@@ -1,0 +1,228 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "One coded posting (one line of postings.jsonl). Raw text lives in postings/raw/<sha256>.txt",
+  "type": "object",
+  "required": [
+    "id",
+    "niche_ids",
+    "company",
+    "title",
+    "city",
+    "level",
+    "url",
+    "source_type",
+    "era",
+    "text_sha256",
+    "date_evidence",
+    "codes",
+    "must_haves",
+    "phrases",
+    "builder_verbs",
+    "maintain_verbs",
+    "coder"
+  ],
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "niche_ids": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 1
+    },
+    "company": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "city": {
+      "type": "string"
+    },
+    "level": {
+      "enum": [
+        "IC",
+        "Mgr",
+        "SrMgr",
+        "Dir",
+        "SrDir",
+        "Head",
+        "VP",
+        "SVP",
+        "C",
+        "entry",
+        "experienced",
+        "lead",
+        "manager",
+        "director",
+        "executive"
+      ]
+    },
+    "segment": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "url": {
+      "type": "string"
+    },
+    "source_type": {
+      "enum": [
+        "employer",
+        "ats",
+        "aggregator",
+        "agency",
+        "archive"
+      ]
+    },
+    "era": {
+      "enum": [
+        "now",
+        "2024-25",
+        "2022-23",
+        "2020-21"
+      ]
+    },
+    "date_posted": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "date_seen": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "date_evidence": {
+      "type": "string"
+    },
+    "reposts": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "removed": {
+      "type": "boolean"
+    },
+    "text_sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "pay": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "properties": {
+        "min": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "max": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "currency": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "unit": {
+          "enum": [
+            "hour",
+            "day",
+            "week",
+            "month",
+            "year",
+            null
+          ]
+        },
+        "annualized": {
+          "type": "boolean"
+        }
+      }
+    },
+    "years_required": {
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "codes": {
+      "type": "object",
+      "additionalProperties": {
+        "enum": [
+          0,
+          1,
+          2
+        ]
+      }
+    },
+    "must_haves": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "maxItems": 5
+    },
+    "phrases": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "maxItems": 3
+    },
+    "builder_verbs": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "maintain_verbs": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "coder": {
+      "enum": [
+        "A",
+        "B"
+      ]
+    },
+    "liveness": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "properties": {
+        "score": {
+          "type": "number"
+        },
+        "band": {
+          "enum": [
+            "live",
+            "doubtful",
+            "likely_ghost",
+            "closed"
+          ]
+        },
+        "flags": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "raw_retained": {
+      "type": "boolean",
+      "description": "false only for reference-run postings coded before raw text was stored"
+    }
+  }
+}

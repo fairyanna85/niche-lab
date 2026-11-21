@@ -1,0 +1,148 @@
+[
+ {
+  "company": "TripleLift",
+  "score": 79.0,
+  "posting_fit": 0.65,
+  "liveness": 90,
+  "band": "live",
+  "access": 2,
+  "path": "Shared ecosystem: holding-company agencies — ask an agency partner lead you worked with for an introduction",
+  "pay_mid": 287500.0,
+  "titles": [
+   "VP, Business Development"
+  ],
+  "urls": [
+   "https://www.mediabistro.com/jobs/3451483081-vp-business-development"
+  ]
+ },
+ {
+  "company": "Braze",
+  "score": 70.4,
+  "posting_fit": 0.58,
+  "liveness": 100,
+  "band": "live",
+  "access": 2,
+  "path": "Shared ecosystem: AWS Partner Network — open with the AWS Marketplace launch you co-led; ask the target's alliances lead for a 20-minute exchange",
+  "pay_mid": 204375.0,
+  "titles": [
+   "Senior Partner Account Director (Snowflake)",
+   "AVP, Partner Sales"
+  ],
+  "urls": [
+   "https://job-boards.greenhouse.io/Braze/jobs/7778126",
+   "https://jobera.com/job/braze-avp-partner-sales-a7fab87a/"
+  ]
+ },
+ {
+  "company": "Confidential (martech)",
+  "score": 68.2,
+  "posting_fit": 0.64,
+  "liveness": 75,
+  "band": "live",
+  "access": 2,
+  "path": "Shared ecosystem: holding-company agencies — ask an agency partner lead you worked with for an introduction",
+  "pay_mid": null,
+  "titles": [
+   "Head of Partnerships"
+  ],
+  "urls": [
+   "https://www.goodwinrecruiting.com/job/a0wr7000002fwenmaa-head-of-partnerships-adtech-new-york-new-york?amp=1"
+  ]
+ },
+ {
+  "company": "Amperity",
+  "score": 67.7,
+  "posting_fit": 0.54,
+  "liveness": 90,
+  "band": "live",
+  "access": 2,
+  "path": "Shared ecosystem: AWS Partner Network — open with the AWS Marketplace launch you co-led; ask the target's alliances lead for a 20-minute exchange",
+  "pay_mid": 211500.0,
+  "titles": [
+   "Head of Partnerships & Alliances"
+  ],
+  "urls": [
+   "https://jobs.madrona.com/companies/amperity/jobs/91216729-head-of-partnerships-alliances"
+  ]
+ },
+ {
+  "company": "Smartly",
+  "score": 67.5,
+  "posting_fit": 0.6,
+  "liveness": 100,
+  "band": "live",
+  "access": 1,
+  "path": "Same city / industry community only — apply on the employer site within 72 h and send a short note to the hiring manager",
+  "pay_mid": 232500.0,
+  "titles": [
+   "VP, Partner Development"
+  ],
+  "urls": [
+   "https://job-boards.greenhouse.io/smartlyio/jobs/5751247004"
+  ]
+ },
+ {
+  "company": "Subtotal",
+  "score": 67.4,
+  "posting_fit": 0.7,
+  "liveness": 90,
+  "band": "live",
+  "access": 2,
+  "path": "Shared ecosystem: holding-company agencies — ask an agency partner lead you worked with for an introduction",
+  "pay_mid": 160000.0,
+  "titles": [
+   "Head of Partnerships"
+  ],
+  "urls": [
+   "https://www.ziprecruiter.com/c/Subtotal/Job/Head-of-Partnerships/-in-New-York,NY?jid=cf0970f56f8a32c0"
+  ]
+ },
+ {
+  "company": "Addepar",
+  "score": 64.3,
+  "posting_fit": 0.5,
+  "liveness": 100,
+  "band": "live",
+  "access": 1,
+  "path": "Same city / industry community only — apply on the employer site within 72 h and send a short note to the hiring manager",
+  "pay_mid": 233500.0,
+  "titles": [
+   "Head of Partner Solutions"
+  ],
+  "urls": [
+   "https://job-boards.greenhouse.io/addepar1/jobs/8393340002"
+  ]
+ },
+ {
+  "company": "GWI",
+  "score": 59.2,
+  "posting_fit": 0.51,
+  "liveness": 100,
+  "band": "live",
+  "access": 1,
+  "path": "Same city / industry community only — apply on the employer site within 72 h and send a short note to the hiring manager",
+  "pay_mid": 187500.0,
+  "titles": [
+   "VP Strategic Partnerships"
+  ],
+  "urls": [
+   "https://job-boards.greenhouse.io/globalwebindex/jobs/8301393002"
+  ]
+ },
+ {
+  "company": "Confidential (public cloud platform)",
+  "score": 40.8,
+  "posting_fit": 0.39,
+  "liveness": 65,
+  "band": "doubtful",
+  "access": 1,
+  "path": "Same city / industry community only — apply on the employer site within 72 h and send a short note to the hiring manager",
+  "pay_mid": null,
+  "titles": [
+   "Head of AI Partnerships"
+  ],
+  "urls": [
+   "https://talents.vaia.com/companies/confidential/new-york-city/head-of-ai-partnerships-108482741/"
+  ]
+ }
+]

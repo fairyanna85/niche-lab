@@ -1,0 +1,100 @@
+{
+ "n": 9,
+ "sources": {
+  "fictional": 9
+ },
+ "codes": {
+  "agy": 0.333,
+  "agyb": 0.222,
+  "aib": 0.0,
+  "aig": 0.222,
+  "aip": 0.667,
+  "aiu": 0.333,
+  "arrn": 0.0,
+  "budget": 0.0,
+  "com": 0.444,
+  "conb": 0.444,
+  "cos": 0.778,
+  "cred": 0.0,
+  "csuite": 0.111,
+  "cust": 0.0,
+  "data": 0.0,
+  "deal": 0.889,
+  "exec": 0.778,
+  "fcst": 0.333,
+  "gsi": 0.889,
+  "hyp": 0.667,
+  "hypb": 0.222,
+  "infl": 0.333,
+  "intl": 0.667,
+  "isv": 0.667,
+  "jbp": 0.333,
+  "lang": 0.0,
+  "mgr": 0.889,
+  "mkt": 0.222,
+  "oem": 0.222,
+  "pc": 0.667,
+  "prog": 0.889,
+  "quota": 0.0,
+  "res": 0.111,
+  "resl": 0.667,
+  "safety": 0.0,
+  "shift": 0.0,
+  "src": 0.444,
+  "stb": 0.444,
+  "tech": 0.778,
+  "tool": 0.0,
+  "train": 0.0,
+  "zero": 0.556
+ },
+ "years": {
+  "n": 9,
+  "median": 12.0,
+  "top_quartile": 12.0,
+  "values": [
+   8,
+   9,
+   10,
+   11,
+   12,
+   12,
+   12,
+   13,
+   13
+  ]
+ },
+ "paths": [
+  {
+   "path": "alliances manager at an AI model provider",
+   "n": 5
+  },
+  {
+   "path": "cloud marketplace partner manager",
+   "n": 2
+  },
+  {
+   "path": "business development at an AI start-up",
+   "n": 2
+  }
+ ],
+ "employer_types": [
+  {
+   "type": "SaaS vendor",
+   "n": 3
+  },
+  {
+   "type": "start-up",
+   "n": 3
+  },
+  {
+   "type": "agency or consultancy",
+   "n": 2
+  },
+  {
+   "type": "systems integrator",
+   "n": 1
+  }
+ ],
+ "second_coded": 3,
+ "kappa": 0.95
+}

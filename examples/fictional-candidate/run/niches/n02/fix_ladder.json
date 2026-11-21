@@ -1,0 +1,153 @@
+{
+ "niche": "n02",
+ "base": {
+  "fit": 0.558,
+  "coverage": 0.571
+ },
+ "steps": [
+  {
+   "code": "cos",
+   "label": "Co-sell",
+   "from_grade": 1,
+   "demand": 0.7,
+   "coverage_gain": 0.072,
+   "fit_gain": 0.06,
+   "kind": "surface"
+  },
+  {
+   "code": "exec",
+   "label": "Works with senior leaders or executives",
+   "from_grade": 0,
+   "demand": 0.7,
+   "coverage_gain": 0.072,
+   "fit_gain": 0.055,
+   "kind": "build"
+  },
+  {
+   "code": "fcst",
+   "label": "Forecasting / attribution / CRM reporting",
+   "from_grade": 1,
+   "demand": 0.6,
+   "coverage_gain": 0.072,
+   "fit_gain": 0.05,
+   "kind": "surface"
+  },
+  {
+   "code": "aip",
+   "label": "Employer sells an AI / ML product",
+   "from_grade": 0,
+   "demand": 0.5,
+   "coverage_gain": 0.072,
+   "fit_gain": 0.045,
+   "kind": "build"
+  },
+  {
+   "code": "csuite",
+   "label": "Reports to top leadership",
+   "from_grade": 0,
+   "demand": 0.5,
+   "coverage_gain": 0.072,
+   "fit_gain": 0.04,
+   "kind": "build"
+  },
+  {
+   "code": "stb",
+   "label": "Fast-growth or new-venture environment",
+   "from_grade": 0,
+   "demand": 0.5,
+   "coverage_gain": 0.072,
+   "fit_gain": 0.03,
+   "kind": "build"
+  },
+  {
+   "code": "quota",
+   "label": "Carries a quota / revenue number",
+   "from_grade": 0,
+   "demand": 0.4,
+   "coverage_gain": 0.0,
+   "fit_gain": 0.035,
+   "kind": "build"
+  },
+  {
+   "code": "gsi",
+   "label": "GSIs / SIs / consultancies as partners",
+   "from_grade": 0,
+   "demand": 0.4,
+   "coverage_gain": 0.0,
+   "fit_gain": 0.035,
+   "kind": "build"
+  },
+  {
+   "code": "tool",
+   "label": "Named tools, software or equipment",
+   "from_grade": 1,
+   "demand": 0.3,
+   "coverage_gain": 0.0,
+   "fit_gain": 0.02,
+   "kind": "surface"
+  },
+  {
+   "code": "hypb",
+   "label": "Hyperscaler experience required",
+   "from_grade": 1,
+   "demand": 0.2,
+   "coverage_gain": 0.0,
+   "fit_gain": 0.02,
+   "kind": "surface"
+  },
+  {
+   "code": "tech",
+   "label": "Technical depth (APIs, data stack, systems)",
+   "from_grade": 2,
+   "demand": 0.8,
+   "coverage_gain": 0.0,
+   "fit_gain": 0.014,
+   "kind": "surface"
+  },
+  {
+   "code": "intl",
+   "label": "Multi-site, multi-region or international scope",
+   "from_grade": 2,
+   "demand": 0.6,
+   "coverage_gain": 0.0,
+   "fit_gain": 0.014,
+   "kind": "surface"
+  },
+  {
+   "code": "jbp",
+   "label": "Joint business plans / QBRs / account mapping",
+   "from_grade": 2,
+   "demand": 0.7,
+   "coverage_gain": 0.0,
+   "fit_gain": 0.013,
+   "kind": "surface"
+  },
+  {
+   "code": "pc",
+   "label": "Player-coach / hands-on individual contributor",
+   "from_grade": 2,
+   "demand": 0.4,
+   "coverage_gain": 0.0,
+   "fit_gain": 0.009,
+   "kind": "surface"
+  },
+  {
+   "code": "hyp",
+   "label": "Hyperscaler partners (AWS / GCP / Azure)",
+   "from_grade": 2,
+   "demand": 0.2,
+   "coverage_gain": 0.0,
+   "fit_gain": 0.004,
+   "kind": "surface"
+  },
+  {
+   "code": "mkt",
+   "label": "Cloud marketplaces",
+   "from_grade": 2,
+   "demand": 0.2,
+   "coverage_gain": 0.0,
+   "fit_gain": 0.004,
+   "kind": "surface"
+  }
+ ]
+}

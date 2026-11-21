@@ -1,0 +1,26 @@
+{
+ "method": "pdftotext",
+ "linkedin_status": "blocked",
+ "score": 100,
+ "two_column_ratio": 0.0,
+ "pages": 1,
+ "career_years": 13,
+ "words": 258,
+ "sections": [
+  "education",
+  "experience",
+  "header",
+  "languages",
+  "skills",
+  "summary"
+ ],
+ "roles_dated": 3,
+ "issues": [
+  {
+   "kind": "linkedin_not_read",
+   "line": null,
+   "detail": "LinkedIn URL given; LinkedIn blocks automated reads. Try WebFetch once; if it fails, run resume-only and mark LinkedIn checks not_run."
+  }
+ ],
+ "action": "ok"
+}

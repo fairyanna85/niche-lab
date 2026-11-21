@@ -1,0 +1,38 @@
+{
+ "n01": {
+  "verdict": "Stretch",
+  "coverage": 0.733,
+  "fit": 0.587,
+  "band_step": 1,
+  "flags": [
+   "low confidence"
+  ]
+ },
+ "n02": {
+  "verdict": "Pivot",
+  "coverage": 0.571,
+  "fit": 0.558,
+  "band_step": 1,
+  "flags": [
+   "low confidence"
+  ]
+ },
+ "n03": {
+  "verdict": "Stretch",
+  "coverage": 0.6,
+  "fit": 0.52,
+  "band_step": 0,
+  "flags": [
+   "low confidence"
+  ]
+ },
+ "n04": {
+  "verdict": "Stretch",
+  "coverage": 0.667,
+  "fit": 0.554,
+  "band_step": 1,
+  "flags": [
+   "low confidence"
+  ]
+ }
+}

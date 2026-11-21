@@ -1,0 +1,894 @@
+{
+ "$schema": "https://json-schema.org/draft/2020-12/schema",
+ "title": "results.json — the single data contract between the pipeline and template/report.html",
+ "description": "Every report section is an object with a non-empty do_this array. A section with no data is null and the template hides it and prints the reason from `hidden_reason`.",
+ "type": "object",
+ "required": [
+  "meta",
+  "summary",
+  "profile_view",
+  "portfolio",
+  "niches",
+  "resumes",
+  "original",
+  "gates",
+  "funnel",
+  "method",
+  "confirm",
+  "market",
+  "baseline",
+  "linkedin",
+  "actions",
+  "journey",
+  "plan12"
+ ],
+ "$defs": {
+  "do": {
+   "type": "array",
+   "minItems": 1,
+   "items": {
+    "type": "string",
+    "minLength": 8
+   }
+  },
+  "sec": {
+   "type": "object",
+   "required": [
+    "do_this"
+   ],
+   "properties": {
+    "do_this": {
+     "$ref": "#/$defs/do"
+    }
+   }
+  },
+  "nullable_sec": {
+   "anyOf": [
+    {
+     "type": "null"
+    },
+    {
+     "$ref": "#/$defs/sec"
+    }
+   ]
+  },
+  "grade": {
+   "enum": [
+    "stated",
+    "inferred2",
+    "inferred1",
+    "absent"
+   ]
+  },
+  "verdict": {
+   "enum": [
+    "Core",
+    "Stretch",
+    "Pivot",
+    "Rejected"
+   ]
+  },
+  "bullet": {
+   "type": "object",
+   "required": [
+    "text",
+    "ledger"
+   ],
+   "properties": {
+    "text": {
+     "type": "string"
+    },
+    "ledger": {
+     "type": "array",
+     "items": {
+      "type": "string"
+     }
+    },
+    "tag": {
+     "type": [
+      "string",
+      "null"
+     ]
+    }
+   }
+  },
+  "linkedin_ref": {
+   "type": "object",
+   "required": [
+    "niche_id",
+    "headline",
+    "about",
+    "experience",
+    "skills"
+   ]
+  }
+ },
+ "properties": {
+  "meta": {
+   "type": "object",
+   "required": [
+    "candidate",
+    "generated",
+    "skill_version",
+    "fictional",
+    "data_window"
+   ],
+   "properties": {
+    "candidate": {
+     "type": "string"
+    },
+    "generated": {
+     "type": "string"
+    },
+    "skill_version": {
+     "type": "string"
+    },
+    "fictional": {
+     "type": "boolean"
+    },
+    "data_window": {
+     "type": "string"
+    },
+    "banner": {
+     "type": [
+      "string",
+      "null"
+     ]
+    }
+   }
+  },
+  "summary": {
+   "allOf": [
+    {
+     "$ref": "#/$defs/sec"
+    },
+    {
+     "type": "object",
+     "required": [
+      "headline",
+      "run_now",
+      "fixes",
+      "gaps",
+      "narrative",
+      "findings"
+     ],
+     "properties": {
+      "headline": {
+       "type": "string"
+      },
+      "run_now": {
+       "type": "array",
+       "minItems": 1,
+       "maxItems": 3,
+       "items": {
+        "type": "string"
+       }
+      },
+      "fixes": {
+       "type": "array",
+       "minItems": 1,
+       "maxItems": 5,
+       "items": {
+        "type": "object",
+        "required": [
+         "text",
+         "why"
+        ]
+       }
+      },
+      "gaps": {
+       "type": "array",
+       "maxItems": 3,
+       "items": {
+        "type": "object",
+        "required": [
+         "text",
+         "why"
+        ]
+       }
+      },
+      "narrative": {
+       "type": "string"
+      },
+      "findings": {
+       "type": "array",
+       "minItems": 3,
+       "maxItems": 3,
+       "items": {
+        "type": "object",
+        "required": [
+         "title",
+         "body"
+        ],
+        "properties": {
+         "title": {
+          "type": "string"
+         },
+         "body": {
+          "type": "string"
+         }
+        }
+       }
+      }
+     }
+    }
+   ]
+  },
+  "profile_view": {
+   "allOf": [
+    {
+     "$ref": "#/$defs/sec"
+    },
+    {
+     "type": "object",
+     "required": [
+      "fields",
+      "strengths",
+      "parse",
+      "timeline"
+     ],
+     "properties": {
+      "fields": {
+       "type": "array",
+       "items": {
+        "type": "object",
+        "required": [
+         "name",
+         "value",
+         "grade"
+        ],
+        "properties": {
+         "grade": {
+          "$ref": "#/$defs/grade"
+         }
+        }
+       }
+      },
+      "timeline": {
+       "type": "array",
+       "items": {
+        "type": "object",
+        "required": [
+         "employer",
+         "title",
+         "start",
+         "end",
+         "ledger_ids"
+        ],
+        "properties": {
+         "employer": {
+          "type": "string"
+         },
+         "title": {
+          "type": "string"
+         },
+         "dates": {
+          "type": [
+           "string",
+           "null"
+          ]
+         },
+         "start": {
+          "type": [
+           "string",
+           "null"
+          ]
+         },
+         "end": {
+          "type": [
+           "string",
+           "null"
+          ]
+         },
+         "scope": {
+          "type": [
+           "string",
+           "null"
+          ]
+         },
+         "n_metrics": {
+          "type": "integer"
+         },
+         "ledger_ids": {
+          "type": "array",
+          "items": {
+           "type": "string"
+          }
+         }
+        }
+       }
+      }
+     }
+    }
+   ]
+  },
+  "portfolio": {
+   "allOf": [
+    {
+     "$ref": "#/$defs/sec"
+    },
+    {
+     "type": "object",
+     "required": [
+      "niches",
+      "weights",
+      "sensitivity",
+      "overlap",
+      "sequence",
+      "rejected"
+     ],
+     "properties": {
+      "niches": {
+       "type": "array",
+       "minItems": 1,
+       "maxItems": 10,
+       "items": {
+        "type": "object",
+        "required": [
+         "id",
+         "label",
+         "verdict",
+         "score",
+         "rank",
+         "components"
+        ],
+        "properties": {
+         "verdict": {
+          "$ref": "#/$defs/verdict"
+         },
+         "score": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100
+         }
+        }
+       }
+      },
+      "weights": {
+       "type": "object"
+      },
+      "sensitivity": {
+       "type": "object",
+       "required": [
+        "rank_freq",
+        "stable"
+       ]
+      },
+      "overlap": {
+       "type": "object",
+       "required": [
+        "ids",
+        "requirements",
+        "employers"
+       ]
+      },
+      "sequence": {
+       "type": "array",
+       "items": {
+        "type": "object",
+        "required": [
+         "niche_id",
+         "phase",
+         "trigger"
+        ],
+        "properties": {
+         "phase": {
+          "enum": [
+           "now",
+           "next",
+           "parked"
+          ]
+         }
+        }
+       }
+      },
+      "rejected": {
+       "type": "array",
+       "items": {
+        "type": "object",
+        "required": [
+         "label",
+         "reason"
+        ]
+       }
+      }
+     }
+    }
+   ]
+  },
+  "niches": {
+   "type": "array",
+   "minItems": 1,
+   "maxItems": 10,
+   "items": {
+    "type": "object",
+    "required": [
+     "id",
+     "label",
+     "verdict",
+     "rank",
+     "score",
+     "confidence",
+     "size",
+     "demand",
+     "change",
+     "peers",
+     "language",
+     "fit",
+     "employers",
+     "access",
+     "pitch",
+     "pay",
+     "plan30",
+     "resume_id",
+     "fit_per_posting",
+     "fix_ladder",
+     "liveness_summary",
+     "formulas"
+    ],
+    "properties": {
+     "verdict": {
+      "$ref": "#/$defs/verdict"
+     },
+     "confidence": {
+      "enum": [
+       "normal",
+       "low"
+      ]
+     },
+     "size": {
+      "type": "object",
+      "required": [
+       "n_postings",
+       "n_employers"
+      ]
+     },
+     "demand": {
+      "$ref": "#/$defs/sec"
+     },
+     "change": {
+      "$ref": "#/$defs/nullable_sec"
+     },
+     "peers": {
+      "$ref": "#/$defs/nullable_sec"
+     },
+     "language": {
+      "$ref": "#/$defs/sec"
+     },
+     "fit": {
+      "$ref": "#/$defs/sec"
+     },
+     "employers": {
+      "$ref": "#/$defs/sec"
+     },
+     "access": {
+      "$ref": "#/$defs/nullable_sec"
+     },
+     "pitch": {
+      "$ref": "#/$defs/sec"
+     },
+     "pay": {
+      "$ref": "#/$defs/nullable_sec"
+     },
+     "plan30": {
+      "type": "array",
+      "minItems": 1
+     },
+     "resume_id": {
+      "type": "string"
+     },
+     "hidden_reason": {
+      "type": "object"
+     },
+     "fit_per_posting": {
+      "type": "object",
+      "required": [
+       "n",
+       "line",
+       "above_line",
+       "postings"
+      ]
+     },
+     "fix_ladder": {
+      "type": "object",
+      "required": [
+       "base",
+       "steps"
+      ]
+     },
+     "liveness_summary": {
+      "type": "object",
+      "required": [
+       "doubtful_share",
+       "age_buckets",
+       "benchmark"
+      ]
+     },
+     "formulas": {
+      "type": "array",
+      "items": {
+       "type": "object",
+       "required": [
+        "bundle",
+        "template",
+        "example",
+        "ledger_ids"
+       ],
+       "properties": {
+        "bundle": {
+         "type": "array",
+         "minItems": 2,
+         "maxItems": 2
+        },
+        "ledger_ids": {
+         "type": "array",
+         "minItems": 1
+        }
+       }
+      }
+     }
+    }
+   }
+  },
+  "resumes": {
+   "type": "array",
+   "minItems": 1,
+   "items": {
+    "type": "object",
+    "required": [
+     "id",
+     "niche_id",
+     "header",
+     "profile",
+     "skills",
+     "experience",
+     "education",
+     "placeholders"
+    ],
+    "properties": {
+     "experience": {
+      "type": "array",
+      "items": {
+       "type": "object",
+       "required": [
+        "employer",
+        "context",
+        "title",
+        "dates",
+        "bullets"
+       ],
+       "properties": {
+        "bullets": {
+         "type": "array",
+         "minItems": 1,
+         "items": {
+          "$ref": "#/$defs/bullet"
+         }
+        }
+       }
+      }
+     }
+    }
+   }
+  },
+  "original": {
+   "type": "object",
+   "required": [
+    "headline",
+    "bullets"
+   ]
+  },
+  "gates": {
+   "type": "array",
+   "items": {
+    "type": "object",
+    "required": [
+     "name",
+     "status",
+     "detail"
+    ],
+    "properties": {
+     "status": {
+      "enum": [
+       "pass",
+       "warn",
+       "fail",
+       "not_run"
+      ]
+     }
+    }
+   }
+  },
+  "funnel": {
+   "$ref": "#/$defs/sec"
+  },
+  "method": {
+   "type": "object",
+   "required": [
+    "steps",
+    "limits",
+    "sources"
+   ]
+  },
+  "confirm": {
+   "type": "array",
+   "items": {
+    "type": "object",
+    "required": [
+     "item",
+     "why"
+    ]
+   }
+  },
+  "market": {
+   "type": "object",
+   "required": [
+    "points",
+    "candidate",
+    "closeness",
+    "dna",
+    "pay_points",
+    "years",
+    "levels",
+    "peers",
+    "peer_points",
+    "rarity",
+    "bridge",
+    "title_shift",
+    "change"
+   ],
+   "properties": {
+    "points": {
+     "type": "array",
+     "items": {
+      "type": "object",
+      "required": [
+       "id",
+       "niche",
+       "x",
+       "y",
+       "band"
+      ]
+     }
+    },
+    "candidate": {
+     "type": "object",
+     "required": [
+      "x",
+      "y"
+     ]
+    },
+    "peers": {
+     "type": "array",
+     "items": {
+      "type": "object",
+      "required": [
+       "niche_id",
+       "n"
+      ],
+      "properties": {
+       "niche_id": {
+        "type": "string"
+       },
+       "n": {
+        "type": "integer"
+       },
+       "reason": {
+        "type": "string"
+       },
+       "sources": {
+        "type": "object"
+       },
+       "years": {
+        "type": "object"
+       },
+       "paths": {
+        "type": "array",
+        "items": {
+         "type": "object",
+         "required": [
+          "path",
+          "n"
+         ]
+        }
+       },
+       "kappa": {
+        "type": [
+         "number",
+         "null"
+        ]
+       }
+      }
+     }
+    },
+    "peer_points": {
+     "type": "array",
+     "items": {
+      "type": "object",
+      "required": [
+       "id",
+       "niche",
+       "x",
+       "y"
+      ]
+     }
+    },
+    "rarity": {
+     "type": "array",
+     "items": {
+      "type": "object",
+      "required": [
+       "code",
+       "label",
+       "grade",
+       "asked_share",
+       "asked_n",
+       "peer_share",
+       "peer_n"
+      ],
+      "properties": {
+       "peer_share": {
+        "type": [
+         "number",
+         "null"
+        ]
+       }
+      }
+     }
+    },
+    "bridge": {
+     "type": "array",
+     "items": {
+      "type": "object",
+      "required": [
+       "strength_id",
+       "asset",
+       "code",
+       "reads_as",
+       "ledger_ids"
+      ],
+      "properties": {
+       "ledger_ids": {
+        "type": "array",
+        "minItems": 1
+       }
+      }
+     }
+    },
+    "title_shift": {
+     "type": "array"
+    },
+    "change": {
+     "type": [
+      "object",
+      "null"
+     ]
+    }
+   }
+  },
+  "baseline": {
+   "type": "object",
+   "required": [
+    "gates",
+    "coverage_by_niche"
+   ]
+  },
+  "linkedin": {
+   "$ref": "#/$defs/linkedin_ref"
+  },
+  "actions": {
+   "type": "array",
+   "minItems": 1,
+   "items": {
+    "type": "object",
+    "required": [
+     "id",
+     "text",
+     "impact",
+     "effort",
+     "section"
+    ],
+    "properties": {
+     "impact": {
+      "enum": [
+       "high",
+       "medium",
+       "low"
+      ]
+     },
+     "effort": {
+      "enum": [
+       "low",
+       "medium",
+       "high"
+      ]
+     },
+     "section": {
+      "type": "string"
+     },
+     "niche_id": {
+      "type": [
+       "string",
+       "null"
+      ]
+     }
+    }
+   }
+  },
+  "journey": {
+   "type": "object",
+   "required": [
+    "acts"
+   ],
+   "properties": {
+    "acts": {
+     "type": "array",
+     "minItems": 7,
+     "items": {
+      "type": "object",
+      "required": [
+       "act",
+       "question",
+       "answer",
+       "learned",
+       "handover"
+      ],
+      "properties": {
+       "act": {
+        "enum": [
+         "cover",
+         "you",
+         "market",
+         "peers",
+         "verdict",
+         "course",
+         "method"
+        ]
+       },
+       "question": {
+        "type": "string",
+        "pattern": "\\?$"
+       },
+       "answer": {
+        "type": "string",
+        "minLength": 10
+       },
+       "learned": {
+        "type": "array",
+        "maxItems": 3,
+        "items": {
+         "type": "string"
+        }
+       },
+       "handover": {
+        "type": [
+         "string",
+         "null"
+        ]
+       }
+      }
+     }
+    }
+   }
+  },
+  "plan12": {
+   "type": "array",
+   "minItems": 1,
+   "items": {
+    "type": "object",
+    "required": [
+     "week",
+     "track",
+     "action",
+     "target"
+    ],
+    "properties": {
+     "week": {
+      "type": "string",
+      "pattern": "^\\d{1,2}(-\\d{1,2})?$"
+     }
+    }
+   }
+  }
+ }
+}

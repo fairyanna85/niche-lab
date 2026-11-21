@@ -1,0 +1,78 @@
+{
+ "niche": "n04",
+ "line": 0.6,
+ "n": 10,
+ "above_line": 1,
+ "postings": [
+  {
+   "id": "p0035",
+   "company": "ChapsVision",
+   "title": "Head of Partner Ecosystem - Data & AI Solutions",
+   "fit": 0.63,
+   "band": "live"
+  },
+  {
+   "id": "p0037",
+   "company": "Anthropic",
+   "title": "Head of Southern Europe Partnerships",
+   "fit": 0.586,
+   "band": "live"
+  },
+  {
+   "id": "p0033",
+   "company": "Partoo",
+   "title": "Head of Partnerships",
+   "fit": 0.579,
+   "band": "live"
+  },
+  {
+   "id": "p0038",
+   "company": "Mirakl",
+   "title": "Director of Strategic Partnerships, Mirakl Ads",
+   "fit": 0.579,
+   "band": "live"
+  },
+  {
+   "id": "p0041",
+   "company": "Qevlar AI",
+   "title": "Head of Partnerships",
+   "fit": 0.578,
+   "band": "live"
+  },
+  {
+   "id": "p0034",
+   "company": "Payflows",
+   "title": "Head of Partnerships/Alliances",
+   "fit": 0.548,
+   "band": "live"
+  },
+  {
+   "id": "p0039",
+   "company": "Dataiku",
+   "title": "EMEA Technology Alliances Manager",
+   "fit": 0.543,
+   "band": "live"
+  },
+  {
+   "id": "p0036",
+   "company": "Mistral AI",
+   "title": "Director of Systems Integrators",
+   "fit": 0.527,
+   "band": "live"
+  },
+  {
+   "id": "p0042",
+   "company": "Anthropic",
+   "title": "AWS Partnerships Lead, Southern Europe",
+   "fit": 0.434,
+   "band": "live"
+  },
+  {
+   "id": "p0040",
+   "company": "Dataiku",
+   "title": "Partner & Alliances Manager, Southern Europe",
+   "fit": 0.391,
+   "band": "live"
+  }
+ ]
+}

@@ -1,0 +1,59 @@
+# Every figure and block of the report (docs/CORRECTIVE-PLAN-v2.1.md §2.2), with the act it lives in and its source.
+# kind: chart (must draw data marks, [data-mark]) | block (must hold text) | table (must hold rows) | stub-ok (may be a stub)
+# rows: name of the expected-row function in tests/test_parity.py (I12). Absent = non-empty is enough.
+# ref: the reference report's equivalent, for the side-by-side tick in cycle 10.
+- {fig: cover-tiles, act: cover, kind: block, source: method, ref: five hero tiles}
+- {fig: cover-sky, act: cover, kind: chart, source: market.points, rows: stars, ref: "-"}
+- {fig: you-dissection, act: you, kind: block, source: profile_view.fields, ref: "-"}
+- {fig: you-timeline, act: you, kind: chart, source: profile_view.timeline, rows: timeline, ref: "-"}
+- {fig: you-strengths, act: you, kind: block, source: profile_view.strengths, ref: rare-proof finding card}
+- {fig: you-edges, act: you, kind: block, source: profile_view.edges, ref: "-"}
+- {fig: you-rare, act: you, kind: block, source: market.rarity, ref: "0 of 42 ask for it"}
+- {fig: you-baseline, act: you, kind: block, source: baseline, ref: old-resume half of chapter 4}
+- {fig: mkt-sky, act: market, kind: chart, source: market.points, rows: stars, ref: "-"}
+- {fig: mkt-niches, act: market, kind: block, source: portfolio, ref: niche definition and segments}
+- {fig: mkt-sample, act: market, kind: chart, source: method.sample, ref: planned vs achieved sample}
+- {fig: mkt-dna, act: market, kind: chart, source: market.dna, rows: dna_cells, ref: "-"}
+- {fig: mkt-demand, act: market, kind: chart, source: "niches[].demand.rows", rows: demand_rows, ref: demand map}
+- {fig: mkt-seniority, act: market, kind: stub-ok, source: "niches[].demand.contrasts.seniority", ref: what rises with seniority}
+- {fig: mkt-contrast, act: market, kind: stub-ok, source: "niches[].demand.contrasts.versus", ref: "AI-native vs martech; NYC vs Paris"}
+- {fig: mkt-bundles, act: market, kind: chart, source: "niches[].demand.bundles", ref: requirements that travel together}
+- {fig: mkt-change, act: market, kind: chart, source: "niches[].change | market.change", ref: then vs now}
+- {fig: mkt-titles, act: market, kind: stub-ok, source: market.title_shift, ref: "titles containing Channel"}
+- {fig: mkt-pay, act: market, kind: chart, source: "niches[].pay.ranges | market.pay_points", ref: NYC pay ranges}
+- {fig: mkt-words, act: market, kind: block, source: "niches[].language.phrases", ref: words hiring managers repeat}
+- {fig: mkt-builder, act: market, kind: chart, source: "niches[].demand.builder", ref: builder index}
+- {fig: mkt-keyness, act: market, kind: stub-ok, source: "niches[].language.keyness", ref: distinctive vocabulary}
+- {fig: mkt-live, act: market, kind: chart, source: "niches[].liveness_summary", ref: "-"}
+- {fig: cmp-peers, act: peers, kind: stub-ok, source: market.peers, ref: peer benchmark}
+- {fig: cmp-paths, act: peers, kind: stub-ok, source: market.peers.paths, ref: precedent paths}
+- {fig: cmp-asks, act: peers, kind: chart, source: "market.years | market.levels", ref: "-"}
+- {fig: cmp-rarity, act: peers, kind: chart, source: market.rarity, ref: "0 of 42 ask for it"}
+- {fig: cmp-odds, act: peers, kind: block, source: funnel.benchmarks, ref: 2026 search evidence}
+- {fig: vrd-findings, act: verdict, kind: block, source: summary.findings, ref: three finding cards}
+- {fig: vrd-bridge, act: verdict, kind: chart, source: market.bridge, rows: bridge, ref: the bridge}
+- {fig: vrd-fit, act: verdict, kind: chart, source: "niches[].fit_per_posting", rows: fit_postings, ref: fit by segment}
+- {fig: vrd-scatter, act: verdict, kind: chart, source: "niches[].fit_per_posting", ref: coverage vs pay scatter}
+- {fig: vrd-ladder, act: verdict, kind: chart, source: "niches[].fix_ladder", rows: ladder, ref: "-"}
+- {fig: vrd-ranking, act: verdict, kind: chart, source: portfolio.niches, rows: ranking, ref: "-"}
+- {fig: vrd-robust, act: verdict, kind: chart, source: portfolio.sensitivity, ref: "-"}
+- {fig: vrd-verdict, act: verdict, kind: block, source: summary.run_now, ref: four target tiers}
+- {fig: vrd-narrative, act: verdict, kind: block, source: summary.narrative, ref: interview narrative}
+- {fig: crs-playbook, act: course, kind: block, source: "niches[].employers | pitch | pay", ref: tier cards and corpus examples}
+- {fig: crs-rules, act: course, kind: block, source: "niches[].language", ref: message rules by audience}
+- {fig: crs-formulas, act: course, kind: block, source: "niches[].formulas", ref: golden formulas}
+- {fig: crs-resumes, act: course, kind: block, source: resumes, ref: rewritten resume and legend}
+- {fig: crs-oldnew, act: course, kind: chart, source: baseline.zone_coverage, ref: old vs new coverage}
+- {fig: crs-bullets, act: course, kind: block, source: gates, ref: bullets with a so-what}
+- {fig: crs-panel, act: course, kind: stub-ok, source: "resumes[].review", ref: blind panel and CEO rounds}
+- {fig: crs-linkedin, act: course, kind: block, source: linkedin, ref: "-"}
+- {fig: crs-plan12, act: course, kind: chart, source: plan12, ref: 12-week search plan}
+- {fig: crs-actions, act: course, kind: block, source: actions, ref: "-"}
+- {fig: crs-tracker, act: course, kind: block, source: funnel, ref: "-"}
+- {fig: crs-confirm, act: course, kind: block, source: confirm, ref: mandatory before sending}
+- {fig: app-phases, act: method, kind: block, source: method.steps, ref: eight phases status}
+- {fig: app-kappa, act: method, kind: chart, source: "niches[].demand.reliability", ref: coding reliability per requirement}
+- {fig: app-toolkit, act: method, kind: table, source: method, ref: the statistical and linguistic toolkit}
+- {fig: app-limits, act: method, kind: block, source: method.limits, ref: limits}
+- {fig: app-sources, act: method, kind: block, source: method.sources, ref: sources}
+- {fig: app-postings, act: method, kind: table, source: market.points, ref: every posting URL and the coding}

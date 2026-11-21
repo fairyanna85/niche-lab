@@ -1,0 +1,17 @@
+{
+  "name": "niche-lab",
+  "displayName": "niche-lab",
+  "version": "2.1.0",
+  "description": "Give it a resume and a LinkedIn profile. It researches live job postings, finds and ranks 3\u201310 job-market niches, writes one resume per niche, rewrites the LinkedIn profile, and fills an interactive HTML career report.",
+  "author": {
+    "name": "niche-lab contributors"
+  },
+  "license": "MIT",
+  "keywords": [
+    "resume",
+    "job search",
+    "career",
+    "linkedin",
+    "labor market"
+  ]
+}

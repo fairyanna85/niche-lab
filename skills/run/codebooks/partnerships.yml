@@ -1,0 +1,222 @@
+# Job-family module: partnerships / alliances / channel. Validated in reference/partnerships-2026 (kappa 0.79 on 18 codes).
+# v2: AI-product, AI-build, AI-governance, technical depth, consulting background and player-coach codes moved here from core.
+module: partnerships
+version: 1
+title_patterns:
+- partner
+- alliance
+- channel
+- ecosystem
+- business development
+- bd\b
+codes:
+- id: aip
+  label: Employer sells an AI / ML product
+  posting_rule: 2 if the product itself is AI (agents, LLM, ML platform); 1 if AI is one feature among many; 0 otherwise.
+  resume_cues:
+  - \bai\b
+  - machine learning
+  - \bml\b
+  - \bllm
+  - genai
+  - generative
+- id: aib
+  label: Candidate builds AI agents / automation
+  posting_rule: 2 if the candidate must build agents, workflows or automations; 1 if mentioned.
+  resume_cues:
+  - agent
+  - automat
+  - workflow
+  - built .*(bot|tool)
+  - python
+  - n8n
+  - zapier
+- id: aig
+  label: AI governance / responsible AI
+  posting_rule: 2 if governance, safety, policy or risk of AI is a responsibility; 1 if mentioned.
+  resume_cues:
+  - governance
+  - responsible ai
+  - ai policy
+  - ai risk
+  - compliance
+- id: tech
+  label: Technical depth (APIs, data stack, systems)
+  posting_rule: 2 if technical fluency is required (APIs, SQL, architecture, data stack); 1 if 'technical aptitude' only.
+  resume_cues:
+  - \bapi
+  - \bsql\b
+  - python
+  - architecture
+  - data (stack|platform|pipeline)
+  - engineer
+- id: pc
+  label: Player-coach / hands-on individual contributor
+  posting_rule: 2 if 'hands-on', 'IC', 'player-coach' or 'roll up sleeves' is explicit; 1 if implied.
+  resume_cues:
+  - hands-on
+  - individual contributor
+  - player-coach
+  - personally (closed|built|led)
+- id: conb
+  label: Consulting background valued
+  posting_rule: 2 if consulting background is required; 1 if listed as a plus.
+  resume_cues:
+  - consult
+  - mckinsey
+  - bcg
+  - bain
+  - accenture
+  - deloitte
+  - advisory
+- id: src
+  label: Owns partner-sourced pipeline / revenue
+  posting_rule: '2 if the role owns a partner-sourced number; 1 if contributes to it. WEAK in reference: code 2 only when ownership is explicit.'
+  resume_cues:
+  - partner[- ]sourced
+  - sourced (pipeline|revenue)
+  - partner[- ]generated
+- id: infl
+  label: Partner-influenced revenue
+  posting_rule: '2 if influenced revenue is a target; 1 if mentioned. WEAK in reference: do not infer from ''co-sell'' alone.'
+  resume_cues:
+  - influenced
+- id: quota
+  label: Carries a quota / revenue number
+  posting_rule: 2 if quota-carrying; 1 if 'revenue accountability' without a quota.
+  resume_cues:
+  - quota
+  - target
+  - revenue (goal|number)
+  - \d+% of (plan|target)
+- id: arrn
+  label: States a numeric ARR threshold for the candidate
+  posting_rule: 2 if a number is stated (e.g. '$10M+ ARR'); else 0.
+  resume_cues:
+  - \$\d+[mk]? arr
+  - €\d+[mk]? arr
+- id: fcst
+  label: Forecasting / attribution / CRM reporting
+  posting_rule: 2 if forecasting or attribution is a responsibility; 1 if reporting only.
+  resume_cues:
+  - forecast
+  - attribution
+  - pipeline review
+  - dashboard
+- id: hyp
+  label: Hyperscaler partners (AWS / GCP / Azure)
+  posting_rule: 2 if hyperscaler partnerships are core; 1 if mentioned.
+  resume_cues:
+  - \baws\b
+  - amazon web services
+  - google cloud
+  - \bgcp\b
+  - azure
+- id: gsi
+  label: GSIs / SIs / consultancies as partners
+  posting_rule: 2 if core; 1 if mentioned.
+  resume_cues:
+  - \bgsi
+  - system integrator
+  - accenture
+  - deloitte
+  - capgemini
+  - \bsi partners?
+- id: isv
+  label: ISV / technology / integration partners
+  posting_rule: 2 if core; 1 if mentioned.
+  resume_cues:
+  - \bisv
+  - technology partner
+  - integration partner
+  - tech partner
+- id: agy
+  label: Agencies as partners
+  posting_rule: 2 if core; 1 if mentioned.
+  resume_cues:
+  - agenc
+  - holding compan
+  - wpp
+  - publicis
+  - omnicom
+  - havas
+  - dentsu
+- id: resl
+  label: Resellers / VARs / channel
+  posting_rule: 2 if core; 1 if mentioned.
+  resume_cues:
+  - resell
+  - \bvar\b
+  - channel partner
+  - distribut
+- id: mkt
+  label: Cloud marketplaces
+  posting_rule: 2 if marketplace listings / private offers are core; 1 if mentioned.
+  resume_cues:
+  - marketplace
+  - private offer
+- id: cos
+  label: Co-sell
+  posting_rule: 2 if co-sell motion is core; 1 if mentioned.
+  resume_cues:
+  - co-?sell
+  - joint (selling|go-to-market|gtm)
+- id: res
+  label: Resale
+  posting_rule: 2 if resale is core; 1 if mentioned.
+  resume_cues:
+  - resale
+  - resold
+- id: oem
+  label: OEM / embedded
+  posting_rule: 2 if core; 1 if mentioned.
+  resume_cues:
+  - \boem\b
+  - embedded
+  - white[- ]label
+- id: com
+  label: Co-marketing / partner funds
+  posting_rule: 2 if core; 1 if mentioned.
+  resume_cues:
+  - co-?market
+  - \bmdf\b
+  - partner fund
+- id: prog
+  label: "Partner program design (tiers, incentives, enablement)"
+  posting_rule: 2 if designing the program is core; 1 if running it.
+  resume_cues:
+  - partner program
+  - tier
+  - certification
+  - enablement
+  - incentive
+- id: deal
+  label: Structures / negotiates complex deals
+  posting_rule: 2 if deal structuring is core; 1 if 'negotiation skills'.
+  resume_cues:
+  - negotiat
+  - structured
+  - contract
+  - deal
+- id: jbp
+  label: Joint business plans / QBRs / account mapping
+  posting_rule: 2 if core; 1 if mentioned.
+  resume_cues:
+  - joint business plan
+  - \bjbp
+  - \bqbr
+  - quarterly business review
+  - account (mapping|plan)
+- id: agyb
+  label: Agency background valued
+  posting_rule: 2 if agency experience required; 1 if a plus.
+  resume_cues:
+  - agency
+- id: hypb
+  label: Hyperscaler experience required
+  posting_rule: 2 if experience AT or WITH a hyperscaler is required; 1 if a plus.
+  resume_cues:
+  - \baws\b
+  - google cloud
+  - microsoft
+  - azure

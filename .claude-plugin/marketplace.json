@@ -1,0 +1,7 @@
+{
+  "name": "niche-lab",
+  "owner": {"name": "niche-lab contributors"},
+  "plugins": [
+    {"name": "niche-lab", "source": "./", "description": "Resume + LinkedIn in; ranked job niches, one resume per niche, a LinkedIn rewrite and an HTML career report out."}
+  ]
+}

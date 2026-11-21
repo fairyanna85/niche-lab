@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "ledger.json — every factual line the candidate supplied, numbered. All resume versions draw ONLY from this.",
+  "type": "object", "required": ["sources", "lines"],
+  "properties": {
+    "sources": {"type": "array", "items": {"type": "object", "required": ["kind", "path", "sha256"], "properties": {"kind": {"enum": ["resume", "linkedin"]}, "path": {"type": "string"}, "sha256": {"type": "string"}}}},
+    "lines": {"type": "array", "items": {
+      "type": "object", "required": ["id", "source", "text", "section"],
+      "properties": {
+        "id": {"type": "string", "pattern": "^[RL][0-9]+$"},
+        "source": {"enum": ["resume", "linkedin"]},
+        "text": {"type": "string"},
+        "section": {"type": "string"},
+        "employer": {"type": ["string", "null"]},
+        "title": {"type": ["string", "null"]},
+        "dates": {"type": ["string", "null"]},
+        "numbers": {"type": "array", "items": {"type": "string"}},
+        "own_role": {"enum": ["led", "co-led", "contributed", "unknown", null]},
+        "claim_type": {"enum": ["metric", "scope", "duty", "award", "education", "skill", "contact", "header", "other", null]},
+        "conflict": {"type": ["string", "null"]}
+      }}}
+  }
+}

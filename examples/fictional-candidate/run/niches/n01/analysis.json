@@ -1,0 +1,943 @@
+{
+ "niche": "n01",
+ "n_now": 8,
+ "n_live_weighted": 8.0,
+ "n_employers": 7,
+ "n_archive": 0,
+ "liveness": {
+  "live": 8
+ },
+ "confidence": "low",
+ "relaxed_thresholds": true,
+ "liveness_summary": {
+  "n": 8,
+  "bands": {
+   "live": 8
+  },
+  "age_buckets": {
+   "0-30": 8,
+   "31-60": 0,
+   "61-90": 0,
+   "90+": 0,
+   "unknown": 0
+  },
+  "doubtful_share": 0.0,
+  "benchmark": {
+   "low": 0.18,
+   "high": 0.22,
+   "source": "Greenhouse share of postings not actively being filled, per quarter (via Apollo Technical)"
+  }
+ },
+ "reliability": {
+  "n_postings": 8,
+  "pooled_kappa": 0.79,
+  "pooled_agree": 0.91,
+  "per_code": {
+   "aiu": {
+    "n": 8,
+    "agree": 1.0,
+    "kappa": 1.0
+   },
+   "mgr": {
+    "n": 8,
+    "agree": 1.0,
+    "kappa": 1.0
+   },
+   "zero": {
+    "n": 8,
+    "agree": 0.88,
+    "kappa": 0.75
+   },
+   "exec": {
+    "n": 8,
+    "agree": 0.88,
+    "kappa": 0.6
+   },
+   "intl": {
+    "n": 8,
+    "agree": 0.88,
+    "kappa": 0.6
+   },
+   "aip": {
+    "n": 8,
+    "agree": 0.88,
+    "kappa": 0.71
+   },
+   "pc": {
+    "n": 8,
+    "agree": 0.75,
+    "kappa": 0.5
+   },
+   "src": {
+    "n": 8,
+    "agree": 0.75,
+    "kappa": 0.0
+   },
+   "infl": {
+    "n": 8,
+    "agree": 0.75,
+    "kappa": 0.0
+   },
+   "quota": {
+    "n": 8,
+    "agree": 0.88,
+    "kappa": 0.71
+   },
+   "hyp": {
+    "n": 8,
+    "agree": 1.0,
+    "kappa": 1.0
+   },
+   "gsi": {
+    "n": 8,
+    "agree": 1.0,
+    "kappa": 1.0
+   },
+   "isv": {
+    "n": 8,
+    "agree": 1.0,
+    "kappa": null
+   },
+   "agy": {
+    "n": 8,
+    "agree": 1.0,
+    "kappa": 1.0
+   },
+   "mkt": {
+    "n": 8,
+    "agree": 0.88,
+    "kappa": 0.71
+   },
+   "cos": {
+    "n": 8,
+    "agree": 1.0,
+    "kappa": 1.0
+   },
+   "prog": {
+    "n": 8,
+    "agree": 1.0,
+    "kappa": 1.0
+   },
+   "deal": {
+    "n": 8,
+    "agree": 0.88,
+    "kappa": 0.6
+   }
+  }
+ },
+ "prevalence": [
+  {
+   "code": "aip",
+   "label": "Employer sells an AI / ML product",
+   "module": "partnerships",
+   "present": 1.0,
+   "lo": 0.676,
+   "hi": 1.0,
+   "required": 1.0,
+   "k": 8,
+   "n": 8,
+   "reliability": "ok"
+  },
+  {
+   "code": "mgr",
+   "label": "Manages people",
+   "module": "core",
+   "present": 0.875,
+   "lo": 0.529,
+   "hi": 0.978,
+   "required": 0.5,
+   "k": 7,
+   "n": 8,
+   "reliability": "ok"
+  },
+  {
+   "code": "deal",
+   "label": "Structures / negotiates complex deals",
+   "module": "partnerships",
+   "present": 0.875,
+   "lo": 0.529,
+   "hi": 0.978,
+   "required": 0.5,
+   "k": 7,
+   "n": 8,
+   "reliability": "ok"
+  },
+  {
+   "code": "prog",
+   "label": "Partner program design (tiers, incentives, enablement)",
+   "module": "partnerships",
+   "present": 0.75,
+   "lo": 0.409,
+   "hi": 0.929,
+   "required": 0.625,
+   "k": 6,
+   "n": 8,
+   "reliability": "ok"
+  },
+  {
+   "code": "zero",
+   "label": "Builds or launches something new",
+   "module": "core",
+   "present": 0.75,
+   "lo": 0.409,
+   "hi": 0.929,
+   "required": 0.375,
+   "k": 6,
+   "n": 8,
+   "reliability": "ok"
+  },
+  {
+   "code": "tech",
+   "label": "Technical depth (APIs, data stack, systems)",
+   "module": "partnerships",
+   "present": 0.75,
+   "lo": 0.409,
+   "hi": 0.929,
+   "required": 0.0,
+   "k": 6,
+   "n": 8,
+   "reliability": "unchecked"
+  },
+  {
+   "code": "gsi",
+   "label": "GSIs / SIs / consultancies as partners",
+   "module": "partnerships",
+   "present": 0.625,
+   "lo": 0.306,
+   "hi": 0.863,
+   "required": 0.625,
+   "k": 5,
+   "n": 8,
+   "reliability": "ok"
+  },
+  {
+   "code": "exec",
+   "label": "Works with senior leaders or executives",
+   "module": "core",
+   "present": 0.625,
+   "lo": 0.306,
+   "hi": 0.863,
+   "required": 0.5,
+   "k": 5,
+   "n": 8,
+   "reliability": "ok"
+  },
+  {
+   "code": "src",
+   "label": "Owns partner-sourced pipeline / revenue",
+   "module": "partnerships",
+   "present": 0.625,
+   "lo": 0.306,
+   "hi": 0.863,
+   "required": 0.5,
+   "k": 5,
+   "n": 8,
+   "reliability": "excluded"
+  },
+  {
+   "code": "isv",
+   "label": "ISV / technology / integration partners",
+   "module": "partnerships",
+   "present": 0.625,
+   "lo": 0.306,
+   "hi": 0.863,
+   "required": 0.375,
+   "k": 5,
+   "n": 8,
+   "reliability": "ok"
+  },
+  {
+   "code": "agy",
+   "label": "Agencies as partners",
+   "module": "partnerships",
+   "present": 0.5,
+   "lo": 0.215,
+   "hi": 0.785,
+   "required": 0.5,
+   "k": 4,
+   "n": 8,
+   "reliability": "ok"
+  },
+  {
+   "code": "intl",
+   "label": "Multi-site, multi-region or international scope",
+   "module": "core",
+   "present": 0.5,
+   "lo": 0.215,
+   "hi": 0.785,
+   "required": 0.375,
+   "k": 4,
+   "n": 8,
+   "reliability": "ok"
+  },
+  {
+   "code": "hyp",
+   "label": "Hyperscaler partners (AWS / GCP / Azure)",
+   "module": "partnerships",
+   "present": 0.5,
+   "lo": 0.215,
+   "hi": 0.785,
+   "required": 0.375,
+   "k": 4,
+   "n": 8,
+   "reliability": "ok"
+  },
+  {
+   "code": "cos",
+   "label": "Co-sell",
+   "module": "partnerships",
+   "present": 0.5,
+   "lo": 0.215,
+   "hi": 0.785,
+   "required": 0.375,
+   "k": 4,
+   "n": 8,
+   "reliability": "ok"
+  },
+  {
+   "code": "jbp",
+   "label": "Joint business plans / QBRs / account mapping",
+   "module": "partnerships",
+   "present": 0.5,
+   "lo": 0.215,
+   "hi": 0.785,
+   "required": 0.375,
+   "k": 4,
+   "n": 8,
+   "reliability": "unchecked"
+  },
+  {
+   "code": "pc",
+   "label": "Player-coach / hands-on individual contributor",
+   "module": "partnerships",
+   "present": 0.5,
+   "lo": 0.215,
+   "hi": 0.785,
+   "required": 0.25,
+   "k": 4,
+   "n": 8,
+   "reliability": "weak"
+  },
+  {
+   "code": "stb",
+   "label": "Fast-growth or new-venture environment",
+   "module": "core",
+   "present": 0.375,
+   "lo": 0.137,
+   "hi": 0.694,
+   "required": 0.25,
+   "k": 3,
+   "n": 8,
+   "reliability": "unchecked"
+  },
+  {
+   "code": "fcst",
+   "label": "Forecasting / attribution / CRM reporting",
+   "module": "partnerships",
+   "present": 0.375,
+   "lo": 0.137,
+   "hi": 0.694,
+   "required": 0.25,
+   "k": 3,
+   "n": 8,
+   "reliability": "unchecked"
+  },
+  {
+   "code": "aiu",
+   "label": "Uses AI or digital tools in the work",
+   "module": "core",
+   "present": 0.375,
+   "lo": 0.137,
+   "hi": 0.694,
+   "required": 0.125,
+   "k": 3,
+   "n": 8,
+   "reliability": "ok"
+  },
+  {
+   "code": "resl",
+   "label": "Resellers / VARs / channel",
+   "module": "partnerships",
+   "present": 0.375,
+   "lo": 0.137,
+   "hi": 0.694,
+   "required": 0.125,
+   "k": 3,
+   "n": 8,
+   "reliability": "unchecked"
+  },
+  {
+   "code": "conb",
+   "label": "Consulting background valued",
+   "module": "partnerships",
+   "present": 0.375,
+   "lo": 0.137,
+   "hi": 0.694,
+   "required": 0.0,
+   "k": 3,
+   "n": 8,
+   "reliability": "unchecked"
+  },
+  {
+   "code": "agyb",
+   "label": "Agency background valued",
+   "module": "partnerships",
+   "present": 0.375,
+   "lo": 0.137,
+   "hi": 0.694,
+   "required": 0.0,
+   "k": 3,
+   "n": 8,
+   "reliability": "unchecked"
+  },
+  {
+   "code": "hypb",
+   "label": "Hyperscaler experience required",
+   "module": "partnerships",
+   "present": 0.25,
+   "lo": 0.071,
+   "hi": 0.591,
+   "required": 0.25,
+   "k": 2,
+   "n": 8,
+   "reliability": "unchecked"
+  },
+  {
+   "code": "quota",
+   "label": "Carries a quota / revenue number",
+   "module": "partnerships",
+   "present": 0.25,
+   "lo": 0.071,
+   "hi": 0.591,
+   "required": 0.125,
+   "k": 2,
+   "n": 8,
+   "reliability": "ok"
+  },
+  {
+   "code": "com",
+   "label": "Co-marketing / partner funds",
+   "module": "partnerships",
+   "present": 0.25,
+   "lo": 0.071,
+   "hi": 0.591,
+   "required": 0.125,
+   "k": 2,
+   "n": 8,
+   "reliability": "unchecked"
+  },
+  {
+   "code": "mkt",
+   "label": "Cloud marketplaces",
+   "module": "partnerships",
+   "present": 0.125,
+   "lo": 0.022,
+   "hi": 0.471,
+   "required": 0.125,
+   "k": 1,
+   "n": 8,
+   "reliability": "ok"
+  },
+  {
+   "code": "csuite",
+   "label": "Reports to top leadership",
+   "module": "core",
+   "present": 0.125,
+   "lo": 0.022,
+   "hi": 0.471,
+   "required": 0.0,
+   "k": 1,
+   "n": 8,
+   "reliability": "unchecked"
+  },
+  {
+   "code": "aig",
+   "label": "AI governance / responsible AI",
+   "module": "partnerships",
+   "present": 0.125,
+   "lo": 0.022,
+   "hi": 0.471,
+   "required": 0.0,
+   "k": 1,
+   "n": 8,
+   "reliability": "unchecked"
+  },
+  {
+   "code": "infl",
+   "label": "Partner-influenced revenue",
+   "module": "partnerships",
+   "present": 0.125,
+   "lo": 0.022,
+   "hi": 0.471,
+   "required": 0.0,
+   "k": 1,
+   "n": 8,
+   "reliability": "excluded"
+  },
+  {
+   "code": "res",
+   "label": "Resale",
+   "module": "partnerships",
+   "present": 0.125,
+   "lo": 0.022,
+   "hi": 0.471,
+   "required": 0.0,
+   "k": 1,
+   "n": 8,
+   "reliability": "unchecked"
+  },
+  {
+   "code": "oem",
+   "label": "OEM / embedded",
+   "module": "partnerships",
+   "present": 0.125,
+   "lo": 0.022,
+   "hi": 0.471,
+   "required": 0.0,
+   "k": 1,
+   "n": 8,
+   "reliability": "unchecked"
+  },
+  {
+   "code": "tool",
+   "label": "Named tools, software or equipment",
+   "module": "core",
+   "present": 0.0,
+   "lo": 0.0,
+   "hi": 0.324,
+   "required": 0.0,
+   "k": 0,
+   "n": 8,
+   "reliability": "unchecked"
+  },
+  {
+   "code": "lang",
+   "label": "Languages required",
+   "module": "core",
+   "present": 0.0,
+   "lo": 0.0,
+   "hi": 0.324,
+   "required": 0.0,
+   "k": 0,
+   "n": 8,
+   "reliability": "unchecked"
+  },
+  {
+   "code": "budget",
+   "label": "Owns a budget, P&L or cost line",
+   "module": "core",
+   "present": 0.0,
+   "lo": 0.0,
+   "hi": 0.324,
+   "required": 0.0,
+   "k": 0,
+   "n": 8,
+   "reliability": "unchecked"
+  },
+  {
+   "code": "cred",
+   "label": "Licence or certification required",
+   "module": "core",
+   "present": 0.0,
+   "lo": 0.0,
+   "hi": 0.324,
+   "required": 0.0,
+   "k": 0,
+   "n": 8,
+   "reliability": "unchecked"
+  },
+  {
+   "code": "shift",
+   "label": "Shifts, on-call or travel",
+   "module": "core",
+   "present": 0.0,
+   "lo": 0.0,
+   "hi": 0.324,
+   "required": 0.0,
+   "k": 0,
+   "n": 8,
+   "reliability": "unchecked"
+  },
+  {
+   "code": "safety",
+   "label": "Safety, compliance or regulation",
+   "module": "core",
+   "present": 0.0,
+   "lo": 0.0,
+   "hi": 0.324,
+   "required": 0.0,
+   "k": 0,
+   "n": 8,
+   "reliability": "unchecked"
+  },
+  {
+   "code": "cust",
+   "label": "Directly serves customers, patients or clients",
+   "module": "core",
+   "present": 0.0,
+   "lo": 0.0,
+   "hi": 0.324,
+   "required": 0.0,
+   "k": 0,
+   "n": 8,
+   "reliability": "unchecked"
+  },
+  {
+   "code": "data",
+   "label": "Uses data or metrics to decide",
+   "module": "core",
+   "present": 0.0,
+   "lo": 0.0,
+   "hi": 0.324,
+   "required": 0.0,
+   "k": 0,
+   "n": 8,
+   "reliability": "unchecked"
+  },
+  {
+   "code": "train",
+   "label": "Trains or mentors others",
+   "module": "core",
+   "present": 0.0,
+   "lo": 0.0,
+   "hi": 0.324,
+   "required": 0.0,
+   "k": 0,
+   "n": 8,
+   "reliability": "unchecked"
+  },
+  {
+   "code": "aib",
+   "label": "Candidate builds AI agents / automation",
+   "module": "partnerships",
+   "present": 0.0,
+   "lo": 0.0,
+   "hi": 0.324,
+   "required": 0.0,
+   "k": 0,
+   "n": 8,
+   "reliability": "unchecked"
+  },
+  {
+   "code": "arrn",
+   "label": "States a numeric ARR threshold for the candidate",
+   "module": "partnerships",
+   "present": 0.0,
+   "lo": 0.0,
+   "hi": 0.324,
+   "required": 0.0,
+   "k": 0,
+   "n": 8,
+   "reliability": "unchecked"
+  }
+ ],
+ "top_required": [
+  "aip",
+  "prog",
+  "gsi",
+  "mgr",
+  "deal",
+  "exec",
+  "agy",
+  "zero",
+  "isv",
+  "intl"
+ ],
+ "bundles": [
+  {
+   "a": "stb",
+   "b": "com",
+   "both": 0.25,
+   "lift": 2.67
+  },
+  {
+   "a": "aiu",
+   "b": "hypb",
+   "both": 0.25,
+   "lift": 2.67
+  },
+  {
+   "a": "resl",
+   "b": "com",
+   "both": 0.25,
+   "lift": 2.67
+  },
+  {
+   "a": "agyb",
+   "b": "hypb",
+   "both": 0.25,
+   "lift": 2.67
+  },
+  {
+   "a": "agyb",
+   "b": "com",
+   "both": 0.25,
+   "lift": 2.67
+  },
+  {
+   "a": "agy",
+   "b": "agyb",
+   "both": 0.38,
+   "lift": 2.0
+  },
+  {
+   "a": "agy",
+   "b": "hypb",
+   "both": 0.25,
+   "lift": 2.0
+  },
+  {
+   "a": "agy",
+   "b": "com",
+   "both": 0.25,
+   "lift": 2.0
+  }
+ ],
+ "clusters": null,
+ "pay": {
+  "currency": "USD",
+  "n": 2,
+  "median": null,
+  "median_low_n": 304500.0,
+  "note": "2 posted pay range(s); a band needs at least 3"
+ },
+ "years": {
+  "n": 5,
+  "median": 7.0
+ },
+ "builder_index": {
+  "ratio": 0.9,
+  "build": 27,
+  "maintain": 3
+ },
+ "levels": {
+  "Head": 7,
+  "VP": 1
+ },
+ "employers": [
+  "Amplemarket",
+  "Botify",
+  "Conveo",
+  "Decagon",
+  "Hex",
+  "OpenAI",
+  "Profound"
+ ],
+ "language": {
+  "contrast": "other niches",
+  "contrast_n": 34,
+  "keyness": [
+   {
+    "term": "program",
+    "z": 1.38,
+    "n_in": 4,
+    "n_out": 2
+   },
+   {
+    "term": "agency",
+    "z": 1.31,
+    "n_in": 3,
+    "n_out": 1
+   },
+   {
+    "term": "strategies",
+    "z": 1.3,
+    "n_in": 2,
+    "n_out": 0
+   },
+   {
+    "term": "define",
+    "z": 1.09,
+    "n_in": 3,
+    "n_out": 2
+   },
+   {
+    "term": "operating",
+    "z": 0.97,
+    "n_in": 2,
+    "n_out": 1
+   },
+   {
+    "term": "build",
+    "z": 0.78,
+    "n_in": 5,
+    "n_out": 9
+   },
+   {
+    "term": "sell",
+    "z": 0.77,
+    "n_in": 3,
+    "n_out": 4
+   },
+   {
+    "term": "product",
+    "z": 0.75,
+    "n_in": 2,
+    "n_out": 2
+   },
+   {
+    "term": "partnership",
+    "z": 0.62,
+    "n_in": 5,
+    "n_out": 11
+   },
+   {
+    "term": "through",
+    "z": 0.57,
+    "n_in": 2,
+    "n_out": 3
+   },
+   {
+    "term": "si",
+    "z": 0.57,
+    "n_in": 2,
+    "n_out": 3
+   },
+   {
+    "term": "leadership",
+    "z": 0.57,
+    "n_in": 2,
+    "n_out": 3
+   },
+   {
+    "term": "growth",
+    "z": 0.44,
+    "n_in": 2,
+    "n_out": 4
+   },
+   {
+    "term": "ai",
+    "z": 0.35,
+    "n_in": 3,
+    "n_out": 8
+   },
+   {
+    "term": "execution",
+    "z": 0.32,
+    "n_in": 2,
+    "n_out": 5
+   }
+  ],
+  "phrases": [
+   "outcomes-first approach to strategy and execution",
+   "build a scalable and disciplined partner program",
+   "Manage channel conflict",
+   "build this function from zero",
+   "a build role with commercial teeth",
+   "a partner program that compounds",
+   "true lead gen engine",
+   "agency friendly program",
+   "influencing product strategies",
+   "architect and lead the global partnership strategy",
+   "definitive platform for AI search optimization",
+   "decision-ready memos, plans, and executive updates",
+   "Strong technical and product fluency",
+   "single accountable executive owner of the alliance",
+   "operating system for hundreds of joint clients"
+  ],
+  "top_terms": [
+   [
+    "partnership",
+    5
+   ],
+   [
+    "partnerships",
+    5
+   ],
+   [
+    "build",
+    5
+   ],
+   [
+    "partner",
+    4
+   ],
+   [
+    "program",
+    4
+   ],
+   [
+    "strategy",
+    3
+   ],
+   [
+    "define",
+    3
+   ],
+   [
+    "agency",
+    3
+   ],
+   [
+    "own",
+    3
+   ],
+   [
+    "sell",
+    3
+   ],
+   [
+    "lead",
+    3
+   ],
+   [
+    "ai",
+    3
+   ],
+   [
+    "executive",
+    3
+   ],
+   [
+    "through",
+    2
+   ],
+   [
+    "si",
+    2
+   ],
+   [
+    "strategies",
+    2
+   ],
+   [
+    "high",
+    2
+   ],
+   [
+    "execution",
+    2
+   ],
+   [
+    "sales",
+    2
+   ],
+   [
+    "leadership",
+    2
+   ],
+   [
+    "commercial",
+    2
+   ],
+   [
+    "partners",
+    2
+   ],
+   [
+    "deal",
+    2
+   ],
+   [
+    "relationships",
+    2
+   ],
+   [
+    "product",
+    2
+   ]
+  ]
+ },
+ "change": null,
+ "change_hidden_reason": "0 archive postings (< 10 needed)"
+}

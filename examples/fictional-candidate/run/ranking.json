@@ -1,0 +1,210 @@
+{
+ "weights": {
+  "fit": 35,
+  "pay": 15,
+  "demand": 15,
+  "momentum": 10,
+  "preference": 10,
+  "access": 10,
+  "rarity": 5
+ },
+ "order": [
+  "n02",
+  "n01",
+  "n04",
+  "n03"
+ ],
+ "niches": [
+  {
+   "id": "n02",
+   "rank": 1,
+   "score": 65.1,
+   "components": {
+    "fit": 0.558,
+    "pay": 0.596,
+    "demand": 0.848,
+    "momentum": 0.5,
+    "preference": 1.0,
+    "access": 0.556,
+    "rarity": 0.667
+   },
+   "verdict": "Pivot",
+   "flags": [
+    "low confidence"
+   ]
+  },
+  {
+   "id": "n01",
+   "rank": 2,
+   "score": 62.1,
+   "components": {
+    "fit": 0.587,
+    "pay": 0.5,
+    "demand": 0.792,
+    "momentum": 0.5,
+    "preference": 1.0,
+    "access": 0.714,
+    "rarity": 0.0
+   },
+   "verdict": "Stretch",
+   "flags": [
+    "low confidence"
+   ]
+  },
+  {
+   "id": "n04",
+   "rank": 3,
+   "score": 60.5,
+   "components": {
+    "fit": 0.554,
+    "pay": 0.5,
+    "demand": 0.865,
+    "momentum": 0.5,
+    "preference": 0.6,
+    "access": 0.625,
+    "rarity": 0.667
+   },
+   "verdict": "Stretch",
+   "flags": [
+    "low confidence"
+   ]
+  },
+  {
+   "id": "n03",
+   "rank": 4,
+   "score": 59.5,
+   "components": {
+    "fit": 0.52,
+    "pay": 0.5,
+    "demand": 1.0,
+    "momentum": 0.654,
+    "preference": 0.7,
+    "access": 0.364,
+    "rarity": 0.333
+   },
+   "verdict": "Stretch",
+   "flags": [
+    "low confidence"
+   ]
+  }
+ ],
+ "sensitivity": {
+  "draws": 1000,
+  "rank_freq": {
+   "n01": [
+    0.065,
+    0.626,
+    0.178,
+    0.131
+   ],
+   "n02": [
+    0.933,
+    0.067,
+    0.0,
+    0.0
+   ],
+   "n03": [
+    0.002,
+    0.098,
+    0.32,
+    0.58
+   ],
+   "n04": [
+    0.0,
+    0.209,
+    0.502,
+    0.289
+   ]
+  },
+  "p_top3": {
+   "n01": 0.869,
+   "n02": 1.0,
+   "n03": 0.42,
+   "n04": 0.711
+  },
+  "stable": false,
+  "same_top3_share": 0.58
+ },
+ "overlap": {
+  "ids": [
+   "n02",
+   "n01",
+   "n04",
+   "n03"
+  ],
+  "requirements": [
+   [
+    1.0,
+    0.84,
+    0.85,
+    0.88
+   ],
+   [
+    0.84,
+    1.0,
+    0.87,
+    0.73
+   ],
+   [
+    0.85,
+    0.87,
+    1.0,
+    0.78
+   ],
+   [
+    0.88,
+    0.73,
+    0.78,
+    1.0
+   ]
+  ],
+  "employers": [
+   [
+    1.0,
+    0.0,
+    0.0,
+    0.11
+   ],
+   [
+    0.0,
+    1.0,
+    0.0,
+    0.06
+   ],
+   [
+    0.0,
+    0.0,
+    1.0,
+    0.0
+   ],
+   [
+    0.11,
+    0.06,
+    0.0,
+    1.0
+   ]
+  ]
+ },
+ "sequence": [
+  {
+   "niche_id": "n02",
+   "phase": "now",
+   "trigger": "active from week 1"
+  },
+  {
+   "niche_id": "n01",
+   "phase": "now",
+   "trigger": "active from week 1"
+  },
+  {
+   "niche_id": "n04",
+   "phase": "next",
+   "trigger": "activate if an active niche gets no interview after 10 referral-led approaches, or by week 8"
+  },
+  {
+   "niche_id": "n03",
+   "phase": "next",
+   "trigger": "activate if an active niche gets no interview after 10 referral-led approaches, or by week 8"
+  }
+ ]
+}

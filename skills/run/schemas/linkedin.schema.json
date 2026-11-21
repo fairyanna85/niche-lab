@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "linkedin.json — LinkedIn rewrite for the rank-1 niche, consistent with every resume version",
+  "type": "object",
+  "required": ["niche_id", "headline", "about", "experience", "skills", "alternates", "open_to_titles"],
+  "properties": {
+    "niche_id": {"type": "string"},
+    "headline": {"type": "string", "minLength": 20},
+    "about": {"type": "string", "minLength": 200},
+    "about_ledger": {"type": "array", "items": {"type": "string"}},
+    "experience": {"type": "array", "minItems": 1, "items": {"type": "object", "required": ["employer", "title", "dates", "description", "ledger"],
+      "properties": {"description": {"type": "string"}, "ledger": {"type": "array", "items": {"type": "string"}}}}},
+    "skills": {"type": "array", "minItems": 5, "maxItems": 100, "items": {"type": "string"}},
+    "featured": {"type": "array", "items": {"type": "object", "required": ["title", "why"]}},
+    "open_to_titles": {"type": "array", "minItems": 1, "maxItems": 5, "items": {"type": "string"}},
+    "alternates": {"type": "array", "items": {"type": "object", "required": ["niche_id", "headline"]}},
+    "connection_note": {"type": "string"}
+  }
+}

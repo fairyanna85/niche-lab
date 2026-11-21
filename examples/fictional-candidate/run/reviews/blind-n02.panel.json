@@ -1,0 +1,28 @@
+{
+ "niche_id": "n02",
+ "panel": [
+  {
+   "reviewer": "recruiter",
+   "old": 6,
+   "new": 6,
+   "chose": "new",
+   "why": "B's headline puts the $18M partner-sourced pipeline and the Head of Partnerships, martech and data, framing where I scan, though the visible bracketed placeholders make it look unfinished and A is the cleaner file."
+  },
+  {
+   "reviewer": "hiring manager",
+   "old": 7,
+   "new": 4,
+   "chose": "old",
+   "why": "A reads as a finished, credible record of the same achievements, while B has about fifteen unfilled bracket fields, such as the company description, baselines and ARR, that suggest a draft and leave the scope of the work unclear."
+  },
+  {
+   "reviewer": "executive",
+   "old": 6,
+   "new": 4,
+   "chose": "old",
+   "why": "A is a sendable document with real numbers, while B's placeholders, and a Head of Partnerships headline over a Director title, make it look unready and slightly inflated, even though its summary states the outcome better."
+  }
+ ],
+ "independent": false,
+ "note": "three readers played in one session"
+}

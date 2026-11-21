@@ -1,0 +1,113 @@
+{
+ "n": 10,
+ "sources": {
+  "fictional": 10
+ },
+ "codes": {
+  "agy": 0.7,
+  "agyb": 0.1,
+  "aib": 0.0,
+  "aig": 0.0,
+  "aip": 0.1,
+  "aiu": 0.0,
+  "arrn": 0.0,
+  "budget": 0.0,
+  "com": 0.7,
+  "conb": 0.0,
+  "cos": 0.7,
+  "cred": 0.0,
+  "csuite": 0.7,
+  "cust": 0.0,
+  "data": 0.0,
+  "deal": 0.5,
+  "exec": 0.6,
+  "fcst": 0.6,
+  "gsi": 0.2,
+  "hyp": 0.1,
+  "hypb": 0.3,
+  "infl": 0.7,
+  "intl": 0.9,
+  "isv": 0.9,
+  "jbp": 1.0,
+  "lang": 0.0,
+  "mgr": 0.3,
+  "mkt": 0.0,
+  "oem": 0.0,
+  "pc": 0.2,
+  "prog": 0.7,
+  "quota": 0.4,
+  "res": 0.0,
+  "resl": 0.1,
+  "safety": 0.0,
+  "shift": 0.0,
+  "src": 0.7,
+  "stb": 0.4,
+  "tech": 0.8,
+  "tool": 0.5,
+  "train": 0.0,
+  "zero": 0.6
+ },
+ "years": {
+  "n": 10,
+  "median": 12.0,
+  "top_quartile": 12.75,
+  "values": [
+   4,
+   8,
+   10,
+   10,
+   12,
+   12,
+   12,
+   13,
+   13,
+   13
+  ]
+ },
+ "paths": [
+  {
+   "path": "partner manager at a martech platform",
+   "n": 3
+  },
+  {
+   "path": "channel sales manager at a SaaS scale-up",
+   "n": 2
+  },
+  {
+   "path": "alliances lead at a data warehouse vendor",
+   "n": 2
+  },
+  {
+   "path": "solutions consultant turned partner lead",
+   "n": 2
+  },
+  {
+   "path": "agency partnerships director",
+   "n": 1
+  }
+ ],
+ "employer_types": [
+  {
+   "type": "start-up",
+   "n": 3
+  },
+  {
+   "type": "systems integrator",
+   "n": 3
+  },
+  {
+   "type": "agency or consultancy",
+   "n": 2
+  },
+  {
+   "type": "SaaS vendor",
+   "n": 1
+  },
+  {
+   "type": "cloud provider",
+   "n": 1
+  }
+ ],
+ "second_coded": 4,
+ "kappa": 0.95
+}

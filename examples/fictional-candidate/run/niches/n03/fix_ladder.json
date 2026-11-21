@@ -1,0 +1,153 @@
+{
+ "niche": "n03",
+ "base": {
+  "fit": 0.52,
+  "coverage": 0.6
+ },
+ "steps": [
+  {
+   "code": "cos",
+   "label": "Co-sell",
+   "from_grade": 1,
+   "demand": 0.8,
+   "coverage_gain": 0.1,
+   "fit_gain": 0.083,
+   "kind": "surface"
+  },
+  {
+   "code": "aip",
+   "label": "Employer sells an AI / ML product",
+   "from_grade": 0,
+   "demand": 0.8,
+   "coverage_gain": 0.1,
+   "fit_gain": 0.071,
+   "kind": "build"
+  },
+  {
+   "code": "fcst",
+   "label": "Forecasting / attribution / CRM reporting",
+   "from_grade": 1,
+   "demand": 0.733,
+   "coverage_gain": 0.1,
+   "fit_gain": 0.055,
+   "kind": "surface"
+  },
+  {
+   "code": "exec",
+   "label": "Works with senior leaders or executives",
+   "from_grade": 0,
+   "demand": 0.6,
+   "coverage_gain": 0.1,
+   "fit_gain": 0.052,
+   "kind": "build"
+  },
+  {
+   "code": "quota",
+   "label": "Carries a quota / revenue number",
+   "from_grade": 0,
+   "demand": 0.467,
+   "coverage_gain": 0.0,
+   "fit_gain": 0.04,
+   "kind": "build"
+  },
+  {
+   "code": "stb",
+   "label": "Fast-growth or new-venture environment",
+   "from_grade": 0,
+   "demand": 0.4,
+   "coverage_gain": 0.0,
+   "fit_gain": 0.032,
+   "kind": "build"
+  },
+  {
+   "code": "tool",
+   "label": "Named tools, software or equipment",
+   "from_grade": 1,
+   "demand": 0.333,
+   "coverage_gain": 0.0,
+   "fit_gain": 0.028,
+   "kind": "surface"
+  },
+  {
+   "code": "csuite",
+   "label": "Reports to top leadership",
+   "from_grade": 0,
+   "demand": 0.267,
+   "coverage_gain": 0.0,
+   "fit_gain": 0.024,
+   "kind": "build"
+  },
+  {
+   "code": "jbp",
+   "label": "Joint business plans / QBRs / account mapping",
+   "from_grade": 2,
+   "demand": 0.933,
+   "coverage_gain": 0.0,
+   "fit_gain": 0.023,
+   "kind": "surface"
+  },
+  {
+   "code": "gsi",
+   "label": "GSIs / SIs / consultancies as partners",
+   "from_grade": 0,
+   "demand": 0.2,
+   "coverage_gain": 0.0,
+   "fit_gain": 0.02,
+   "kind": "build"
+  },
+  {
+   "code": "tech",
+   "label": "Technical depth (APIs, data stack, systems)",
+   "from_grade": 2,
+   "demand": 0.733,
+   "coverage_gain": 0.0,
+   "fit_gain": 0.014,
+   "kind": "surface"
+  },
+  {
+   "code": "intl",
+   "label": "Multi-site, multi-region or international scope",
+   "from_grade": 2,
+   "demand": 0.467,
+   "coverage_gain": 0.0,
+   "fit_gain": 0.011,
+   "kind": "surface"
+  },
+  {
+   "code": "hyp",
+   "label": "Hyperscaler partners (AWS / GCP / Azure)",
+   "from_grade": 2,
+   "demand": 0.467,
+   "coverage_gain": 0.0,
+   "fit_gain": 0.01,
+   "kind": "surface"
+  },
+  {
+   "code": "pc",
+   "label": "Player-coach / hands-on individual contributor",
+   "from_grade": 2,
+   "demand": 0.267,
+   "coverage_gain": 0.0,
+   "fit_gain": 0.007,
+   "kind": "surface"
+  },
+  {
+   "code": "aiu",
+   "label": "Uses AI or digital tools in the work",
+   "from_grade": 2,
+   "demand": 0.333,
+   "coverage_gain": 0.0,
+   "fit_gain": 0.006,
+   "kind": "surface"
+  },
+  {
+   "code": "conb",
+   "label": "Consulting background valued",
+   "from_grade": 2,
+   "demand": 0.267,
+   "coverage_gain": 0.0,
+   "fit_gain": 0.005,
+   "kind": "surface"
+  }
+ ]
+}

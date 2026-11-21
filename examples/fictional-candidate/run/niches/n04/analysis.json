@@ -1,0 +1,951 @@
+{
+ "niche": "n04",
+ "n_now": 10,
+ "n_live_weighted": 10.0,
+ "n_employers": 8,
+ "n_archive": 0,
+ "liveness": {
+  "live": 10
+ },
+ "confidence": "low",
+ "relaxed_thresholds": true,
+ "liveness_summary": {
+  "n": 10,
+  "bands": {
+   "live": 10
+  },
+  "age_buckets": {
+   "0-30": 10,
+   "31-60": 0,
+   "61-90": 0,
+   "90+": 0,
+   "unknown": 0
+  },
+  "doubtful_share": 0.0,
+  "benchmark": {
+   "low": 0.18,
+   "high": 0.22,
+   "source": "Greenhouse share of postings not actively being filled, per quarter (via Apollo Technical)"
+  }
+ },
+ "reliability": {
+  "n_postings": 8,
+  "pooled_kappa": 0.79,
+  "pooled_agree": 0.91,
+  "per_code": {
+   "aiu": {
+    "n": 8,
+    "agree": 1.0,
+    "kappa": 1.0
+   },
+   "mgr": {
+    "n": 8,
+    "agree": 1.0,
+    "kappa": 1.0
+   },
+   "zero": {
+    "n": 8,
+    "agree": 0.88,
+    "kappa": 0.75
+   },
+   "exec": {
+    "n": 8,
+    "agree": 0.88,
+    "kappa": 0.6
+   },
+   "intl": {
+    "n": 8,
+    "agree": 0.88,
+    "kappa": 0.6
+   },
+   "aip": {
+    "n": 8,
+    "agree": 0.88,
+    "kappa": 0.71
+   },
+   "pc": {
+    "n": 8,
+    "agree": 0.75,
+    "kappa": 0.5
+   },
+   "src": {
+    "n": 8,
+    "agree": 0.75,
+    "kappa": 0.0
+   },
+   "infl": {
+    "n": 8,
+    "agree": 0.75,
+    "kappa": 0.0
+   },
+   "quota": {
+    "n": 8,
+    "agree": 0.88,
+    "kappa": 0.71
+   },
+   "hyp": {
+    "n": 8,
+    "agree": 1.0,
+    "kappa": 1.0
+   },
+   "gsi": {
+    "n": 8,
+    "agree": 1.0,
+    "kappa": 1.0
+   },
+   "isv": {
+    "n": 8,
+    "agree": 1.0,
+    "kappa": null
+   },
+   "agy": {
+    "n": 8,
+    "agree": 1.0,
+    "kappa": 1.0
+   },
+   "mkt": {
+    "n": 8,
+    "agree": 0.88,
+    "kappa": 0.71
+   },
+   "cos": {
+    "n": 8,
+    "agree": 1.0,
+    "kappa": 1.0
+   },
+   "prog": {
+    "n": 8,
+    "agree": 1.0,
+    "kappa": 1.0
+   },
+   "deal": {
+    "n": 8,
+    "agree": 0.88,
+    "kappa": 0.6
+   }
+  }
+ },
+ "prevalence": [
+  {
+   "code": "intl",
+   "label": "Multi-site, multi-region or international scope",
+   "module": "core",
+   "present": 1.0,
+   "lo": 0.722,
+   "hi": 1.0,
+   "required": 0.8,
+   "k": 10,
+   "n": 10,
+   "reliability": "ok"
+  },
+  {
+   "code": "src",
+   "label": "Owns partner-sourced pipeline / revenue",
+   "module": "partnerships",
+   "present": 1.0,
+   "lo": 0.722,
+   "hi": 1.0,
+   "required": 0.4,
+   "k": 10,
+   "n": 10,
+   "reliability": "excluded"
+  },
+  {
+   "code": "aip",
+   "label": "Employer sells an AI / ML product",
+   "module": "partnerships",
+   "present": 0.9,
+   "lo": 0.596,
+   "hi": 0.982,
+   "required": 0.8,
+   "k": 9,
+   "n": 10,
+   "reliability": "ok"
+  },
+  {
+   "code": "jbp",
+   "label": "Joint business plans / QBRs / account mapping",
+   "module": "partnerships",
+   "present": 0.9,
+   "lo": 0.596,
+   "hi": 0.982,
+   "required": 0.4,
+   "k": 9,
+   "n": 10,
+   "reliability": "unchecked"
+  },
+  {
+   "code": "isv",
+   "label": "ISV / technology / integration partners",
+   "module": "partnerships",
+   "present": 0.8,
+   "lo": 0.49,
+   "hi": 0.943,
+   "required": 0.7,
+   "k": 8,
+   "n": 10,
+   "reliability": "ok"
+  },
+  {
+   "code": "prog",
+   "label": "Partner program design (tiers, incentives, enablement)",
+   "module": "partnerships",
+   "present": 0.8,
+   "lo": 0.49,
+   "hi": 0.943,
+   "required": 0.6,
+   "k": 8,
+   "n": 10,
+   "reliability": "ok"
+  },
+  {
+   "code": "exec",
+   "label": "Works with senior leaders or executives",
+   "module": "core",
+   "present": 0.8,
+   "lo": 0.49,
+   "hi": 0.943,
+   "required": 0.2,
+   "k": 8,
+   "n": 10,
+   "reliability": "ok"
+  },
+  {
+   "code": "zero",
+   "label": "Builds or launches something new",
+   "module": "core",
+   "present": 0.7,
+   "lo": 0.397,
+   "hi": 0.892,
+   "required": 0.6,
+   "k": 7,
+   "n": 10,
+   "reliability": "ok"
+  },
+  {
+   "code": "gsi",
+   "label": "GSIs / SIs / consultancies as partners",
+   "module": "partnerships",
+   "present": 0.7,
+   "lo": 0.397,
+   "hi": 0.892,
+   "required": 0.6,
+   "k": 7,
+   "n": 10,
+   "reliability": "ok"
+  },
+  {
+   "code": "cos",
+   "label": "Co-sell",
+   "module": "partnerships",
+   "present": 0.7,
+   "lo": 0.397,
+   "hi": 0.892,
+   "required": 0.6,
+   "k": 7,
+   "n": 10,
+   "reliability": "ok"
+  },
+  {
+   "code": "infl",
+   "label": "Partner-influenced revenue",
+   "module": "partnerships",
+   "present": 0.7,
+   "lo": 0.397,
+   "hi": 0.892,
+   "required": 0.3,
+   "k": 7,
+   "n": 10,
+   "reliability": "excluded"
+  },
+  {
+   "code": "lang",
+   "label": "Languages required",
+   "module": "core",
+   "present": 0.6,
+   "lo": 0.313,
+   "hi": 0.832,
+   "required": 0.4,
+   "k": 6,
+   "n": 10,
+   "reliability": "unchecked"
+  },
+  {
+   "code": "deal",
+   "label": "Structures / negotiates complex deals",
+   "module": "partnerships",
+   "present": 0.6,
+   "lo": 0.313,
+   "hi": 0.832,
+   "required": 0.4,
+   "k": 6,
+   "n": 10,
+   "reliability": "ok"
+  },
+  {
+   "code": "stb",
+   "label": "Fast-growth or new-venture environment",
+   "module": "core",
+   "present": 0.6,
+   "lo": 0.313,
+   "hi": 0.832,
+   "required": 0.3,
+   "k": 6,
+   "n": 10,
+   "reliability": "unchecked"
+  },
+  {
+   "code": "com",
+   "label": "Co-marketing / partner funds",
+   "module": "partnerships",
+   "present": 0.6,
+   "lo": 0.313,
+   "hi": 0.832,
+   "required": 0.3,
+   "k": 6,
+   "n": 10,
+   "reliability": "unchecked"
+  },
+  {
+   "code": "tech",
+   "label": "Technical depth (APIs, data stack, systems)",
+   "module": "partnerships",
+   "present": 0.6,
+   "lo": 0.313,
+   "hi": 0.832,
+   "required": 0.0,
+   "k": 6,
+   "n": 10,
+   "reliability": "unchecked"
+  },
+  {
+   "code": "pc",
+   "label": "Player-coach / hands-on individual contributor",
+   "module": "partnerships",
+   "present": 0.5,
+   "lo": 0.237,
+   "hi": 0.763,
+   "required": 0.5,
+   "k": 5,
+   "n": 10,
+   "reliability": "weak"
+  },
+  {
+   "code": "fcst",
+   "label": "Forecasting / attribution / CRM reporting",
+   "module": "partnerships",
+   "present": 0.5,
+   "lo": 0.237,
+   "hi": 0.763,
+   "required": 0.3,
+   "k": 5,
+   "n": 10,
+   "reliability": "unchecked"
+  },
+  {
+   "code": "hyp",
+   "label": "Hyperscaler partners (AWS / GCP / Azure)",
+   "module": "partnerships",
+   "present": 0.5,
+   "lo": 0.237,
+   "hi": 0.763,
+   "required": 0.3,
+   "k": 5,
+   "n": 10,
+   "reliability": "ok"
+  },
+  {
+   "code": "resl",
+   "label": "Resellers / VARs / channel",
+   "module": "partnerships",
+   "present": 0.5,
+   "lo": 0.237,
+   "hi": 0.763,
+   "required": 0.3,
+   "k": 5,
+   "n": 10,
+   "reliability": "unchecked"
+  },
+  {
+   "code": "quota",
+   "label": "Carries a quota / revenue number",
+   "module": "partnerships",
+   "present": 0.4,
+   "lo": 0.168,
+   "hi": 0.687,
+   "required": 0.2,
+   "k": 4,
+   "n": 10,
+   "reliability": "ok"
+  },
+  {
+   "code": "hypb",
+   "label": "Hyperscaler experience required",
+   "module": "partnerships",
+   "present": 0.4,
+   "lo": 0.168,
+   "hi": 0.687,
+   "required": 0.2,
+   "k": 4,
+   "n": 10,
+   "reliability": "unchecked"
+  },
+  {
+   "code": "csuite",
+   "label": "Reports to top leadership",
+   "module": "core",
+   "present": 0.3,
+   "lo": 0.108,
+   "hi": 0.603,
+   "required": 0.1,
+   "k": 3,
+   "n": 10,
+   "reliability": "unchecked"
+  },
+  {
+   "code": "agy",
+   "label": "Agencies as partners",
+   "module": "partnerships",
+   "present": 0.2,
+   "lo": 0.057,
+   "hi": 0.51,
+   "required": 0.2,
+   "k": 2,
+   "n": 10,
+   "reliability": "ok"
+  },
+  {
+   "code": "aiu",
+   "label": "Uses AI or digital tools in the work",
+   "module": "core",
+   "present": 0.2,
+   "lo": 0.057,
+   "hi": 0.51,
+   "required": 0.1,
+   "k": 2,
+   "n": 10,
+   "reliability": "ok"
+  },
+  {
+   "code": "mgr",
+   "label": "Manages people",
+   "module": "core",
+   "present": 0.2,
+   "lo": 0.057,
+   "hi": 0.51,
+   "required": 0.1,
+   "k": 2,
+   "n": 10,
+   "reliability": "ok"
+  },
+  {
+   "code": "conb",
+   "label": "Consulting background valued",
+   "module": "partnerships",
+   "present": 0.2,
+   "lo": 0.057,
+   "hi": 0.51,
+   "required": 0.0,
+   "k": 2,
+   "n": 10,
+   "reliability": "unchecked"
+  },
+  {
+   "code": "mkt",
+   "label": "Cloud marketplaces",
+   "module": "partnerships",
+   "present": 0.1,
+   "lo": 0.018,
+   "hi": 0.404,
+   "required": 0.1,
+   "k": 1,
+   "n": 10,
+   "reliability": "ok"
+  },
+  {
+   "code": "res",
+   "label": "Resale",
+   "module": "partnerships",
+   "present": 0.1,
+   "lo": 0.018,
+   "hi": 0.404,
+   "required": 0.1,
+   "k": 1,
+   "n": 10,
+   "reliability": "unchecked"
+  },
+  {
+   "code": "tool",
+   "label": "Named tools, software or equipment",
+   "module": "core",
+   "present": 0.1,
+   "lo": 0.018,
+   "hi": 0.404,
+   "required": 0.0,
+   "k": 1,
+   "n": 10,
+   "reliability": "unchecked"
+  },
+  {
+   "code": "oem",
+   "label": "OEM / embedded",
+   "module": "partnerships",
+   "present": 0.1,
+   "lo": 0.018,
+   "hi": 0.404,
+   "required": 0.0,
+   "k": 1,
+   "n": 10,
+   "reliability": "unchecked"
+  },
+  {
+   "code": "budget",
+   "label": "Owns a budget, P&L or cost line",
+   "module": "core",
+   "present": 0.0,
+   "lo": 0.0,
+   "hi": 0.278,
+   "required": 0.0,
+   "k": 0,
+   "n": 10,
+   "reliability": "unchecked"
+  },
+  {
+   "code": "cred",
+   "label": "Licence or certification required",
+   "module": "core",
+   "present": 0.0,
+   "lo": 0.0,
+   "hi": 0.278,
+   "required": 0.0,
+   "k": 0,
+   "n": 10,
+   "reliability": "unchecked"
+  },
+  {
+   "code": "shift",
+   "label": "Shifts, on-call or travel",
+   "module": "core",
+   "present": 0.0,
+   "lo": 0.0,
+   "hi": 0.278,
+   "required": 0.0,
+   "k": 0,
+   "n": 10,
+   "reliability": "unchecked"
+  },
+  {
+   "code": "safety",
+   "label": "Safety, compliance or regulation",
+   "module": "core",
+   "present": 0.0,
+   "lo": 0.0,
+   "hi": 0.278,
+   "required": 0.0,
+   "k": 0,
+   "n": 10,
+   "reliability": "unchecked"
+  },
+  {
+   "code": "cust",
+   "label": "Directly serves customers, patients or clients",
+   "module": "core",
+   "present": 0.0,
+   "lo": 0.0,
+   "hi": 0.278,
+   "required": 0.0,
+   "k": 0,
+   "n": 10,
+   "reliability": "unchecked"
+  },
+  {
+   "code": "data",
+   "label": "Uses data or metrics to decide",
+   "module": "core",
+   "present": 0.0,
+   "lo": 0.0,
+   "hi": 0.278,
+   "required": 0.0,
+   "k": 0,
+   "n": 10,
+   "reliability": "unchecked"
+  },
+  {
+   "code": "train",
+   "label": "Trains or mentors others",
+   "module": "core",
+   "present": 0.0,
+   "lo": 0.0,
+   "hi": 0.278,
+   "required": 0.0,
+   "k": 0,
+   "n": 10,
+   "reliability": "unchecked"
+  },
+  {
+   "code": "aib",
+   "label": "Candidate builds AI agents / automation",
+   "module": "partnerships",
+   "present": 0.0,
+   "lo": 0.0,
+   "hi": 0.278,
+   "required": 0.0,
+   "k": 0,
+   "n": 10,
+   "reliability": "unchecked"
+  },
+  {
+   "code": "aig",
+   "label": "AI governance / responsible AI",
+   "module": "partnerships",
+   "present": 0.0,
+   "lo": 0.0,
+   "hi": 0.278,
+   "required": 0.0,
+   "k": 0,
+   "n": 10,
+   "reliability": "unchecked"
+  },
+  {
+   "code": "arrn",
+   "label": "States a numeric ARR threshold for the candidate",
+   "module": "partnerships",
+   "present": 0.0,
+   "lo": 0.0,
+   "hi": 0.278,
+   "required": 0.0,
+   "k": 0,
+   "n": 10,
+   "reliability": "unchecked"
+  },
+  {
+   "code": "agyb",
+   "label": "Agency background valued",
+   "module": "partnerships",
+   "present": 0.0,
+   "lo": 0.0,
+   "hi": 0.278,
+   "required": 0.0,
+   "k": 0,
+   "n": 10,
+   "reliability": "unchecked"
+  }
+ ],
+ "top_required": [
+  "intl",
+  "aip",
+  "isv",
+  "prog",
+  "zero",
+  "gsi",
+  "cos",
+  "pc",
+  "jbp",
+  "lang"
+ ],
+ "bundles": [
+  {
+   "a": "csuite",
+   "b": "mgr",
+   "both": 0.2,
+   "lift": 3.33
+  },
+  {
+   "a": "quota",
+   "b": "agy",
+   "both": 0.2,
+   "lift": 2.5
+  },
+  {
+   "a": "pc",
+   "b": "aiu",
+   "both": 0.2,
+   "lift": 2.0
+  },
+  {
+   "a": "pc",
+   "b": "mgr",
+   "both": 0.2,
+   "lift": 2.0
+  },
+  {
+   "a": "fcst",
+   "b": "resl",
+   "both": 0.5,
+   "lift": 2.0
+  },
+  {
+   "a": "fcst",
+   "b": "conb",
+   "both": 0.2,
+   "lift": 2.0
+  },
+  {
+   "a": "hyp",
+   "b": "hypb",
+   "both": 0.4,
+   "lift": 2.0
+  },
+  {
+   "a": "resl",
+   "b": "conb",
+   "both": 0.2,
+   "lift": 2.0
+  }
+ ],
+ "clusters": null,
+ "pay": {
+  "currency": "EUR",
+  "n": 2,
+  "median": null,
+  "median_low_n": 148750.0,
+  "note": "2 posted pay range(s); a band needs at least 3"
+ },
+ "years": {
+  "n": 8,
+  "median": 6.0
+ },
+ "builder_index": {
+  "ratio": 0.78,
+  "build": 39,
+  "maintain": 11
+ },
+ "levels": {
+  "Head": 5,
+  "Dir": 2,
+  "Mgr": 3
+ },
+ "employers": [
+  "Anthropic",
+  "ChapsVision",
+  "Dataiku",
+  "Mirakl",
+  "Mistral AI",
+  "Partoo",
+  "Payflows",
+  "Qevlar AI"
+ ],
+ "language": {
+  "contrast": "other niches",
+  "contrast_n": 32,
+  "keyness": [
+   {
+    "term": "emea",
+    "z": 1.68,
+    "n_in": 4,
+    "n_out": 0
+   },
+   {
+    "term": "tech",
+    "z": 1.18,
+    "n_in": 2,
+    "n_out": 0
+   },
+   {
+    "term": "top",
+    "z": 1.18,
+    "n_in": 2,
+    "n_out": 0
+   },
+   {
+    "term": "trusted",
+    "z": 1.18,
+    "n_in": 2,
+    "n_out": 0
+   },
+   {
+    "term": "operations",
+    "z": 0.83,
+    "n_in": 2,
+    "n_out": 1
+   },
+   {
+    "term": "zero",
+    "z": 0.83,
+    "n_in": 2,
+    "n_out": 1
+   },
+   {
+    "term": "fluent",
+    "z": 0.83,
+    "n_in": 2,
+    "n_out": 1
+   },
+   {
+    "term": "presence",
+    "z": 0.83,
+    "n_in": 2,
+    "n_out": 1
+   },
+   {
+    "term": "environments",
+    "z": 0.83,
+    "n_in": 2,
+    "n_out": 1
+   },
+   {
+    "term": "region",
+    "z": 0.83,
+    "n_in": 2,
+    "n_out": 1
+   },
+   {
+    "term": "sales",
+    "z": 0.77,
+    "n_in": 6,
+    "n_out": 8
+   },
+   {
+    "term": "cloud",
+    "z": 0.71,
+    "n_in": 3,
+    "n_out": 3
+   },
+   {
+    "term": "ecosystem",
+    "z": 0.66,
+    "n_in": 5,
+    "n_out": 7
+   },
+   {
+    "term": "partners",
+    "z": 0.66,
+    "n_in": 5,
+    "n_out": 7
+   },
+   {
+    "term": "saas",
+    "z": 0.57,
+    "n_in": 2,
+    "n_out": 2
+   }
+  ],
+  "phrases": [
+   "Partnerships are a top strategic priority",
+   "Strategic and hands-on: you set the vision",
+   "founding role",
+   "build the function from zero",
+   "partnership-sourced revenue as a first-class number",
+   "Structurer, developper et animer l'ecosysteme de partenaires",
+   "Anglais courant indispensable",
+   "turning top GSIs into strategic growth engines",
+   "Player-coach",
+   "Builder mentality",
+   "voice of the partner",
+   "embedding partners into active sales cycles",
+   "first hire in region",
+   "Global Lead of Ads Partnerships",
+   "Technology Alliances business in EMEA",
+   "navigating within complex ecosystems",
+   "creating the conditions where our strategic partners can thrive",
+   "Operates well in Series A-style environments",
+   "No playbooks needed",
+   "drive joint pipeline",
+   "zero to one"
+  ],
+  "top_terms": [
+   [
+    "partnerships",
+    7
+   ],
+   [
+    "sales",
+    6
+   ],
+   [
+    "partner",
+    6
+   ],
+   [
+    "ecosystem",
+    5
+   ],
+   [
+    "strategic",
+    5
+   ],
+   [
+    "partners",
+    5
+   ],
+   [
+    "build",
+    5
+   ],
+   [
+    "emea",
+    4
+   ],
+   [
+    "5+",
+    3
+   ],
+   [
+    "building",
+    3
+   ],
+   [
+    "pipeline",
+    3
+   ],
+   [
+    "development",
+    3
+   ],
+   [
+    "partnership",
+    3
+   ],
+   [
+    "ai",
+    3
+   ],
+   [
+    "executive",
+    3
+   ],
+   [
+    "cloud",
+    3
+   ],
+   [
+    "high",
+    3
+   ],
+   [
+    "enterprise",
+    3
+   ],
+   [
+    "own",
+    3
+   ],
+   [
+    "hands",
+    2
+   ],
+   [
+    "tech",
+    2
+   ],
+   [
+    "operations",
+    2
+   ],
+   [
+    "top",
+    2
+   ],
+   [
+    "saas",
+    2
+   ],
+   [
+    "through",
+    2
+   ]
+  ]
+ },
+ "change": null,
+ "change_hidden_reason": "0 archive postings (< 10 needed)"
+}

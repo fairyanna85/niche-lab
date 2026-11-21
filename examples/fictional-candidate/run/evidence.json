@@ -1,0 +1,301 @@
+{
+ "aip": {
+  "label": "Employer sells an AI / ML product",
+  "grade": 0,
+  "evidence": [],
+  "source": "agent",
+  "reviewed": true
+ },
+ "aiu": {
+  "label": "Candidate must use / be fluent in AI tools",
+  "grade": 2,
+  "evidence": [
+   "R13"
+  ],
+  "source": "agent",
+  "reviewed": true
+ },
+ "aib": {
+  "label": "Candidate builds AI agents / automation",
+  "grade": 2,
+  "evidence": [
+   "R13"
+  ],
+  "source": "agent",
+  "reviewed": true
+ },
+ "aig": {
+  "label": "AI governance / responsible AI",
+  "grade": 0,
+  "evidence": [],
+  "source": "regex",
+  "reviewed": true
+ },
+ "tech": {
+  "label": "Technical depth (APIs, data stack, systems)",
+  "grade": 2,
+  "evidence": [
+   "R13",
+   "R26"
+  ],
+  "source": "agent",
+  "reviewed": true
+ },
+ "mgr": {
+  "label": "Manages people",
+  "grade": 3,
+  "evidence": [
+   "R11"
+  ],
+  "source": "regex",
+  "reviewed": true
+ },
+ "pc": {
+  "label": "Player-coach / hands-on individual contributor",
+  "grade": 2,
+  "evidence": [
+   "R13"
+  ],
+  "source": "agent",
+  "reviewed": true
+ },
+ "zero": {
+  "label": "Build from zero / founding role",
+  "grade": 3,
+  "evidence": [
+   "R8",
+   "R18"
+  ],
+  "source": "regex",
+  "reviewed": true
+ },
+ "csuite": {
+  "label": "Reports to C-level",
+  "grade": 0,
+  "evidence": [],
+  "source": "regex",
+  "reviewed": true
+ },
+ "exec": {
+  "label": "C-level relationships (external or internal)",
+  "grade": 0,
+  "evidence": [],
+  "source": "agent",
+  "reviewed": true
+ },
+ "tool": {
+  "label": "Named tools (CRM, PRM, BI, PM software)",
+  "grade": 1,
+  "evidence": [
+   "R26"
+  ],
+  "source": "regex",
+  "reviewed": true
+ },
+ "stb": {
+  "label": "Startup / high-growth experience",
+  "grade": 0,
+  "evidence": [],
+  "source": "agent",
+  "reviewed": true
+ },
+ "conb": {
+  "label": "Consulting background valued",
+  "grade": 2,
+  "evidence": [
+   "R19"
+  ],
+  "source": "agent",
+  "reviewed": true
+ },
+ "intl": {
+  "label": "International / multi-region scope",
+  "grade": 2,
+  "evidence": [
+   "R20",
+   "R21",
+   "R22"
+  ],
+  "source": "agent",
+  "reviewed": true
+ },
+ "lang": {
+  "label": "Languages required",
+  "grade": 2,
+  "evidence": [
+   "R27"
+  ],
+  "source": "agent",
+  "reviewed": true
+ },
+ "src": {
+  "label": "Owns partner-sourced pipeline / revenue",
+  "grade": 3,
+  "evidence": [
+   "R9"
+  ],
+  "source": "regex",
+  "reviewed": true
+ },
+ "infl": {
+  "label": "Partner-influenced revenue",
+  "grade": 0,
+  "evidence": [],
+  "source": "regex",
+  "reviewed": true
+ },
+ "quota": {
+  "label": "Carries a quota / revenue number",
+  "grade": 0,
+  "evidence": [],
+  "source": "regex",
+  "reviewed": true
+ },
+ "arrn": {
+  "label": "States a numeric ARR threshold for the candidate",
+  "grade": 0,
+  "evidence": [],
+  "source": "regex",
+  "reviewed": true
+ },
+ "fcst": {
+  "label": "Forecasting / attribution / CRM reporting",
+  "grade": 1,
+  "evidence": [
+   "R12"
+  ],
+  "source": "agent",
+  "reviewed": true
+ },
+ "hyp": {
+  "label": "Hyperscaler partners (AWS / GCP / Azure)",
+  "grade": 2,
+  "evidence": [
+   "R10"
+  ],
+  "source": "agent",
+  "reviewed": true
+ },
+ "gsi": {
+  "label": "GSIs / SIs / consultancies as partners",
+  "grade": 0,
+  "evidence": [],
+  "source": "regex",
+  "reviewed": true
+ },
+ "isv": {
+  "label": "ISV / technology / integration partners",
+  "grade": 3,
+  "evidence": [
+   "R8"
+  ],
+  "source": "regex",
+  "reviewed": true
+ },
+ "agy": {
+  "label": "Agencies as partners",
+  "grade": 3,
+  "evidence": [
+   "R16",
+   "R17"
+  ],
+  "source": "agent",
+  "reviewed": true
+ },
+ "resl": {
+  "label": "Resellers / VARs / channel",
+  "grade": 3,
+  "evidence": [
+   "R21"
+  ],
+  "source": "regex",
+  "reviewed": true
+ },
+ "mkt": {
+  "label": "Cloud marketplaces",
+  "grade": 2,
+  "evidence": [
+   "R10"
+  ],
+  "source": "agent",
+  "reviewed": true
+ },
+ "cos": {
+  "label": "Co-sell",
+  "grade": 1,
+  "evidence": [
+   "R26"
+  ],
+  "source": "regex",
+  "reviewed": true
+ },
+ "res": {
+  "label": "Resale",
+  "grade": 0,
+  "evidence": [],
+  "source": "regex",
+  "reviewed": true
+ },
+ "oem": {
+  "label": "OEM / embedded",
+  "grade": 0,
+  "evidence": [],
+  "source": "regex",
+  "reviewed": true
+ },
+ "com": {
+  "label": "Co-marketing / partner funds",
+  "grade": 3,
+  "evidence": [
+   "R18"
+  ],
+  "source": "regex",
+  "reviewed": true
+ },
+ "prog": {
+  "label": "Partner program design (tiers",
+  "grade": 3,
+  "evidence": [
+   "R8"
+  ],
+  "source": "regex",
+  "reviewed": true
+ },
+ "deal": {
+  "label": "Structures / negotiates complex deals",
+  "grade": 3,
+  "evidence": [
+   "R17"
+  ],
+  "source": "regex",
+  "reviewed": true
+ },
+ "jbp": {
+  "label": "Joint business plans / QBRs / account mapping",
+  "grade": 2,
+  "evidence": [
+   "R12"
+  ],
+  "source": "agent",
+  "reviewed": true
+ },
+ "agyb": {
+  "label": "Agency background valued",
+  "grade": 3,
+  "evidence": [
+   "R16",
+   "R17"
+  ],
+  "source": "agent",
+  "reviewed": true
+ },
+ "hypb": {
+  "label": "Hyperscaler experience required",
+  "grade": 1,
+  "evidence": [
+   "R10"
+  ],
+  "source": "agent",
+  "reviewed": true
+ }
+}

@@ -1,0 +1,38 @@
+{
+ "candidate": {"display_name": "Jordan Avery (fictional)", "city": "New York", "languages": ["English", "French"], "linkedin_status": "blocked"},
+ "fields": {
+  "role_family": {"value": "partnerships", "grade": "stated", "evidence": ["R2", "R6", "R14"]},
+  "seniority_band": {"value": "Director", "grade": "stated", "evidence": ["R6"]},
+  "level_map": {"value": "Director at a 1,000-person SaaS company", "grade": "inferred2", "evidence": ["R6", "R11"], "note": "title Director with 4 reports"},
+  "industry": {"value": "martech, adtech and data SaaS", "grade": "inferred2", "evidence": ["R2", "R14", "R16"]},
+  "side_of_market": {"value": "vendor (now), media platform and consultancy (before)", "grade": "inferred2", "evidence": ["R6", "R14", "R19"]},
+  "span_people": {"value": "4 partner managers", "grade": "stated", "evidence": ["R11"]},
+  "span_budget_or_revenue": {"value": "$18M partner-sourced pipeline (FY2025)", "grade": "stated", "evidence": ["R9"]},
+  "own_role": {"value": "led program build and pipeline; co-led AWS Marketplace launch", "grade": "inferred2", "evidence": ["R8", "R9", "R10"]},
+  "years_experience": {"value": 13, "grade": "stated", "evidence": ["R4", "R20"]},
+  "current_pay_band_est": {"value": {"mid": 200000, "currency": "USD"}, "grade": "inferred2", "evidence": ["R6", "R7"], "note": "median of posted ranges for Director partnerships roles in New York in the run's own corpus (niche n03, n=7)"},
+  "work_auth_signals": {"value": "works in New York since 2018; worked in Paris 2013–2017", "grade": "inferred1", "evidence": ["R15", "R20"], "note": "citizenship not stated"},
+  "positioning": {"value": "A builder of partner revenue programs for data and martech platforms, with agency, consultancy and vendor experience on two continents and a habit of building tools.", "grade": "inferred2", "evidence": ["R8", "R9", "R13", "R16", "R21"]}
+ },
+ "revealed_preferences": {
+  "employer_types": {"value": ["B", "C"], "grade": "inferred2", "evidence": ["R6", "R14"], "note": "segments: B martech/adtech, C data platforms"},
+  "cities": {"value": ["New York", "Paris"], "grade": "stated", "evidence": ["R15", "R20"]},
+  "median_tenure_years": {"value": 4.2, "grade": "stated", "evidence": ["R7", "R15", "R20"]},
+  "company_stage": {"value": "unknown", "grade": "absent", "evidence": [], "note": "no company context lines on the resume"},
+  "mobility": {"value": "moved Paris → New York in 2018", "grade": "inferred2", "evidence": ["R20", "R15"]}
+ },
+ "strengths": [
+  {"label": "Builds partner programs from zero", "grade": "stated", "evidence": ["R8"]},
+  {"label": "Owns partner-sourced pipeline", "grade": "stated", "evidence": ["R9"]},
+  {"label": "Agency ecosystem relationships and deals", "grade": "stated", "evidence": ["R16", "R17"]},
+  {"label": "Channel / reseller growth", "grade": "stated", "evidence": ["R21", "R22"]},
+  {"label": "Cloud marketplace launch (co-led)", "grade": "stated", "evidence": ["R10"]},
+  {"label": "Co-marketing programs", "grade": "stated", "evidence": ["R18"]}
+ ],
+ "edges": [
+  {"label": "Builds AI tools as a non-engineer", "evidence": ["R13"], "codes": ["aib", "aiu"]},
+  {"label": "Three sides of the market: consultancy, media platform, SaaS vendor", "evidence": ["R6", "R14", "R19"], "codes": ["agyb", "conb"]},
+  {"label": "Two-country career, native French", "evidence": ["R20", "R27"], "codes": ["intl", "lang"]}
+ ],
+ "disclosure_risks": []
+}

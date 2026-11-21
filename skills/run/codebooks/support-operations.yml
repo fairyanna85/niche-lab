@@ -1,0 +1,17 @@
+# Job-family module: Customer support / CX operations / service delivery / trust & safety operations.
+# Status: UNTESTED on a coded corpus. Written from the dissection test on a support-operations resume.
+module: support-operations
+version: 1
+title_patterns: ['support', 'customer (experience|success|care)', '\bcx\b', 'service', 'trust', 'safety', 'operations']
+codes:
+  - {id: sup_scale,  label: "Runs support at scale (volume, sites, headcount)", posting_rule: "2 if scale is stated and owned; 1 if mentioned.", resume_cues: ['\d+[k ]? (tickets|contacts|agents|seats)', 'sites', 'follow-the-sun', '24/7']}
+  - {id: sup_vendor, label: BPO / outsourcing vendor management, posting_rule: "2 if vendor management is core; 1 if mentioned.", resume_cues: ['bpo', 'vendor', 'outsourc', 'teleperformance', 'concentrix', 'ttec']}
+  - {id: sup_metric, label: CSAT / NPS / SLA / AHT ownership, posting_rule: "2 if the role owns service metrics; 1 if reports them.", resume_cues: ['csat', 'nps', '\bsla', '\baht', 'first contact', 'resolution']}
+  - {id: sup_wfm,    label: Workforce management / capacity planning, posting_rule: "2 if core; 1 if mentioned.", resume_cues: ['workforce', '\bwfm', 'forecast', 'staffing', 'capacity']}
+  - {id: sup_auto,   label: Support automation / AI deflection, posting_rule: "2 if automation or AI deflection is a responsibility; 1 if mentioned.", resume_cues: ['deflect', 'chatbot', 'self-?serve', 'automat', 'virtual agent']}
+  - {id: sup_kb,     label: Knowledge management / content, posting_rule: "2 if core; 1 if mentioned.", resume_cues: ['knowledge base', 'help center', 'macros', 'content']}
+  - {id: sup_qa,     label: Quality assurance programs, posting_rule: "2 if core; 1 if mentioned.", resume_cues: ['quality', '\bqa\b', 'calibration', 'audit']}
+  - {id: sup_tool,   label: "Support tooling (Zendesk, Salesforce Service Cloud, Intercom)", posting_rule: "2 if required; 1 if a plus.", resume_cues: ['zendesk', 'service cloud', 'intercom', 'freshdesk', 'kustomer']}
+  - {id: sup_escal,  label: Escalations / enterprise / VIP support, posting_rule: "2 if core; 1 if mentioned.", resume_cues: ['escalat', 'enterprise support', 'vip', 'premium support', 'partner support']}
+  - {id: sup_policy, label: Policy / trust & safety / compliance, posting_rule: "2 if core; 1 if mentioned.", resume_cues: ['policy', 'trust', 'safety', 'compliance', 'abuse', 'moderation']}
+  - {id: sup_voc,    label: Voice of customer to product, posting_rule: "2 if feeding product with customer insight is core; 1 if mentioned.", resume_cues: ['voice of (the )?customer', 'feedback loop', 'product feedback', 'insight']}

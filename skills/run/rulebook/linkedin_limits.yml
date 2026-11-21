@@ -1,0 +1,13 @@
+# LinkedIn field limits (characters, spaces included). Widely reported 2026 values; LinkedIn's live profile editor is the
+# final authority and some fields are not documented in LinkedIn Help. Re-check before each release.
+# Sources: unilink.us/blog/linkedin-character-limits-2026 ; linkedin-formatter.pages.dev/blog/linkedin-character-limit ;
+#          contentin.io/glossary/about-section (cites LinkedIn Help "Edit the About section on your profile")
+headline: 220
+about: 2600
+about_visible: 300          # shown before "See more" — the hook must sit here
+experience_title: 100
+experience_description: 2000
+experience_visible: 80      # role preview; lead with the strongest metric
+skill: 80
+skills_max: 100
+connection_note: 300

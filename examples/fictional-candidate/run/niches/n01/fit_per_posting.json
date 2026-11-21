@@ -1,0 +1,64 @@
+{
+ "niche": "n01",
+ "line": 0.6,
+ "n": 8,
+ "above_line": 4,
+ "postings": [
+  {
+   "id": "p0007",
+   "company": "Botify",
+   "title": "Head of Partnerships",
+   "fit": 0.647,
+   "band": "live"
+  },
+  {
+   "id": "p0011",
+   "company": "Profound",
+   "title": "VP, Strategic Partnerships",
+   "fit": 0.634,
+   "band": "live"
+  },
+  {
+   "id": "p0006",
+   "company": "Conveo",
+   "title": "Head of Partnerships",
+   "fit": 0.606,
+   "band": "live"
+  },
+  {
+   "id": "p0008",
+   "company": "Decagon",
+   "title": "Founding Head of Strategic Partnerships & Alliances",
+   "fit": 0.604,
+   "band": "live"
+  },
+  {
+   "id": "p0005",
+   "company": "Amplemarket",
+   "title": "Head of Partnerships",
+   "fit": 0.583,
+   "band": "live"
+  },
+  {
+   "id": "p0030",
+   "company": "OpenAI",
+   "title": "Partner Director, Global Capgemini Alliance",
+   "fit": 0.523,
+   "band": "live"
+  },
+  {
+   "id": "p0028",
+   "company": "OpenAI",
+   "title": "Partner Director, Head of Technology Partnerships",
+   "fit": 0.515,
+   "band": "live"
+  },
+  {
+   "id": "p0004",
+   "company": "Hex",
+   "title": "Head of Partnerships & Alliances",
+   "fit": 0.5,
+   "band": "live"
+  }
+ ]
+}

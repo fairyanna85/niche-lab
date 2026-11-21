@@ -1,0 +1,361 @@
+{
+ "per_resume": {
+  "r-n01": [
+   {
+    "name": "traceability",
+    "status": "pass",
+    "detail": "every number and bullet resolves to a ledger line"
+   },
+   {
+    "name": "consistency",
+    "status": "pass",
+    "detail": "titles and dates identical across versions"
+   },
+   {
+    "name": "authenticity",
+    "status": "pass",
+    "detail": "no stock phrases in headline/profile, bullet length sd 4.9"
+   },
+   {
+    "name": "bullet_score",
+    "status": "warn",
+    "detail": "average 3.4/5, min 2/5 (target ≥4.0, none <3)",
+    "value": 3.44
+   },
+   {
+    "name": "keyword_coverage",
+    "status": "pass",
+    "detail": "6/7 provable top-required codes visible (original resume: 6/7); missing ['intl']",
+    "before": 6,
+    "after": 6,
+    "total": 7
+   },
+   {
+    "name": "six_second_zone",
+    "status": "pass",
+    "detail": "niche words in top third: ['partnerships', 'saas']; proof number: yes"
+   },
+   {
+    "name": "length",
+    "status": "pass",
+    "detail": "1 rendered page(s); limit 2"
+   },
+   {
+    "name": "disclosure",
+    "status": "pass",
+    "detail": "no flagged line or name reused"
+   },
+   {
+    "name": "placeholders",
+    "status": "warn",
+    "detail": "13 placeholders for the candidate to fill: ['[Consultancy, Paris: what it does and its size]', '[FY2023 baseline]', '[What Northwind Data sells, its stage and headcount]', '[What Quillfeather Media does and its size]', '[closed-won partner-sourced ARR]', '[fund size]']",
+    "count": 13
+   },
+   {
+    "name": "ats_parse",
+    "status": "pass",
+    "detail": "PDF text extracts in reading order; 1 page(s)"
+   },
+   {
+    "name": "advocate_test",
+    "status": "pass",
+    "detail": "Advocate (run on the loop-1 versions): This is a partnerships leader who built an ISV program from zero to $18M in partner-sourced pipeline and writes his own AI tools for an AI-forward SaaS or data company that wants a technical, builder-type Head of Partnerships."
+   },
+   {
+    "name": "reviewer_panel",
+    "status": "warn",
+    "detail": "loops 3; recruiter not run in example; hiring manager not run in example; CEO 'Not yet → fixes applied, not re-reviewed'"
+   }
+  ],
+  "r-n02": [
+   {
+    "name": "traceability",
+    "status": "pass",
+    "detail": "every number and bullet resolves to a ledger line"
+   },
+   {
+    "name": "consistency",
+    "status": "pass",
+    "detail": "titles and dates identical across versions"
+   },
+   {
+    "name": "authenticity",
+    "status": "pass",
+    "detail": "no stock phrases in headline/profile, bullet length sd 4.9"
+   },
+   {
+    "name": "bullet_score",
+    "status": "warn",
+    "detail": "average 3.5/5, min 2/5 (target ≥4.0, none <3)",
+    "value": 3.5
+   },
+   {
+    "name": "keyword_coverage",
+    "status": "pass",
+    "detail": "5/6 provable top-required codes visible (original resume: 5/6); missing ['intl']",
+    "before": 5,
+    "after": 5,
+    "total": 6
+   },
+   {
+    "name": "six_second_zone",
+    "status": "pass",
+    "detail": "niche words in top third: ['partnerships', 'martech', 'data']; proof number: yes"
+   },
+   {
+    "name": "length",
+    "status": "pass",
+    "detail": "1 rendered page(s); limit 2"
+   },
+   {
+    "name": "disclosure",
+    "status": "pass",
+    "detail": "no flagged line or name reused"
+   },
+   {
+    "name": "placeholders",
+    "status": "warn",
+    "detail": "13 placeholders for the candidate to fill: ['[Consultancy, Paris: what it does and its size]', '[FY2023 baseline]', '[What Northwind Data sells, its stage and headcount]', '[What Quillfeather Media does and its size]', '[closed-won partner-sourced ARR]', '[fund size]']",
+    "count": 13
+   },
+   {
+    "name": "ats_parse",
+    "status": "pass",
+    "detail": "PDF text extracts in reading order; 1 page(s)"
+   },
+   {
+    "name": "advocate_test",
+    "status": "pass",
+    "detail": "Advocate (run on the loop-1 versions): This is a martech and data partnerships leader who grows pipeline through agency and ISV ecosystems for a martech or data platform that sells through agencies and technology partners."
+   },
+   {
+    "name": "reviewer_panel",
+    "status": "pass",
+    "detail": "loops 2; recruiter not run in example; hiring manager not run in example; CEO 'Good job'"
+   }
+  ],
+  "r-n03": [
+   {
+    "name": "traceability",
+    "status": "pass",
+    "detail": "every number and bullet resolves to a ledger line"
+   },
+   {
+    "name": "consistency",
+    "status": "pass",
+    "detail": "titles and dates identical across versions"
+   },
+   {
+    "name": "authenticity",
+    "status": "pass",
+    "detail": "no stock phrases in headline/profile, bullet length sd 4.9"
+   },
+   {
+    "name": "bullet_score",
+    "status": "warn",
+    "detail": "average 3.5/5, min 2/5 (target ≥4.0, none <3)",
+    "value": 3.5
+   },
+   {
+    "name": "keyword_coverage",
+    "status": "pass",
+    "detail": "4/5 provable top-required codes visible (original resume: 4/5); missing ['intl']",
+    "before": 4,
+    "after": 4,
+    "total": 5
+   },
+   {
+    "name": "six_second_zone",
+    "status": "pass",
+    "detail": "niche words in top third: ['director', 'partnerships', 'alliances']; proof number: yes"
+   },
+   {
+    "name": "length",
+    "status": "pass",
+    "detail": "1 rendered page(s); limit 2"
+   },
+   {
+    "name": "disclosure",
+    "status": "pass",
+    "detail": "no flagged line or name reused"
+   },
+   {
+    "name": "placeholders",
+    "status": "warn",
+    "detail": "13 placeholders for the candidate to fill: ['[Consultancy, Paris: what it does and its size]', '[FY2023 baseline]', '[What Northwind Data sells, its stage and headcount]', '[What Quillfeather Media does and its size]', '[closed-won partner-sourced ARR]', '[fund size]']",
+    "count": 13
+   },
+   {
+    "name": "ats_parse",
+    "status": "pass",
+    "detail": "PDF text extracts in reading order; 1 page(s)"
+   },
+   {
+    "name": "advocate_test",
+    "status": "pass",
+    "detail": "Advocate (run on the loop-1 versions): This is a hands-on partnerships director who runs ISV, agency and AWS Marketplace programs with scorecards and QBRs for a data platform that needs someone to run a multi-partner alliances program."
+   },
+   {
+    "name": "reviewer_panel",
+    "status": "pass",
+    "detail": "loops 1; recruiter not run in example; hiring manager not run in example; CEO 'Good job'"
+   }
+  ],
+  "r-n04": [
+   {
+    "name": "traceability",
+    "status": "pass",
+    "detail": "every number and bullet resolves to a ledger line"
+   },
+   {
+    "name": "consistency",
+    "status": "pass",
+    "detail": "titles and dates identical across versions"
+   },
+   {
+    "name": "authenticity",
+    "status": "pass",
+    "detail": "no stock phrases in headline/profile, bullet length sd 4.9"
+   },
+   {
+    "name": "bullet_score",
+    "status": "warn",
+    "detail": "average 3.4/5, min 2/5 (target ≥4.0, none <3)",
+    "value": 3.44
+   },
+   {
+    "name": "keyword_coverage",
+    "status": "pass",
+    "detail": "6/7 provable top-required codes visible (original resume: 5/7); missing ['intl']",
+    "before": 5,
+    "after": 6,
+    "total": 7
+   },
+   {
+    "name": "six_second_zone",
+    "status": "pass",
+    "detail": "niche words in top third: ['partnerships']; proof number: yes"
+   },
+   {
+    "name": "length",
+    "status": "pass",
+    "detail": "1 rendered page(s); limit 2"
+   },
+   {
+    "name": "disclosure",
+    "status": "pass",
+    "detail": "no flagged line or name reused"
+   },
+   {
+    "name": "placeholders",
+    "status": "warn",
+    "detail": "13 placeholders for the candidate to fill: ['[Consultancy, Paris: what it does and its size]', '[FY2023 baseline]', '[What Northwind Data sells, its stage and headcount]', '[What Quillfeather Media does and its size]', '[closed-won partner-sourced ARR]', '[fund size]']",
+    "count": 13
+   },
+   {
+    "name": "ats_parse",
+    "status": "pass",
+    "detail": "PDF text extracts in reading order; 1 page(s)"
+   },
+   {
+    "name": "advocate_test",
+    "status": "pass",
+    "detail": "Advocate (run on the loop-1 versions): This is a native-French, US–France partnerships leader who has built technology and reseller channels on both sides of the Atlantic for a company expanding between the US and France or Europe."
+   },
+   {
+    "name": "reviewer_panel",
+    "status": "warn",
+    "detail": "loops 3; recruiter not run in example; hiring manager not run in example; CEO 'Not yet → fixes applied, not re-reviewed'"
+   }
+  ]
+ },
+ "summary": [
+  {
+   "name": "traceability",
+   "status": "pass",
+   "detail": "every number and bullet resolves to a ledger line"
+  },
+  {
+   "name": "consistency",
+   "status": "pass",
+   "detail": "titles and dates identical across versions"
+  },
+  {
+   "name": "authenticity",
+   "status": "pass",
+   "detail": "no stock phrases in headline/profile, bullet length sd 4.9"
+  },
+  {
+   "name": "bullet_score",
+   "status": "warn",
+   "detail": "average 3.4/5, min 2/5 (target ≥4.0, none <3)"
+  },
+  {
+   "name": "keyword_coverage",
+   "status": "pass",
+   "detail": "r-n01: 6/7 (original 6); r-n02: 5/6 (original 5); r-n03: 4/5 (original 4); r-n04: 6/7 (original 5)"
+  },
+  {
+   "name": "six_second_zone",
+   "status": "pass",
+   "detail": "niche words in top third: ['partnerships', 'saas']; proof number: yes"
+  },
+  {
+   "name": "length",
+   "status": "pass",
+   "detail": "1 rendered page(s); limit 2"
+  },
+  {
+   "name": "disclosure",
+   "status": "pass",
+   "detail": "no flagged line or name reused"
+  },
+  {
+   "name": "placeholders",
+   "status": "warn",
+   "detail": "52 placeholders across 4 versions"
+  },
+  {
+   "name": "ats_parse",
+   "status": "pass",
+   "detail": "PDF text extracts in reading order; 1 page(s)"
+  },
+  {
+   "name": "advocate_test",
+   "status": "pass",
+   "detail": "Advocate (run on the loop-1 versions): This is a partnerships leader who built an ISV program from zero to $18M in partner-sourced pipeline and writes his own AI tools for an AI-forward SaaS or data company that wants a technical, builder-type Head of Partnerships."
+  },
+  {
+   "name": "reviewer_panel",
+   "status": "warn",
+   "detail": "loops 3; recruiter not run in example; hiring manager not run in example; CEO 'Not yet → fixes applied, not re-reviewed'"
+  }
+ ],
+ "linkedin": [
+  {
+   "name": "li_limits",
+   "status": "pass",
+   "detail": "every field within LinkedIn limits"
+  },
+  {
+   "name": "li_consistency",
+   "status": "pass",
+   "detail": "titles and dates match every resume version"
+  },
+  {
+   "name": "li_traceability",
+   "status": "pass",
+   "detail": "every number resolves to a ledger line"
+  },
+  {
+   "name": "li_authenticity",
+   "status": "pass",
+   "detail": "no stock phrases"
+  },
+  {
+   "name": "li_hook",
+   "status": "pass",
+   "detail": "first 300 characters carry a proof number and the core message"
+  }
+ ]
+}

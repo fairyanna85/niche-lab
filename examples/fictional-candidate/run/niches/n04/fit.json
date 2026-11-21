@@ -1,0 +1,334 @@
+{
+ "niche": "n04",
+ "fit": 0.554,
+ "coverage": 0.667,
+ "n_core": 18,
+ "rows": [
+  {
+   "code": "intl",
+   "label": "Multi-site, multi-region or international scope",
+   "demand": 1.0,
+   "required": 0.8,
+   "grade": 2,
+   "evidence": [
+    "R20",
+    "R21",
+    "R22"
+   ],
+   "status": "partial",
+   "reviewed": true
+  },
+  {
+   "code": "aip",
+   "label": "Employer sells an AI / ML product",
+   "demand": 0.9,
+   "required": 0.8,
+   "grade": 0,
+   "evidence": [],
+   "status": "gap",
+   "reviewed": true
+  },
+  {
+   "code": "jbp",
+   "label": "Joint business plans / QBRs / account mapping",
+   "demand": 0.9,
+   "required": 0.4,
+   "grade": 2,
+   "evidence": [
+    "R12"
+   ],
+   "status": "partial",
+   "reviewed": true
+  },
+  {
+   "code": "isv",
+   "label": "ISV / technology / integration partners",
+   "demand": 0.8,
+   "required": 0.7,
+   "grade": 3,
+   "evidence": [
+    "R8"
+   ],
+   "status": "proven",
+   "reviewed": true
+  },
+  {
+   "code": "prog",
+   "label": "Partner program design (tiers, incentives, enablement)",
+   "demand": 0.8,
+   "required": 0.6,
+   "grade": 3,
+   "evidence": [
+    "R8"
+   ],
+   "status": "proven",
+   "reviewed": true
+  },
+  {
+   "code": "exec",
+   "label": "Works with senior leaders or executives",
+   "demand": 0.8,
+   "required": 0.2,
+   "grade": 0,
+   "evidence": [],
+   "status": "gap",
+   "reviewed": true
+  },
+  {
+   "code": "zero",
+   "label": "Builds or launches something new",
+   "demand": 0.7,
+   "required": 0.6,
+   "grade": 3,
+   "evidence": [
+    "R8",
+    "R18"
+   ],
+   "status": "proven",
+   "reviewed": true
+  },
+  {
+   "code": "gsi",
+   "label": "GSIs / SIs / consultancies as partners",
+   "demand": 0.7,
+   "required": 0.6,
+   "grade": 0,
+   "evidence": [],
+   "status": "gap",
+   "reviewed": true
+  },
+  {
+   "code": "cos",
+   "label": "Co-sell",
+   "demand": 0.7,
+   "required": 0.6,
+   "grade": 1,
+   "evidence": [
+    "R26"
+   ],
+   "status": "gap",
+   "reviewed": true
+  },
+  {
+   "code": "lang",
+   "label": "Languages required",
+   "demand": 0.6,
+   "required": 0.4,
+   "grade": 2,
+   "evidence": [
+    "R27"
+   ],
+   "status": "partial",
+   "reviewed": true
+  },
+  {
+   "code": "deal",
+   "label": "Structures / negotiates complex deals",
+   "demand": 0.6,
+   "required": 0.4,
+   "grade": 3,
+   "evidence": [
+    "R17"
+   ],
+   "status": "proven",
+   "reviewed": true
+  },
+  {
+   "code": "stb",
+   "label": "Fast-growth or new-venture environment",
+   "demand": 0.6,
+   "required": 0.3,
+   "grade": 0,
+   "evidence": [],
+   "status": "gap",
+   "reviewed": true
+  },
+  {
+   "code": "com",
+   "label": "Co-marketing / partner funds",
+   "demand": 0.6,
+   "required": 0.3,
+   "grade": 3,
+   "evidence": [
+    "R18"
+   ],
+   "status": "proven",
+   "reviewed": true
+  },
+  {
+   "code": "tech",
+   "label": "Technical depth (APIs, data stack, systems)",
+   "demand": 0.6,
+   "required": 0.0,
+   "grade": 2,
+   "evidence": [
+    "R13",
+    "R26"
+   ],
+   "status": "partial",
+   "reviewed": true
+  },
+  {
+   "code": "pc",
+   "label": "Player-coach / hands-on individual contributor",
+   "demand": 0.5,
+   "required": 0.5,
+   "grade": 2,
+   "evidence": [
+    "R13"
+   ],
+   "status": "partial",
+   "reviewed": true
+  },
+  {
+   "code": "fcst",
+   "label": "Forecasting / attribution / CRM reporting",
+   "demand": 0.5,
+   "required": 0.3,
+   "grade": 1,
+   "evidence": [
+    "R12"
+   ],
+   "status": "gap",
+   "reviewed": true
+  },
+  {
+   "code": "hyp",
+   "label": "Hyperscaler partners (AWS / GCP / Azure)",
+   "demand": 0.5,
+   "required": 0.3,
+   "grade": 2,
+   "evidence": [
+    "R10"
+   ],
+   "status": "partial",
+   "reviewed": true
+  },
+  {
+   "code": "resl",
+   "label": "Resellers / VARs / channel",
+   "demand": 0.5,
+   "required": 0.3,
+   "grade": 3,
+   "evidence": [
+    "R21"
+   ],
+   "status": "proven",
+   "reviewed": true
+  },
+  {
+   "code": "quota",
+   "label": "Carries a quota / revenue number",
+   "demand": 0.4,
+   "required": 0.2,
+   "grade": 0,
+   "evidence": [],
+   "status": "minor",
+   "reviewed": true
+  },
+  {
+   "code": "hypb",
+   "label": "Hyperscaler experience required",
+   "demand": 0.4,
+   "required": 0.2,
+   "grade": 1,
+   "evidence": [
+    "R10"
+   ],
+   "status": "minor",
+   "reviewed": true
+  },
+  {
+   "code": "csuite",
+   "label": "Reports to top leadership",
+   "demand": 0.3,
+   "required": 0.1,
+   "grade": 0,
+   "evidence": [],
+   "status": "minor",
+   "reviewed": true
+  },
+  {
+   "code": "agy",
+   "label": "Agencies as partners",
+   "demand": 0.2,
+   "required": 0.2,
+   "grade": 3,
+   "evidence": [
+    "R16",
+    "R17"
+   ],
+   "status": "proven",
+   "reviewed": true
+  },
+  {
+   "code": "aiu",
+   "label": "Uses AI or digital tools in the work",
+   "demand": 0.2,
+   "required": 0.1,
+   "grade": 2,
+   "evidence": [
+    "R13"
+   ],
+   "status": "partial",
+   "reviewed": true
+  },
+  {
+   "code": "mgr",
+   "label": "Manages people",
+   "demand": 0.2,
+   "required": 0.1,
+   "grade": 3,
+   "evidence": [
+    "R11"
+   ],
+   "status": "proven",
+   "reviewed": true
+  },
+  {
+   "code": "conb",
+   "label": "Consulting background valued",
+   "demand": 0.2,
+   "required": 0.0,
+   "grade": 2,
+   "evidence": [
+    "R19"
+   ],
+   "status": "partial",
+   "reviewed": true
+  }
+ ],
+ "gaps": [
+  {
+   "code": "aip",
+   "label": "Employer sells an AI / ML product",
+   "demand": 0.9
+  },
+  {
+   "code": "exec",
+   "label": "Works with senior leaders or executives",
+   "demand": 0.8
+  },
+  {
+   "code": "gsi",
+   "label": "GSIs / SIs / consultancies as partners",
+   "demand": 0.7
+  },
+  {
+   "code": "cos",
+   "label": "Co-sell",
+   "demand": 0.7
+  },
+  {
+   "code": "stb",
+   "label": "Fast-growth or new-venture environment",
+   "demand": 0.6
+  },
+  {
+   "code": "fcst",
+   "label": "Forecasting / attribution / CRM reporting",
+   "demand": 0.5
+  }
+ ],
+ "unreviewed": []
+}

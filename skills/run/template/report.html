@@ -1,0 +1,1110 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>__TITLE__</title>
+<style>
+/*__FONTFACE__*/
+/* niche-lab, v2.1. The report is a journey in five acts: You (supply), The market (demand), Peers (competing supply),
+   The verdict, The course. The job market is a night sky: every posting a star, every niche a constellation, the candidate
+   a fixed gold point. The same sky opens each act in a new state. Display: Marcellus. Text: Instrument Sans. Italic accents: EB Garamond. Palette: Olympus OS (Intarsia Celeste).
+   Sizes are in rem so larger system text scales the whole layout; every grid child may shrink (min-width:0). */
+:root,:root[data-theme="light"]{
+  /* Olympus OS · Intarsia Celeste: parchment and ivory, bronze and gold, azzurro, celadon, lavanda, rosa.
+     Data hues are the moodboard's families taken deep enough to read on ivory (validated: lightness, chroma, CVD, contrast). */
+  --bg:#f6f1e7;--bg2:#fffcf6;--bg3:#efe7d8;--ink:#2a241c;--ink2:#5b5245;--ink3:#7f7463;--rule:#e2d7c3;--grid:#ece3d2;
+  --h1:#2f5bd0;--h2:#0a8c7e;--h3:#8a5cc4;--h4:#c04a74;--hx:#a99f8e;--gold:#a8792a;--gold2:#8b6a3b;
+  --good:#3f7d58;--warn:#a86a00;--crit:#b2453f;--accent:#8b6a3b;--btn:#8b6a3b;--btnink:#fffcf6;
+  --shadow:0 1px 0 rgba(120,96,60,.06),0 10px 28px -18px rgba(120,96,60,.35);
+  --serif:"Marcellus","Cormorant Garamond",Georgia,serif;--sans:"Instrument Sans","Helvetica Neue",Arial,sans-serif;--ital:"EB Garamond",Georgia,serif;
+  --bar:3.5rem;--sel:0rem;--botbar:0rem;--r:14px;--gap:1.25rem;
+}
+:root[data-theme="dark"]{
+  --bg:#161922;--bg2:#1e2230;--bg3:#262b3b;--ink:#f2eadb;--ink2:#cbc2b0;--ink3:#9a917f;--rule:#343a4e;--grid:#2a3042;
+  --h1:#5a84ea;--h2:#1c9e90;--h3:#8f7ae6;--h4:#d66a7c;--hx:#6b7596;--gold:#d9b46a;--gold2:#c09a4e;
+  --good:#5fbf86;--warn:#e0a43a;--crit:#e2555e;--accent:#d9b46a;--btn:#d9b46a;--btnink:#1b1a12;
+  --shadow:0 1px 0 rgba(0,0,0,.2),0 14px 34px -22px rgba(0,0,0,.7);
+}
+*,*::before,*::after{box-sizing:border-box;min-width:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font:1rem/1.55 var(--sans);-webkit-font-smoothing:antialiased;overflow-wrap:break-word;padding-bottom:var(--botbar)}
+h1,h2,h3,h4{font-family:var(--serif);font-weight:400;margin:0;line-height:1.12;letter-spacing:0;text-wrap:balance}
+p{margin:0}a{color:var(--accent)}button,input,select,textarea{font:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--gold);outline-offset:2px;border-radius:4px}
+.wrap{max-width:75rem;margin:0 auto;padding:0 clamp(1rem,3.5vw,2.75rem)}
+.meta{font-size:.875rem;color:var(--ink3);line-height:1.45}
+.muted{color:var(--ink2)}.serif{font-family:var(--serif)}
+.anywhere{overflow-wrap:anywhere}
+[id]{scroll-margin-top:calc(var(--bar) + var(--sel) + .5rem)}
+
+/* ---------- station bar: five equal stations, never scrolls ---------- */
+.stations{position:fixed;inset:0 0 auto 0;z-index:50;height:var(--bar);background:color-mix(in srgb,var(--bg2) 90%,transparent);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid color-mix(in srgb,var(--rule) 70%,transparent)}
+.stations ol{list-style:none;margin:0 auto;padding:0 clamp(.25rem,3.5vw,2.75rem);max-width:75rem;height:100%;display:grid;grid-template-columns:repeat(5,1fr)}
+.stations li{display:flex}
+.stations a{position:relative;flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:0;min-height:2.75rem;text-decoration:none;color:var(--ink3);font-size:.8125rem;line-height:1.15;text-align:center;padding:.25rem .125rem}
+.stations a b{font-family:var(--serif);font-weight:400;font-size:.8125rem;color:var(--ink3)}
+.stations a span{font-size:.875rem}
+.stations a::after{content:"";position:absolute;left:18%;right:18%;bottom:0;height:2px;background:var(--rule);transform-origin:left;transform:scaleX(1);opacity:0}
+.stations a i{position:absolute;left:18%;bottom:0;height:2px;width:calc(64% * var(--p,0));background:var(--gold)}
+.stations a[aria-current]{color:var(--ink)}.stations a[aria-current] b{color:var(--gold)}.stations a[aria-current]::after{opacity:1}
+@media (min-width:860px){.stations a{flex-direction:row;gap:.5rem;font-size:.9375rem}.stations a span{font-size:.9375rem}}
+@media (max-width:859.98px){
+  :root{--bar:0rem;--botbar:calc(3.5rem + env(safe-area-inset-bottom))}
+  .stations{inset:auto 0 0 0;height:var(--botbar);padding-bottom:env(safe-area-inset-bottom);border-bottom:0;border-top:1px solid color-mix(in srgb,var(--rule) 70%,transparent)}
+  .stations ol{height:3.5rem}
+  .stations a::after,.stations a i{bottom:auto;top:0}
+  body.typing .stations{display:none}
+}
+.corner{position:fixed;z-index:51;right:max(.75rem,env(safe-area-inset-right));bottom:1rem;width:2.75rem;height:2.75rem;border-radius:50%;border:1px solid var(--rule);background:var(--bg2);color:var(--ink2);cursor:pointer;display:grid;place-items:center}
+.corner svg{width:1.25rem;height:1.25rem}.corner .moon{display:none}:root[data-theme="light"] .corner .moon{display:block}:root[data-theme="light"] .corner .sun{display:none}
+@media (max-width:859.98px){.corner{position:absolute;bottom:auto;top:max(.75rem,env(safe-area-inset-top))}}
+
+/* ---------- niche selector: sticky through acts 2–5 ---------- */
+.scope{--sel:3rem}
+.selector{position:sticky;top:var(--bar);z-index:40;background:color-mix(in srgb,var(--bg) 92%,transparent);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid var(--rule)}
+.selector .wrap{display:flex;align-items:center;gap:.75rem;min-height:var(--sel);padding-top:.25rem;padding-bottom:.25rem}
+.selector .lbl{font-size:.875rem;color:var(--ink3);white-space:nowrap}
+.selector [data-btn-group]{flex:1;--min:9rem}
+.selector .seg button{min-height:2.25rem;padding:.25rem .5rem;font-size:.875rem;line-height:1.2;border-radius:10px;border:1px solid var(--rule);background:transparent;color:var(--ink2);cursor:pointer;display:flex;align-items:center;justify-content:center;gap:.4rem;text-align:center}
+.selector .seg button[aria-pressed="true"]{border-color:var(--ink);color:var(--ink);background:var(--bg3)}
+.selector .seg button i,.pick i,.sheet-list i{width:.6rem;height:.6rem;border-radius:50%;flex:none;display:inline-block}
+.pick{width:100%;min-height:2.75rem;display:flex;align-items:center;gap:.6rem;padding:.25rem .75rem;border:1px solid var(--rule);border-radius:10px;background:var(--bg2);color:var(--ink);cursor:pointer;text-align:left;font-size:.9375rem;line-height:1.25}
+.pick .chev{margin-left:auto;color:var(--ink3);flex:none}
+.selector .seg{display:none}.selector .pickwrap{display:block;flex:1}
+@media (min-width:860px){.selector.few .seg{display:grid}.selector.few .pickwrap{display:none}}
+dialog.sheet-dlg{border:1px solid var(--rule);border-radius:16px;background:var(--bg2);color:var(--ink);padding:1rem;width:min(36rem,calc(100vw - 2rem));max-height:80vh}
+dialog.sheet-dlg::backdrop{background:rgba(5,8,20,.6)}
+dialog.sheet-dlg h3{font-family:var(--sans);font-weight:600;font-size:1rem;margin-bottom:.75rem}
+.sheet-list{--cols:1}
+.sheet-list button{min-height:3rem;display:flex;align-items:center;gap:.6rem;text-align:left;padding:.5rem .75rem;border-radius:10px;border:1px solid var(--rule);background:transparent;color:var(--ink);cursor:pointer;line-height:1.3}
+.sheet-list button[aria-pressed="true"]{border-color:var(--gold)}
+
+/* ---------- buttons: one component; groups make sibling widths and heights equal by construction ---------- */
+[data-btn-group]{display:grid;gap:.5rem;grid-template-columns:repeat(var(--cols,auto-fit),minmax(min(100%,var(--min,10rem)),1fr));align-items:stretch}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.4rem;min-height:2.75rem;padding:.4rem .9rem;border:1px solid var(--rule);background:var(--bg2);color:var(--ink);border-radius:10px;cursor:pointer;font-size:.9375rem;line-height:1.2;text-align:center;text-decoration:none}
+.btn:hover{border-color:var(--ink3)}.btn.ok{border-color:var(--good);color:var(--good)}
+.btn.primary{background:var(--btn);color:var(--btnink);border-color:var(--btn)}
+.btn[aria-pressed="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+[data-action="copy"]{width:6.5rem;flex:none}
+@media (min-width:860px){.btn{min-height:2.25rem}}
+.lnk{display:inline-flex;align-items:center;min-height:2.75rem}
+
+/* ---------- acts ---------- */
+.act{position:relative}
+.act + .act,.scope > .act{border-top:1px solid var(--rule)}
+.chead{padding:clamp(2.5rem,6vw,4.5rem) 0 1.5rem;display:grid;gap:.75rem;max-width:46rem}
+.chead .no{font-family:var(--serif);font-size:.875rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold2);display:flex;gap:.6rem;align-items:baseline}
+.chead .no span{color:var(--gold2)}
+.chead h2{font-size:clamp(1.75rem,3.2vw,2.5rem);line-height:1.12;font-weight:400}
+.chead .ans{font-family:var(--ital);font-style:italic;font-size:clamp(1.0625rem,1.6vw,1.25rem);line-height:1.4;color:var(--ink2);font-weight:400;max-width:42rem}
+.body{display:grid;gap:var(--gap);padding-bottom:2rem}
+.learned{border-top:1px solid var(--rule);padding:1.75rem 0 2.5rem;display:grid;gap:1.25rem;grid-template-columns:minmax(0,1fr)}
+@media (min-width:860px){.learned{grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);align-items:end}}
+.learned ul{margin:0;padding:0;list-style:none;display:grid;gap:.6rem}
+.learned li{padding-left:1rem;border-left:2px solid var(--gold);font-size:1rem}
+.handover{display:grid;gap:.75rem;justify-items:start}
+.handover p{font-family:var(--ital);font-style:italic;font-weight:400;font-size:1.375rem;line-height:1.3}
+.next{display:inline-flex;align-items:center;gap:.5rem;min-height:2.75rem;padding:.35rem 1.1rem;font-size:.9375rem;letter-spacing:.01em;border-radius:999px;border:1px solid var(--btn);background:var(--btn);color:var(--btnink);text-decoration:none;font-weight:500;box-shadow:var(--shadow)}
+.next::after{content:"→"}
+.next:hover{filter:brightness(1.06)}
+
+/* ---------- panels, figures, evidence ---------- */
+.panel{background:var(--bg2);border:1px solid var(--rule);border-radius:var(--r);padding:1.25rem 1.25rem 1.1rem;box-shadow:var(--shadow)}
+.panel > h3{font-family:var(--serif);font-weight:400;font-size:1.25rem;line-height:1.25;margin-bottom:.3rem}
+.fh{font-family:var(--serif);font-weight:400;font-size:.8125rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold2);line-height:1.4;margin-bottom:.3rem}
+.panel > .d{font-size:1rem;color:var(--ink2);margin-bottom:.9rem}
+@media (min-width:860px){.panel > .d{font-size:.9375rem}}
+.panel > .foot{margin-top:.75rem}
+.g2{display:grid;gap:var(--gap);grid-template-columns:repeat(auto-fit,minmax(min(100%,26rem),1fr));align-items:stretch}
+.g2 > .per-niche{display:grid}.g2 > .per-niche > *{height:100%}
+.g3{display:grid;gap:var(--gap);grid-template-columns:repeat(auto-fit,minmax(min(100%,18rem),1fr));align-items:start}
+.do{border-left:2px solid var(--gold);padding:.1rem 0 .1rem .8rem;margin-top:.9rem}
+.do b{display:block;font-size:.875rem;color:var(--gold);font-weight:600;margin-bottom:.15rem}
+.do ul{margin:0;padding-left:1.1rem}.do li{margin:.2rem 0}
+.body > .do,.per-niche > .do{margin:0 1.2rem}
+details.evidence{border:1px solid var(--rule);border-radius:var(--r);background:color-mix(in srgb,var(--bg2) 55%,transparent)}
+details.evidence > summary{list-style:none;cursor:pointer;min-height:3.25rem;display:flex;align-items:center;gap:.75rem;padding:.6rem 1.1rem;font-weight:500}
+details.evidence > summary::-webkit-details-marker{display:none}
+details.evidence > summary::before{content:"+";font-family:var(--serif);font-size:1.4rem;line-height:1;color:var(--gold);width:1rem}
+details.evidence[open] > summary::before{content:"–"}
+details.evidence > summary .meta{margin-left:auto;text-align:right;white-space:nowrap;flex:none}
+details.evidence > .inner{padding:0 1.1rem 1.1rem;display:grid;gap:var(--gap)}
+details.tool > summary{min-height:4rem}
+details.tool > summary .t{display:grid}details.tool > summary .t small{font-size:.875rem;color:var(--ink3);font-weight:400}
+.stub{border:1px dashed var(--rule);border-radius:var(--r);padding:.9rem 1.1rem;color:var(--ink3);font-size:.9375rem}
+.stub b{color:var(--ink2);font-weight:500}
+.tag{display:inline-block;font-size:.8125rem;color:var(--ink2);border:1px solid var(--rule);border-radius:6px;padding:0 .4rem;line-height:1.6;overflow-wrap:anywhere}
+.tags{display:flex;flex-wrap:wrap;gap:.35rem}
+.v{display:inline-flex;align-items:center;gap:.4rem;font-size:.875rem;color:var(--ink2)}.v i{width:.55rem;height:.55rem;border-radius:50%;background:var(--ink3)}
+.st{font-size:.875rem}.st.pass,.st.live,.st.proven,.st.stated{color:var(--good)}.st.fail,.st.likely_ghost,.st.gap,.st.absent{color:var(--crit)}.st.warn,.st.doubtful,.st.inferred1{color:var(--warn)}.st.not_run,.st.minor{color:var(--ink3)}.st.inferred2,.st.partial{color:var(--ink2)}
+.ph{background:color-mix(in srgb,var(--gold) 22%,transparent);border-radius:3px;padding:0 3px}
+.ph.filled{background:color-mix(in srgb,var(--good) 22%,transparent)}
+.statement{font-family:var(--ital);font-weight:400;font-style:italic;font-size:clamp(1.25rem,2.2vw,1.75rem);line-height:1.3;max-width:40ch}
+.qa{padding:.6rem 0;border-bottom:1px solid var(--rule)}.qa:last-child{border-bottom:0}.qa b{font-weight:500;display:block}
+.tiles{display:grid;gap:.25rem 1.25rem;grid-template-columns:repeat(auto-fit,minmax(min(100%,7.5rem),1fr))}
+.tile b{display:block;font-family:var(--serif);font-weight:400;font-size:1.875rem;line-height:1.05;color:var(--gold2)}.tile span{font-size:.875rem;color:var(--ink3)}
+
+/* ---------- tables: rows become stacked cards under 640 px ---------- */
+table.t{width:100%;border-collapse:collapse;font-size:.9375rem}
+table.t th{font-weight:500;font-size:.875rem;color:var(--ink3);text-align:left;padding:0 .75rem .5rem 0;border-bottom:1px solid var(--ink3)}
+table.t td{padding:.6rem .75rem .6rem 0;border-bottom:1px solid var(--rule);vertical-align:top}
+table.t td.r,table.t th.r{text-align:right}
+@media (max-width:639.98px){
+  table.t,table.t tbody,table.t tr,table.t td{display:block;width:100%}
+  table.t tr:first-child:has(th){display:none}
+  table.t tr{padding:.6rem 0;border-bottom:1px solid var(--rule)}
+  table.t td{border:0;padding:.15rem 0;display:grid;grid-template-columns:minmax(0,7.5rem) minmax(0,1fr);gap:.75rem;text-align:left!important}
+  table.t td::before{content:attr(data-label);font-size:.875rem;color:var(--ink3)}
+  table.t td[data-label=""]{grid-template-columns:minmax(0,1fr)}table.t td[data-label=""]::before{display:none}
+}
+
+/* ---------- sky openers ---------- */
+.opener{position:relative;display:grid;grid-template-columns:minmax(0,calc(max(0px,(100vw - 75rem) / 2) + 26rem)) minmax(0,1fr)}
+.opener .stage{position:sticky;top:calc(var(--bar) + var(--sel));height:min(calc(100vh - var(--bar) - var(--sel)),44rem);grid-column:2;grid-row:1;overflow:hidden}
+.opener .steps{grid-column:1;grid-row:1;padding:0 0 0 calc(max(0px,(100vw - 75rem) / 2) + clamp(1rem,3.5vw,2.75rem));position:relative;z-index:2}
+.opener .step{min-height:min(40vh,22rem);display:flex;align-items:center;padding:2rem 0}
+.opener .step:first-child{min-height:min(36vh,20rem)}
+.opener .step:only-child{min-height:min(40vh,24rem)}
+.opener .card{background:var(--bg2);border:1px solid var(--rule);border-radius:var(--r);padding:1.25rem 1.25rem 1.1rem;width:100%;box-shadow:var(--shadow)}
+.opener .card h3{font-size:clamp(1.25rem,2vw,1.625rem);margin-bottom:.6rem}
+.opener .card p{color:var(--ink2)}
+.legend{display:flex;flex-wrap:wrap;gap:.35rem 1rem;font-size:.875rem;color:var(--ink2);margin:.75rem 0 0}
+.legend span{display:inline-flex;align-items:center;gap:.4rem}.legend i{width:.6rem;height:.6rem;border-radius:50%;display:inline-block;flex:none}
+.sky{display:block;width:100%;height:100%}
+.sky .star{transition:fill .7s ease,r .7s ease,opacity .7s ease}
+.sky .constellation{transition:opacity .7s ease}
+.plates{display:none}
+.opener .plate{display:none}
+@media (max-width:859.98px){
+  .opener{display:block}
+  .opener .stage{display:none}
+  .opener .steps{padding:0 clamp(1rem,3.5vw,2.75rem)}
+  .opener .step,.opener .step:first-child,.opener .step:only-child{min-height:0;display:grid;gap:.5rem;padding:0 0 1.25rem}
+  .opener .plate{display:block}.opener .plate svg{display:block;width:100%;height:auto}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}.sky .star,.sky .constellation{transition:none}
+  .opener{display:block}.opener .stage{display:none}.opener .steps{padding:0 clamp(1rem,3.5vw,2.75rem);margin:0}
+  .opener .step,.opener .step:first-child,.opener .step:only-child{min-height:0;padding:1rem 0;display:grid;gap:1rem}
+  .opener .plate{display:block}.opener .plate svg{display:block;width:100%;height:auto}
+}
+
+/* ---------- cover: a measured title page, not a poster ----------
+   Three bands on one grid: title and chart side by side, a ledger of the study's counts, the route as five links. */
+.cover{padding:calc(var(--bar) + clamp(1.75rem,5vh,3.5rem)) 0 clamp(1.5rem,4vh,2.5rem)}
+.cover .head{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:clamp(1.5rem,4vw,3.5rem);align-items:center}
+.cover .front{display:grid;gap:1rem;max-width:36rem}
+.cover .who{font-size:.9375rem;color:var(--ink3)}
+.cover h1{font-size:clamp(2rem,3.6vw,3rem);font-weight:400;line-height:1.08}
+.cover .ans{font-size:1.0625rem;color:var(--ink2);max-width:34rem}
+.cover .go{display:flex;flex-wrap:wrap;gap:.75rem 1.25rem;align-items:center;margin-top:.25rem}
+.cover .stage{position:relative;width:100%;max-width:28rem;aspect-ratio:1;justify-self:end;overflow:hidden}
+.cover .tiles{display:grid;grid-template-columns:none;grid-auto-flow:column;grid-auto-columns:minmax(0,1fr);gap:0;margin-top:clamp(1.75rem,4vh,2.75rem);border-top:1px solid var(--rule);border-bottom:1px solid var(--rule)}
+.cover .tile{padding:.85rem 1rem .9rem;border-left:1px solid var(--rule);display:grid;gap:.2rem;align-content:start}
+.cover .tile:first-child{border-left:0;padding-left:0}
+.cover .tile b{font-size:1.625rem;line-height:1;color:var(--gold2)}
+.cover .tile span{font-size:.8125rem;line-height:1.35;color:var(--ink3)}
+.route{margin-top:1.5rem}
+.route ol{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:none;grid-auto-flow:column;grid-auto-columns:minmax(0,1fr);gap:0}
+.route li:not(:first-child){padding-left:1rem}
+.route .stop{display:grid;gap:.2rem;padding:.7rem 0 .5rem;border-top:2px solid var(--rule)}
+.route .stop b{font-family:var(--serif);font-weight:400;color:var(--gold2);font-size:1rem}
+.route .stop span{font-size:.875rem;line-height:1.4;color:var(--ink2)}
+@media (max-width:859.98px){
+  .cover{padding-top:calc(var(--bar) + 1rem)}
+  .cover .head{grid-template-columns:minmax(0,1fr);gap:.75rem}
+  .cover .stage{order:-1;max-width:none;aspect-ratio:auto;height:8.5rem;justify-self:stretch}
+  .cover h1{font-size:1.75rem;line-height:1.12}
+  .cover .front{gap:.75rem}
+  .cover .tiles{grid-auto-flow:row;grid-template-columns:minmax(0,1fr);margin-top:1.5rem;border-bottom:0}
+  .cover .tile,.cover .tile:first-child{grid-template-columns:3.75rem minmax(0,1fr);align-items:baseline;gap:.75rem;padding:.45rem 0;border-left:0;border-bottom:1px solid var(--rule)}
+  .cover .tile b{font-size:1.25rem}
+  .cover .tile span{font-size:.875rem;color:var(--ink2)}
+  .route ol{grid-auto-flow:row;grid-template-columns:minmax(0,1fr)}
+  .route li:not(:first-child){padding-left:0}
+  .route .stop{padding:.6rem 0;border-top-width:1px}
+}
+@media (min-width:560px) and (max-width:859.98px){
+  .cover .tiles{grid-auto-flow:column;grid-template-columns:none;border-bottom:1px solid var(--rule)}
+  .cover .tile,.cover .tile:first-child{grid-template-columns:none;gap:.15rem;padding:.6rem .75rem;border-bottom:0;border-left:1px solid var(--rule)}
+  .cover .tile:first-child{border-left:0;padding-left:0}
+  .route .stop{grid-template-columns:9.5rem minmax(0,1fr);align-items:baseline;gap:1rem}
+}
+
+/* ---------- chart kit ---------- */
+.chart{width:100%}
+.kit{display:grid;gap:.15rem}
+.kit .row{display:grid;grid-template-columns:var(--lab,minmax(0,38%)) minmax(0,1fr) var(--val,auto);gap:.25rem 12px;align-items:center;padding:.2rem 0}
+.kit .row .lab{font-size:.9375rem;line-height:1.3;overflow-wrap:anywhere}
+.kit .row .val{font-size:.875rem;color:var(--ink2);text-align:right;white-space:nowrap}
+.kit .row svg{display:block;width:100%;overflow:visible}
+.kit.narrow .row{grid-template-columns:minmax(0,1fr) var(--val,auto)}
+.kit.narrow .row .lab{grid-column:1 / -1}
+.kit .axis{display:grid;grid-template-columns:var(--lab,minmax(0,38%)) minmax(0,1fr) var(--val,auto);gap:12px}
+.kit.narrow .axis{grid-template-columns:minmax(0,1fr) var(--val,auto)}
+.kit.narrow .axis > :first-child{display:none}
+.kit .axis svg{display:block;width:100%}
+svg text{font-family:var(--sans);font-size:13px;fill:var(--ink2)}
+svg .ink{fill:var(--ink)}svg .ser{font-family:var(--serif)}
+.matrix{display:grid;gap:2px;align-items:center}
+.matrix .mh{font-size:.875rem;color:var(--ink2);text-align:center;display:flex;flex-direction:column;align-items:center;gap:.15rem;padding-bottom:.25rem}
+.matrix .mh i{width:.6rem;height:.6rem;border-radius:50%;display:block}
+.matrix .ml{font-size:.9375rem;line-height:1.3;padding:.2rem .5rem .2rem 0;overflow-wrap:anywhere}
+.matrix .mc{height:1.5rem;border-radius:4px;position:relative}
+.matrix .mc.req::after{content:"";position:absolute;left:50%;top:50%;width:5px;height:5px;margin:-2.5px;border-radius:50%;background:var(--bg)}
+.matrix .yc{display:grid;place-items:center}
+.matrix .yc i{width:.85rem;height:.85rem;border-radius:50%;border:1.5px solid var(--gold);display:block}
+.matrix .yc i.p2{background:color-mix(in srgb,var(--gold) 60%,transparent)}.matrix .yc i.p3{background:var(--gold)}
+.matrix.narrow .ml{grid-column:1 / -1;padding-top:.5rem}
+.ribbon{display:grid;grid-template-columns:3rem minmax(0,1.2fr) minmax(0,2fr) auto;gap:.9rem;align-items:center;padding:.75rem 0;border-bottom:1px solid var(--rule)}
+.ribbon:last-child{border-bottom:0}
+.ribbon .bars{display:flex;height:.75rem;background:var(--grid);border-radius:4px;overflow:hidden;gap:2px}
+.ribbon .bars i{display:block;height:100%}
+.ribbon .sc{font-family:var(--serif);font-size:1.75rem;font-weight:400;text-align:right;white-space:nowrap;min-width:max-content}
+@media (max-width:639.98px){.ribbon{grid-template-columns:2.5rem minmax(0,1fr) auto}.ribbon .bars{grid-column:1 / -1}.ribbon .sc{font-size:1.5rem}}
+.linkd{display:grid;align-items:start}
+.linkd .lcol,.linkd .rcol{display:grid;gap:.6rem}
+.linkd .li{font-family:var(--serif);font-size:1.125rem;line-height:1.3;padding:.3rem .5rem .3rem 0;border-right:2px solid var(--gold)}
+.linkd .ri{font-size:.9375rem;line-height:1.3;padding:.2rem 0 .2rem .6rem;border-left:2px solid var(--rule)}
+.linkd .mid svg{display:block;overflow:visible}
+.pairs{display:grid;gap:1rem}.pair .pl{font-family:var(--serif);font-size:1.125rem;line-height:1.3;border-left:2px solid var(--gold);padding-left:.6rem}
+.pair ul{list-style:none;margin:.35rem 0 0;padding:0 0 0 .8rem}.pair li{margin:.2rem 0}.pair .arrow{color:var(--gold)}
+.finds{display:grid;gap:var(--gap);grid-template-columns:repeat(auto-fit,minmax(min(100%,18rem),1fr))}
+.find{border-top:2px solid var(--gold);padding-top:.75rem}.find b{display:block;font-family:var(--serif);font-weight:400;font-size:1.1875rem;line-height:1.2;margin-bottom:.35rem}
+.gantt{display:grid;gap:6px 3px;align-items:stretch}
+.gantt .gw{font-size:.8125rem;color:var(--ink3);text-align:center}
+.gantt .gt{font-size:.9375rem;line-height:1.3;align-self:center;padding:.35rem .75rem .35rem 0;border-top:1px solid var(--rule)}
+.gantt .gc{border-top:1px solid var(--rule);border-left:1px dashed color-mix(in srgb,var(--rule) 60%,transparent)}
+.gantt .gb{background:var(--gold);border-radius:999px;height:.75rem;align-self:center;margin:0 2px;opacity:.9}
+.glist{display:grid;gap:.6rem}.glist .gi{border-left:3px solid var(--gold);padding:.2rem 0 .2rem .7rem}.glist b{font-family:var(--serif);font-weight:400}
+.rare{display:grid;gap:.4rem;margin-top:1.1rem}.rare p{font-size:1.0625rem}.rare b{color:var(--gold);font-weight:500}
+.chips{display:flex;flex-wrap:wrap;gap:.4rem}.chip{border:1px solid var(--rule);border-radius:999px;padding:.2rem .7rem;font-size:1rem;font-style:italic;font-family:var(--ital);background:var(--bg2)}
+.formula{border-top:1px solid var(--rule);padding:.8rem 0;display:grid;grid-template-columns:minmax(0,1fr) auto;gap:.4rem 1rem;align-items:start}
+.formula .tpl{font-family:var(--serif);font-size:1.25rem;line-height:1.3}.formula .ex{grid-column:1 / -1}
+.heat{display:grid;gap:3px}
+.heat > div{min-height:2.25rem;border-radius:5px;display:grid;place-items:center;font-size:.875rem}
+.heat .hh{min-height:1.5rem;color:var(--ink3);background:none}
+
+/* ---------- act 1: you ---------- */
+.career{display:grid;gap:1rem}
+.roles{display:grid;gap:.75rem;grid-template-columns:repeat(auto-fit,minmax(min(100%,15rem),1fr))}
+.role{border-left:var(--w,3px) solid var(--gold);padding:.2rem 0 .2rem .8rem}
+.role b{display:block;font-weight:500}.role .meta{display:block}
+.fields{display:grid;gap:0 1.5rem;grid-template-columns:repeat(auto-fit,minmax(min(100%,22rem),1fr))}
+.field{display:grid;grid-template-columns:minmax(0,9rem) minmax(0,1fr);gap:.75rem;padding:.55rem 0;border-bottom:1px solid var(--rule)}
+.field .k{font-size:.875rem;color:var(--ink3)}
+.field .vv{display:grid;gap:.15rem}
+.grade{font-size:.875rem}
+@media (max-width:479.98px){.field{grid-template-columns:minmax(0,1fr);gap:.1rem}}
+.edge{border-top:2px solid var(--gold);padding-top:.6rem}
+.edges .fh{margin-bottom:.75rem}
+.edge b{font-family:var(--serif);font-weight:400;font-size:clamp(1.1875rem,1.8vw,1.4375rem);display:block;line-height:1.2;margin-bottom:.4rem}
+
+/* ---------- verdict plates ---------- */
+.plates-v{display:grid;gap:var(--gap);grid-template-columns:repeat(auto-fit,minmax(min(100%,24rem),1fr))}
+.plate-v{background:var(--bg2);border:1px solid var(--rule);border-radius:18px;padding:1.25rem;display:grid;grid-template-columns:9rem minmax(0,1fr);gap:1.1rem;align-items:center}
+.plate-v .rank{font-size:.875rem;color:var(--ink3)}
+.plate-v h3{font-size:1.5rem;margin:.2rem 0 .5rem}
+.plate-v .score{font-family:var(--serif);font-size:2.75rem;font-weight:400;line-height:1}
+@media (max-width:519.98px){.plate-v{grid-template-columns:minmax(0,1fr)}.plate-v .glyph{max-width:9rem}}
+.glyph svg{width:100%;height:auto;display:block}
+
+/* ---------- course: actions, playbook, resumes, linkedin, tracker ---------- */
+.actlist{display:grid}
+.act-row{display:grid;grid-template-columns:2.75rem minmax(0,1fr);gap:.5rem;align-items:start;padding:.4rem 0;border-bottom:1px solid var(--rule)}
+.check{width:2.75rem;height:2.75rem;display:grid;place-items:center;cursor:pointer}
+.check input{width:1.25rem;height:1.25rem;accent-color:var(--gold);margin:0}
+.act-row .txt{padding-top:.6rem}.act-row.done .txt{color:var(--ink3);text-decoration:line-through}
+.act-row .tags{margin-top:.35rem}
+.imp-high{border-color:var(--gold);color:var(--gold)}
+.progress{height:6px;border-radius:3px;background:var(--grid);overflow:hidden;margin:.75rem 0 .25rem}.progress i{display:block;height:100%;background:var(--gold);width:0;transition:width .3s}
+.weeks{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,12rem),1fr));gap:.75rem}
+.week{background:var(--bg3);border-radius:10px;border-top:2px solid var(--gold);padding:.75rem .9rem}
+.week b{font-family:var(--serif);font-weight:400;font-size:1.125rem;display:block;margin-bottom:.25rem}.week ul{margin:0;padding-left:1.1rem}
+.res{display:grid;grid-template-columns:minmax(0,20rem) minmax(0,1fr);gap:1.75rem}
+@media (max-width:899.98px){.res{grid-template-columns:minmax(0,1fr)}}
+.vlist{--cols:1}
+.vlist button{min-height:2.75rem;text-align:left;justify-content:flex-start;padding:.4rem .75rem;border-radius:10px;border:1px solid var(--rule);background:transparent;color:var(--ink2);cursor:pointer;line-height:1.3;display:flex;align-items:center}
+.vlist button[aria-selected="true"]{color:var(--ink);border-color:var(--ink);background:var(--bg3)}
+.ph-field{display:grid;gap:.25rem;margin:.6rem 0}.ph-field label{font-size:.875rem;color:var(--ink3);overflow-wrap:anywhere}
+input[type=text],select{background:var(--bg3);border:1px solid var(--rule);color:var(--ink);border-radius:8px;padding:.5rem .6rem;min-height:2.75rem;font-size:1rem;width:100%}
+@media (min-width:860px){input[type=text],select{font-size:.9375rem;min-height:2.25rem}}
+.ph-fields{max-height:24rem;overflow-y:auto;padding-right:.25rem}
+.paper{background:#fdfcf9;color:#1b2033;border-radius:4px;padding:clamp(1.1rem,4.5vw,3.25rem);box-shadow:0 30px 80px -40px rgba(0,0,0,.6)}
+:root[data-theme="light"] .paper{box-shadow:0 1px 0 var(--rule),0 24px 60px -36px rgba(20,28,58,.45)}
+.paper .nm{font-family:var(--serif);font-size:2rem;font-weight:400}.paper .hl{font-weight:600;margin-top:.25rem}.paper .ct{font-size:.875rem;color:#4c5672;overflow-wrap:anywhere}
+.paper h4{font-family:var(--sans);font-size:.875rem;font-weight:600;color:#2f5bd0;margin:1.25rem 0 .4rem;padding-bottom:.2rem;border-bottom:1px solid #dde1ec}
+.paper .role2{display:flex;justify-content:space-between;flex-wrap:wrap;gap:.25rem .75rem;margin-top:.75rem}.paper .role2 span{color:#4c5672;font-size:.875rem}
+.paper .ctx,.paper .scope{font-size:.875rem;color:#4c5672}.paper .ctx{font-style:italic}
+.paper ul{margin:.4rem 0 0;padding-left:1.1rem}.paper li{margin:.2rem 0}
+.paper .ph{background:#f6e7b9}.paper .ph.filled{background:#d6f0de}
+.paper .src{font-size:.75rem;color:#5f6884;border-color:#dde1ec;margin-left:.35rem;line-height:1.4}
+.li-field{background:var(--bg2);border:1px solid var(--rule);border-radius:12px;padding:.9rem 1rem;margin-bottom:.75rem}
+.li-field .top{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:.5rem .75rem;align-items:center;margin-bottom:.5rem}
+.li-field .top b{font-weight:500}.li-field pre{white-space:pre-line;font:inherit;margin:0;color:var(--ink);overflow-wrap:anywhere}
+.trk{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,11rem),1fr));gap:.6rem;align-items:end}
+.trk label{font-size:.875rem;color:var(--ink3);display:grid;gap:.25rem}
+#trk-diag .hit{border-left:2px solid var(--crit);padding:.4rem .7rem;margin-top:.6rem}
+.emp{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:.25rem .75rem;padding:.75rem 0;border-bottom:1px solid var(--rule);align-items:start}
+.emp:last-child{border-bottom:0}
+.emp .co{font-weight:500;overflow-wrap:anywhere}.emp .acts{display:flex;gap:.5rem;align-items:center}
+.dots{color:var(--gold);letter-spacing:2px}
+details.more > summary{cursor:pointer;color:var(--accent);list-style:none}details.more > summary::-webkit-details-marker{display:none}
+.erow{display:flex;flex-wrap:wrap;align-items:center;gap:0 1rem}
+.per-niche > .do,.per-niche + .do{margin-top:var(--gap)}
+.panel ol{padding-left:1.75rem!important}
+.pitch{border-top:2px solid var(--gold);padding:1.1rem 0 .4rem}.pitch .statement{max-width:none;margin-top:.4rem}
+.running{display:flex;flex-wrap:wrap;gap:.75rem 1.5rem;align-items:center}.running .r{display:flex;gap:.6rem;align-items:center}.running .r svg{width:3rem;height:3rem}
+
+#tip{position:fixed;z-index:60;pointer-events:none;background:var(--ink);color:var(--bg);font-size:.875rem;line-height:1.4;padding:.45rem .65rem;border-radius:8px;max-width:19rem;opacity:0;transition:opacity .08s}
+footer{padding:1.75rem 0 3.5rem;border-top:1px solid var(--rule)}
+
+/* ---------- phone type scale (v2.1.1): denser, after reader feedback that 2.1.0 was too large to read ---------- */
+@media (max-width:859.98px){
+  
+  body{line-height:1.5}
+  .chead{padding:2.25rem 0 1.25rem;gap:.5rem}
+  .chead h2{font-size:1.625rem;line-height:1.15}
+  .chead .ans{font-size:1.0625rem;line-height:1.4}
+  .cover .ans{font-size:1rem}
+  .tile b{font-size:1.375rem}
+  .statement{font-size:1.125rem;line-height:1.34}
+  .opener .card h3{font-size:1.25rem}
+  .opener .card{padding:1rem}
+  .handover p{font-size:1.125rem}
+  .edge b,.find b{font-size:1.125rem}
+  .linkd .li,.pair .pl,.week b{font-size:1rem}
+  .paper .nm{font-size:1.5rem}
+  .panel{padding:.9rem .9rem .8rem}
+  .panel > h3,.fh{font-size:.9375rem}
+  .panel > .d{font-size:.9375rem}
+  .stations a span{font-size:.8125rem}.stations a b{font-size:.75rem}
+  input[type=text],select{font-size:16px}
+  .rare p{font-size:1rem}
+}
+@media print{.stations,.corner,.selector,.opener .stage,.next,#tip{display:none!important}.plates,.opener .plate{display:block}details > *{display:block!important}body{background:#fff;color:#000;padding:0}}
+</style>
+</head>
+<body>
+<div id="tip" role="tooltip"></div>
+<nav class="stations" aria-label="Journey" data-stations></nav>
+<main id="main"></main>
+<footer><div class="wrap meta" id="foot"></div></footer>
+<script>
+"use strict";
+const R = /*__RESULTS__*/null;
+/* ================= utilities ================= */
+const $ = (q, e = document) => e.querySelector(q), $$ = (q, e = document) => [...e.querySelectorAll(q)];
+const NS = "http://www.w3.org/2000/svg";
+function el(t, a = {}, k = []) { const e = document.createElement(t); for (const [x, v] of Object.entries(a)) { if (v == null || v === false) continue; if (x === "html") e.innerHTML = v; else if (x === "text") e.textContent = v; else e.setAttribute(x, v === true ? "" : v); }
+  (Array.isArray(k) ? k : [k]).flat(Infinity).forEach(c => c != null && c !== false && e.append(c.nodeType ? c : document.createTextNode(c))); return e; }
+function s(t, a = {}, k = []) { const e = document.createElementNS(NS, t); for (const [x, v] of Object.entries(a)) if (v != null) e.setAttribute(x, v);
+  (Array.isArray(k) ? k : [k]).forEach(c => c != null && e.append(c.nodeType ? c : document.createTextNode(c))); return e; }
+const pct = v => v == null ? "—" : Math.round(v * 100 - 1e-6) + "%";
+const money = (v, c) => v == null ? "—" : (c === "EUR" ? "€" : c === "GBP" ? "£" : "$") + Math.round(v / 1000) + "K";
+const esc = t => String(t ?? "").replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+const cap = t => String(t || "").replace(/^./, c => c.toUpperCase());
+const reduced = matchMedia("(prefers-reduced-motion: reduce)").matches;
+const NICHE = Object.fromEntries(R.niches.map(n => [n.id, n]));
+const ORDER = R.niches.map(n => n.id).sort((a, b) => NICHE[a].rank - NICHE[b].rank);
+const HUE = id => { const r = NICHE[id]?.rank; return r && r <= 4 ? `var(--h${r})` : "var(--hx)"; };
+const first = (R.meta.candidate || "").split(/[\s(]/)[0] || "you";
+const J = Object.fromEntries((R.journey?.acts || []).map(a => [a.act, a]));
+function parts(n) { /* labels are "Role, segment, City" or "Description, City"; never assume three parts */
+  const p = n.label.split(", "), city = p.length > 1 ? p[p.length - 1] : (n.city || ""), role = p[0];
+  const lvl = /director/i.test(role) ? "Director" : /head|vp|vice/i.test(role) ? "Head / VP" : (n.seniority ? cap(String(n.seniority)) : "");
+  const seg = cap(p.length > 2 ? p.slice(1, -1).join(", ") : role);
+  return { lvl, seg, city, short: city ? `${seg}, ${city}` : seg }; }
+const store = (() => { const mem = {}; let ls = null; try { ls = window.localStorage; ls.setItem("__nl", "1"); ls.removeItem("__nl"); } catch (e) { ls = null; }
+  const key = k => "niche-lab:" + (R.meta.candidate || "") + ":" + k;
+  return { get(k, d) { try { const v = ls ? ls.getItem(key(k)) : mem[k]; return v == null ? d : JSON.parse(v); } catch (e) { return mem[k] != null ? JSON.parse(mem[k]) : d; } },
+    set(k, v) { const j = JSON.stringify(v); mem[k] = j; try { ls && ls.setItem(key(k), j); } catch (e) { } } }; })();
+async function copy(text, btn) {
+  try { await navigator.clipboard.writeText(text); } catch (e) { const t = el("textarea", { style: "position:fixed;opacity:0" }); t.value = text; document.body.append(t); t.select(); try { document.execCommand("copy"); } catch (_) { } t.remove(); }
+  if (btn) { const o = btn.textContent; btn.textContent = "Copied"; btn.classList.add("ok"); setTimeout(() => { btn.textContent = o; btn.classList.remove("ok"); }, 1200); } }
+const copyBtn = (text, id) => { const b = el("button", { class: "btn", "data-action": "copy", "data-copy": id, text: "Copy" }); b.onclick = () => copy(typeof text === "function" ? text() : text, b); return b; };
+const fills = store.get("fills", {});
+const nicheNames = t => String(t ?? "").replace(/\b(n\d\d|s\d\d)\b/g, id => NICHE[id] ? `${NICHE[id].rank} · ${parts(NICHE[id]).short}` : id);
+const phHTML = t => esc(nicheNames(t)).replace(/\[[^\]]+\]/g, m => { const k = m.replace(/&amp;/g, "&"); const v = fills[k];
+  return `<span class="ph${v ? " filled" : ""}" data-key="${esc(k)}" data-tip="${v ? "Filled by you" : "Only you can supply this. Fill it under Your resumes."}">${v ? esc(v) : m}</span>`; });
+const applyFills = t => String(t ?? "").replace(/\[[^\]]+\]/g, m => fills[m] || m);
+const tip = $("#tip");
+function showTip(t, x, y) { tip.innerHTML = t.getAttribute("data-tip"); tip.style.opacity = 1; const w = tip.offsetWidth; tip.style.left = Math.max(8, Math.min(x + 14, innerWidth - w - 8)) + "px"; tip.style.top = Math.min(y + 16, innerHeight - tip.offsetHeight - 8) + "px"; }
+addEventListener("pointermove", e => { if (e.pointerType === "touch") return; const t = e.target.closest?.("[data-tip]"); if (!t) { tip.style.opacity = 0; return; } showTip(t, e.clientX, e.clientY); });
+addEventListener("click", e => { const t = e.target.closest?.("[data-tip]"); if (!t || e.target.closest("button,a,input")) { tip.style.opacity = 0; return; } showTip(t, e.clientX, e.clientY); });
+addEventListener("scroll", () => { tip.style.opacity = 0; }, { passive: true });
+function act(list) { return list?.length ? el("div", { class: "do" }, [el("b", { text: "Do this" }), el("ul", {}, list.map(x => el("li", { html: phHTML(x) })))]) : null; }
+function panel(title, desc, body, foot) { return el("div", { class: "panel" }, [title ? el("h3", { text: title }) : null, desc ? el("p", { class: "d", html: desc }) : null, body, foot ? (foot.nodeType ? foot : el("p", { class: "foot meta", html: foot })) : null]); }
+const fig = (id, src, node) => { node.setAttribute("data-fig", id); node.setAttribute("data-src", src); return node; };
+const stub = (id, src, what, why) => fig(id, src, el("div", { class: "stub", "data-stub": why }, [el("b", { text: what + ". " }), why]));
+const verdict = n => el("span", { class: "v", html: `<i style="background:${HUE(n.id)}"></i>${esc(n.verdict)}` });
+function evidence(title, kids, note) { const k = kids.filter(Boolean); if (!k.length) return null;
+  return el("details", { class: "evidence" }, [el("summary", {}, [el("span", { text: title }), el("span", { class: "meta", text: note || `${k.length} more` })]), el("div", { class: "inner" }, k)]); }
+
+/* ================= chart kit =================
+   chart(draw) re-draws at the container's real width whenever it changes (resize, an expander opening, a niche switch).
+   Every primitive puts labels in HTML, where they wrap; SVG carries only marks and short axis ticks kept inside the box.
+   Data marks carry data-mark so tests can compare them with the rows in results.json. */
+const NARROW = 560;
+const REM = () => parseFloat(getComputedStyle(document.documentElement).fontSize) / 16 || 1;
+const _cv = document.createElement("canvas").getContext("2d");
+function textW(html, px = 14) { _cv.font = `${px * REM()}px "Instrument Sans", "Helvetica Neue", Arial, sans-serif`; const d = document.createElement("div"); d.innerHTML = html || ""; return Math.ceil(_cv.measureText(d.textContent).width); }
+function chart(draw) { const box = el("div", { class: "chart" }); let w0 = 0;
+  const put = w => { const n = draw(w); box.replaceChildren(n); if (n._after) requestAnimationFrame(() => n._after()); };
+  const ro = new ResizeObserver(() => { const w = Math.floor(box.clientWidth); if (!w || w === w0) return; w0 = w; put(w); });
+  ro.observe(box); box._redraw = () => { w0 = 0; const w = Math.floor(box.clientWidth); if (w) { w0 = w; put(w); } }; return box; }
+function ticks(xs, fmt, w, h = 16) { const g = s("svg", { width: w, height: h, viewBox: `0 0 ${w} ${h}`, "aria-hidden": "true" });
+  xs = w < 70 ? [] : w < 150 ? [xs[0], xs[xs.length - 1]] : xs;
+  xs.forEach(([v, x]) => g.append(s("text", { x: Math.max(0, Math.min(w, x)), y: 12, "text-anchor": x < 24 ? "start" : x > w - 24 ? "end" : "middle" }, fmt(v)))); return g; }
+/* rows: [{label(html), value, lo, hi, req, color, tip, valText, mark}] ; axis [0..max] */
+function barRows(rows, o = {}) { return W => {
+  const narrow = W < NARROW * REM(), valW = Math.max(Math.round((o.valW ?? 72) * REM()), ...rows.map(r => textW(r.valText) + 6)), labW = narrow ? 0 : Math.round(W * (o.lab ?? .38)), gap = 12;
+  const bw = Math.max(40, narrow ? W - valW - gap : W - labW - valW - 2 * gap), max = o.max ?? Math.max(...rows.map(r => r.hi ?? r.value), 1e-9), X = v => 6 + (v / max) * (bw - 12);
+  const box = el("div", { class: "kit" + (narrow ? " narrow" : ""), style: `--lab:${labW}px;--val:${valW}px` });
+  if (o.axis !== false) box.append(el("div", { class: "axis" }, [el("span"), ticks((o.ticks || [0, max / 2, max]).map(v => [v, X(v)]), o.fmt || pct, bw), el("span")]));
+  rows.forEach(r => { const g = s("svg", { width: bw, height: 18, viewBox: `0 0 ${bw} 18` });
+    g.append(s("line", { x1: X(0), x2: X(max), y1: 9, y2: 9, stroke: "var(--grid)", "stroke-width": 6, "stroke-linecap": "round" }));
+    if (o.band) g.append(s("rect", { x: X(o.band[0]), y: 1, width: X(o.band[1]) - X(o.band[0]), height: 16, fill: "none", stroke: "var(--ink2)", "stroke-dasharray": "3 2", rx: 2 }));
+    if (r.lo != null) g.append(s("line", { x1: X(r.lo), x2: X(r.hi), y1: 9, y2: 9, stroke: r.color, "stroke-opacity": .32, "stroke-width": 6, "stroke-linecap": "round" }));
+    if (r.req != null) g.append(s("line", { x1: X(0), x2: X(r.req), y1: 9, y2: 9, stroke: r.color, "stroke-width": 2 }));
+    if (o.kind === "dot") g.append(s("circle", { cx: X(r.value), cy: 9, r: 5, fill: "var(--bg2)", stroke: r.color, "stroke-width": 2.2, "data-mark": "", "data-tip": r.tip }));
+    else g.append(s("rect", { x: X(0) - 3, y: 3, width: Math.max(3, X(r.value) - X(0) + 3), height: 12, rx: 3, fill: r.color, "fill-opacity": r.op ?? .85, "data-mark": "", "data-tip": r.tip }));
+    if (r.m2 != null) g.append(s("circle", { cx: X(r.m2), cy: 9, r: 5.5, fill: "var(--bg2)", "fill-opacity": .4, stroke: "var(--ink)", "stroke-width": 1.8 }));
+    box.append(el("div", { class: "row" }, [el("div", { class: "lab", html: r.label }), g, el("div", { class: "val", html: r.valText ?? "" })])); });
+  return box; }; }
+/* one strip of dots on a 0..max axis, with an optional threshold line */
+function dotStrip(pts, o = {}) { return W => { const max = o.max ?? 1, min = o.min ?? 0, H = o.h ?? 64, X = v => 8 + (v - min) / (max - min || 1) * (W - 16);
+  const g = s("svg", { width: W, height: H + 18, viewBox: `0 0 ${W} ${H + 18}`, role: "img", "aria-label": o.aria || "" });
+  if (o.line != null) { g.append(s("rect", { x: X(o.line), y: 4, width: X(max) - X(o.line), height: H - 8, fill: "var(--gold)", "fill-opacity": .08 }));
+    g.append(s("line", { x1: X(o.line), x2: X(o.line), y1: 2, y2: H - 2, stroke: "var(--gold)", "stroke-width": 1.5 })); }
+  if (o.mark != null) g.append(s("line", { x1: X(o.mark), x2: X(o.mark), y1: 2, y2: H - 2, stroke: "var(--gold)", "stroke-width": 1.6, "stroke-dasharray": "4 3" }));
+  const used = {}; pts.forEach(p => { const b = Math.round((p.v - min) / (max - min || 1) * 40); used[b] = (used[b] || 0) + 1;
+    const y = H / 2 + ((used[b] % 2 ? 1 : -1) * Math.floor(used[b] / 2) * 9);
+    g.append(s("circle", { cx: X(p.v), cy: Math.max(6, Math.min(H - 6, y)), r: 5.5, fill: p.color, "fill-opacity": p.op ?? .85, "data-mark": "", "data-tip": p.tip })); });
+  (o.ticks || [min, (min + max) / 2, max]).forEach(v => g.append(s("text", { x: X(v), y: H + 14, "text-anchor": v === min ? "start" : v === max ? "end" : "middle" }, (o.fmt || pct)(v))));
+  return g; }; }
+/* labelled strips: one dotStrip per row, shared axis */
+function stripRows(rows, o = {}) { return W => { const narrow = W < NARROW, labW = narrow ? 0 : Math.round(W * (o.lab ?? .3)), bw = narrow ? W - 12 : W - labW - 24;
+  const all = rows.flatMap(r => r.pts.map(p => p.v)).concat(o.mark != null ? [o.mark] : []), min = o.min ?? Math.min(...all) * .95, max = o.max ?? Math.max(...all) * 1.04;
+  const box = el("div", { class: "kit" + (narrow ? " narrow" : ""), style: `--lab:${labW}px;--val:0px` });
+  rows.forEach(r => box.append(el("div", { class: "row" }, [el("div", { class: "lab", html: r.label }), dotStrip(r.pts, { ...o, min, max, h: 30, ticks: [] })(bw), el("span")])));
+  box.append(el("div", { class: "axis" }, [el("span"), ticks([[min, 8], [(min + max) / 2, bw / 2], [max, bw - 8]], o.fmt || pct, bw), el("span")]));
+  return box; }; }
+
+/* diverging rows around zero: difference with interval; hollow when not significant */
+function divRows(rows, o = {}) { return W => { const narrow = W < NARROW * REM(), valW = Math.max(Math.round(64 * REM()), ...rows.map(r => textW(r.valText) + 6)), labW = narrow ? 0 : Math.round(W * .38);
+  const bw = Math.max(60, narrow ? W - valW - 12 : W - labW - valW - 24), m = o.max ?? Math.max(.1, ...rows.map(r => Math.max(Math.abs(r.lo ?? r.value), Math.abs(r.hi ?? r.value)))), X = v => bw / 2 + v / m * (bw / 2 - 8);
+  const box = el("div", { class: "kit" + (narrow ? " narrow" : ""), style: `--lab:${labW}px;--val:${valW}px` });
+  box.append(el("div", { class: "axis" }, [el("span"), ticks([[-m, X(-m)], [0, X(0)], [m, X(m)]], v => (v > 0 ? "+" : "") + Math.round(v * 100) + " pts", bw), el("span")]));
+  rows.forEach(r => { const g = s("svg", { width: bw, height: 18, viewBox: `0 0 ${bw} 18` });
+    g.append(s("line", { x1: X(0), x2: X(0), y1: 0, y2: 18, stroke: "var(--ink3)", "stroke-width": 1 }));
+    if (r.lo != null) g.append(s("line", { x1: X(Math.max(-m, r.lo)), x2: X(Math.min(m, r.hi)), y1: 9, y2: 9, stroke: r.color, "stroke-opacity": .45, "stroke-width": 2 }));
+    const x0 = Math.min(X(0), X(r.value)), w = Math.max(2, Math.abs(X(r.value) - X(0)));
+    g.append(s("rect", { x: x0, y: 4, width: w, height: 10, rx: 2, fill: r.solid ? r.color : "none", stroke: r.color, "stroke-width": 1.5, "data-mark": "", "data-tip": r.tip }));
+    box.append(el("div", { class: "row" }, [el("div", { class: "lab", html: r.label }), g, el("div", { class: "val", html: r.valText ?? "" })])); });
+  return box; }; }
+/* gantt: tracks × weeks; under 560 px a week-by-week list */
+function gantt(items, weeks = 12) { return W => { const span = w => { const [a, b] = String(w).split("-").map(Number); return [a, b || a]; };
+  if (W < NARROW * REM()) { const byW = [...items].sort((x, y) => span(x.week)[0] - span(y.week)[0]);
+    return el("div", { class: "glist" }, byW.map(i => el("div", { class: "gi", "data-mark": "" }, [el("b", { text: `Week ${i.week}` }), el("div", { html: phHTML(i.action) }), el("div", { class: "meta", text: `${i.track} · target: ${i.target}` })]))); }
+  const lab = Math.round(Math.min(420, W * .42)), rows = [...items].sort((x, y) => span(x.week)[0] - span(y.week)[0]);
+  const g = el("div", { class: "gantt", style: `grid-template-columns:${lab}px repeat(${weeks},minmax(0,1fr))` }, [el("div", { class: "gw", style: "text-align:left", text: "Week" }), ...Array.from({ length: weeks }, (_, k) => el("div", { class: "gw", text: String(k + 1) }))]);
+  rows.forEach((i, ri) => { const row = ri + 2, [a, b] = span(i.week);
+    g.append(el("div", { class: "gt", style: `grid-row:${row}` }, [el("div", { html: phHTML(i.action) }), el("div", { class: "meta", text: `${i.track} · ${i.target}` })]));
+    for (let k = 1; k <= weeks; k++) g.append(el("div", { class: "gc", style: `grid-row:${row};grid-column:${k + 1}` }));
+    g.append(el("div", { class: "gb", "data-mark": "", style: `grid-row:${row};grid-column:${a + 1} / ${b + 2}`, "data-tip": `<b>${esc(i.action)}</b><br>target: ${esc(i.target)}` })); });
+  return g; }; }
+/* scatter: x and y numeric, optional vertical threshold */
+function scatter(pts, o = {}) { return W => { const H = o.h ?? Math.round(Math.min(340, Math.max(220, W * .45))), L = 52, B = 30, T = 10, Rr = 12;
+  const xs = pts.map(p => p.x), ys = pts.map(p => p.y), x0 = o.xmin ?? Math.min(...xs), x1 = o.xmax ?? Math.max(...xs), y0 = Math.min(...ys) * .96, y1 = Math.max(...ys) * 1.03;
+  const X = v => L + (v - x0) / ((x1 - x0) || 1) * (W - L - Rr), Y = v => H - B - (v - y0) / ((y1 - y0) || 1) * (H - B - T);
+  const g = s("svg", { width: W, height: H, viewBox: `0 0 ${W} ${H}`, role: "img", "aria-label": o.aria || "" });
+  [y0, (y0 + y1) / 2, y1].forEach(v => { g.append(s("line", { x1: L, x2: W - Rr, y1: Y(v), y2: Y(v), stroke: "var(--grid)" })); g.append(s("text", { x: L - 6, y: Y(v) + 4, "text-anchor": "end" }, o.fy(v))); });
+  [x0, (x0 + x1) / 2, x1].forEach(v => g.append(s("text", { x: X(v), y: H - 8, "text-anchor": v === x0 ? "start" : v === x1 ? "end" : "middle" }, o.fx(v))));
+  if (o.line != null) { g.append(s("rect", { x: X(o.line), y: T, width: W - Rr - X(o.line), height: H - B - T, fill: "var(--gold)", "fill-opacity": .07 })); g.append(s("line", { x1: X(o.line), x2: X(o.line), y1: T, y2: H - B, stroke: "var(--gold)", "stroke-width": 1.5 })); }
+  pts.forEach(p => g.append(s("circle", { cx: X(p.x), cy: Y(p.y), r: 6, fill: p.color, "fill-opacity": p.op ?? .9, stroke: "var(--bg2)", "stroke-width": 2, "data-mark": "", "data-tip": p.tip })));
+  return g; }; }
+/* link diagram: left items to right items; under 560 px a paired list */
+function linkDiagram(links, o = {}) { return W => { const L = [...new Set(links.map(l => l.left))], Rt = [...new Set(links.map(l => l.right))].sort((a, b) => (o.order?.(b) ?? 0) - (o.order?.(a) ?? 0));
+  if (W < NARROW * REM()) return el("div", { class: "pairs" }, L.map(a => el("div", { class: "pair" }, [el("div", { class: "pl", text: a }), el("ul", {}, links.filter(l => l.left === a).map(l => el("li", { "data-mark": "", "data-tip": l.tip }, [el("span", { class: "arrow", text: "→ " }), l.right, o.note ? el("span", { class: "meta", text: " " + o.note(l.right) }) : null])))])));
+  const lw = Math.round(W * .3), rw = Math.round(W * .38), mw = W - lw - rw;
+  const left = el("div", { class: "lcol" }, L.map(a => el("div", { class: "li", "data-left": a, text: a })));
+  const right = el("div", { class: "rcol" }, Rt.map(b => el("div", { class: "ri", "data-right": b }, [el("span", { text: b }), o.note ? el("span", { class: "meta", text: " " + o.note(b) }) : null])));
+  const svg = s("svg", { width: mw, height: 10, class: "links" }), box = el("div", { class: "linkd", style: `grid-template-columns:${lw}px ${mw}px ${rw}px` }, [left, el("div", { class: "mid" }, svg), right]);
+  box._after = () => { const r0 = box.getBoundingClientRect(), H = Math.max(left.offsetHeight, right.offsetHeight); svg.setAttribute("height", H); svg.setAttribute("viewBox", `0 0 ${mw} ${H}`); svg.replaceChildren();
+    const yL = a => { const e = left.querySelector(`[data-left="${CSS.escape(a)}"]`).getBoundingClientRect(); return e.top - r0.top + e.height / 2; }, yR = b => { const e = right.querySelector(`[data-right="${CSS.escape(b)}"]`).getBoundingClientRect(); return e.top - r0.top + e.height / 2; };
+    links.forEach(l => { const a = yL(l.left), b = yR(l.right); svg.append(s("path", { d: `M2,${a} C${mw * .5},${a} ${mw * .5},${b} ${mw - 2},${b}`, fill: "none", stroke: l.color || "var(--gold)", "stroke-width": l.w || 1.6, "stroke-opacity": .8, "data-mark": "", "data-tip": l.tip })); }); };
+  return box; }; }
+
+/* ================= the rose: a niche's requirement profile ================= */
+function rose(n, size = 150) {
+  const rows = n.demand.rows.filter(r => r.present >= .2).slice(0, 12), fit = Object.fromEntries(n.fit.rows.map(r => [r.code, r])), c = size / 2, R0 = size * .1, R1 = size * .48;
+  const g = s("svg", { viewBox: `0 0 ${size} ${size}`, width: size, height: size, role: "img", "aria-label": `Requirement profile of ${n.label}` });
+  [.5, 1].forEach(f => g.append(s("circle", { cx: c, cy: c, r: R0 + (R1 - R0) * f, fill: "none", stroke: "var(--grid)" })));
+  const k = rows.length || 1, step = Math.PI * 2 / k;
+  rows.forEach((r, i) => { const a0 = i * step - Math.PI / 2 + step * .08, a1 = (i + 1) * step - Math.PI / 2 - step * .08;
+    const petal = (rad, op) => { const p = (a, rr) => [c + Math.cos(a) * rr, c + Math.sin(a) * rr]; const [x0, y0] = p(a0, R0), [x1, y1] = p(a0, rad), [x2, y2] = p(a1, rad), [x3, y3] = p(a1, R0);
+      return s("path", { d: `M${x0},${y0} L${x1},${y1} A${rad},${rad} 0 0 1 ${x2},${y2} L${x3},${y3} A${R0},${R0} 0 0 0 ${x0},${y0}Z`, fill: HUE(n.id), "fill-opacity": op }); };
+    const outer = R0 + (R1 - R0) * r.present, f = fit[r.code], g3 = f ? f.grade / 3 : 0;
+    const P = petal(outer, .28); P.setAttribute("data-tip", `<b>${esc(r.label)}</b><br>asked in ${pct(r.present)}; your evidence ${f ? f.grade : 0} of 3`); g.append(P);
+    if (g3 > 0) g.append(petal(R0 + (outer - R0) * g3, .95)); });
+  g.append(s("circle", { cx: c, cy: c, r: R0 * .55, fill: "var(--gold)" }));
+  return g; }
+
+/* ================= the sky =================
+   Identical geometry in every opener so the reader stays in one place; each opener shows its act's states. */
+const M = R.market, FITMAP = {}; R.niches.forEach(n => n.fit_per_posting.postings.forEach(p => FITMAP[p.id] = p.fit));
+const PAYS = M.points.filter(p => p.pay_mid && p.currency === "USD").map(p => p.pay_mid), PMIN = Math.min(...PAYS), PMAX = Math.max(...PAYS);
+const BANDC = { live: "var(--good)", doubtful: "var(--warn)", likely_ghost: "var(--crit)", closed: "var(--ink3)" };
+function starStyle(p, m) {
+  if (m === "cover") return { fill: "var(--ink2)", r: 3.4, op: .9 };
+  if (m === "niche") return { fill: HUE(p.niche), r: 4.5, op: .95 };
+  if (m === "live") return { fill: BANDC[p.band] || "var(--ink3)", r: 4.5, op: .95 };
+  if (m === "pay") { if (!p.pay_mid || p.currency !== "USD") return { fill: "var(--ink3)", r: 2.5, op: .35 }; const t = (p.pay_mid - PMIN) / ((PMAX - PMIN) || 1); return { fill: "var(--accent)", r: 3 + t * 7, op: .35 + t * .65 }; }
+  if (m === "peers") return { fill: HUE(p.niche), r: 3.4, op: .6 };
+  const f = FITMAP[p.id] ?? 0; return { fill: f >= .6 ? "var(--gold)" : "var(--ink3)", r: f >= .6 ? 6 : 3.2, op: f >= .6 ? 1 : .45 }; }
+function skySVG(W, H, m, id, o = {}) {
+  const pad = Math.min(64, W * (W < 600 ? .14 : .1)), left = o.left ?? pad, top = o.top ?? pad * .8, bot = o.bottom ?? H - pad * .8, X = x => left + x * (W - left - pad), Y = y => top + y * (bot - top);
+  const g = s("svg", { class: "sky", viewBox: `0 0 ${W} ${H}`, width: W, height: H, "data-sky": "", "data-state": m, role: "img", "aria-label": "Star map of the job market: one star per posting, your position in gold" });
+  if (id) g.id = id;
+  const rnd = (i => () => (i = (i * 16807) % 2147483647) / 2147483647)(42);
+  const ring = s("g", { class: "astrolabe", opacity: .55 }), cxA = W * .5, cyA = H * .5, RA = Math.min(W, H) * .46;
+  [1, .72, .44].forEach(f => ring.append(s("circle", { cx: cxA, cy: cyA, r: RA * f, fill: "none", stroke: "var(--gold)", "stroke-opacity": .28, "stroke-width": f === 1 ? 1.2 : .8 })));
+  for (let k = 0; k < 72; k++) { const a = k / 72 * Math.PI * 2, r1 = RA, r2 = RA - (k % 6 ? 5 : 11); ring.append(s("line", { x1: cxA + Math.cos(a) * r1, y1: cyA + Math.sin(a) * r1, x2: cxA + Math.cos(a) * r2, y2: cyA + Math.sin(a) * r2, stroke: "var(--gold)", "stroke-opacity": .35, "stroke-width": .8 })); }
+  g.append(ring);
+  for (let i = 0; i < Math.round(W * H / 2600); i++) g.append(s("circle", { cx: (o.left ? o.left * .8 : 0) + rnd() * (W - (o.left ? o.left * .8 : 0)), cy: rnd() * H, r: rnd() * .9 + .2, fill: "var(--ink3)", "fill-opacity": .22 + rnd() * .3 }));
+  const lines = s("g", { class: "constellation", opacity: m === "niche" ? .75 : m === "cover" ? .45 : 0 });
+  ORDER.forEach(id => { const ps = M.points.filter(p => p.niche === id).map(p => [X(p.x), Y(p.y)]); if (ps.length < 2) return;
+    const inT = [0], rest = ps.map((_, i) => i).slice(1);
+    while (rest.length) { let best = [Infinity, 0, 0]; inT.forEach(a => rest.forEach((b, k) => { const d = Math.hypot(ps[a][0] - ps[b][0], ps[a][1] - ps[b][1]); if (d < best[0]) best = [d, a, k]; }));
+      const b = rest.splice(best[2], 1)[0]; inT.push(b); if (best[0] > Math.hypot(W, H) * .2) continue; lines.append(s("line", { x1: ps[best[1]][0], y1: ps[best[1]][1], x2: ps[b][0], y2: ps[b][1], stroke: HUE(id), "stroke-width": 1.1, "stroke-opacity": .7 })); } });
+  g.append(lines);
+  const rings = s("g", { class: "rings", opacity: m === "fit" || m === "peers" ? 1 : 0 }), yx = X(M.candidate.x), yy = Y(M.candidate.y);
+  [70, 140, 210].forEach((r, i) => rings.append(s("circle", { cx: yx, cy: yy, r, fill: "none", stroke: "var(--gold)", "stroke-opacity": .5 - i * .12, "stroke-dasharray": "2 5" }))); g.append(rings);
+  const pg = s("g", { class: "peers", opacity: m === "peers" ? 1 : 0 });
+  (M.peer_points || []).forEach(q => pg.append(s("circle", { cx: X(q.x) + ((q.id.length * 7) % 9 - 4), cy: Y(q.y) + ((q.id.length * 5) % 9 - 4), r: 5.5, fill: "var(--ink)", "fill-opacity": .18, stroke: "var(--ink)", "stroke-width": 1.5, "stroke-opacity": .9, "data-tip": `A person now in a ${esc(parts(NICHE[q.niche]).short)} role` })));
+  g.append(pg);
+  M.points.forEach(p => { const st = starStyle(p, m);
+    g.append(s("circle", { class: "star", "data-mark": "", "data-id": p.id, cx: X(p.x), cy: Y(p.y), r: st.r, style: `fill:${st.fill};opacity:${st.op}`,
+      "data-tip": `<b>${esc(p.company)}</b><br>${esc(p.title)}<br>${esc(NICHE[p.niche]?.label || "")}<br>${p.band.replace("_", " ")}${p.pay_mid ? ", pay " + money(p.pay_mid, p.currency) : ""}${FITMAP[p.id] != null ? `<br>your fit ${pct(FITMAP[p.id])}` : ""}` })); });
+  const you = s("g", { class: "you", "data-tip": "You: placed by the same requirement profile, using what your record proves" });
+  you.append(s("circle", { cx: yx, cy: yy, r: 16, fill: "var(--gold)", "fill-opacity": .14 }), s("circle", { cx: yx, cy: yy, r: 8, fill: "var(--gold)", "fill-opacity": .3 }),
+    s("path", { d: `M${yx},${yy - 9} L${yx + 2.6},${yy - 2.6} L${yx + 9},${yy} L${yx + 2.6},${yy + 2.6} L${yx},${yy + 9} L${yx - 2.6},${yy + 2.6} L${yx - 9},${yy} L${yx - 2.6},${yy - 2.6}Z`, fill: "var(--gold)" }));
+  if (id === "atlas") you.id = "you-star";
+  g.append(you);
+  g._geom = { X, Y, W, H }; setSkyLabels(g, m); return g; }
+function setSkyLabels(g, m) { g.querySelector("[data-decor]")?.remove(); if (m !== "niche") return;
+  const { X, Y, W } = g._geom, lab = s("g", { "data-decor": "" }), placed = [];
+  const mx = W / 2, my = g._geom.H / 2;
+  const cent = ORDER.map(id => { const ps = M.points.filter(p => p.niche === id).map(p => [X(p.x), Y(p.y)]); if (!ps.length) return null;
+    const c = [ps.reduce((a, p) => a + p[0], 0) / ps.length, ps.reduce((a, p) => a + p[1], 0) / ps.length];
+    const far = ps.reduce((b, p) => Math.hypot(p[0] - mx, p[1] - my) * .6 + Math.hypot(p[0] - c[0], p[1] - c[1]) * .4 > Math.hypot(b[0] - mx, b[1] - my) * .6 + Math.hypot(b[0] - c[0], b[1] - c[1]) * .4 ? p : b, ps[0]);
+    return [id, far[0], far[1]]; }).filter(Boolean);
+  cent.sort((a, b) => a[2] - b[2]).forEach(([id, cx, cy]) => { if (NICHE[id].rank > 4 && W < 700) return; let y = cy - 12; let k = 0; while (placed.some(q => Math.abs(q[1] - y) < 34 && Math.abs(q[0] - cx) < 220) && k++ < 12) y += 36; placed.push([cx, y]);
+    const left = cx > mx, x = cx + (left ? -12 : 12), a = left ? "end" : "start", P = parts(NICHE[id]);
+    lab.append(s("text", { x, y, "text-anchor": a, class: "ser ink", style: `font-size:${W < 500 ? 13 : 16}px;paint-order:stroke;stroke:var(--bg);stroke-width:4px` }, `${NICHE[id].rank}  ${P.seg}`));
+    lab.append(s("text", { x, y: y + 16, "text-anchor": a, style: "font-size:12px;paint-order:stroke;stroke:var(--bg);stroke-width:4px" }, [P.lvl, P.city].filter(Boolean).join(", "))); });
+  lab.append(s("text", { x: X(M.candidate.x) + 14, y: Y(M.candidate.y) + 5, class: "ser", style: "fill:var(--gold);font-size:15px;font-style:italic;paint-order:stroke;stroke:var(--bg);stroke-width:4px" }, "You"));
+  g.append(lab);
+  requestAnimationFrame(() => { const sw = g.getBoundingClientRect(); lab.querySelectorAll("text").forEach(t => { const r = t.getBoundingClientRect(); if (!r.width) return;
+    const k = W / sw.width; if (r.right > sw.right - 2) t.setAttribute("x", +t.getAttribute("x") - (r.right - sw.right + 4) * k); if (r.left < sw.left + 2) t.setAttribute("x", +t.getAttribute("x") + (sw.left - r.left + 4) * k); }); }); }
+function setSky(g, m) { if (!g || g.dataset.state === m) return; g.dataset.state = m;
+  const byId = Object.fromEntries(M.points.map(p => [p.id, p]));
+  g.querySelectorAll(".star").forEach(c => { const st = starStyle(byId[c.dataset.id], m); c.style.fill = st.fill; c.style.opacity = st.op; c.setAttribute("r", st.r); });
+  g.querySelector(".constellation").setAttribute("opacity", m === "niche" ? .75 : m === "cover" ? .32 : 0); g.querySelector(".rings").setAttribute("opacity", m === "fit" || m === "peers" ? 1 : 0); g.querySelector(".peers")?.setAttribute("opacity", m === "peers" ? 1 : 0); setSkyLabels(g, m); }
+/* an opener: sticky sky with step cards that change its state; static plates under reduced motion */
+function opener(states, figId, src, skyId) {
+  const stage = el("div", { class: "stage" }), steps = el("div", { class: "steps" }), plates = el("div", { class: "plates" });
+  const op = el("div", { class: "opener", "data-sky-opener": "" }, [steps, stage]); if (figId) fig(figId, src, op);
+  let sky = null; const draw = () => { const w = Math.floor(stage.clientWidth), h = Math.floor(stage.clientHeight); if (!w || !h) return; const m = sky?.dataset.state || states[0].state;
+    if (sky && sky._geom.W === w && sky._geom.H === h) return; const n = skySVG(w, h, m, skyId); sky ? sky.replaceWith(n) : stage.append(n); sky = n; };
+  new ResizeObserver(draw).observe(stage);
+  /* each step carries its own plate: shown under a phone width or reduced motion, so text and picture sit in one column,
+     card then chart, with no sticky layer behind the cards and no empty scroll runway between them */
+  states.forEach(st => { const card = el("div", { class: "card" }, st.card), plate = el("div", { class: "plate", "data-plate": st.state });
+    let pg = null; new ResizeObserver(() => { const w = Math.floor(plate.clientWidth); if (!w || pg?._geom.W === w) return;
+      const n = skySVG(w, Math.round(Math.min(w * .9, 440)), st.state); if (w < 560) n.querySelector("[data-decor]")?.remove(); pg ? pg.replaceWith(n) : plate.append(n); pg = n; }).observe(plate);
+    steps.append(el("div", { class: "step", "data-state": st.state }, [card, plate])); });
+  const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { if (!sky) draw(); setSky(sky, e.target.dataset.state); } }), { rootMargin: "-40% 0px -45% 0px" });
+  requestAnimationFrame(() => $$(".step", steps).forEach(x => io.observe(x)));
+  op._steps = steps; return op; }
+function legend(items) { return el("div", { class: "legend" }, items.map(([c, t, ring]) => el("span", {}, [el("i", { style: ring ? `border:1.5px solid ${c};background:transparent` : `background:${c}` }), t]))); }
+
+/* ================= journey scaffolding ================= */
+const main = $("#main");
+const ACTS = [["you", "You"], ["market", "Market"], ["peers", "Peers"], ["verdict", "Verdict"], ["course", "Course"]];
+const NAMES = { you: "You", market: "The market", peers: "The competition", verdict: "The verdict", course: "The course", method: "Method" };
+function actSection(id) { return el("section", { class: "act", id, "data-act": id, "data-src": "journey" }); }
+function chapterHead(id, i) { const j = J[id] || {}; return el("header", { class: "wrap" }, el("div", { class: "chead", "data-chapter-head": "" }, [
+  el("div", { class: "no" }, [i ? String(i) : "", el("span", { text: NAMES[id] })]), el("h2", { text: j.question || NAMES[id] + "?" }), j.answer ? el("p", { class: "ans", html: phHTML(j.answer) }) : null])); }
+function learned(id, o = {}) { const j = J[id] || {}; const nx = ACTS.findIndex(a => a[0] === id), to = ACTS[nx + 1];
+  const items = o.items || j.learned || [];
+  return el("div", { class: "wrap" }, el("div", { class: "learned", "data-learned": "" }, [
+    el("div", {}, [el("div", { class: "fh", text: o.title || "What we learned" }), el("ul", {}, items.map(t => el("li", { html: phHTML(t) })))]),
+    to ? el("div", { class: "handover" }, [j.handover ? el("p", { text: j.handover }) : null, el("a", { class: "next", href: "#" + to[0], "data-next": "", text: `Next: ${NAMES[to[0]]}` })])
+      : el("div", { class: "handover" }, [el("p", { text: o.handover || "Everything above is yours to keep: ticks, blanks and the tracker are saved in this browser." }), el("a", { class: "next", href: "#method", text: "How this was measured" })])])); }
+const body = kids => el("div", { class: "wrap" }, el("div", { class: "body" }, kids.filter(Boolean)));
+
+/* niche selection, shared by acts 2–5 */
+let SEL = store.get("niche", ORDER[0]); if (!NICHE[SEL]) SEL = ORDER[0];
+const perNiche = [];
+function forNiche(render) { const box = el("div", { class: "per-niche" }); perNiche.push([box, render]); box.replaceChildren(render(NICHE[SEL])); return box; }
+function selectNiche(id) { if (!NICHE[id]) return; SEL = id; store.set("niche", id);
+  perNiche.forEach(([box, render]) => box.replaceChildren(render(NICHE[id])));
+  $$("[data-niche-btn]").forEach(b => b.setAttribute("aria-pressed", String(b.dataset.nicheBtn === id)));
+  $$(".pick .cur").forEach(c => c.textContent = `${NICHE[id].rank} · ${parts(NICHE[id]).short}`); $$(".pick .dot").forEach(d => d.style.background = HUE(id)); }
+
+/* ================= COVER ================= */
+(function cover() {
+  const sec = el("section", { class: "act cover", id: "cover", "data-act": "cover", "data-src": "journey meta" });
+  const stage = el("div", { class: "stage", "data-sky-opener": "" }); fig("cover-sky", "market", stage);
+  let sky; new ResizeObserver(() => { const w = Math.floor(stage.clientWidth), h = Math.floor(stage.clientHeight); if (!w || !h || (sky && sky._geom.W === w && sky._geom.H === h)) return; const n = skySVG(w, h, "cover", null, h < 200 ? { top: 12, bottom: h - 12 } : {}); sky ? sky.replaceWith(n) : stage.prepend(n); sky = n; }).observe(stage);
+  if (reduced) stage.append(el("div", { class: "plates" }, el("div", { class: "plate", "data-plate": "cover" }, skySVG(640, 420, "cover"))));
+  const j = J.cover || {}, Mth = R.method, emp = new Set(M.points.map(p => p.company)).size, kap = R.niches.map(n => n.demand.reliability?.pooled_kappa).find(v => v != null);
+  const tiles = fig("cover-tiles", "method niches", el("div", { class: "tiles" }, [[M.points.length, "live postings read"], [emp, "employers"], [R.niches.length, R.niches.length === 1 ? "market found" : "markets found"],
+    [Mth.n_archive, "older postings for the trend"], kap != null ? [kap.toFixed(2), "coder agreement (κ)"] : null].filter(Boolean).map(([v, l]) => el("div", { class: "tile" }, [el("b", { text: v }), el("span", { text: l })]))));
+  const route = el("nav", { class: "route", "aria-label": "The route" }, el("ol", {}, ACTS.map(([id, t], i) => el("li", {}, el("div", { class: "stop" }, [el("b", { text: `${i + 1}  ${NAMES[id]}` }), el("span", { text: J[id]?.question || "" })])))));
+  sec.append(el("div", { class: "wrap" }, [el("div", { class: "head" }, [el("div", { class: "front" }, [el("div", { class: "who", text: R.meta.candidate }), el("h1", { text: j.question || "Where do you fit?" }),
+    j.answer ? el("p", { class: "ans", html: phHTML(j.answer) }) : null,
+    el("div", { class: "go" }, [el("a", { class: "next", href: "#you", "data-next": "", text: "Begin with you" }), el("a", { class: "lnk", href: "#verdict", text: "Skip to the verdict" })])]), stage]), tiles, route]));
+  main.append(sec);
+})();
+
+/* ================= ACT 1: YOU ================= */
+(function you() {
+  const sec = actSection("you"), P = R.profile_view, T = P.timeline || [];
+  const GR = { stated: "stated on the resume", inferred2: "inferred, strong", inferred1: "inferred, weak", absent: "not found" };
+  const ym = s => s ? +s.slice(0, 4) + (+s.slice(5, 7) - 1) / 12 : null, now = new Date().getFullYear() + new Date().getMonth() / 12;
+  const roles = T.filter(r => r.start).map(r => ({ ...r, a: ym(r.start), b: r.end ? ym(r.end) : now })).sort((x, y) => x.a - y.a);
+  const maxM = Math.max(1, ...roles.map(r => r.n_metrics || 0));
+  const line = W => { if (!roles.length) return el("p", { class: "muted", text: "No dated roles found in the resume." });
+    const a0 = Math.floor(roles[0].a), a1 = Math.ceil(now), H = 80, X = v => 10 + (v - a0) / (a1 - a0 || 1) * (W - 20), g = s("svg", { width: W, height: H, viewBox: `0 0 ${W} ${H}`, role: "img", "aria-label": "Career line" });
+    g.append(s("line", { x1: X(a0), x2: X(a1), y1: 30, y2: 30, stroke: "var(--grid)", "stroke-width": 2 }));
+    roles.forEach((r, i) => { const w = 6 + 16 * (r.n_metrics || 0) / maxM;
+      g.append(s("line", { x1: X(r.a) + 2, x2: X(r.b) - 2, y1: 30, y2: 30, stroke: "var(--gold)", "stroke-width": w, "stroke-linecap": "round", "stroke-opacity": .45 + .55 * (i + 1) / roles.length, "data-mark": "", "data-tip": `<b>${esc(r.title)}</b><br>${esc(r.employer)}<br>${esc(r.dates || "")}` }));
+      g.append(s("circle", { cx: X(r.a), cy: 30, r: 3.5, fill: "var(--bg)", stroke: "var(--gold)", "stroke-width": 1.5 })); });
+    const step = [1, 2, 3, 4, 5, 10].find(k => (W - 20) / ((a1 - a0) / k) >= 52) || 10; for (let y = a0; y <= a1; y += step) { const x = X(y); g.append(s("line", { x1: x, x2: x, y1: 46, y2: 52, stroke: "var(--rule)" }));
+      if (x > 14 && x < W - 14 || y === a0) g.append(s("text", { x: Math.max(0, Math.min(W, x)), y: 70, "text-anchor": y === a0 ? "start" : "middle" }, String(y))); }
+    g.append(s("text", { x: W, y: 11, "text-anchor": "end", style: "fill:var(--gold)" }, "now"));
+    return g; };
+  const career = fig("you-timeline", "profile_view", el("div", { class: "panel career" }, [el("h3", { text: "The career, as a line" }), el("p", { class: "d", text: "Each segment is a role; thicker means more measured results stated for it." }), chart(line),
+    el("div", { class: "roles" }, [...roles].reverse().map(r => el("div", { class: "role", style: `--w:${2 + Math.round(4 * (r.n_metrics || 0) / maxM)}px` }, [el("b", { text: r.title }), el("span", { class: "meta", text: `${r.employer} · ${r.dates || ""}` }), r.scope ? el("span", { class: "meta", html: phHTML(r.scope) }) : null])))]));
+  const hidden = new Set(["positioning"]);
+  const dis = fig("you-dissection", "profile_view", panel(null, "What the study inferred from the resume alone, and how sure it is. Weak or missing items are in the confirm list.",
+    el("div", { class: "fields" }, P.fields.filter(f => !hidden.has(f.name)).map(f => el("div", { class: "field" }, [el("div", { class: "k", text: cap(f.name.replace(/_/g, " ").replace(/ est$/, " (estimate)")) }),
+      el("div", { class: "vv" }, [el("span", { html: phHTML(String(f.value ?? "—")) }), el("span", { class: "grade st " + f.grade, text: (GR[f.grade] || f.grade) + (f.evidence?.length ? ` · lines ${f.evidence.join(", ")}` : "") })])])))));
+  const str = fig("you-strengths", "profile_view", panel("Strengths, on the record", null, el("div", {}, P.strengths.map(x => el("div", { class: "qa" }, [el("b", { text: x.label }), el("span", { class: "meta", text: `${GR[x.grade] || x.grade} · lines ${(x.evidence || []).join(", ")}` })])))));
+  const RA = (M.rarity || []).filter(r => r.peer_share != null).sort((a, b) => (b.asked_share - b.peer_share) - (a.asked_share - a.peer_share)).slice(0, 2);
+  const rare = RA.length ? fig("you-rare", "market", el("div", { class: "rare" }, RA.map(r => el("p", { html: `<b>${esc(r.label)}.</b> ${pct(r.asked_share)} of postings ask for it; ${pct(r.peer_share)} of the people now in these jobs show it. Your record proves it.` }))))
+    : fig("you-rare", "market", el("div", { class: "rare" }, (M.rarity || []).slice(0, 2).map(r => el("p", { html: `<b>${esc(r.label)}.</b> ${pct(r.asked_share)} of postings ask for it, and your record proves it.` }))));
+  const edges = fig("you-edges", "profile_view", el("div", { class: "edges" }, [el("div", { class: "fh", text: "What is unusual about this record" }), el("div", { class: "g3" }, (P.edges || []).map(e => el("div", { class: "edge" }, [el("b", { text: e.label }), el("span", { class: "meta", text: `resume lines ${(e.evidence || []).join(", ")}` })]))), rare]));
+  const B = R.baseline, bg = Object.fromEntries(B.gates.map(g => [g.name, g]));
+  const cov = Object.entries(B.coverage_by_niche || {}).filter(([id]) => NICHE[id]).sort((a, b) => NICHE[a[0]].rank - NICHE[b[0]].rank);
+  const base = fig("you-baseline", "baseline original", panel("How your current resume reads", `Headline today: <i>${esc(R.original.headline)}</i>`, el("div", { class: "g2" }, [
+    chart(barRows(cov.map(([id, c]) => ({ label: `${NICHE[id].rank} · ${esc(parts(NICHE[id]).short)}`, value: c.before / (c.total || 1), color: HUE(id), valText: `${c.before} of ${c.total}`, tip: `${c.before} of ${c.total} must-haves visible in the current text` })), { max: 1, valW: 64 })),
+    (() => { const ch = ["traceability", "authenticity", "bullet_score", "six_second_zone", "keyword_coverage"].filter(k => bg[k]), bad = ch.filter(k => bg[k].status === "fail" || bg[k].status === "warn");
+      return el("div", {}, [el("p", { style: "font-size:1.0625rem", text: bad.length ? `The current resume fails or flags ${bad.length} of ${ch.length} quality checks: ${bad.map(k => k.replace(/_/g, " ")).join(", ")}.` : `The current resume passes all ${ch.length} quality checks; the gap is what it makes visible, not how it is written.` }),
+        (() => { const z = (B.zone_coverage || {})[ORDER[0]]; return z ? el("p", { style: "margin-top:.6rem", text: `In the first six seconds (headline, summary, first three bullets) it shows ${z.original.zone} of the ${z.total} must-haves the top niche asks for and you can prove; the whole text shows ${z.original.whole}.` }) : null; })(),
+        el("p", { class: "meta", style: "margin-top:.4rem", text: "The rewritten versions in act 5 are checked the same way." })]); })()]),
+    "Bars: share of each niche's must-haves the current resume makes visible."));
+  sec.append(chapterHead("you", 1), body([edges, career, el("div", { class: "g2" }, [str, base]), act(P.do_this), evidence("See the evidence: the full dissection, field by field", [dis], `${P.fields.length - 1} fields`)]), learned("you"));
+  main.append(sec);
+})();
+
+/* ================= ACTS 2–5 share the niche selector ================= */
+const scope = el("div", { class: "scope" }); main.append(scope);
+(function selector() {
+  const few = ORDER.length <= 5, bar = el("div", { class: "selector" + (few ? " few" : ""), "aria-label": "Niche shown" });
+  const seg = el("div", { class: "seg", "data-btn-group": "", role: "group", style: `--cols:${ORDER.length}` }, ORDER.map(id => { const b = el("button", { "data-niche-btn": id, "aria-pressed": String(id === SEL) }, [el("i", { style: `background:${HUE(id)}` }), `${NICHE[id].rank} · ${parts(NICHE[id]).short}`]); b.onclick = () => selectNiche(id); return b; }));
+  const dlg = el("dialog", { class: "sheet-dlg", "aria-label": "Choose a niche" });
+  const list = el("div", { class: "sheet-list", "data-btn-group": "" }, ORDER.map(id => { const b = el("button", { "data-niche-btn": id, "aria-pressed": String(id === SEL) }, [el("i", { style: `background:${HUE(id)}` }), `${NICHE[id].rank} · ${NICHE[id].label}`]); b.onclick = () => { selectNiche(id); dlg.close(); }; return b; }));
+  const close = el("div", { "data-btn-group": "", style: "margin-top:.75rem" }, el("button", { class: "btn", text: "Close" })); close.firstChild.onclick = () => dlg.close();
+  dlg.append(el("h3", { text: "Show the market for" }), list, close);
+  const pick = el("button", { class: "pick", "data-btn-solo": "", "aria-haspopup": "dialog" }, [el("i", { class: "dot", style: `background:${HUE(SEL)}` }), el("span", { class: "cur", text: `${NICHE[SEL].rank} · ${parts(NICHE[SEL]).short}` }), el("span", { class: "chev", text: "▾" })]);
+  pick.onclick = () => dlg.showModal();
+  bar.append(el("div", { class: "wrap" }, [el("span", { class: "lbl", text: "Niche" }), seg, el("div", { class: "pickwrap" }, pick)]), dlg);
+  scope.append(bar);
+})();
+
+/* ================= ACT 2: THE MARKET ================= */
+(function market() {
+  const sec = actSection("market");
+  const bm0 = R.niches[0].liveness_summary.benchmark, tot = M.points.length, alive = M.points.filter(p => p.band === "live").length, doubt = tot ? 1 - alive / tot : 0;
+  const est = R.meta.candidate_pay_est, above = R.niches.filter(x => est?.mid && x.size.pay_median && x.size.currency === est.currency && x.size.pay_median > est.mid);
+  const words = ["No", "One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine", "Ten"];
+  const op = opener([
+    { state: "niche", card: [el("h3", { text: `${words[R.niches.length] || R.niches.length} markets for ${first}.` }), el("p", { text: "Each star is a posting; postings that ask for the same things form a constellation. Your gold point sits where your proven record places you." }),
+      legend(ORDER.slice(0, 6).map(id => [HUE(id), `${NICHE[id].rank} · ${parts(NICHE[id]).short}`]))] },
+    { state: "live", card: [el("h3", { text: doubt < bm0.low ? "Most of these listings are real openings." : `${pct(doubt)} of these listings may not be real openings.` }), el("p", { text: `Across all ${tot} listings, ${pct(doubt)} are scored doubtful or likely ghosts (the share varies by niche; see the evidence drawer), against ${pct(bm0.low)}–${pct(bm0.high)} across hiring platforms. Each star is scored on age, reposts, source and wording.` }),
+      legend([["var(--good)", "live"], ["var(--warn)", "doubtful"], ["var(--crit)", "likely ghost"]])] },
+    { state: "pay", card: [el("h3", { text: est?.mid ? `${above.length} of ${R.niches.length} niches post a median above your estimated ${money(est.mid, est.currency)}.` : "What each listing posts as pay." }), el("p", { text: "Bigger, brighter stars post higher pay (US dollars). Grey stars publish no range or pay in another currency." }),
+      legend([["var(--accent)", "posted pay"], ["var(--ink3)", "no range"]])] }], "mkt-sky", "market", "atlas");
+  /* market DNA: requirements × niches, HTML grid; labels wrap, nothing is truncated */
+  const D = [...(M.dna || [])].sort((a, b) => Math.max(...b.cells.map(c => c.present)) - Math.max(...a.cells.map(c => c.present))).slice(0, 14), universal = D.filter(d => d.cells.every(c => c.present >= .5)), uniGap = universal.filter(d => d.grade < 2);
+  const dna = W => { const narrow = W < NARROW, cols = ORDER.length, lab = narrow ? 0 : Math.min(300, Math.round(W * .36));
+    const tpl = narrow ? `repeat(${cols}, minmax(0,1fr)) 2.25rem` : `${lab}px repeat(${cols}, minmax(0,1fr)) 2.75rem`;
+    const g = el("div", { class: "matrix" + (narrow ? " narrow" : ""), style: `grid-template-columns:${tpl}` });
+    if (!narrow) g.append(el("span"));
+    ORDER.forEach(id => g.append(el("div", { class: "mh" }, [el("i", { style: `background:${HUE(id)}` }), String(NICHE[id].rank)])));
+    g.append(el("div", { class: "mh", style: "color:var(--gold)", text: "you" }));
+    D.forEach(d => { g.append(el("div", { class: "ml", style: universal.includes(d) ? "font-weight:500" : "color:var(--ink2)", text: d.label }));
+      ORDER.forEach(id => { const c = d.cells.find(x => x.niche === id); g.append(c ? el("div", { class: "mc" + (c.required >= .5 ? " req" : ""), "data-mark": "", style: `background:color-mix(in srgb, ${HUE(id)} ${Math.round(Math.max(.14, c.present) * 100)}%, transparent);box-shadow:inset 0 0 0 1px color-mix(in srgb, ${HUE(id)} 35%, transparent)`, "data-tip": `<b>${esc(d.label)}</b><br>${esc(NICHE[id].label)}<br>asked ${pct(c.present)}, required ${pct(c.required)}` }) : el("div", { class: "mc" })); });
+      g.append(el("div", { class: "yc", "data-tip": `your evidence ${d.grade} of 3` }, el("i", { class: d.grade >= 3 ? "p3" : d.grade >= 2 ? "p2" : "" })) ); });
+    return g; };
+  const dnaFig = fig("mkt-dna", "market", panel("The market's DNA", `The 14 requirements asked most. ${universal.length ? `${universal.length} appear in at least half the postings of every niche; you prove ${universal.length - uniGap.length}.` : "None is shared by every niche."} Cell strength = how often a niche asks; a dot = at least half require it; gold = what your record proves.`,
+    chart(dna), null));
+  /* demand map for the selected niche */
+  const GRADE = Object.fromEntries((M.dna || []).map(d => [d.code, d.grade]).concat((M.rarity || []).map(r => [r.code, r.grade])));
+  const demand = forNiche(n => { const fit = Object.fromEntries(n.fit.rows.map(r => [r.code, r])), ST = { proven: "proven", partial: "partial", gap: "gap", minor: "minor" };
+    const proof = r => fit[r.code] ? fit[r.code].status : GRADE[r.code] >= 2 ? "proven" : GRADE[r.code] === 1 ? "partial" : GRADE[r.code] === 0 ? "gap" : null;
+    const rows = n.demand.rows.filter(r => r.present >= .2).slice(0, 16), rel = n.demand.reliability;
+    return fig("mkt-demand", "niches.demand niches.fit", panel(`What ${parts(n).short} asks for`, n.demand.insight ? phHTML(n.demand.insight) : null,
+      el("div", {}, [legend([[HUE(n.id), "ring: share of postings that ask", true], ["var(--ink2)", "line: share that require it; band: 95% interval"]]), ...[rows.slice(0, 10), rows.slice(10)].map((part, pi) => { if (!part.length) return null; const c = chart(barRows(part.map(r => ({ label: esc(r.label) + (r.reliability === "excluded" ? ' <span class="meta" data-tip="The two coders disagreed on which postings ask for this; the share is less certain. Your proof of it is graded separately.">· share uncertain</span>' : ""), value: r.present, lo: r.lo, hi: r.hi, req: r.required, color: HUE(n.id), kind: "dot",
+        tip: `<b>${esc(r.label)}</b><br>${r.k} of ${r.n} postings, 95% CI ${pct(r.lo)}–${pct(r.hi)}<br>required in ${pct(r.required)}`,
+        valText: proof(r) ? `<span class="st ${proof(r)}">${ST[proof(r)] || ""}</span>` : "" })), { kind: "dot", max: 1, valW: 64, axis: pi === 0 }));
+        return pi === 0 ? c : el("details", { class: "more", style: "margin-top:.5rem" }, [el("summary", { class: "lnk", text: `Show ${part.length} less-asked requirements` }), c]); })]),
+      `${n.size.n_postings} postings. Right column: what your record proves.${rel ? ` Coder agreement ${pct(rel.pooled_agree)}, κ ${rel.pooled_kappa}.` : ""}`)); });
+
+  /* pay: posted midpoints by niche, one axis per currency */
+  const curs = [...new Set(ORDER.filter(id => (M.pay_points[id] || []).length).map(id => NICHE[id].size.currency))];
+  const ranges = forNiche(n => { const rg = n.pay?.ranges || []; if (!rg.length) return el("p", { class: "meta", text: `${parts(n).short}: no posted ranges.` });
+    return el("details", { class: "more", style: "margin-top:.75rem" }, [el("summary", { class: "lnk", text: `Show the ${rg.length} posted ranges for ${parts(n).short}` }), chart(barRows(rg.map(x => ({ label: esc(x.company) + (x.flagged ? ' <span class="meta">· estimated by a job board</span>' : ""), value: (x.lo + x.hi) / 2, lo: x.lo, hi: x.hi, color: HUE(n.id), kind: "dot", valText: `${money(x.lo, x.currency)}–${money(x.hi, x.currency)}`, tip: `${esc(x.company)}: ${money(x.lo, x.currency)} to ${money(x.hi, x.currency)}` })),
+      { kind: "dot", max: Math.max(...rg.map(x => x.hi)) * 1.02, fmt: v => money(v, rg[0].currency), ticks: [0, Math.max(...rg.map(x => x.hi)) / 2, Math.max(...rg.map(x => x.hi)) * 1.02] }))]); });
+  const payFig = fig("mkt-pay", "market niches.size niches.pay", panel("What they pay", "Midpoint of each posted range, by niche. The gold line is your estimated current pay, labelled inferred.",
+    el("div", {}, curs.map(cu => { const ids = ORDER.filter(id => (M.pay_points[id] || []).length && NICHE[id].size.currency === cu);
+      return el("div", { style: "margin-top:.5rem" }, [curs.length > 1 ? el("div", { class: "meta", text: cu }) : null, chart(stripRows(ids.map(id => ({ label: `${NICHE[id].rank} · ${esc(parts(NICHE[id]).short)}`, pts: M.pay_points[id].map(v => ({ v, color: HUE(id), tip: `${money(v, cu)} posted midpoint` })) })),
+        { fmt: v => money(v, cu), mark: est?.currency === cu ? est.mid : null }))]); })), est?.mid ? `Your estimate: ${money(est.mid, est.currency)}, from postings for your current title and city.` : "Your current pay could not be estimated from the record."));
+  payFig.append(ranges);
+  /* liveness by niche against the platform benchmark */
+  const bm = R.niches[0].liveness_summary.benchmark;
+  const liveFig = fig("mkt-live", "niches.liveness_summary", panel("Ghost-job risk", `Share of each niche's listings scored doubtful or likely ghost. Dashed box: ${esc(bm.source || "platform benchmark")}, ${pct(bm.low)}–${pct(bm.high)}.`,
+    chart(barRows(ORDER.map(id => { const l = NICHE[id].liveness_summary; return { label: `${NICHE[id].rank} · ${esc(parts(NICHE[id]).short)}`, value: l.doubtful_share, color: "var(--warn)", valText: pct(l.doubtful_share), tip: `${pct(l.doubtful_share)} of ${l.n} listings doubtful or likely ghost` }; }), { max: Math.max(.4, ...ORDER.map(id => NICHE[id].liveness_summary.doubtful_share)), band: [bm.low, bm.high], valW: 48 })),
+    null));
+  /* evidence: niches found and screened out; change; vocabulary */
+  const P = R.portfolio;
+  const nichesFig = fig("mkt-niches", "portfolio niches.size niches.segment niches.city niches.seniority niches.confidence niches.verdict", panel("The niches, found and screened out", `${R.niches.length} of ${R.niches.length + P.rejected.length} candidate niches qualified.`, el("div", {}, [
+    ...ORDER.map(id => { const n = NICHE[id]; return el("div", { class: "qa" }, [el("b", { text: `${n.rank} · ${n.label}` }), el("span", { class: "meta", text: [n.segment, n.city, n.seniority].filter(Boolean).map(String).join(" · ") + ` · ${n.size.n_postings} postings from ${n.size.n_employers} employers · ${n.confidence} confidence` })]); }),
+    ...P.rejected.map(r => el("div", { class: "qa" }, [el("b", { style: "color:var(--ink3)", text: r.label }), el("span", { class: "meta", text: "Screened out: " + r.reason })]))])));
+  const pooled = M.change;
+  const change = forNiche(n => { const c = n.change;
+    if (!c && pooled?.rows?.length) return fig("mkt-change", "niches.change market", panel("What is changing, across all niches", `${esc(parts(n).short)} has too few older postings for its own trend (${esc(n.hidden_reason?.change || "")}), so this compares all ${pooled.n_then} older postings with all ${pooled.n_now} current ones. The dot is now; solid labels are significant (Fisher p < 0.05).`,
+      chart(barRows(pooled.rows.slice(0, 8).map(r => ({ label: esc(r.label) + (r.signal === "significant" ? "" : ' <span class="meta">· directional</span>'), value: r.now, lo: Math.min(r.then, r.now), hi: Math.max(r.then, r.now), color: r.delta > 0 ? HUE(n.id) : "var(--ink3)", kind: "dot", valText: `${r.delta > 0 ? "+" : ""}${Math.round(r.delta * 100)}`, tip: `${pct(r.then)} then, ${pct(r.now)} now; p = ${r.p}` })), { kind: "dot", max: 1, valW: 44 }))));
+    if (!c) return stub("mkt-change", "niches.change", `No trend for ${parts(n).short}`, n.hidden_reason?.change || "no archive postings");
+    const rows = [...c.rows].sort((a, b) => Math.abs(b.delta) - Math.abs(a.delta)).slice(0, 8), eras = Object.keys(c.eras), nThen = eras.slice(0, -1).reduce((a, e) => a + c.eras[e], 0);
+    return fig("mkt-change", "niches.change", panel("What is changing", `${c.insight ? phHTML(c.insight) + " " : ""}Share of postings then (n=${nThen}) and now (n=${c.eras.now}); the dot is now.`,
+      chart(barRows(rows.map(r => ({ label: esc(r.label), value: r.now, lo: Math.min(r.then, r.now), hi: Math.max(r.then, r.now), color: r.delta > 0 ? HUE(n.id) : "var(--ink3)", kind: "dot", valText: `${r.delta > 0 ? "+" : ""}${Math.round(r.delta * 100)}`, tip: `${pct(r.then)} then, ${pct(r.now)} now; ${r.signal}` })), { kind: "dot", max: 1, valW: 44 })), act(c.do_this))); });
+  const vocab = forNiche(n => { const kz = (n.language.keyness || []).filter(k => k.z >= 1); const chips = el("div", { class: "tags", style: "margin-top:.6rem" }, [...(n.language.use || []).map(t => el("span", { class: "tag", style: "border-color:var(--gold)", text: t })), ...(n.language.avoid || []).map(t => el("span", { class: "tag", style: "text-decoration:line-through", text: t }))]);
+    if (kz.length < 3) return fig("mkt-keyness", "niches.language", el("div", { class: "stub", "data-stub": "fewer than three contrasting terms" }, [el("b", { text: "The niche's own words. " }), "Too few contrasting postings to rank terms; the words to use come from the postings themselves.", chips]));
+    return fig("mkt-keyness", "niches.language", panel("The niche's own words", `Terms most specific to ${esc(parts(n).short)} against ${esc(n.language.contrast)}. Gold chips: use; struck: avoid.`, el("div", {}, [chart(barRows(kz.slice(0, 8).map(k => ({ label: esc(k.term), value: k.z, color: HUE(n.id), valText: `${k.n_in} vs ${k.n_out}`, tip: `in ${k.n_in} postings here, ${k.n_out} elsewhere` })), { axis: false, valW: 64, lab: .3 })), chips]))); });
+  const sen = forNiche(n => { const c = n.demand.contrasts?.seniority; if (!c?.rows?.length) return stub("mkt-seniority", "niches.demand", "What rises with seniority", c?.reason || "too few postings");
+    return fig("mkt-seniority", "niches.demand", panel("What rises with seniority", `Head, VP and above (n=${c.n_senior}) against director and manager roles (n=${c.n_other})${c.scope === "all niches" ? ", across all niches because this niche alone is too small" : ""}. Solid: significant (Fisher p < 0.05); hollow: directional. Line: 95% interval.`,
+      chart(divRows(c.rows.slice(0, 10).map(r => ({ label: esc(r.label), value: r.diff, lo: r.lo, hi: r.hi, solid: r.significant, color: r.diff > 0 ? "var(--gold)" : "var(--accent)", valText: `${r.diff > 0 ? "+" : ""}${Math.round(r.diff * 100)}`, tip: `${pct(r.a)} of senior, ${pct(r.b)} of other postings; p = ${r.p}` })))))); });
+  const vs = forNiche(n => { const c = n.demand.contrasts?.versus; if (!c?.rows?.length) return stub("mkt-contrast", "niches.demand", "How this niche differs from its neighbour", c?.reason || "no comparison");
+    const o = NICHE[c.other];
+    return fig("mkt-contrast", "niches.demand", panel(`${parts(n).short} against ${parts(o).short}`, `Share of postings asking, ${c.n_a} against ${c.n_b} postings. Bar: this niche; ring: the other. Hollow labels are directional, not significant.`,
+      chart(barRows(c.rows.slice(0, 10).map(r => ({ label: esc(r.label) + (r.significant ? "" : ' <span class="meta">· directional</span>'), value: r.a, m2: r.b, color: HUE(n.id), valText: `${pct(r.a)} / ${pct(r.b)}`, tip: `${pct(r.a)} here, ${pct(r.b)} in ${esc(o.label)}; p = ${r.p}` })), { max: 1 })))); });
+  const LAB = {}; R.niches.forEach(x => x.demand.rows.forEach(r => LAB[r.code] = r.label));
+  const bundles = forNiche(n => { const b = (n.demand.bundles || []).slice(0, 8); if (!b.length) return stub("mkt-bundles", "niches.demand", "Requirements that travel together", "no pair co-occurs often enough");
+    return fig("mkt-bundles", "niches.demand", panel("Requirements that travel together", "Pairs that appear together more often than chance (lift; 1 = chance). Use them as one sentence in the resume: act 5 turns them into formulas.",
+      chart(barRows(b.map(x => ({ label: `${esc(LAB[x.a] || x.a)} <span class="meta">+</span> ${esc(LAB[x.b] || x.b)}`, value: x.lift, color: HUE(n.id), valText: `×${x.lift}`, tip: `together in ${pct(x.both)} of postings` })), { max: Math.max(...b.map(x => x.lift)), axis: false, valW: 48 })))); });
+  const phrasesFig = forNiche(n => { const ph = (n.language.phrases || []).slice(0, 14); if (!ph.length) return stub("mkt-words", "niches.language", "The phrases employers repeat", "no repeated phrases");
+    return fig("mkt-words", "niches.language", panel("The phrases employers repeat", `Lifted verbatim from ${esc(parts(n).short)} postings. Mirror the ones that are true of you.`, el("div", { class: "chips" }, ph.map(x => el("span", { class: "chip", text: x }))))); });
+  const builder = fig("mkt-builder", "niches.demand", panel("Build or maintain", "Share of action verbs in each niche's postings that ask for building (launch, create, scale) rather than maintaining (manage, support, own).",
+    chart(barRows(ORDER.map(id => { const b = NICHE[id].demand.builder; return { label: `${NICHE[id].rank} · ${esc(parts(NICHE[id]).short)}`, value: b?.ratio ?? 0, color: HUE(id), valText: b ? `${pct(b.ratio)} build` : "—", tip: b ? `${b.build} build verbs, ${b.maintain} maintain` : "" }; }), { max: 1, valW: 72 }))));
+  const TS = M.title_shift || [];
+  const titles = TS.length ? fig("mkt-titles", "market", panel("How the job titles changed", `Words in job titles: older postings (n=${TS[0].n_then}) against current ones (n=${TS[0].n_now}). Dot: now; ring: then.`,
+    chart(barRows(TS.slice(0, 8).map(r => ({ label: `“${esc(r.term)}”` + (r.p < .05 ? "" : ' <span class="meta">· directional</span>'), value: r.share_now, m2: r.share_then, color: r.share_now > r.share_then ? "var(--gold)" : "var(--ink3)", kind: "dot", valText: `${pct(r.share_then)} → ${pct(r.share_now)}`, tip: `${r.k_then} of ${r.n_then} then, ${r.k_now} of ${r.n_now} now; p = ${r.p}` })), { kind: "dot", max: 1 }))))
+    : stub("mkt-titles", "market", "How the job titles changed", "too few older postings with titles");
+  const SM = R.method.sample || [];
+  const sample = SM.length ? fig("mkt-sample", "method", panel("How much was read", `Postings read per niche against the plan of ${SM[0].planned} current and ${SM[0].archive_planned} older ones${SM[0].reason ? ` (${esc(SM[0].reason)})` : ""}. Bar: achieved; ring: planned.`,
+    chart(barRows(SM.map(x => ({ label: `${NICHE[x.niche_id].rank} · ${esc(parts(NICHE[x.niche_id]).short)}`, value: x.achieved, m2: x.planned, color: HUE(x.niche_id), valText: `${x.achieved} + ${x.archive_achieved} older`, tip: `${x.achieved} of ${x.planned} current; ${x.archive_achieved} of ${x.archive_planned} older` })), { max: Math.max(...SM.map(x => Math.max(x.planned, x.achieved))), fmt: v => Math.round(v) })))) : stub("mkt-sample", "method", "How much was read", "no sample plan recorded");
+  sec.append(chapterHead("market", 2), op, body([dnaFig, demand, payFig,
+    evidence("See the evidence: what is changing", [change, titles, sen, vs], "4 figures"),
+    evidence("See the evidence: how postings are written, how many were read", [bundles, phrasesFig, builder, vocab, sample, liveFig, nichesFig], "7 figures")]), learned("market"));
+  scope.append(sec);
+})();
+
+/* ================= ACT 3: THE COMPETITION ================= */
+(function peers() {
+  const sec = actSection("peers"), j = J.peers || {}, yrs = R.meta.candidate_years;
+  const PEERS = Object.fromEntries((M.peers || []).map(x => [x.niche_id, x])), totalPeers = (M.peer_points || []).length;
+  const op = opener([{ state: "peers", card: [el("h3", { text: totalPeers ? `${totalPeers} people already doing these jobs.` : "The same sky, with you in it." }),
+    el("p", { text: totalPeers ? "Open circles are people now in these roles, placed among the postings they resemble. The gold point is you." : "No peer search reached the minimum of 8 people; this act rests on what the postings ask and the hiring benchmarks." }),
+    totalPeers ? legend([["var(--ink)", "a person in the role", true], ["var(--gold)", "you"]]) : null] }]);
+  const peerFig = forNiche(n => { const q = PEERS[n.id], sec = n.peers;
+    if (!sec || !q || !q.n) return stub("cmp-peers", "market niches.peers", `No peer comparison for ${parts(n).short}`, q?.reason || n.hidden_reason?.peers || "peer search not run");
+    const yv = q.years?.values || [], src = Object.entries(q.sources || {}).map(([k, v]) => `${v} ${k.replace("_", " ")}`).join(", ");
+    return fig("cmp-peers", "market niches.peers", panel(`The people in ${parts(n).short} roles`, `${q.n} people (${esc(src)}). Years in the field: each dot a person; gold line, you.${q.kappa != null ? ` Second-coder agreement κ ${q.kappa}.` : ""}`,
+      el("div", {}, [chart(dotStrip(yv.map(v => ({ v, color: "var(--ink2)", op: .8, tip: `${v} years` })), { min: 0, max: Math.max(R.meta.candidate_years || 0, ...yv) + 2, mark: R.meta.candidate_years, fmt: v => Math.round(v) + "y", h: 44 })),
+        el("p", { class: "meta", text: `Median ${Math.round(q.years.median)} years; the most experienced quarter have ${Math.round(q.years.top_quartile)} or more; you have ${R.meta.candidate_years ?? "an unknown number"}.` }), sec.insight ? el("p", { style: "margin-top:.6rem", html: phHTML(sec.insight) }) : null, act(sec.do_this)]))); });
+  const pathFig = forNiche(n => { const q = PEERS[n.id];
+    if (!q?.paths?.length) return stub("cmp-paths", "market", `No career paths for ${parts(n).short}`, q?.reason || "peer search not run");
+    return fig("cmp-paths", "market", panel("How they got there", "The role each person held before this one.", chart(barRows(q.paths.map(x => ({ label: esc(cap(x.path)), value: x.n / q.n, color: HUE(n.id), valText: `${x.n} of ${q.n}`, tip: `${x.n} of ${q.n} people` })), { max: 1, valW: 56 })))); });
+  const RA0 = (M.rarity || []), RA = RA0.some(r => r.peer_share != null) ? RA0.filter(r => r.asked_share - (r.peer_share ?? 0) >= .1).slice(0, 6).concat(RA0.filter(r => r.asked_share - (r.peer_share ?? 0) < .1).length ? [] : []) : RA0.slice(0, 8);
+  const rare = RA.length ? fig("cmp-rarity", "market", panel("What is rare about you", RA[0].peer_share != null ? "Requirements your record proves: bar, share of postings that ask; ring, share of peers who show it. Wide gaps are your edge." : "Requirements your record proves, by how often postings ask for them. No peer data to compare against.",
+    chart(barRows(RA.map(r => ({ label: esc(r.label), value: r.asked_share, m2: r.peer_share, color: r.peer_share != null && r.asked_share - r.peer_share >= .15 ? "var(--gold)" : "var(--accent)", valText: r.peer_share != null ? `${pct(r.asked_share)} / ${pct(r.peer_share)}` : pct(r.asked_share),
+      tip: `<b>${esc(r.label)}</b><br>asked in ${pct(r.asked_share)} of ${r.asked_n} postings${r.peer_share != null ? `<br>shown by ${pct(r.peer_share)} of ${r.peer_n} peers` : ""}` })), { max: 1 })))) : stub("cmp-rarity", "market", "No proven requirements to compare", "the record proves no coded requirement at grade 2 or above");
+  const yrsFig = chart(stripRows(ORDER.filter(id => (M.years[id] || []).length).map(id => ({ label: `${NICHE[id].rank} · ${esc(parts(NICHE[id]).short)}`, pts: M.years[id].map(v => ({ v, color: HUE(id), tip: `${v} years asked` })) })), { fmt: v => Math.round(v) + "y", mark: yrs, min: 0, max: Math.max(yrs || 0, ...Object.values(M.years).flat()) + 1 }));
+  const LV = ["IC", "entry", "experienced", "Mgr", "manager", "SrMgr", "lead", "Dir", "director", "SrDir", "Head", "VP", "SVP", "executive", "C"];
+  const lvl = chart(barRows(ORDER.map(id => { const lv = M.levels[id] || {}, tot = Object.values(lv).reduce((a, b) => a + b, 0) || 1, top = Object.entries(lv).sort((a, b) => b[1] - a[1])[0];
+    return { label: `${NICHE[id].rank} · ${esc(parts(NICHE[id]).short)}`, value: top ? top[1] / tot : 0, color: HUE(id), valText: top ? esc(top[0]) : "—", tip: LV.filter(b => lv[b]).map(b => `${b}: ${lv[b]}`).join("<br>") }; }), { max: 1, valW: 64 }));
+  const asks = fig("cmp-asks", "market", panel("The bar the postings set", "Years of experience each posting asks for (gold line: yours), and the most common level in each niche (bar: its share).", el("div", { class: "g2" }, [el("div", {}, [el("div", { class: "fh", text: "Years asked" }), yrsFig]), el("div", {}, [el("div", { class: "fh", text: "Most common level" }), lvl])])));
+  const F = R.funnel;
+  const iso = W => { const per = W < 480 ? 20 : 40, rows = 200 / per, d = Math.min(14, (W - 10) / per), H = 2 * (rows * d + 30), g = s("svg", { width: W, height: H, viewBox: `0 0 ${W} ${H}` });
+    [[1, 0], [11, rows * d + 30]].forEach(([k, y0]) => { for (let i = 0; i < 200; i++) { const x = (i % per) * d + d / 2, y = y0 + 22 + Math.floor(i / per) * d + d / 2; g.append(s("circle", { cx: x, cy: y, r: d * .32, fill: i < k ? "var(--gold)" : "var(--ink3)", "fill-opacity": i < k ? 1 : .35 })); }
+      g.append(s("text", { x: 0, y: y0 + 14, class: "ink" }, W < 400 ? `${k === 1 ? "Cold" : "Referrals"}: ${k} per 200` : `${k === 1 ? "Cold applications" : "Referrals"}: about ${k} hire${k > 1 ? "s" : ""} per 200`)); }); return g; };
+  const bench = el("table", { class: "t" }, [el("tr", {}, [el("th", { text: "Benchmark" }), el("th", { class: "r", text: "Value" })]), ...F.benchmarks.map(b => el("tr", {}, [el("td", { "data-label": "" }, [b.stage, el("div", { class: "meta" }, el("a", { class: "lnk", href: b.url, target: "_blank", rel: "noopener", text: b.source }))]), el("td", { class: "r serif", "data-label": "Value", text: b.rate })]))]);
+  const odds = fig("cmp-odds", "funnel", el("div", { class: "g2" }, [panel("How the field is won", "Gem's 2026 benchmarks: 0.5% of applicants get offers; referrals convert about 11 times better. Per 200 approaches, rounded.", chart(iso)), panel("The benchmarks", null, bench)]));
+  sec.append(chapterHead("peers", 3), op, body([rare, el("div", { class: "g2" }, [peerFig, pathFig]), asks, evidence("See the evidence: how the field is won", [odds])]), learned("peers"));
+  scope.append(sec);
+})();
+
+/* ================= ACT 4: THE VERDICT ================= */
+(function verdictAct() {
+  const sec = actSection("verdict"), S = R.summary, P = R.portfolio;
+  const best = {}; R.niches.forEach(x => x.fit_per_posting.postings.forEach(p => best[p.id] = Math.max(best[p.id] ?? 0, p.fit)));
+  const fp = [Object.values(best).filter(v => v >= .6).length, Object.keys(best).length];
+  const op = opener([{ state: "fit", card: [el("h3", { text: `You meet 60% of the asks on ${fp[0]} of ${fp[1]} postings.` }), el("p", { text: "Gold stars are postings where your proven record covers at least 60% of what they ask. Applicants at 60–70% match are worth sending; perfect matches are rare." }), legend([["var(--gold)", "fit ≥ 60%"], ["var(--ink3)", "below"]])] }]);
+  const finds = fig("vrd-findings", "summary", el("div", { class: "finds" }, (S.findings || []).map(f => el("div", { class: "find" }, [el("b", { text: f.title }), el("p", { class: "muted", html: phHTML(f.body) })]))));
+  const B = M.bridge || [], asked = Object.fromEntries((M.rarity || []).map(r => [r.label, r.asked_share]));
+  const bridge = B.length ? fig("vrd-bridge", "market profile_view", panel("The bridge", "What the record shows, on the left; how employers ask for it, on the right, with the share of postings that ask. Each line rests on the resume lines cited.",
+    chart(linkDiagram(B.map(b => ({ left: b.asset, right: b.reads_as, tip: `${esc(b.asset)} → ${esc(b.reads_as)}<br>resume ${b.ledger_ids.join(", ")}`, w: 1 + 3 * (b.asked_share || 0) })), { order: r => B.find(b => b.reads_as === r)?.asked_share || 0, note: r => { const v = B.find(b => b.reads_as === r)?.asked_share; return v != null ? pct(v) : ""; } }))))
+    : stub("vrd-bridge", "market profile_view", "No bridge", "no strength shares a resume line with a proven requirement");
+  const PTS = Object.fromEntries(M.points.map(p => [p.id, p]));
+  const scat = forNiche(n => { const F = n.fit_per_posting, cur = n.size.currency, pts = F.postings.map(p => ({ p, m: PTS[p.id] })).filter(x => x.m?.pay_mid && x.m.currency === cur);
+    if (pts.length < 3) return stub("vrd-scatter", "niches.fit_per_posting market", `Fit against pay for ${parts(n).short}`, `${pts.length} postings in this niche publish pay (3 needed)`);
+    return fig("vrd-scatter", "niches.fit_per_posting market", panel("Where fit meets pay", `Each ${esc(parts(n).short)} posting that publishes pay: your fit across, posted midpoint up. Top right is where to start.`,
+      chart(scatter(pts.map(({ p, m }) => ({ x: p.fit, y: m.pay_mid, color: p.fit >= F.line ? "var(--gold)" : HUE(n.id), op: p.fit >= F.line ? 1 : .6, tip: `<b>${esc(p.company)}</b><br>${esc(p.title)}<br>fit ${pct(p.fit)}, ${money(m.pay_mid, cur)}` })), { xmin: 0, xmax: 1, line: F.line, fx: pct, fy: v => money(v, cur), aria: "Fit against posted pay" })))); });
+  const plates = fig("vrd-verdict", "summary niches.verdict niches.pitch niches.fit", el("div", { class: "plates-v" }, S.run_now.map(id => { const n = NICHE[id];
+    return el("div", { class: "plate-v" }, [el("div", { class: "glyph" }, rose(n, 150)), el("div", {}, [el("div", { class: "rank", text: `Run now · rank ${n.rank}` }), el("h3", { text: n.label }),
+      el("div", { style: "display:flex;gap:.75rem 1rem;align-items:baseline;flex-wrap:wrap" }, [el("span", { class: "score", text: n.score }), verdict(n), el("span", { class: "tag", text: `fit ${pct(n.fit.score)}` }), el("span", { class: "tag", text: `${n.size.n_postings} postings` })]),
+      el("p", { class: "muted", style: "margin-top:.5rem", html: phHTML(n.pitch.one_liner) })])]); })));
+  const head = el("p", { class: "statement", text: S.headline });
+  const story = fig("vrd-narrative", "summary", el("div", { class: "panel" }, [el("h3", { text: "The story to tell" }), el("p", { class: "muted", style: "font-size:1.0625rem", html: phHTML(S.narrative) })]));
+  const fitFig = forNiche(n => { const F = n.fit_per_posting; return fig("vrd-fit", "niches.fit_per_posting", panel(`Your fit to each ${parts(n).short} posting`, `You clear the 60% line on ${F.above_line} of ${F.n}. Gold dots are worth applying to now.`,
+    chart(dotStrip(F.postings.map(p => ({ v: p.fit, color: p.fit >= F.line ? "var(--gold)" : HUE(n.id), op: p.fit >= F.line ? 1 : .55, tip: `<b>${esc(p.company)}</b><br>${esc(p.title)}<br>fit ${pct(p.fit)}` })), { line: F.line, aria: "Fit per posting" })), act(n.fit.do_this))); });
+  const ladder = forNiche(n => { const st = n.fix_ladder.steps.filter(x => x.coverage_gain >= .01 || x.fit_gain >= .01).slice(0, 6);
+    if (!st.length) return fig("vrd-ladder", "niches.fix_ladder", el("div", { class: "stub", "data-stub": "no single requirement moves coverage" }, [el("b", { text: "The fix ladder. " }), "No single requirement moves coverage for this niche."]));
+    const vals = st.map(x => Math.max(x.coverage_gain, x.fit_gain)), flat = Math.max(...vals) - Math.min(...vals) < .005;
+    if (flat) return fig("vrd-ladder", "niches.fix_ladder", panel("The fix ladder", `Each of these adds the same +${Math.round(vals[0] * 100)} points of coverage. Start with the ones you can already prove.`, el("div", { class: "g2" }, [["surface", "Surface: the evidence exists"], ["build", "Build: needs new evidence"]].map(([k, h]) => el("div", {}, [el("div", { class: "fh", text: h }), el("ul", { style: "padding-left:1.1rem;margin:.4rem 0 0" }, st.filter(x => x.kind === k).map(x => el("li", { "data-mark": "", text: x.label })).concat(st.some(x => x.kind === k) ? [] : [el("li", { class: "meta", text: "None" })]))])))));
+    return fig("vrd-ladder", "niches.fix_ladder", panel("The fix ladder", "Points gained by proving each requirement, one at a time. Gold: the evidence exists and needs surfacing. Colour: needs building.",
+      chart(barRows(st.map(x => { const v = Math.max(x.coverage_gain, x.fit_gain); return { label: esc(x.label), value: v, color: x.kind === "surface" ? "var(--gold)" : HUE(n.id), op: x.kind === "surface" ? .95 : .55, valText: `+${Math.round(v * 100)} ${x.coverage_gain >= .01 ? "coverage" : "fit"}`, tip: x.kind === "surface" ? "Surface: you have partial evidence; make it visible" : "Build: needs new evidence" }; }), { valW: 108, axis: false })))); });
+  const comps = Object.keys(P.weights), tot = comps.reduce((a, c) => a + P.weights[c], 0);
+  const rank = fig("vrd-ranking", "portfolio niches.components niches.flags", panel("How the niches rank", `Score out of 100: ${comps.map(c => `${c} ${P.weights[c]}`).join(", ")}.`, el("div", {}, P.niches.map(n => el("div", { class: "ribbon", "data-mark": "" }, [
+    el("div", { class: "glyph" }, rose(NICHE[n.id], 48)), el("div", {}, [el("div", { style: "font-weight:500", text: `${n.rank} · ${n.label}` }), el("div", { class: "tags", style: "margin-top:.2rem" }, [verdict(NICHE[n.id]), ...n.flags.map(f => el("span", { class: "tag", text: f }))])]),
+    el("div", { class: "bars" }, comps.map((c, i) => el("i", { style: `width:${n.components[c] * P.weights[c] / tot * 100}%;background:${HUE(n.id)};opacity:${1 - i * .1}`, "data-tip": `<b>${c}</b>: ${pct(n.components[c])} × weight ${P.weights[c]}` }))), el("div", { class: "sc", text: n.score })])))));
+  const ids = P.overlap.ids, K = ids.length;
+  const heat = el("div", { class: "heat", style: `grid-template-columns:2rem repeat(${K},minmax(0,1fr))` }, [el("div", { class: "hh" }), ...ids.map((_, j) => el("div", { class: "hh", text: "#" + (j + 1) })),
+    ...ids.flatMap((id, i) => [el("div", { class: "hh serif", text: NICHE[id].rank }), ...P.sensitivity.rank_freq[id].map((v, j) => el("div", { "data-mark": "", style: `background:color-mix(in srgb, ${HUE(id)} ${Math.round(Math.max(.05, v) * 100)}%, transparent)`, "data-tip": `rank ${j + 1} in ${pct(v)} of weightings`, text: v >= .1 ? pct(v) : "" }))])]);
+  const robust = fig("vrd-robust", "portfolio", panel("How stable is the order", `Top three unchanged in ${pct(P.sensitivity.same_top3_share)} of ${P.sensitivity.draws.toLocaleString()} random re-weightings.`, heat));
+  const lanes = el("div", { class: "g3" }, [["now", "Run now"], ["next", "Next"], ["parked", "Parked"]].map(([k, t]) => panel(t, null, el("div", {}, [...P.sequence.filter(x => x.phase === k).map(x => el("div", { class: "qa" }, [el("b", { text: `${NICHE[x.niche_id].rank} · ${NICHE[x.niche_id].label}` }), el("span", { class: "meta", text: x.trigger })])), P.sequence.some(x => x.phase === k) ? null : el("p", { class: "meta", text: "None" })]))));
+  const gaps = S.gaps.length ? panel("Gaps the market will notice", null, el("div", {}, S.gaps.map(g => el("div", { class: "qa" }, [el("b", { text: g.text }), el("span", { class: "meta", text: g.why })])))) : null;
+  const key = el("p", { class: "meta", text: "Each rose: petals are the niche's most-asked requirements, length is how often postings ask, the solid part is how much your record proves." });
+  head.style.fontSize = "clamp(1.5rem,2.8vw,2.25rem)"; head.style.maxWidth = "36ch"; head.style.color = "var(--ink)";
+  sec.append(chapterHead("verdict", 4), el("div", { class: "wrap", style: "padding-bottom:1.5rem" }, head), op, body([finds, plates, key, bridge, el("div", { class: "g2" }, [fitFig, scat]), act(P.do_this), evidence("See the evidence: ranking, the story, fix ladder, stability, sequence, gaps", [rank, story, ladder, robust, lanes, gaps])]), learned("verdict"));
+  scope.append(sec);
+})();
+
+/* ================= ACT 5: THE COURSE ================= */
+function resumeMD(r) { const L = r.language === "fr" ? ["Profil", "Expérience professionnelle", "Formation", "Compétences", "Langues"] : ["Profile", "Experience", "Education", "Skills", "Languages"];
+  const m = [`# ${r.header.name}`, `**${applyFills(r.header.headline)}**`, r.header.contact || "", "", `## ${L[0]}`, applyFills(r.profile), "", `## ${L[1]}`];
+  r.experience.forEach(e => { m.push(`**${e.title}**, ${e.employer} — ${e.dates}${e.location ? " · " + e.location : ""}`); if (e.context) m.push(`_${applyFills(e.context)}_`); if (e.scope) m.push(applyFills(e.scope)); e.bullets.forEach(b => m.push("- " + applyFills(b.text))); m.push(""); });
+  m.push(`## ${L[2]}`, ...r.education.map(x => "- " + x), "", `## ${L[3]}`, r.skills.join(" · ")); if (r.languages) m.push("", `## ${L[4]}`, r.languages.join(" · ")); return m.join("\n") + "\n"; }
+function paper(r) { const orig = new Map(R.original.ledger_ids.map((id, i) => [id, R.original.bullets[i]]));
+  const d = el("div", { class: "paper" }, [el("div", { class: "nm", text: r.header.name }), el("div", { class: "hl", html: phHTML(r.header.headline) }), el("div", { class: "ct", text: r.header.contact || "" }), el("h4", { text: "Profile" }), el("p", { html: phHTML(r.profile) }), el("h4", { text: "Experience" })]);
+  r.experience.forEach(e => { d.append(el("div", { class: "role2" }, [el("b", { text: `${e.title}, ${e.employer}` }), el("span", { text: e.dates + (e.location ? ", " + e.location : "") })]));
+    if (e.context) d.append(el("div", { class: "ctx", html: phHTML(e.context) })); if (e.scope) d.append(el("div", { class: "scope", html: phHTML(e.scope) }));
+    d.append(el("ul", {}, e.bullets.map(b => { const same = b.ledger.length === 1 && orig.get(b.ledger[0]) === b.text; return el("li", { html: phHTML(b.text) + `<span class="tag src" data-tip="${esc(b.ledger.map(id => id + ": " + (orig.get(id) || "")).join("<br>"))}">${same ? "as written" : "rewritten"}</span>` }); }))); });
+  d.append(el("h4", { text: "Education" }), ...r.education.map(x => el("p", { text: x })), el("h4", { text: "Skills" }), el("p", { html: phHTML(r.skills.join(", ")) }));
+  if (r.languages) d.append(el("h4", { text: "Languages" }), el("p", { text: r.languages.join(", ") })); return d; }
+function interviewQs(n) { const q = n.fit.gaps.slice(0, 4).map(g => ({ q: `Tell me about your experience with ${g.label.toLowerCase()}.`, h: g.fix || "Answer with the closest real example and what you would do in the first 90 days." }));
+  n.pitch.objections.forEach(o => q.push({ q: o.objection, h: o.answer })); return q; }
+function outreach(n, e) { const proof = n.pitch.proof_points[0] || ""; return applyFills(`Hi [name], I'm reaching out about the ${e.titles?.[0] || "role"} at ${e.company}. ${n.pitch.one_liner} One example: ${proof}. Would you be open to a 15-minute conversation?`); }
+const LABC = {}; R.niches.forEach(x => x.demand.rows.forEach(r => LABC[r.code] = r.label));
+(function course() {
+  const sec = actSection("course"), S = R.summary;
+  /* actions: fixes first, then the ranked list, filterable */
+  const done = store.get("done", {}), A = R.actions, list = el("div", { class: "actlist", "data-list": "" }), prog = el("div", { class: "progress" }, el("i")), count = el("span", { class: "meta" });
+  let f = "all";
+  const filters = el("div", { "data-btn-group": "", style: "--min:6.25rem" }, [["all", "Top 12"], ["quick", "Quick"], ["niche", "Niche"]].map(([k, t]) => { const b = el("button", { class: "btn", "aria-pressed": String(k === f), text: t });
+    b.onclick = () => { f = k; $$("button", filters).forEach(x => x.setAttribute("aria-pressed", String(x === b))); render(); }; return b; }));
+  const fixT = new Set(S.fixes.map(x => x.text));
+  function render() { list.replaceChildren(); const rows = A.filter(a => !fixT.has(a.text)).filter(a => f === "all" || (f === "quick" && a.impact === "high" && a.effort === "low") || (f === "niche" && a.niche_id === SEL));
+    const seen = new Map(); rows.forEach(a => { const k = a.text.replace(NICHE[a.niche_id]?.label || "\u0000", "this niche"); if (seen.has(k)) seen.get(k).more.push(a.niche_id); else seen.set(k, { ...a, more: [] }); });
+    [...seen.values()].slice(0, f === "all" ? 12 : 40).forEach(a => { const cb = el("input", { type: "checkbox", "aria-label": "Done" }); cb.checked = !!done[a.id];
+      const row = el("div", { class: "act-row" + (cb.checked ? " done" : "") }, [el("label", { class: "check" }, cb), el("div", { class: "txt" }, [el("div", { html: phHTML(a.text.replace(NICHE[a.niche_id]?.label || "\u0000", "this niche")) }), el("div", { class: "tags" }, [a.niche_id && NICHE[a.niche_id] ? el("span", { class: "tag", text: `niche ${[a.niche_id, ...(a.more || [])].filter(id => NICHE[id]).map(id => NICHE[id].rank).sort().join(", ")}` }) : null, el("span", { class: "tag" + (a.impact === "high" ? " imp-high" : ""), text: `${a.impact} impact` }), el("span", { class: "tag", text: `${a.effort} effort` })])])]);
+      cb.onchange = () => { done[a.id] = cb.checked; store.set("done", done); row.classList.toggle("done", cb.checked); meter(); }; list.append(row); });
+    if (!rows.length) list.append(el("p", { class: "meta", style: "padding:.75rem 0", text: "No actions for this filter." }));
+    if (f === "all" && A.length > 12) list.append(el("p", { class: "meta", style: "padding-top:.6rem", text: `${A.length - 12} more: see Quick wins and This niche.` })); }
+  function meter() { const k = A.filter(a => done[a.id]).length; prog.firstChild.style.width = (100 * k / A.length) + "%"; count.textContent = `${k} of ${A.length} done · saved in this browser`; }
+  perNiche.push([el("div"), () => { if (f === "niche") render(); return el("span"); }]);
+  render(); meter();
+  const fixes = el("div", {}, [el("div", { class: "fh", text: "Before the first application" }), el("ol", { style: "margin:.4rem 0 0;padding-left:1.25rem" }, S.fixes.map(x => el("li", { style: "margin:.5rem 0" }, [el("div", { html: phHTML(x.text) }), el("div", { class: "meta", text: x.why })])))]);
+  const actions = fig("crs-actions", "actions summary", panel("Next moves", "Every recommendation in this report, ranked by impact for the effort.", el("div", {}, [fixes, el("div", { style: "margin-top:1.25rem" }, [el("div", { class: "fh", text: "Then, in order" }), filters, prog, count, list])])));
+  /* playbook for the selected niche */
+  const playbook = forNiche(n => { const sz = n.size;
+    const erow = e => el("div", { class: "emp" }, [el("div", {}, [el("div", { class: "co", text: e.company }), el("div", { class: "meta", text: (e.titles?.[0] || "") }),
+      el("div", { class: "meta erow" }, [el("span", { class: "st " + e.band, text: e.band.replace("_", " ") }), el("span", {}, ["access ", el("span", { class: "dots", "data-tip": esc(e.path || "no path found"), text: "●".repeat(e.access) + "○".repeat(3 - e.access) })]), e.urls?.[0] ? el("a", { class: "lnk", href: e.urls[0], target: "_blank", rel: "noopener", text: "View posting" }) : null])]),
+      el("div", { class: "acts" }, copyBtn(() => outreach(n, e), "note-" + e.company))]);
+    const ER = n.employers.rows.slice(0, 8), emps = el("div", { "data-list": "" }, [...ER.slice(0, 3).map(erow), ER.length > 3 ? el("details", { class: "more" }, [el("summary", { class: "lnk", text: `Show all ${ER.length}` }), el("div", { "data-list": "" }, ER.slice(3).map(erow))]) : null]);
+    const pay = n.pay ? panel("Pay and the counter", `Posted band for ${esc(parts(n).short)}: 25th ${money(n.pay.band.p25, sz.currency)}, median ${money(n.pay.band.median, sz.currency)}, 75th ${money(n.pay.band.p75, sz.currency)}.`,
+      el("div", {}, [el("p", { html: `<b>Anchor.</b> ${phHTML(n.pay.anchor)}` }), el("p", { html: `<b>Walk-away.</b> ${phHTML(n.pay.walk_away)}` }), el("p", { class: "muted", style: "margin-top:.4rem", html: phHTML(n.pay.script) })]))
+      : el("div", { class: "stub" }, [el("b", { text: "Pay. " }), n.hidden_reason?.pay || "no posted ranges"]);
+    const acc = n.access?.paths?.length ? panel("Ways in", null, el("div", {}, n.access.paths.slice(0, 5).map(p => el("div", { class: "qa" }, [el("b", { text: p.company }), el("span", { class: "meta", text: p.path })])))) : null;
+    return fig("crs-playbook", "niches.employers niches.access niches.pitch niches.pay niches.plan30", el("div", { class: "body", style: "padding:0" }, [
+      el("div", { class: "pitch" }, [el("div", { class: "fh", text: `Your pitch for ${parts(n).short}` }), el("p", { class: "statement", html: phHTML(n.pitch.one_liner) }),
+        el("div", { class: "g2", style: "align-items:end" }, [el("ol", { style: "padding-left:1.25rem;margin:.5rem 0 0" }, n.pitch.proof_points.map(p => el("li", { html: phHTML(p) }))), el("div", { style: "display:flex;justify-content:flex-end" }, copyBtn(() => applyFills(n.pitch.one_liner), "pitch"))])]),
+      panel(`Approach first`, "Ranked by opportunity. Access dots: strength of an inferred path (hover). Notes are drafted from your pitch; fill [name] before sending.", emps, act([...n.employers.do_this, ...(n.access?.do_this || []), ...n.pitch.do_this])),
+      evidence(`More for ${parts(n).short}: pay, interviews, ways in, first 30 days`, [pay, panel("Interview preparation", "Questions your gaps and objections will raise, with the line to answer from.", el("div", {}, interviewQs(n).map(x => el("div", { class: "qa" }, [el("b", { text: x.q }), el("span", { class: "meta", html: phHTML(x.h) })])))),
+        acc, panel("The first 30 days", null, el("div", { class: "weeks" }, n.plan30.map(w => el("div", { class: "week" }, [el("b", { text: w.week }), el("ul", {}, w.actions.map(a => el("li", { html: phHTML(a) })))]))))], "4 panels")])); });
+  const rules = forNiche(n => fig("crs-rules", "niches.language niches.demand", panel("Message rules", `How to write for ${esc(parts(n).short)}.`, el("div", { class: "g2" }, [
+    el("div", {}, [el("div", { class: "fh", text: "Use their words" }), el("div", { class: "tags", style: "margin:.4rem 0" }, (n.language.use || []).map(t => el("span", { class: "tag", style: "border-color:var(--gold)", text: t }))),
+      (n.language.avoid || []).length ? el("div", {}, [el("div", { class: "fh", style: "margin-top:.6rem", text: "Avoid" }), el("div", { class: "tags", style: "margin-top:.4rem" }, n.language.avoid.map(t => el("span", { class: "tag", style: "text-decoration:line-through", text: t })))]) : null]),
+    el("div", {}, [act(n.language.do_this)])]))));
+  /* tool panels */
+  const RES = [...R.resumes].sort((a, b) => NICHE[a.niche_id].rank - NICHE[b.niche_id].rank), holder = el("div"), cmpBox = el("div");
+  let cur = RES.find(r => r.niche_id === SEL) || RES[0];
+  const vl = el("div", { class: "vlist", "data-btn-group": "", role: "tablist" });
+  const keys = [...new Set(RES.flatMap(r => JSON.stringify(r).match(/\[[^\]"]+\]/g) || []))];
+  const fields = el("div", { class: "ph-fields" }, keys.map(k => { const i = el("input", { type: "text", "data-key": k, value: fills[k] || "", placeholder: "type the fact" });
+    i.addEventListener("input", () => { if (i.value.trim()) fills[k] = i.value.trim(); else delete fills[k]; store.set("fills", fills); show(cur); refreshPH(); });
+    return el("div", { class: "ph-field" }, [el("label", { text: k.slice(1, -1) }), i]); }));
+  function refreshPH() { $$("span.ph").forEach(sp => { const k = sp.dataset.key, v = fills[k]; sp.textContent = v || k; sp.classList.toggle("filled", !!v); }); }
+  const gmap = R.gates_per_resume || {};
+  function cmp(r) { const base = Object.fromEntries(R.baseline.gates.map(g => [g.name, g])), now = Object.fromEntries((gmap[r.id] || R.gates).map(g => [g.name, g]));
+    const names = ["traceability", "authenticity", "bullet_score", "keyword_coverage", "six_second_zone", "length", "ats_parse"].filter(x => base[x] || now[x]);
+    cmpBox.replaceChildren(panel("Original vs this version", null, el("table", { class: "t" }, [el("tr", {}, [el("th", { text: "Check" }), el("th", { class: "r", text: "Original" }), el("th", { class: "r", text: "This version" })]),
+      ...names.map(x => el("tr", {}, [el("td", { "data-label": "", text: cap(x.replace(/_/g, " ")) }), el("td", { class: "r", "data-label": "Original" }, base[x] ? el("span", { class: "st " + base[x].status, text: base[x].status.replace("_", " ") }) : "—"),
+        el("td", { class: "r", "data-label": "This version" }, now[x] ? el("span", { class: "st " + now[x].status, text: now[x].status.replace("_", " ") }) : "—")]))]))); }
+  function show(r) { cur = r; holder.replaceChildren(paper(r)); cmp(r); $$("button", vl).forEach(b => b.setAttribute("aria-selected", String(b.dataset.id === r.id))); }
+  RES.forEach(r => { const n = NICHE[r.niche_id], b = el("button", { role: "tab", "data-id": r.id, text: `${n.rank} · ${parts(n).short} (${parts(n).lvl})` }); b.onclick = () => show(r); vl.append(b); });
+  perNiche.push([el("div"), n => { const r = RES.find(x => x.niche_id === n.id); if (r) show(r); return el("span"); }]);
+  const dl = el("div", { "data-btn-group": "" }, el("button", { class: "btn", text: "Download this version (.md)" }));
+  dl.firstChild.onclick = () => { const a = el("a", { href: URL.createObjectURL(new Blob([resumeMD(cur)], { type: "text/markdown" })), download: `resume-${cur.id}.md` }); document.body.append(a); a.click(); a.remove(); };
+  window.nicheLab = { exportResume: id => resumeMD(RES.find(r => r.id === id)), fills, selectNiche, niches: ORDER, get selected() { return SEL; },
+    longestNiche: [...ORDER].sort((a, b) => NICHE[b].label.length - NICHE[a].label.length)[0] };
+  const rail = el("div", {}, [vl, el("div", { class: "fh", style: "margin:1.1rem 0 .2rem", text: `Fill the blanks (${keys.length})` }), el("p", { class: "meta", text: "Each value updates every version at once and is saved in this browser." }), fields, el("div", { style: "margin-top:.75rem" }, dl), el("div", { style: "margin-top:1.1rem" }, cmpBox)]);
+  const tool = (id, src, title, sub, kids) => fig(id, src, el("details", { class: "evidence tool" }, [el("summary", {}, el("span", { class: "t" }, [title, el("small", { text: sub })])), el("div", { class: "inner" }, kids)]));
+  const resumes = tool("crs-resumes", "resumes original gates gates_per_resume", "Your resumes", `${RES.length} versions, one per niche · ${keys.length} blanks only you can fill`, [el("div", { class: "res" }, [rail, holder])]);
+  show(cur);
+  const L = R.linkedin, li = [];
+  if (L) { const field = (id, title, text, limit) => el("div", { class: "li-field" }, [el("div", { class: "top" }, [el("div", {}, [el("b", { text: title }), limit ? el("div", { class: "meta", text: `${text.length} / ${limit} characters` }) : null]), copyBtn(() => applyFills(text), id)]), el("pre", { html: phHTML(text) })]);
+    li.push(field("li-headline", "Headline", L.headline, 220), field("li-about", "About (the first 300 characters show before “See more”)", L.about, 2600), ...L.experience.map((e, i) => field(`li-exp-${i}`, `${e.title}, ${e.employer}`, e.description, 2000)),
+      field("li-skills", "Skills (pin the first three)", L.skills.join(", ")), field("li-open", "Open to work: job titles", L.open_to_titles.join(", ")), ...(L.connection_note ? [field("li-note", "Connection note", L.connection_note, 300)] : []),
+      ...(L.alternates || []).map((a, i) => field(`li-alt-${i}`, `Headline for ${NICHE[a.niche_id]?.label || a.niche_id}`, a.headline, 220)));
+    const gl = (R.gates_linkedin || []).map(g => el("div", { class: "qa" }, [el("span", { class: "st " + g.status, text: g.status }), " ", g.detail])); if (gl.length) li.push(panel("Checks", null, el("div", {}, gl))); }
+  const linkedin = tool("crs-linkedin", "linkedin gates_linkedin", "Your LinkedIn, rewritten", `Written for ${NICHE[L?.niche_id]?.label || "your top niche"}; within LinkedIn's field limits`, li);
+  /* tracker */
+  const F = R.funnel, log = store.get("tracker", []);
+  const form = el("div", { class: "trk" }, [el("label", {}, ["Niche", el("select", { id: "trk-niche" }, ORDER.map(id => el("option", { value: id, text: `${NICHE[id].rank} · ${parts(NICHE[id]).short}` })))]),
+    el("label", {}, ["Employer", el("input", { id: "trk-employer", type: "text" })]), el("label", {}, ["Channel", el("select", { id: "trk-channel" }, [["referral", "Referral"], ["warm", "Warm intro"], ["direct", "Note + apply"], ["cold", "Cold apply"]].map(([v, t]) => el("option", { value: v, text: t })))]),
+    el("label", {}, ["Outcome", el("select", { id: "trk-outcome" }, [["pending", "Waiting"], ["no_reply", "No reply"], ["screen", "Screen"], ["interview", "Interviews"], ["final", "Final round"], ["offer_low", "Offer below band"], ["offer", "Offer"], ["rejected", "Rejected"]].map(([v, t]) => el("option", { value: v, text: t })))]),
+    el("div", { "data-btn-group": "" }, el("button", { class: "btn primary", id: "trk-add", text: "Log approach" }))]);
+  const table = el("div"), diag = el("div", { id: "trk-diag" });
+  function renderT() { table.replaceChildren(log.length ? el("table", { class: "t", style: "margin-top:.75rem" }, [el("tr", {}, ["Niche", "Employer", "Channel", "Outcome"].map(h => el("th", { text: h }))), ...log.slice(-12).reverse().map(e => el("tr", {}, [el("td", { "data-label": "Niche", text: NICHE[e.niche]?.rank + "" }), el("td", { "data-label": "Employer", text: e.employer }), el("td", { "data-label": "Channel", text: e.channel }), el("td", { "data-label": "Outcome", text: e.outcome.replace("_", " ") })]))]) : el("p", { class: "meta", style: "margin-top:.6rem", text: "Nothing logged yet." }));
+    const hits = []; ORDER.forEach(id => { const L2 = log.filter(e => e.niche === id), c = o => L2.filter(e => e.outcome === o).length;
+      if (c("no_reply") >= 10 && !L2.some(e => ["screen", "interview", "final", "offer", "offer_low"].includes(e.outcome))) hits.push([F.diagnosis[0], id]);
+      if (c("screen") >= 3 && !L2.some(e => ["interview", "final", "offer", "offer_low"].includes(e.outcome))) hits.push([F.diagnosis[1], id]);
+      if (c("final") >= 2 && !L2.some(e => ["offer", "offer_low"].includes(e.outcome))) hits.push([F.diagnosis[2], id]);
+      if (c("offer_low") >= 1) hits.push([F.diagnosis[3], id]); });
+    diag.replaceChildren(...hits.map(([d, id]) => el("div", { class: "hit" }, [el("b", { text: `${NICHE[id].rank} · ${d.symptom}. ` }), `Likely cause: ${d.cause.toLowerCase()}. ${d.fix}.`]))); }
+  form.querySelector("#trk-add").onclick = () => { log.push({ niche: $("#trk-niche").value, employer: $("#trk-employer").value.trim() || "—", channel: $("#trk-channel").value, outcome: $("#trk-outcome").value, at: Date.now() }); store.set("tracker", log); $("#trk-employer").value = ""; renderT(); };
+  renderT();
+  const diagT = el("table", { class: "t" }, [el("tr", {}, ["If you see", "Likely cause", "Change"].map(h => el("th", { text: h }))), ...F.diagnosis.map(d => el("tr", {}, [el("td", { "data-label": "If you see", text: d.symptom }), el("td", { "data-label": "Likely cause", class: "muted", text: d.cause }), el("td", { "data-label": "Change", text: d.fix })]))]);
+  const tracker = tool("crs-tracker", "funnel", "Your search tracker", "Log every approach; it applies the diagnosis rules as you go", [form, diag, table, panel("When a stage stalls", null, diagT), act(F.do_this)]);
+  const blanks = R.confirm.filter(c => /^Fill \[/.test(c.item)), rest = R.confirm.filter(c => !/^Fill \[/.test(c.item));
+  const confirm = tool("crs-confirm", "confirm", "Confirm before sending", `${rest.length} inferences to check · ${blanks.length} blanks to fill`, [el("div", { class: "g2" }, [
+    panel("Inferred or defaulted", "The study had only your resume and LinkedIn; these were inferred, defaulted or left blank on purpose.", el("div", {}, rest.map(c => el("div", { class: "qa" }, [el("b", { html: phHTML(cap(c.item)) }), el("span", { class: "meta", text: c.why })])))),
+    panel(`Blanks (${blanks.length})`, "Fill them under Your resumes; they update every version.", el("div", { class: "tags" }, blanks.slice(0, 60).map(c => el("span", { class: "tag", html: phHTML(c.item.replace(/^Fill /, "")) }))))])]);
+  const plan = fig("crs-plan12", "plan12", el("div", { class: "panel" }, [el("h3", { text: "The next twelve weeks" }), el("p", { class: "d", text: "Each bar is an action with its target; the tracker below tells you when a stage stalls." }), chart(gantt(R.plan12 || []))]));
+  const formulas = forNiche(n => { const F = n.formulas || []; if (!F.length) return stub("crs-formulas", "niches.formulas", `Sentence formulas for ${parts(n).short}`, "no requirement bundle maps to a line of the record");
+    return fig("crs-formulas", "niches.formulas niches.demand", panel("Golden formulas", `Requirements that travel together in ${esc(parts(n).short)}, turned into a sentence you can reuse in resumes, notes and interviews. The example is built only from your resume lines.`,
+      el("div", { "data-list": "" }, F.map((f, i) => el("div", { class: "formula" }, [el("div", { class: "tpl", html: phHTML(f.template) }), copyBtn(() => applyFills(f.template), `formula-${i}`),
+        el("div", { class: "ex meta", text: `${f.bundle.map(c => LABC[c] || c).join(" + ")} · e.g. “${f.example}” (resume ${f.ledger_ids.join(", ")})` })]))))); });
+  const Z = R.baseline.zone_coverage || {};
+  const oldnew = fig("crs-oldnew", "baseline", panel("Original against the new versions", "Must-haves you can prove that each version makes visible, in the first six seconds and in the whole text. Bar: new version; ring: original.",
+    chart(barRows(ORDER.filter(id => Z[id]?.rewritten).flatMap(id => { const z = Z[id]; return [
+      { label: `${NICHE[id].rank} · ${esc(parts(NICHE[id]).short)} <span class="meta">· first six seconds</span>`, value: z.rewritten.zone / (z.total || 1), m2: z.original.zone / (z.total || 1), color: HUE(id), valText: `${z.original.zone} → ${z.rewritten.zone} of ${z.total}`, tip: "headline, summary and the first three bullets" },
+      { label: `${NICHE[id].rank} · ${esc(parts(NICHE[id]).short)} <span class="meta">· whole text</span>`, value: z.rewritten.whole / (z.total || 1), m2: z.original.whole / (z.total || 1), color: HUE(id), op: .55, valText: `${z.original.whole} → ${z.rewritten.whole} of ${z.total}`, tip: "everything on the page" }]; }), { max: 1 }))));
+  const BU = RES.map(r => { const b = r.experience.flatMap(e => e.bullets), pend = b.filter(x => /\[[^\]]+\]/.test(x.text)).length; return { r, total: b.length, pend }; });
+  const bullets = fig("crs-bullets", "resumes gates", panel("Bullets with a so-what", "A complete bullet states a result, its measure and how it was done. Pending ones wait on a fact only you can supply.",
+    chart(barRows(BU.map(x => ({ label: `${NICHE[x.r.niche_id].rank} · ${esc(parts(NICHE[x.r.niche_id]).short)}`, value: (x.total - x.pend) / (x.total || 1), color: "var(--good)", valText: `${x.total - x.pend} complete, ${x.pend} pending`, tip: `${x.total} bullets` })), { max: 1 }))));
+  const PNL = RES.filter(r => r.review?.panel?.length);
+  const panelFig = PNL.length ? fig("crs-panel", "resumes", panel("Would they take the call?", `A blind panel read the original and the new version without knowing which was which (${esc(PNL[0].review.note || "")}). Scores out of 10.`,
+    el("div", {}, PNL.flatMap(r => { const pr = r.review.panel, newWins = pr.filter(p => p.chose === "new").length;
+      return [el("div", { class: "fh", style: "margin-top:.6rem", text: `${NICHE[r.niche_id].rank} · ${parts(NICHE[r.niche_id]).short}: ${newWins} of ${pr.length} chose the new version` }),
+        chart(barRows(pr.map(p => ({ label: cap(p.reviewer), value: p.new, m2: p.old, color: p.chose === "new" ? "var(--good)" : "var(--crit)", valText: `${p.old} → ${p.new}`, tip: esc(p.why) })), { max: 10, fmt: v => Math.round(v) })),
+        el("ul", { class: "meta", style: "padding-left:1.1rem;margin:.4rem 0 0" }, pr.map(p => el("li", { text: `${cap(p.reviewer)}: ${p.why}` })))]; }),
+      el("p", { class: "do", style: "margin-top:1rem", html: "<b>What this means</b>Readers judge an unfinished version harshly. Fill every blank before sending, and keep the title on the page consistent with the headline." }))))
+    : stub("crs-panel", "resumes", "Blind panel", "the blind panel did not run for this report");
+  const top = NICHE[S.run_now[0]] || NICHE[ORDER[0]], emp = top.employers.rows.slice(0, 3).map(e => e.company);
+  const start = [S.fixes[0]?.text, emp.length ? `Approach ${emp.join(", ")} first, with the ${parts(top).short} resume.` : null, "Log every approach in the tracker; it tells you which stage to fix."].filter(Boolean);
+  const running = el("div", { class: "running" }, [el("span", { class: "meta", text: "Running now" }), ...S.run_now.map(id => el("div", { class: "r" }, [rose(NICHE[id], 48), el("span", { text: `${NICHE[id].rank} · ${parts(NICHE[id]).short}` })]))]);
+  sec.append(chapterHead("course", 5), body([running, playbook, plan, actions,
+    evidence("See the evidence: formulas, message rules", [formulas, rules], "2 panels"),
+    evidence("See the evidence: how the new versions compare", [oldnew, bullets, panelFig], "3 figures"),
+    resumes, linkedin, tracker, confirm]), learned("course", { title: "Start here", items: start }));
+  scope.append(sec);
+})();
+
+/* ================= APPENDIX: METHOD ================= */
+(function method() {
+  const sec = el("section", { class: "act", id: "method", "data-act": "method", "data-src": "method gates" }), Mth = R.method;
+  const nm = { ats_parse: "ATS parse", six_second_zone: "Six-second zone", bullet_score: "Bullet score (X-Y-Z)" };
+  const gates = el("table", { class: "t" }, [el("tr", {}, [el("th", { text: "Check" }), el("th", { text: "Result" }), el("th", { text: "Detail" })]),
+    ...R.gates.map(g => el("tr", {}, [el("td", { "data-label": "", text: nm[g.name] || cap(g.name.replace(/_/g, " ")) }), el("td", { "data-label": "Result" }, el("span", { class: "st " + g.status, text: g.status.replace("_", " ") })), el("td", { "data-label": "Detail", class: "muted", text: g.detail })]))]);
+  const phases = fig("app-phases", "method", panel("How the study ran", null, el("ol", { style: "padding-left:1.25rem;margin:0" }, Mth.steps.map(x => el("li", { style: "margin:.25rem 0", text: x })))));
+  const limits = fig("app-limits", "method", panel("Limits", null, el("ul", { style: "padding-left:1.25rem;margin:0" }, Mth.limits.map(x => el("li", { style: "margin:.25rem 0", text: x })))));
+  const sources = fig("app-sources", "method", panel("Sources", null, el("ul", { style: "padding-left:1.25rem;margin:0" }, Mth.sources.map(x => el("li", { style: "margin:.25rem 0" }, /^https?:/.test(x.url) ? [el("a", { class: "lnk", href: x.url, target: "_blank", rel: "noopener", text: x.title }), el("span", { class: "meta", text: " · " + new URL(x.url).hostname })] : `${x.title} (${x.url})`)))));
+  const agg = {}; R.niches.forEach(n => Object.entries(n.demand.reliability?.per_code || {}).forEach(([c, v]) => { const a = agg[c] || (agg[c] = { n: 0, k: 0, ag: 0 }); if (v.kappa != null) { a.k += v.kappa * v.n; a.ag += v.agree * v.n; a.n += v.n; } }));
+  const KR = Object.entries(agg).filter(([, a]) => a.n).map(([c, a]) => ({ c, k: a.k / a.n, ag: a.ag / a.n, n: a.n })).sort((a, b) => a.k - b.k);
+  const kappa = KR.length ? fig("app-kappa", "niches.demand", panel("Agreement between the two coders, by requirement", `Cohen's κ on the double-coded postings (1 = perfect; below 0.4 the share is reported as uncertain). Lowest first.`,
+    chart(barRows(KR.map(x => ({ label: esc(LABC[x.c] || x.c), value: Math.max(0, x.k), color: x.k < .4 ? "var(--warn)" : "var(--accent)", valText: `κ ${x.k.toFixed(2)}`, tip: `agreement ${pct(x.ag)} on ${x.n} postings` })), { max: 1, fmt: v => v.toFixed(1), valW: 60 })))) : stub("app-kappa", "niches.demand", "Coder agreement", "no double-coded postings");
+  const TK = [["Wilson interval", "How sure is a share from a small sample?", "Demand map, peers"], ["Fisher exact test", "Is a difference between two groups real?", "Trend, seniority, niche against niche, titles"],
+    ["Newcombe interval", "How large could a difference be?", "Seniority, niche against niche"], ["Lift", "Which requirements appear together more than chance?", "Bundles, formulas"],
+    ["Cohen's κ", "Do two independent coders agree?", "Every coded requirement, peers"], ["Log-odds keyness", "Which words are specific to a niche?", "The niche's own words"],
+    ["Classical MDS on Jaccard distance", "Which postings ask for similar things?", "The star map"], ["Bootstrap", "How stable is a pay median?", "Pay bands"],
+    ["Random re-weighting (1,000 draws)", "Does the niche order survive other priorities?", "Ranking stability"], ["Liveness score", "Is a listing a real opening?", "Ghost-job risk"]];
+  const toolkit = fig("app-toolkit", "method", panel("The toolkit", null, el("table", { class: "t" }, [el("tr", {}, [el("th", { text: "Method" }), el("th", { text: "What it answers" }), el("th", { text: "Used in" })]),
+    ...TK.map(([a, b, c]) => el("tr", {}, [el("td", { "data-label": "", text: a }), el("td", { "data-label": "Answers", text: b }), el("td", { "data-label": "Used in", class: "muted", text: c })]))])));
+  let pf = "all"; const ptab = el("div");
+  const pfil = el("div", { "data-btn-group": "", style: "--min:6rem;margin-bottom:.6rem" }, [["all", "All"], ...ORDER.map(id => [id, `Niche ${NICHE[id].rank}`])].map(([k, l]) => { const b = el("button", { class: "btn", "aria-pressed": String(k === pf), text: l });
+    b.onclick = () => { pf = k; $$("button", pfil).forEach(x => x.setAttribute("aria-pressed", String(x === b))); drawP(); }; return b; }));
+  function drawP() { const rows = M.points.filter(p => pf === "all" || p.niches.includes(pf));
+    ptab.replaceChildren(el("table", { class: "t" }, [el("tr", {}, ["Employer", "Title", "Niche", "Status", ""].map(h => el("th", { text: h }))),
+      ...rows.map(p => el("tr", {}, [el("td", { "data-label": "Employer", text: p.company }), el("td", { "data-label": "Title", text: p.title }), el("td", { "data-label": "Niche", text: p.niches.map(id => NICHE[id].rank).join(", ") }),
+        el("td", { "data-label": "Status" }, el("span", { class: "st " + p.band, text: p.band.replace("_", " ") })), el("td", { "data-label": "" }, p.url ? el("a", { class: "lnk", href: p.url, target: "_blank", rel: "noopener", text: "View posting" }) : "—")]))])); }
+  drawP();
+  const postings = fig("app-postings", "market", panel(`Every posting read (${M.points.length})`, "The coded corpus behind every figure.", el("div", {}, [pfil, ptab])));
+  sec.append(el("header", { class: "wrap" }, el("div", { class: "chead", "data-chapter-head": "" }, [el("div", { class: "no" }, [el("span", { text: "Appendix · Method" })]), el("h2", { text: J.method?.question || "How was this measured?" }), J.method?.answer ? el("p", { class: "ans", text: J.method.answer }) : null])),
+    body([el("div", { class: "g2" }, [limits, phases]), evidence("See the evidence: quality gates, coder agreement, toolkit, sources", [panel("Quality gates", "The checks each resume version is held to; the results for the top niche's version.", gates), kappa, toolkit, sources], "4 panels"),
+      evidence("See the evidence: every posting", [postings], `${M.points.length} postings`),
+      R.meta.banner ? el("p", { class: "meta", text: R.meta.banner }) : null, el("div", {}, [el("a", { class: "next", href: "#cover", text: "Back to the top" })])]));
+  main.append(sec);
+})();
+
+/* ================= stations, theme, observers ================= */
+(function chrome() {
+  const nav = $("[data-stations]"), ol = el("ol");
+  ACTS.forEach(([id, t], i) => ol.append(el("li", {}, el("a", { href: "#" + id }, [el("b", { text: String(i + 1) }), el("span", { text: t }), el("i")]))));
+  nav.append(ol);
+  const links = Object.fromEntries(ACTS.map(([id]) => [id, $(`a[href="#${id}"]`, nav)]));
+  const acts = ACTS.map(([id]) => document.getElementById(id));
+  let cur = null;
+  function update() { const y = innerHeight * .5; let now = null;
+    for (const a of acts) { const r = a.getBoundingClientRect(); if (r.top <= y && r.bottom > y) { now = a; break; } }
+    if (now?.id !== cur) { Object.values(links).forEach(l => l.removeAttribute("aria-current")); if (now) links[now.id].setAttribute("aria-current", "step"); cur = now?.id || null; }
+    if (now) { const r = now.getBoundingClientRect(); links[now.id].style.setProperty("--p", Math.max(0, Math.min(1, (y - r.top) / r.height)).toFixed(3)); } }
+  addEventListener("scroll", () => requestAnimationFrame(update), { passive: true }); addEventListener("resize", update); setTimeout(update, 50);
+  const t = el("button", { class: "corner", "data-btn-solo": "", "aria-label": "Switch light or dark theme", html: '<svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="4.5"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8"/></svg><svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M20 14.5A8 8 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5z"/></svg>' });
+  t.onclick = () => { const r = document.documentElement; r.dataset.theme = r.dataset.theme === "dark" ? "light" : "dark"; store.set("theme", r.dataset.theme); };
+  const saved = store.get("theme", null); if (saved) document.documentElement.dataset.theme = saved;
+  document.body.append(t);
+  addEventListener("focusin", e => { if (e.target.matches("input[type=text],select,textarea")) document.body.classList.add("typing"); });
+  addEventListener("focusout", () => document.body.classList.remove("typing"));
+  $("#foot").textContent = `niche-lab ${R.meta.skill_version}. Data window: ${R.meta.data_window}. LinkedIn: ${R.meta.linkedin_status}. One self-contained file; nothing is sent anywhere.`;
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,314 @@
+{
+ "niches": [
+  {
+   "id": "n01",
+   "label": "Head / VP of Partnerships, AI-native SaaS, New York",
+   "role_family": "partnerships",
+   "seniority": "Head-VP",
+   "segment": "AI-native SaaS",
+   "city": "New York",
+   "module": "partnerships",
+   "origin": "level_up",
+   "title_queries": [
+    "Head of Partnerships",
+    "VP Strategic Partnerships",
+    "Head of Alliances"
+   ],
+   "triage": {
+    "score": 8,
+    "notes": "partner-sourced pipeline and ISV program from zero match; AI assistant build is an edge; one band up"
+   },
+   "screen": {
+    "n_postings": 8,
+    "n_employers": 7,
+    "posting_ids": [
+     "p0004",
+     "p0005",
+     "p0006",
+     "p0007",
+     "p0008",
+     "p0011",
+     "p0028",
+     "p0030"
+    ],
+    "coverage_est": 0.75
+   },
+   "verdict": "keep",
+   "reason": "8 postings, 7 employers, coverage 0.75",
+   "pref_checks": [
+    {
+     "pref": "city New York",
+     "matched": true,
+     "grade": "stated"
+    },
+    {
+     "pref": "growth-stage SaaS employer",
+     "matched": true,
+     "grade": "inferred2"
+    },
+    {
+     "pref": "international scope",
+     "matched": true,
+     "grade": "inferred2"
+    }
+   ]
+  },
+  {
+   "id": "n02",
+   "label": "Head / VP of Partnerships, martech & data SaaS, New York",
+   "role_family": "partnerships",
+   "seniority": "Head-VP",
+   "segment": "Martech, adtech & data SaaS",
+   "city": "New York",
+   "module": "partnerships",
+   "origin": "level_up",
+   "title_queries": [
+    "Head of Partnerships",
+    "VP Partnerships",
+    "VP Business Development"
+   ],
+   "triage": {
+    "score": 8,
+    "notes": "same segment as current employer; agency background valued in martech"
+   },
+   "screen": {
+    "n_postings": 10,
+    "n_employers": 9,
+    "posting_ids": [
+     "p0001",
+     "p0002",
+     "p0003",
+     "p0010",
+     "p0013",
+     "p0017",
+     "p0019",
+     "p0021",
+     "p0022",
+     "p0023"
+    ],
+    "coverage_est": 0.56
+   },
+   "verdict": "keep",
+   "reason": "10 postings, 9 employers, coverage 0.56",
+   "pref_checks": [
+    {
+     "pref": "city New York",
+     "matched": true,
+     "grade": "stated"
+    },
+    {
+     "pref": "martech / data employer",
+     "matched": true,
+     "grade": "stated"
+    },
+    {
+     "pref": "international scope",
+     "matched": true,
+     "grade": "inferred2"
+    }
+   ]
+  },
+  {
+   "id": "n03",
+   "label": "Director of Partnerships & Alliances, SaaS, New York",
+   "role_family": "partnerships",
+   "seniority": "Director",
+   "segment": "SaaS (all segments)",
+   "city": "New York",
+   "module": "partnerships",
+   "origin": "current",
+   "title_queries": [
+    "Director of Partnerships",
+    "Director, Strategic Alliances",
+    "Partner Sales Director"
+   ],
+   "triage": {
+    "score": 9,
+    "notes": "current title and band"
+   },
+   "screen": {
+    "n_postings": 15,
+    "n_employers": 11,
+    "posting_ids": [
+     "p0009",
+     "p0012",
+     "p0014",
+     "p0015",
+     "p0016",
+     "p0018",
+     "p0020",
+     "p0021",
+     "p0024",
+     "p0025",
+     "p0026",
+     "p0027",
+     "p0029",
+     "p0031",
+     "p0032"
+    ],
+    "coverage_est": 0.58
+   },
+   "verdict": "keep",
+   "reason": "15 postings, 11 employers, coverage 0.58",
+   "pref_checks": [
+    {
+     "pref": "city New York",
+     "matched": true,
+     "grade": "stated"
+    },
+    {
+     "pref": "growth-stage SaaS employer",
+     "matched": true,
+     "grade": "inferred2"
+    },
+    {
+     "pref": "international scope",
+     "matched": false,
+     "grade": "inferred2"
+    }
+   ]
+  },
+  {
+   "id": "n04",
+   "label": "Head of Partnerships / Alliances, SaaS, Paris",
+   "role_family": "partnerships",
+   "seniority": "Head-VP",
+   "segment": "SaaS (all segments)",
+   "city": "Paris",
+   "module": "partnerships",
+   "origin": "other_city",
+   "title_queries": [
+    "Head of Partnerships",
+    "Directeur des partenariats",
+    "Head of Alliances EMEA"
+   ],
+   "triage": {
+    "score": 7,
+    "notes": "French native, four years in Paris; city tie stated"
+   },
+   "screen": {
+    "n_postings": 10,
+    "n_employers": 8,
+    "posting_ids": [
+     "p0033",
+     "p0034",
+     "p0035",
+     "p0036",
+     "p0037",
+     "p0038",
+     "p0039",
+     "p0040",
+     "p0041",
+     "p0042"
+    ],
+    "coverage_est": 0.65
+   },
+   "verdict": "keep",
+   "reason": "10 postings, 8 employers, coverage 0.65",
+   "pref_checks": [
+    {
+     "pref": "city Paris",
+     "matched": true,
+     "grade": "inferred2"
+    },
+    {
+     "pref": "growth-stage SaaS employer",
+     "matched": true,
+     "grade": "inferred2"
+    },
+    {
+     "pref": "current base New York",
+     "matched": false,
+     "grade": "stated"
+    }
+   ]
+  },
+  {
+   "id": "n05",
+   "label": "Director of Partnerships, AI-native SaaS, New York",
+   "role_family": "partnerships",
+   "seniority": "Director",
+   "segment": "AI-native SaaS",
+   "city": "New York",
+   "module": "partnerships",
+   "origin": "adjacent_segment",
+   "title_queries": [
+    "Director of Partnerships",
+    "AI Partnerships Lead"
+   ],
+   "triage": {
+    "score": 7,
+    "notes": "segment variant of n03"
+   },
+   "screen": {
+    "n_postings": 6,
+    "n_employers": 4,
+    "posting_ids": [
+     "p0016",
+     "p0020",
+     "p0026",
+     "p0029",
+     "p0031",
+     "p0032"
+    ],
+    "coverage_est": 0.64
+   },
+   "verdict": "reject",
+   "reason": "volume: 6 postings / 4 employers (< 8 / 5)"
+  },
+  {
+   "id": "n06",
+   "label": "Partner-side alliances at a hyperscaler, New York",
+   "role_family": "partnerships",
+   "seniority": "Director",
+   "segment": "Hyperscaler / cloud",
+   "city": "New York",
+   "module": "partnerships",
+   "origin": "other_side",
+   "title_queries": [
+    "Partner Development Manager",
+    "ISV Alliances Lead"
+   ],
+   "triage": {
+    "score": 5,
+    "notes": "AWS Marketplace co-lead is the only hyperscaler evidence"
+   },
+   "screen": {
+    "n_postings": 1,
+    "n_employers": 1,
+    "posting_ids": [
+     "p0017"
+    ],
+    "coverage_est": 0.57
+   },
+   "verdict": "reject",
+   "reason": "volume: 1 postings / 1 employers (< 8 / 5)"
+  },
+  {
+   "id": "n07",
+   "label": "Partner Program Manager (IC), SaaS, New York",
+   "role_family": "partnerships",
+   "seniority": "Manager",
+   "segment": "SaaS",
+   "city": "New York",
+   "module": "partnerships",
+   "origin": "level_down",
+   "title_queries": [
+    "Partner Program Manager"
+   ],
+   "triage": {
+    "score": 3,
+    "notes": "two bands down; pay step-down certain"
+   },
+   "screen": {
+    "n_postings": 0,
+    "n_employers": 0,
+    "posting_ids": [],
+    "coverage_est": 0.0
+   },
+   "verdict": "not_screened",
+   "reason": "triage 3 < 5 (rubric 04)"
+  }
+ ],
+ "relaxed_thresholds": true
+}

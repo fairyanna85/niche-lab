@@ -1,0 +1,1109 @@
+{
+ "nursing": [
+  {
+   "company": "Lakeshore General",
+   "title": "Registered Nurse, ICU",
+   "city": "Chicago",
+   "band": "experienced",
+   "pay": {
+    "min": 51.07,
+    "max": 64.25,
+    "unit": "hour",
+    "currency": "USD"
+   },
+   "years": 3,
+   "reqs": [
+    "Lead daily safety huddles and escalate patient safety events",
+    "Strong patient and family communication skills",
+    "Active RN license in the state of Illinois is required",
+    "CCRN certification preferred",
+    "Participate in quality improvement and infection-control audits",
+    "Precept and mentor new graduate nurses",
+    "Bachelor of Science in Nursing (BSN) required",
+    "Current BLS and ACLS certification required",
+    "Experience with Epic electronic health records"
+   ],
+   "text": "Lakeshore General is hiring a Registered Nurse, ICU in Chicago. In this role you will be accountable for outcomes that matter to the people we serve. Lead daily safety huddles and escalate patient safety events. Strong patient and family communication skills. Active RN license in the state of Illinois is required. CCRN certification preferred. Participate in quality improvement and infection-control audits. Precept and mentor new graduate nurses. Bachelor of Science in Nursing (BSN) required. Current BLS and ACLS certification required. Experience with Epic electronic health records. We are an equal opportunity employer and value a diverse team. Our people are the reason guests, patients and clients return. This role offers competitive pay, health benefits, paid time off and a retirement plan with an employer match. You will join a team that cares about doing the work properly, learning every day and supporting one another through busy periods. Pay range: 51.07\u201364.25 per hour."
+  },
+  {
+   "company": "Northside Medical Center",
+   "title": "Charge Nurse, Medical-Surgical",
+   "city": "Chicago",
+   "band": "lead",
+   "pay": {
+    "min": 63.04,
+    "max": 77.67,
+    "unit": "hour",
+    "currency": "USD"
+   },
+   "years": 5,
+   "reqs": [
+    "Current BLS and ACLS certification required",
+    "Manage staffing assignments for the unit",
+    "Lead daily safety huddles and escalate patient safety events",
+    "Active RN license in the state of Illinois is required",
+    "Manage ventilated and post-surgical patients",
+    "Strong patient and family communication skills",
+    "Precept and mentor new graduate nurses",
+    "Bachelor of Science in Nursing (BSN) required",
+    "Experience with Epic electronic health records",
+    "Participate in quality improvement and infection-control audits"
+   ],
+   "text": "Northside Medical Center is hiring a Charge Nurse, Medical-Surgical in Chicago. In this role you will be accountable for outcomes that matter to the people we serve. Current BLS and ACLS certification required. Manage staffing assignments for the unit. Lead daily safety huddles and escalate patient safety events. Active RN license in the state of Illinois is required. Manage ventilated and post-surgical patients. Strong patient and family communication skills. Precept and mentor new graduate nurses. Bachelor of Science in Nursing (BSN) required. Experience with Epic electronic health records. Participate in quality improvement and infection-control audits. We are an equal opportunity employer and value a diverse team. Our people are the reason guests, patients and clients return. This role offers competitive pay, health benefits, paid time off and a retirement plan with an employer match. You will join a team that cares about doing the work properly, learning every day and supporting one another through busy periods. Pay range: 63.04\u201377.67 per hour."
+  },
+  {
+   "company": "Prairie Health",
+   "title": "Nurse Manager, Cardiac ICU",
+   "city": "Chicago",
+   "band": "manager",
+   "pay": {
+    "min": 42.92,
+    "max": 53.75,
+    "unit": "hour",
+    "currency": "USD"
+   },
+   "years": 3,
+   "reqs": [
+    "Current BLS and ACLS certification required",
+    "Charge nurse experience preferred",
+    "Experience with Epic electronic health records",
+    "Lead daily safety huddles and escalate patient safety events",
+    "Manage ventilated and post-surgical patients",
+    "Active RN license in the state of Illinois is required",
+    "Participate in quality improvement and infection-control audits",
+    "Strong patient and family communication skills"
+   ],
+   "text": "Prairie Health is hiring a Nurse Manager, Cardiac ICU in Chicago. In this role you will be accountable for outcomes that matter to the people we serve. Current BLS and ACLS certification required. Charge nurse experience preferred. Experience with Epic electronic health records. Lead daily safety huddles and escalate patient safety events. Manage ventilated and post-surgical patients. Active RN license in the state of Illinois is required. Participate in quality improvement and infection-control audits. Strong patient and family communication skills. We are an equal opportunity employer and value a diverse team. Our people are the reason guests, patients and clients return. This role offers competitive pay, health benefits, paid time off and a retirement plan with an employer match. You will join a team that cares about doing the work properly, learning every day and supporting one another through busy periods. Pay range: 42.92\u201353.75 per hour."
+  },
+  {
+   "company": "St. Brigid Hospital",
+   "title": "ICU Staff Nurse",
+   "city": "Chicago",
+   "band": "experienced",
+   "pay": {
+    "min": 47.27,
+    "max": 62.48,
+    "unit": "hour",
+    "currency": "USD"
+   },
+   "years": 5,
+   "reqs": [
+    "Charge nurse experience preferred",
+    "CCRN certification preferred",
+    "Precept and mentor new graduate nurses",
+    "Experience with Epic electronic health records",
+    "Ability to work 12-hour night shifts and weekends",
+    "Participate in quality improvement and infection-control audits",
+    "Bilingual English/Spanish preferred",
+    "Manage staffing assignments for the unit"
+   ],
+   "text": "St. Brigid Hospital is hiring a ICU Staff Nurse in Chicago. In this role you will be accountable for outcomes that matter to the people we serve. Charge nurse experience preferred. CCRN certification preferred. Precept and mentor new graduate nurses. Experience with Epic electronic health records. Ability to work 12-hour night shifts and weekends. Participate in quality improvement and infection-control audits. Bilingual English/Spanish preferred. Manage staffing assignments for the unit. We are an equal opportunity employer and value a diverse team. Our people are the reason guests, patients and clients return. This role offers competitive pay, health benefits, paid time off and a retirement plan with an employer match. You will join a team that cares about doing the work properly, learning every day and supporting one another through busy periods. Pay range: 47.27\u201362.48 per hour."
+  },
+  {
+   "company": "Wabash University Hospital",
+   "title": "Clinical Nurse Educator",
+   "city": "Chicago",
+   "band": "lead",
+   "pay": {
+    "min": 62.95,
+    "max": 84.09,
+    "unit": "hour",
+    "currency": "USD"
+   },
+   "years": 3,
+   "reqs": [
+    "Manage staffing assignments for the unit",
+    "CCRN certification preferred",
+    "Strong patient and family communication skills",
+    "Active RN license in the state of Illinois is required",
+    "Manage ventilated and post-surgical patients",
+    "Experience with Epic electronic health records",
+    "Charge nurse experience preferred"
+   ],
+   "text": "Wabash University Hospital is hiring a Clinical Nurse Educator in Chicago. In this role you will be accountable for outcomes that matter to the people we serve. Manage staffing assignments for the unit. CCRN certification preferred. Strong patient and family communication skills. Active RN license in the state of Illinois is required. Manage ventilated and post-surgical patients. Experience with Epic electronic health records. Charge nurse experience preferred. We are an equal opportunity employer and value a diverse team. Our people are the reason guests, patients and clients return. This role offers competitive pay, health benefits, paid time off and a retirement plan with an employer match. You will join a team that cares about doing the work properly, learning every day and supporting one another through busy periods. Pay range: 62.95\u201384.09 per hour."
+  },
+  {
+   "company": "Midway Community Health",
+   "title": "Registered Nurse, ICU",
+   "city": "Chicago",
+   "band": "experienced",
+   "pay": {
+    "min": 49.44,
+    "max": 65.45,
+    "unit": "hour",
+    "currency": "USD"
+   },
+   "years": 5,
+   "reqs": [
+    "Experience with Epic electronic health records",
+    "Precept and mentor new graduate nurses",
+    "Current BLS and ACLS certification required",
+    "Strong patient and family communication skills",
+    "Bilingual English/Spanish preferred",
+    "Lead daily safety huddles and escalate patient safety events",
+    "Charge nurse experience preferred",
+    "Manage ventilated and post-surgical patients",
+    "CCRN certification preferred",
+    "Manage staffing assignments for the unit"
+   ],
+   "text": "Midway Community Health is hiring a Registered Nurse, ICU in Chicago. In this role you will be accountable for outcomes that matter to the people we serve. Experience with Epic electronic health records. Precept and mentor new graduate nurses. Current BLS and ACLS certification required. Strong patient and family communication skills. Bilingual English/Spanish preferred. Lead daily safety huddles and escalate patient safety events. Charge nurse experience preferred. Manage ventilated and post-surgical patients. CCRN certification preferred. Manage staffing assignments for the unit. We are an equal opportunity employer and value a diverse team. Our people are the reason guests, patients and clients return. This role offers competitive pay, health benefits, paid time off and a retirement plan with an employer match. You will join a team that cares about doing the work properly, learning every day and supporting one another through busy periods. Pay range: 49.44\u201365.45 per hour."
+  },
+  {
+   "company": "Lakeshore General",
+   "title": "Charge Nurse, Medical-Surgical",
+   "city": "Chicago",
+   "band": "lead",
+   "pay": {
+    "min": 54.98,
+    "max": 69.42,
+    "unit": "hour",
+    "currency": "USD"
+   },
+   "years": 3,
+   "reqs": [
+    "Experience with Epic electronic health records",
+    "Manage staffing assignments for the unit",
+    "Participate in quality improvement and infection-control audits",
+    "Current BLS and ACLS certification required",
+    "Bilingual English/Spanish preferred",
+    "Precept and mentor new graduate nurses",
+    "Ability to work 12-hour night shifts and weekends",
+    "CCRN certification preferred",
+    "Manage ventilated and post-surgical patients"
+   ],
+   "text": "Lakeshore General is hiring a Charge Nurse, Medical-Surgical in Chicago. In this role you will be accountable for outcomes that matter to the people we serve. Experience with Epic electronic health records. Manage staffing assignments for the unit. Participate in quality improvement and infection-control audits. Current BLS and ACLS certification required. Bilingual English/Spanish preferred. Precept and mentor new graduate nurses. Ability to work 12-hour night shifts and weekends. CCRN certification preferred. Manage ventilated and post-surgical patients. We are an equal opportunity employer and value a diverse team. Our people are the reason guests, patients and clients return. This role offers competitive pay, health benefits, paid time off and a retirement plan with an employer match. You will join a team that cares about doing the work properly, learning every day and supporting one another through busy periods. Pay range: 54.98\u201369.42 per hour."
+  },
+  {
+   "company": "Northside Medical Center",
+   "title": "Nurse Manager, Cardiac ICU",
+   "city": "Chicago",
+   "band": "manager",
+   "pay": {
+    "min": 42.95,
+    "max": 52.96,
+    "unit": "hour",
+    "currency": "USD"
+   },
+   "years": 3,
+   "reqs": [
+    "Manage ventilated and post-surgical patients",
+    "Ability to work 12-hour night shifts and weekends",
+    "Precept and mentor new graduate nurses",
+    "Bachelor of Science in Nursing (BSN) required",
+    "Strong patient and family communication skills",
+    "Lead daily safety huddles and escalate patient safety events",
+    "Experience with Epic electronic health records",
+    "Bilingual English/Spanish preferred",
+    "CCRN certification preferred",
+    "Active RN license in the state of Illinois is required"
+   ],
+   "text": "Northside Medical Center is hiring a Nurse Manager, Cardiac ICU in Chicago. In this role you will be accountable for outcomes that matter to the people we serve. Manage ventilated and post-surgical patients. Ability to work 12-hour night shifts and weekends. Precept and mentor new graduate nurses. Bachelor of Science in Nursing (BSN) required. Strong patient and family communication skills. Lead daily safety huddles and escalate patient safety events. Experience with Epic electronic health records. Bilingual English/Spanish preferred. CCRN certification preferred. Active RN license in the state of Illinois is required. We are an equal opportunity employer and value a diverse team. Our people are the reason guests, patients and clients return. This role offers competitive pay, health benefits, paid time off and a retirement plan with an employer match. You will join a team that cares about doing the work properly, learning every day and supporting one another through busy periods. Pay range: 42.95\u201352.96 per hour."
+  },
+  {
+   "company": "Prairie Health",
+   "title": "ICU Staff Nurse",
+   "city": "Chicago",
+   "band": "experienced",
+   "pay": {
+    "min": 53.71,
+    "max": 62.73,
+    "unit": "hour",
+    "currency": "USD"
+   },
+   "years": 2,
+   "reqs": [
+    "Experience with Epic electronic health records",
+    "Bilingual English/Spanish preferred",
+    "Lead daily safety huddles and escalate patient safety events",
+    "CCRN certification preferred",
+    "Manage ventilated and post-surgical patients",
+    "Strong patient and family communication skills",
+    "Active RN license in the state of Illinois is required",
+    "Minimum two years of ICU experience",
+    "Charge nurse experience preferred"
+   ],
+   "text": "Prairie Health is hiring a ICU Staff Nurse in Chicago. In this role you will be accountable for outcomes that matter to the people we serve. Experience with Epic electronic health records. Bilingual English/Spanish preferred. Lead daily safety huddles and escalate patient safety events. CCRN certification preferred. Manage ventilated and post-surgical patients. Strong patient and family communication skills. Active RN license in the state of Illinois is required. Minimum two years of ICU experience. Charge nurse experience preferred. We are an equal opportunity employer and value a diverse team. Our people are the reason guests, patients and clients return. This role offers competitive pay, health benefits, paid time off and a retirement plan with an employer match. You will join a team that cares about doing the work properly, learning every day and supporting one another through busy periods. Pay range: 53.71\u201362.73 per hour."
+  },
+  {
+   "company": "St. Brigid Hospital",
+   "title": "Clinical Nurse Educator",
+   "city": "Chicago",
+   "band": "lead",
+   "pay": {
+    "min": 49.46,
+    "max": 56.36,
+    "unit": "hour",
+    "currency": "USD"
+   },
+   "years": 2,
+   "reqs": [
+    "Minimum two years of ICU experience",
+    "Lead daily safety huddles and escalate patient safety events",
+    "Bachelor of Science in Nursing (BSN) required",
+    "CCRN certification preferred",
+    "Manage staffing assignments for the unit",
+    "Participate in quality improvement and infection-control audits",
+    "Active RN license in the state of Illinois is required",
+    "Strong patient and family communication skills",
+    "Experience with Epic electronic health records"
+   ],
+   "text": "St. Brigid Hospital is hiring a Clinical Nurse Educator in Chicago. In this role you will be accountable for outcomes that matter to the people we serve. Minimum two years of ICU experience. Lead daily safety huddles and escalate patient safety events. Bachelor of Science in Nursing (BSN) required. CCRN certification preferred. Manage staffing assignments for the unit. Participate in quality improvement and infection-control audits. Active RN license in the state of Illinois is required. Strong patient and family communication skills. Experience with Epic electronic health records. We are an equal opportunity employer and value a diverse team. Our people are the reason guests, patients and clients return. This role offers competitive pay, health benefits, paid time off and a retirement plan with an employer match. You will join a team that cares about doing the work properly, learning every day and supporting one another through busy periods. Pay range: 49.46\u201356.36 per hour."
+  },
+  {
+   "company": "Wabash University Hospital",
+   "title": "Registered Nurse, ICU",
+   "city": "Chicago",
+   "band": "experienced",
+   "pay": {
+    "min": 55.55,
+    "max": 64.55,
+    "unit": "hour",
+    "currency": "USD"
+   },
+   "years": 3,
+   "reqs": [
+    "CCRN certification preferred",
+    "Charge nurse experience preferred",
+    "Minimum two years of ICU experience",
+    "Experience with Epic electronic health records",
+    "Ability to work 12-hour night shifts and weekends",
+    "Active RN license in the state of Illinois is required",
+    "Participate in quality improvement and infection-control audits",
+    "Precept and mentor new graduate nurses"
+   ],
+   "text": "Wabash University Hospital is hiring a Registered Nurse, ICU in Chicago. In this role you will be accountable for outcomes that matter to the people we serve. CCRN certification preferred. Charge nurse experience preferred. Minimum two years of ICU experience. Experience with Epic electronic health records. Ability to work 12-hour night shifts and weekends. Active RN license in the state of Illinois is required. Participate in quality improvement and infection-control audits. Precept and mentor new graduate nurses. We are an equal opportunity employer and value a diverse team. Our people are the reason guests, patients and clients return. This role offers competitive pay, health benefits, paid time off and a retirement plan with an employer match. You will join a team that cares about doing the work properly, learning every day and supporting one another through busy periods. Pay range: 55.55\u201364.55 per hour."
+  },
+  {
+   "company": "Midway Community Health",
+   "title": "Charge Nurse, Medical-Surgical",
+   "city": "Chicago",
+   "band": "lead",
+   "pay": {
+    "min": 43.42,
+    "max": 52.03,
+    "unit": "hour",
+    "currency": "USD"
+   },
+   "years": 2,
+   "reqs": [
+    "Strong patient and family communication skills",
+    "Bachelor of Science in Nursing (BSN) required",
+    "CCRN certification preferred",
+    "Precept and mentor new graduate nurses",
+    "Minimum two years of ICU experience",
+    "Bilingual English/Spanish preferred",
+    "Manage ventilated and post-surgical patients"
+   ],
+   "text": "Midway Community Health is hiring a Charge Nurse, Medical-Surgical in Chicago. In this role you will be accountable for outcomes that matter to the people we serve. Strong patient and family communication skills. Bachelor of Science in Nursing (BSN) required. CCRN certification preferred. Precept and mentor new graduate nurses. Minimum two years of ICU experience. Bilingual English/Spanish preferred. Manage ventilated and post-surgical patients. We are an equal opportunity employer and value a diverse team. Our people are the reason guests, patients and clients return. This role offers competitive pay, health benefits, paid time off and a retirement plan with an employer match. You will join a team that cares about doing the work properly, learning every day and supporting one another through busy periods. Pay range: 43.42\u201352.03 per hour."
+  },
+  {
+   "company": "Lakeshore General",
+   "title": "Nurse Manager, Cardiac ICU",
+   "city": "Chicago",
+   "band": "manager",
+   "pay": {
+    "min": 63.99,
+    "max": 75.71,
+    "unit": "hour",
+    "currency": "USD"
+   },
+   "years": 2,
+   "reqs": [
+    "Precept and mentor new graduate nurses",
+    "Bachelor of Science in Nursing (BSN) required",
+    "Manage staffing assignments for the unit",
+    "Charge nurse experience preferred",
+    "Minimum two years of ICU experience",
+    "Manage ventilated and post-surgical patients",
+    "Lead daily safety huddles and escalate patient safety events"
+   ],
+   "text": "Lakeshore General is hiring a Nurse Manager, Cardiac ICU in Chicago. In this role you will be accountable for outcomes that matter to the people we serve. Precept and mentor new graduate nurses. Bachelor of Science in Nursing (BSN) required. Manage staffing assignments for the unit. Charge nurse experience preferred. Minimum two years of ICU experience. Manage ventilated and post-surgical patients. Lead daily safety huddles and escalate patient safety events. We are an equal opportunity employer and value a diverse team. Our people are the reason guests, patients and clients return. This role offers competitive pay, health benefits, paid time off and a retirement plan with an employer match. You will join a team that cares about doing the work properly, learning every day and supporting one another through busy periods. Pay range: 63.99\u201375.71 per hour."
+  },
+  {
+   "company": "Northside Medical Center",
+   "title": "ICU Staff Nurse",
+   "city": "Chicago",
+   "band": "experienced",
+   "pay": {
+    "min": 52.52,
+    "max": 68.41,
+    "unit": "hour",
+    "currency": "USD"
+   },
+   "years": 3,
+   "reqs": [
+    "Charge nurse experience preferred",
+    "Active RN license in the state of Illinois is required",
+    "Bachelor of Science in Nursing (BSN) required",
+    "Manage staffing assignments for the unit",
+    "Manage ventilated and post-surgical patients",
+    "Precept and mentor new graduate nurses",
+    "Current BLS and ACLS certification required",
+    "Ability to work 12-hour night shifts and weekends",
+    "CCRN certification preferred",
+    "Bilingual English/Spanish preferred"
+   ],
+   "text": "Northside Medical Center is hiring a ICU Staff Nurse in Chicago. In this role you will be accountable for outcomes that matter to the people we serve. Charge nurse experience preferred. Active RN license in the state of Illinois is required. Bachelor of Science in Nursing (BSN) required. Manage staffing assignments for the unit. Manage ventilated and post-surgical patients. Precept and mentor new graduate nurses. Current BLS and ACLS certification required. Ability to work 12-hour night shifts and weekends. CCRN certification preferred. Bilingual English/Spanish preferred. We are an equal opportunity employer and value a diverse team. Our people are the reason guests, patients and clients return. This role offers competitive pay, health benefits, paid time off and a retirement plan with an employer match. You will join a team that cares about doing the work properly, learning every day and supporting one another through busy periods. Pay range: 52.52\u201368.41 per hour."
+  },
+  {
+   "company": "Prairie Health",
+   "title": "Clinical Nurse Educator",
+   "city": "Chicago",
+   "band": "lead",
+   "pay": {
+    "min": 60.85,
+    "max": 75.01,
+    "unit": "hour",
+    "currency": "USD"
+   },
+   "years": 3,
+   "reqs": [
+    "Strong patient and family communication skills",
+    "Manage staffing assignments for the unit",
+    "CCRN certification preferred",
+    "Experience with Epic electronic health records",
+    "Minimum two years of ICU experience",
+    "Manage ventilated and post-surgical patients",
+    "Ability to work 12-hour night shifts and weekends",
+    "Current BLS and ACLS certification required",
+    "Participate in quality improvement and infection-control audits"
+   ],
+   "text": "Prairie Health is hiring a Clinical Nurse Educator in Chicago. In this role you will be accountable for outcomes that matter to the people we serve. Strong patient and family communication skills. Manage staffing assignments for the unit. CCRN certification preferred. Experience with Epic electronic health records. Minimum two years of ICU experience. Manage ventilated and post-surgical patients. Ability to work 12-hour night shifts and weekends. Current BLS and ACLS certification required. Participate in quality improvement and infection-control audits. We are an equal opportunity employer and value a diverse team. Our people are the reason guests, patients and clients return. This role offers competitive pay, health benefits, paid time off and a retirement plan with an employer match. You will join a team that cares about doing the work properly, learning every day and supporting one another through busy periods. Pay range: 60.85\u201375.01 per hour."
+  }
+ ],
+ "civil": [
+  {
+   "company": "Front Range Infrastructure",
+   "title": "Site Engineer",
+   "city": "Denver",
+   "band": "experienced",
+   "pay": {
+    "min": 114643.0,
+    "max": 131858.0,
+    "unit": "year",
+    "currency": "USD"
+   },
+   "years": 3,
+   "reqs": [
+    "Review shop drawings and submittals",
+    "Mentor junior engineers",
+    "Five years of experience on public infrastructure projects",
+    "Experience with OSHA 30 site safety",
+    "Write technical reports for public agencies",
+    "Prepare cost estimates and manage project budgets",
+    "Coordinate subcontractors and site crews"
+   ],
+   "text": "Front Range Infrastructure is hiring a Site Engineer in Denver. In this role you will be accountable for outcomes that matter to the people we serve. Review shop drawings and submittals. Mentor junior engineers. Five years of experience on public infrastructure projects. Experience with OSHA 30 site safety. Write technical reports for public agencies. Prepare cost estimates and manage project budgets. Coordinate subcontractors and site crews. We are an equal opportunity employer and value a diverse team. Our people are the reason guests, patients and clients return. This role offers competitive pay, health benefits, paid time off and a retirement plan with an employer match. You will join a team that cares about doing the work properly, learning every day and supporting one another through busy periods. Pay range: 114643.0\u2013131858.0 per year."
+  },
+  {
+   "company": "Cherry Creek Civil",
+   "title": "Project Engineer, Transportation",
+   "city": "Denver",
+   "band": "experienced",
+   "pay": {
+    "min": 123507.0,
+    "max": 151421.0,
+    "unit": "year",
+    "currency": "USD"
+   },
+   "years": 3,
+   "reqs": [
+    "Five years of experience on public infrastructure projects",
+    "Write technical reports for public agencies",
+    "Experience with OSHA 30 site safety",
+    "Prepare cost estimates and manage project budgets",
+    "Review shop drawings and submittals",
+    "Travel to job sites up to 40% of the time",
+    "Use schedule software such as Primavera P6"
+   ],
+   "text": "Cherry Creek Civil is hiring a Project Engineer, Transportation in Denver. In this role you will be accountable for outcomes that matter to the people we serve. Five years of experience on public infrastructure projects. Write technical reports for public agencies. Experience with OSHA 30 site safety. Prepare cost estimates and manage project budgets. Review shop drawings and submittals. Travel to job sites up to 40% of the time. Use schedule software such as Primavera P6. We are an equal opportunity employer and value a diverse team. Our people are the reason guests, patients and clients return. This role offers competitive pay, health benefits, paid time off and a retirement plan with an employer match. You will join a team that cares about doing the work properly, learning every day and supporting one another through busy periods. Pay range: 123507.0\u2013151421.0 per year."
+  },
+  {
+   "company": "Summit Transit Builders",
+   "title": "Senior Civil Engineer",
+   "city": "Denver",
+   "band": "lead",
+   "pay": {
+    "min": 130596.0,
+    "max": 169786.0,
+    "unit": "year",
+    "currency": "USD"
+   },
+   "years": 2,
+   "reqs": [
+    "Five years of experience on public infrastructure projects",
+    "Travel to job sites up to 40% of the time",
+    "Experience with CDOT standards and specifications",
+    "Mentor junior engineers",
+    "Professional Engineer (PE) license required, or EIT with PE within 12 months",
+    "Prepare cost estimates and manage project budgets",
+    "Stormwater and drainage design experience"
+   ],
+   "text": "Summit Transit Builders is hiring a Senior Civil Engineer in Denver. In this role you will be accountable for outcomes that matter to the people we serve. Five years of experience on public infrastructure projects. Travel to job sites up to 40% of the time. Experience with CDOT standards and specifications. Mentor junior engineers. Professional Engineer (PE) license required, or EIT with PE within 12 months. Prepare cost estimates and manage project budgets. Stormwater and drainage design experience. We are an equal opportunity employer and value a diverse team. Our people are the reason guests, patients and clients return. This role offers competitive pay, health benefits, paid time off and a retirement plan with an employer match. You will join a team that cares about doing the work properly, learning every day and supporting one another through busy periods. Pay range: 130596.0\u2013169786.0 per year."
+  },
+  {
+   "company": "Platte River Engineering",
+   "title": "Construction Manager",
+   "city": "Denver",
+   "band": "manager",
+   "pay": {
+    "min": 116933.0,
+    "max": 146304.0,
+    "unit": "year",
+    "currency": "USD"
+   },
+   "years": 2,
+   "reqs": [
+    "Coordinate subcontractors and site crews",
+    "Experience with OSHA 30 site safety",
+    "Stormwater and drainage design experience",
+    "Prepare cost estimates and manage project budgets",
+    "Use schedule software such as Primavera P6",
+    "Proficiency in AutoCAD Civil 3D",
+    "Travel to job sites up to 40% of the time",
+    "Lead design reviews with clients and agencies"
+   ],
+   "text": "Platte River Engineering is hiring a Construction Manager in Denver. In this role you will be accountable for outcomes that matter to the people we serve. Coordinate subcontractors and site crews. Experience with OSHA 30 site safety. Stormwater and drainage design experience. Prepare cost estimates and manage project budgets. Use schedule software such as Primavera P6. Proficiency in AutoCAD Civil 3D. Travel to job sites up to 40% of the time. Lead design reviews with clients and agencies. We are an equal opportunity employer and value a diverse team. Our people are the reason guests, patients and clients return. This role offers competitive pay, health benefits, paid time off and a retirement plan with an employer match. You will join a team that cares about doing the work properly, learning every day and supporting one another through busy periods. Pay range: 116933.0\u2013146304.0 per year."
+  },
+  {
+   "company": "Mile High Structures",
+   "title": "Principal Engineer, Water Resources",
+   "city": "Denver",
+   "band": "lead",
+   "pay": {
+    "min": 102589.0,
+    "max": 132773.0,
+    "unit": "year",
+    "currency": "USD"
+   },
+   "years": 5,
+   "reqs": [
+    "Bachelor's degree in civil engineering",
+    "Use schedule software such as Primavera P6",
+    "Review shop drawings and submittals",
+    "Coordinate subcontractors and site crews",
+    "Five years of experience on public infrastructure projects",
+    "Stormwater and drainage design experience",
+    "Professional Engineer (PE) license required, or EIT with PE within 12 months",
+    "Prepare cost estimates and manage project budgets",
+    "Experience with OSHA 30 site safety",
+    "Lead design reviews with clients and agencies"
+   ],
+   "text": "Mile High Structures is hiring a Principal Engineer, Water Resources in Denver. In this role you will be accountable for outcomes that matter to the people we serve. Bachelor's degree in civil engineering. Use schedule software such as Primavera P6. Review shop drawings and submittals. Coordinate subcontractors and site crews. Five years of experience on public infrastructure projects. Stormwater and drainage design experience. Professional Engineer (PE) license required, or EIT with PE within 12 months. Prepare cost estimates and manage project budgets. Experience with OSHA 30 site safety. Lead design reviews with clients and agencies. We are an equal opportunity employer and value a diverse team. Our people are the reason guests, patients and clients return. This role offers competitive pay, health benefits, paid time off and a retirement plan with an employer match. You will join a team that cares about doing the work properly, learning every day and supporting one another through busy periods. Pay range: 102589.0\u2013132773.0 per year."
+  },
+  {
+   "company": "Arapahoe Works",
+   "title": "Site Engineer",
+   "city": "Denver",
+   "band": "experienced",
+   "pay": {
+    "min": 122018.0,
+    "max": 151106.0,
+    "unit": "year",
+    "currency": "USD"
+   },
+   "years": 3,
+   "reqs": [
+    "Mentor junior engineers",
+    "Professional Engineer (PE) license required, or EIT with PE within 12 months",
+    "Prepare cost estimates and manage project budgets",
+    "Experience with CDOT standards and specifications",
+    "Lead design reviews with clients and agencies",
+    "Proficiency in AutoCAD Civil 3D",
+    "Five years of experience on public infrastructure projects"
+   ],
+   "text": "Arapahoe Works is hiring a Site Engineer in Denver. In this role you will be accountable for outcomes that matter to the people we serve. Mentor junior engineers. Professional Engineer (PE) license required, or EIT with PE within 12 months. Prepare cost estimates and manage project budgets. Experience with CDOT standards and specifications. Lead design reviews with clients and agencies. Proficiency in AutoCAD Civil 3D. Five years of experience on public infrastructure projects. We are an equal opportunity employer and value a diverse team. Our people are the reason guests, patients and clients return. This role offers competitive pay, health benefits, paid time off and a retirement plan with an employer match. You will join a team that cares about doing the work properly, learning every day and supporting one another through busy periods. Pay range: 122018.0\u2013151106.0 per year."
+  },
+  {
+   "company": "Front Range Infrastructure",
+   "title": "Project Engineer, Transportation",
+   "city": "Denver",
+   "band": "experienced",
+   "pay": {
+    "min": 141243.0,
+    "max": 187337.0,
+    "unit": "year",
+    "currency": "USD"
+   },
+   "years": 5,
+   "reqs": [
+    "Stormwater and drainage design experience",
+    "Five years of experience on public infrastructure projects",
+    "Experience with OSHA 30 site safety",
+    "Coordinate subcontractors and site crews",
+    "Prepare cost estimates and manage project budgets",
+    "Mentor junior engineers",
+    "Use schedule software such as Primavera P6",
+    "Professional Engineer (PE) license required, or EIT with PE within 12 months"
+   ],
+   "text": "Front Range Infrastructure is hiring a Project Engineer, Transportation in Denver. In this role you will be accountable for outcomes that matter to the people we serve. Stormwater and drainage design experience. Five years of experience on public infrastructure projects. Experience with OSHA 30 site safety. Coordinate subcontractors and site crews. Prepare cost estimates and manage project budgets. Mentor junior engineers. Use schedule software such as Primavera P6. Professional Engineer (PE) license required, or EIT with PE within 12 months. We are an equal opportunity employer and value a diverse team. Our people are the reason guests, patients and clients return. This role offers competitive pay, health benefits, paid time off and a retirement plan with an employer match. You will join a team that cares about doing the work properly, learning every day and supporting one another through busy periods. Pay range: 141243.0\u2013187337.0 per year."
+  },
+  {
+   "company": "Cherry Creek Civil",
+   "title": "Senior Civil Engineer",
+   "city": "Denver",
+   "band": "lead",
+   "pay": {
+    "min": 137226.0,
+    "max": 162727.0,
+    "unit": "year",
+    "currency": "USD"
+   },
+   "years": 2,
+   "reqs": [
+    "Review shop drawings and submittals",
+    "Travel to job sites up to 40% of the time",
+    "Stormwater and drainage design experience",
+    "Experience with CDOT standards and specifications",
+    "Prepare cost estimates and manage project budgets",
+    "Use schedule software such as Primavera P6",
+    "Bachelor's degree in civil engineering",
+    "Write technical reports for public agencies"
+   ],
+   "text": "Cherry Creek Civil is hiring a Senior Civil Engineer in Denver. In this role you will be accountable for outcomes that matter to the people we serve. Review shop drawings and submittals. Travel to job sites up to 40% of the time. Stormwater and drainage design experience. Experience with CDOT standards and specifications. Prepare cost estimates and manage project budgets. Use schedule software such as Primavera P6. Bachelor's degree in civil engineering. Write technical reports for public agencies. We are an equal opportunity employer and value a diverse team. Our people are the reason guests, patients and clients return. This role offers competitive pay, health benefits, paid time off and a retirement plan with an employer match. You will join a team that cares about doing the work properly, learning every day and supporting one another through busy periods. Pay range: 137226.0\u2013162727.0 per year."
+  },
+  {
+   "company": "Summit Transit Builders",
+   "title": "Construction Manager",
+   "city": "Denver",
+   "band": "manager",
+   "pay": {
+    "min": 89704.0,
+    "max": 116972.0,
+    "unit": "year",
+    "currency": "USD"
+   },
+   "years": 2,
+   "reqs": [
+    "Experience with OSHA 30 site safety",
+    "Lead design reviews with clients and agencies",
+    "Prepare cost estimates and manage project budgets",
+    "Stormwater and drainage design experience",
+    "Proficiency in AutoCAD Civil 3D",
+    "Experience with CDOT standards and specifications",
+    "Review shop drawings and submittals",
+    "Bachelor's degree in civil engineering"
+   ],
+   "text": "Summit Transit Builders is hiring a Construction Manager in Denver. In this role you will be accountable for outcomes that matter to the people we serve. Experience with OSHA 30 site safety. Lead design reviews with clients and agencies. Prepare cost estimates and manage project budgets. Stormwater and drainage design experience. Proficiency in AutoCAD Civil 3D. Experience with CDOT standards and specifications. Review shop drawings and submittals. Bachelor's degree in civil engineering. We are an equal opportunity employer and value a diverse team. Our people are the reason guests, patients and clients return. This role offers competitive pay, health benefits, paid time off and a retirement plan with an employer match. You will join a team that cares about doing the work properly, learning every day and supporting one another through busy periods. Pay range: 89704.0\u2013116972.0 per year."
+  },
+  {
+   "company": "Platte River Engineering",
+   "title": "Principal Engineer, Water Resources",
+   "city": "Denver",
+   "band": "lead",
+   "pay": {
+    "min": 119265.0,
+    "max": 150261.0,
+    "unit": "year",
+    "currency": "USD"
+   },
+   "years": 2,
+   "reqs": [
+    "Professional Engineer (PE) license required, or EIT with PE within 12 months",
+    "Experience with OSHA 30 site safety",
+    "Write technical reports for public agencies",
+    "Coordinate subcontractors and site crews",
+    "Lead design reviews with clients and agencies",
+    "Mentor junior engineers",
+    "Use schedule software such as Primavera P6"
+   ],
+   "text": "Platte River Engineering is hiring a Principal Engineer, Water Resources in Denver. In this role you will be accountable for outcomes that matter to the people we serve. Professional Engineer (PE) license required, or EIT with PE within 12 months. Experience with OSHA 30 site safety. Write technical reports for public agencies. Coordinate subcontractors and site crews. Lead design reviews with clients and agencies. Mentor junior engineers. Use schedule software such as Primavera P6. We are an equal opportunity employer and value a diverse team. Our people are the reason guests, patients and clients return. This role offers competitive pay, health benefits, paid time off and a retirement plan with an employer match. You will join a team that cares about doing the work properly, learning every day and supporting one another through busy periods. Pay range: 119265.0\u2013150261.0 per year."
+  },
+  {
+   "company": "Mile High Structures",
+   "title": "Site Engineer",
+   "city": "Denver",
+   "band": "experienced",
+   "pay": {
+    "min": 137647.0,
+    "max": 164298.0,
+    "unit": "year",
+    "currency": "USD"
+   },
+   "years": 5,
+   "reqs": [
+    "Proficiency in AutoCAD Civil 3D",
+    "Travel to job sites up to 40% of the time",
+    "Coordinate subcontractors and site crews",
+    "Write technical reports for public agencies",
+    "Stormwater and drainage design experience",
+    "Use schedule software such as Primavera P6",
+    "Five years of experience on public infrastructure projects",
+    "Review shop drawings and submittals",
+    "Experience with OSHA 30 site safety"
+   ],
+   "text": "Mile High Structures is hiring a Site Engineer in Denver. In this role you will be accountable for outcomes that matter to the people we serve. Proficiency in AutoCAD Civil 3D. Travel to job sites up to 40% of the time. Coordinate subcontractors and site crews. Write technical reports for public agencies. Stormwater and drainage design experience. Use schedule software such as Primavera P6. Five years of experience on public infrastructure projects. Review shop drawings and submittals. Experience with OSHA 30 site safety. We are an equal opportunity employer and value a diverse team. Our people are the reason guests, patients and clients return. This role offers competitive pay, health benefits, paid time off and a retirement plan with an employer match. You will join a team that cares about doing the work properly, learning every day and supporting one another through busy periods. Pay range: 137647.0\u2013164298.0 per year."
+  },
+  {
+   "company": "Arapahoe Works",
+   "title": "Project Engineer, Transportation",
+   "city": "Denver",
+   "band": "experienced",
+   "pay": {
+    "min": 95192.0,
+    "max": 108727.0,
+    "unit": "year",
+    "currency": "USD"
+   },
+   "years": 5,
+   "reqs": [
+    "Write technical reports for public agencies",
+    "Five years of experience on public infrastructure projects",
+    "Bachelor's degree in civil engineering",
+    "Travel to job sites up to 40% of the time",
+    "Stormwater and drainage design experience",
+    "Lead design reviews with clients and agencies",
+    "Mentor junior engineers",
+    "Professional Engineer (PE) license required, or EIT with PE within 12 months"
+   ],
+   "text": "Arapahoe Works is hiring a Project Engineer, Transportation in Denver. In this role you will be accountable for outcomes that matter to the people we serve. Write technical reports for public agencies. Five years of experience on public infrastructure projects. Bachelor's degree in civil engineering. Travel to job sites up to 40% of the time. Stormwater and drainage design experience. Lead design reviews with clients and agencies. Mentor junior engineers. Professional Engineer (PE) license required, or EIT with PE within 12 months. We are an equal opportunity employer and value a diverse team. Our people are the reason guests, patients and clients return. This role offers competitive pay, health benefits, paid time off and a retirement plan with an employer match. You will join a team that cares about doing the work properly, learning every day and supporting one another through busy periods. Pay range: 95192.0\u2013108727.0 per year."
+  },
+  {
+   "company": "Front Range Infrastructure",
+   "title": "Senior Civil Engineer",
+   "city": "Denver",
+   "band": "lead",
+   "pay": {
+    "min": 134805.0,
+    "max": 173882.0,
+    "unit": "year",
+    "currency": "USD"
+   },
+   "years": 2,
+   "reqs": [
+    "Professional Engineer (PE) license required, or EIT with PE within 12 months",
+    "Prepare cost estimates and manage project budgets",
+    "Proficiency in AutoCAD Civil 3D",
+    "Write technical reports for public agencies",
+    "Travel to job sites up to 40% of the time",
+    "Experience with OSHA 30 site safety",
+    "Bachelor's degree in civil engineering",
+    "Use schedule software such as Primavera P6",
+    "Mentor junior engineers",
+    "Review shop drawings and submittals"
+   ],
+   "text": "Front Range Infrastructure is hiring a Senior Civil Engineer in Denver. In this role you will be accountable for outcomes that matter to the people we serve. Professional Engineer (PE) license required, or EIT with PE within 12 months. Prepare cost estimates and manage project budgets. Proficiency in AutoCAD Civil 3D. Write technical reports for public agencies. Travel to job sites up to 40% of the time. Experience with OSHA 30 site safety. Bachelor's degree in civil engineering. Use schedule software such as Primavera P6. Mentor junior engineers. Review shop drawings and submittals. We are an equal opportunity employer and value a diverse team. Our people are the reason guests, patients and clients return. This role offers competitive pay, health benefits, paid time off and a retirement plan with an employer match. You will join a team that cares about doing the work properly, learning every day and supporting one another through busy periods. Pay range: 134805.0\u2013173882.0 per year."
+  },
+  {
+   "company": "Cherry Creek Civil",
+   "title": "Construction Manager",
+   "city": "Denver",
+   "band": "manager",
+   "pay": {
+    "min": 139012.0,
+    "max": 174734.0,
+    "unit": "year",
+    "currency": "USD"
+   },
+   "years": 2,
+   "reqs": [
+    "Experience with OSHA 30 site safety",
+    "Stormwater and drainage design experience",
+    "Bachelor's degree in civil engineering",
+    "Experience with CDOT standards and specifications",
+    "Five years of experience on public infrastructure projects",
+    "Prepare cost estimates and manage project budgets",
+    "Review shop drawings and submittals"
+   ],
+   "text": "Cherry Creek Civil is hiring a Construction Manager in Denver. In this role you will be accountable for outcomes that matter to the people we serve. Experience with OSHA 30 site safety. Stormwater and drainage design experience. Bachelor's degree in civil engineering. Experience with CDOT standards and specifications. Five years of experience on public infrastructure projects. Prepare cost estimates and manage project budgets. Review shop drawings and submittals. We are an equal opportunity employer and value a diverse team. Our people are the reason guests, patients and clients return. This role offers competitive pay, health benefits, paid time off and a retirement plan with an employer match. You will join a team that cares about doing the work properly, learning every day and supporting one another through busy periods. Pay range: 139012.0\u2013174734.0 per year."
+  },
+  {
+   "company": "Summit Transit Builders",
+   "title": "Principal Engineer, Water Resources",
+   "city": "Denver",
+   "band": "lead",
+   "pay": {
+    "min": 100933.0,
+    "max": 125459.0,
+    "unit": "year",
+    "currency": "USD"
+   },
+   "years": 5,
+   "reqs": [
+    "Mentor junior engineers",
+    "Review shop drawings and submittals",
+    "Write technical reports for public agencies",
+    "Bachelor's degree in civil engineering",
+    "Travel to job sites up to 40% of the time",
+    "Use schedule software such as Primavera P6",
+    "Coordinate subcontractors and site crews",
+    "Professional Engineer (PE) license required, or EIT with PE within 12 months",
+    "Stormwater and drainage design experience",
+    "Experience with OSHA 30 site safety"
+   ],
+   "text": "Summit Transit Builders is hiring a Principal Engineer, Water Resources in Denver. In this role you will be accountable for outcomes that matter to the people we serve. Mentor junior engineers. Review shop drawings and submittals. Write technical reports for public agencies. Bachelor's degree in civil engineering. Travel to job sites up to 40% of the time. Use schedule software such as Primavera P6. Coordinate subcontractors and site crews. Professional Engineer (PE) license required, or EIT with PE within 12 months. Stormwater and drainage design experience. Experience with OSHA 30 site safety. We are an equal opportunity employer and value a diverse team. Our people are the reason guests, patients and clients return. This role offers competitive pay, health benefits, paid time off and a retirement plan with an employer match. You will join a team that cares about doing the work properly, learning every day and supporting one another through busy periods. Pay range: 100933.0\u2013125459.0 per year."
+  }
+ ],
+ "restaurant": [
+  {
+   "company": "Lone Star Kitchens",
+   "title": "General Manager",
+   "city": "Austin",
+   "band": "manager",
+   "pay": {
+    "min": 62372.0,
+    "max": 77924.0,
+    "unit": "year",
+    "currency": "USD"
+   },
+   "years": 2,
+   "reqs": [
+    "Maintain health code and safety compliance",
+    "Experience with Toast POS and scheduling software",
+    "Coach and develop shift leads and assistant managers",
+    "Own the restaurant P&L, food cost and labor cost",
+    "Hire, train and schedule a team of 40+ hourly employees",
+    "Handle guest complaints and service recovery",
+    "Three years of full-service restaurant management experience"
+   ],
+   "text": "Lone Star Kitchens is hiring a General Manager in Austin. In this role you will be accountable for outcomes that matter to the people we serve. Maintain health code and safety compliance. Experience with Toast POS and scheduling software. Coach and develop shift leads and assistant managers. Own the restaurant P&L, food cost and labor cost. Hire, train and schedule a team of 40+ hourly employees. Handle guest complaints and service recovery. Three years of full-service restaurant management experience. We are an equal opportunity employer and value a diverse team. Our people are the reason guests, patients and clients return. This role offers competitive pay, health benefits, paid time off and a retirement plan with an employer match. You will join a team that cares about doing the work properly, learning every day and supporting one another through busy periods. Pay range: 62372.0\u201377924.0 per year."
+  },
+  {
+   "company": "Barton Creek Hospitality",
+   "title": "Assistant General Manager",
+   "city": "Austin",
+   "band": "lead",
+   "pay": {
+    "min": 87001.0,
+    "max": 106301.0,
+    "unit": "year",
+    "currency": "USD"
+   },
+   "years": 5,
+   "reqs": [
+    "Food Manager certification (ServSafe) required",
+    "Experience with Toast POS and scheduling software",
+    "Open and close shifts, including nights, weekends and holidays",
+    "Bilingual English/Spanish a plus",
+    "Multi-unit experience preferred",
+    "Use sales and labor data to make daily decisions",
+    "Own the restaurant P&L, food cost and labor cost",
+    "Maintain health code and safety compliance",
+    "Hire, train and schedule a team of 40+ hourly employees",
+    "Handle guest complaints and service recovery"
+   ],
+   "text": "Barton Creek Hospitality is hiring a Assistant General Manager in Austin. In this role you will be accountable for outcomes that matter to the people we serve. Food Manager certification (ServSafe) required. Experience with Toast POS and scheduling software. Open and close shifts, including nights, weekends and holidays. Bilingual English/Spanish a plus. Multi-unit experience preferred. Use sales and labor data to make daily decisions. Own the restaurant P&L, food cost and labor cost. Maintain health code and safety compliance. Hire, train and schedule a team of 40+ hourly employees. Handle guest complaints and service recovery. We are an equal opportunity employer and value a diverse team. Our people are the reason guests, patients and clients return. This role offers competitive pay, health benefits, paid time off and a retirement plan with an employer match. You will join a team that cares about doing the work properly, learning every day and supporting one another through busy periods. Pay range: 87001.0\u2013106301.0 per year."
+  },
+  {
+   "company": "Rainey Street Group",
+   "title": "Kitchen Manager",
+   "city": "Austin",
+   "band": "manager",
+   "pay": {
+    "min": 78509.0,
+    "max": 97583.0,
+    "unit": "year",
+    "currency": "USD"
+   },
+   "years": 3,
+   "reqs": [
+    "Bilingual English/Spanish a plus",
+    "Handle guest complaints and service recovery",
+    "Own the restaurant P&L, food cost and labor cost",
+    "Multi-unit experience preferred",
+    "Launch new menus and seasonal promotions",
+    "Experience with Toast POS and scheduling software",
+    "Open and close shifts, including nights, weekends and holidays",
+    "Coach and develop shift leads and assistant managers",
+    "Use sales and labor data to make daily decisions"
+   ],
+   "text": "Rainey Street Group is hiring a Kitchen Manager in Austin. In this role you will be accountable for outcomes that matter to the people we serve. Bilingual English/Spanish a plus. Handle guest complaints and service recovery. Own the restaurant P&L, food cost and labor cost. Multi-unit experience preferred. Launch new menus and seasonal promotions. Experience with Toast POS and scheduling software. Open and close shifts, including nights, weekends and holidays. Coach and develop shift leads and assistant managers. Use sales and labor data to make daily decisions. We are an equal opportunity employer and value a diverse team. Our people are the reason guests, patients and clients return. This role offers competitive pay, health benefits, paid time off and a retirement plan with an employer match. You will join a team that cares about doing the work properly, learning every day and supporting one another through busy periods. Pay range: 78509.0\u201397583.0 per year."
+  },
+  {
+   "company": "Congress Ave Dining",
+   "title": "Restaurant Manager",
+   "city": "Austin",
+   "band": "manager",
+   "pay": {
+    "min": 82931.0,
+    "max": 108982.0,
+    "unit": "year",
+    "currency": "USD"
+   },
+   "years": 3,
+   "reqs": [
+    "Use sales and labor data to make daily decisions",
+    "Bilingual English/Spanish a plus",
+    "Launch new menus and seasonal promotions",
+    "Coach and develop shift leads and assistant managers",
+    "Experience with Toast POS and scheduling software",
+    "Handle guest complaints and service recovery",
+    "Hire, train and schedule a team of 40+ hourly employees",
+    "Maintain health code and safety compliance",
+    "Own the restaurant P&L, food cost and labor cost"
+   ],
+   "text": "Congress Ave Dining is hiring a Restaurant Manager in Austin. In this role you will be accountable for outcomes that matter to the people we serve. Use sales and labor data to make daily decisions. Bilingual English/Spanish a plus. Launch new menus and seasonal promotions. Coach and develop shift leads and assistant managers. Experience with Toast POS and scheduling software. Handle guest complaints and service recovery. Hire, train and schedule a team of 40+ hourly employees. Maintain health code and safety compliance. Own the restaurant P&L, food cost and labor cost. We are an equal opportunity employer and value a diverse team. Our people are the reason guests, patients and clients return. This role offers competitive pay, health benefits, paid time off and a retirement plan with an employer match. You will join a team that cares about doing the work properly, learning every day and supporting one another through busy periods. Pay range: 82931.0\u2013108982.0 per year."
+  },
+  {
+   "company": "Hill Country Grill Co.",
+   "title": "Area Manager, Multi-unit",
+   "city": "Austin",
+   "band": "director",
+   "pay": {
+    "min": 79259.0,
+    "max": 94559.0,
+    "unit": "year",
+    "currency": "USD"
+   },
+   "years": 5,
+   "reqs": [
+    "Launch new menus and seasonal promotions",
+    "Multi-unit experience preferred",
+    "Handle guest complaints and service recovery",
+    "Run inventory, ordering and vendor relationships",
+    "Maintain health code and safety compliance",
+    "Open and close shifts, including nights, weekends and holidays",
+    "Own the restaurant P&L, food cost and labor cost",
+    "Hire, train and schedule a team of 40+ hourly employees",
+    "Drive guest satisfaction scores and online reviews",
+    "Experience with Toast POS and scheduling software"
+   ],
+   "text": "Hill Country Grill Co. is hiring a Area Manager, Multi-unit in Austin. In this role you will be accountable for outcomes that matter to the people we serve. Launch new menus and seasonal promotions. Multi-unit experience preferred. Handle guest complaints and service recovery. Run inventory, ordering and vendor relationships. Maintain health code and safety compliance. Open and close shifts, including nights, weekends and holidays. Own the restaurant P&L, food cost and labor cost. Hire, train and schedule a team of 40+ hourly employees. Drive guest satisfaction scores and online reviews. Experience with Toast POS and scheduling software. We are an equal opportunity employer and value a diverse team. Our people are the reason guests, patients and clients return. This role offers competitive pay, health benefits, paid time off and a retirement plan with an employer match. You will join a team that cares about doing the work properly, learning every day and supporting one another through busy periods. Pay range: 79259.0\u201394559.0 per year."
+  },
+  {
+   "company": "South Lamar Eats",
+   "title": "General Manager",
+   "city": "Austin",
+   "band": "manager",
+   "pay": {
+    "min": 83036.0,
+    "max": 109711.0,
+    "unit": "year",
+    "currency": "USD"
+   },
+   "years": 5,
+   "reqs": [
+    "Drive guest satisfaction scores and online reviews",
+    "Multi-unit experience preferred",
+    "Run inventory, ordering and vendor relationships",
+    "Handle guest complaints and service recovery",
+    "Maintain health code and safety compliance",
+    "Open and close shifts, including nights, weekends and holidays",
+    "Bilingual English/Spanish a plus",
+    "Hire, train and schedule a team of 40+ hourly employees"
+   ],
+   "text": "South Lamar Eats is hiring a General Manager in Austin. In this role you will be accountable for outcomes that matter to the people we serve. Drive guest satisfaction scores and online reviews. Multi-unit experience preferred. Run inventory, ordering and vendor relationships. Handle guest complaints and service recovery. Maintain health code and safety compliance. Open and close shifts, including nights, weekends and holidays. Bilingual English/Spanish a plus. Hire, train and schedule a team of 40+ hourly employees. We are an equal opportunity employer and value a diverse team. Our people are the reason guests, patients and clients return. This role offers competitive pay, health benefits, paid time off and a retirement plan with an employer match. You will join a team that cares about doing the work properly, learning every day and supporting one another through busy periods. Pay range: 83036.0\u2013109711.0 per year."
+  },
+  {
+   "company": "Lone Star Kitchens",
+   "title": "Assistant General Manager",
+   "city": "Austin",
+   "band": "lead",
+   "pay": {
+    "min": 58118.0,
+    "max": 68378.0,
+    "unit": "year",
+    "currency": "USD"
+   },
+   "years": 5,
+   "reqs": [
+    "Bilingual English/Spanish a plus",
+    "Drive guest satisfaction scores and online reviews",
+    "Run inventory, ordering and vendor relationships",
+    "Hire, train and schedule a team of 40+ hourly employees",
+    "Launch new menus and seasonal promotions",
+    "Food Manager certification (ServSafe) required",
+    "Maintain health code and safety compliance",
+    "Use sales and labor data to make daily decisions"
+   ],
+   "text": "Lone Star Kitchens is hiring a Assistant General Manager in Austin. In this role you will be accountable for outcomes that matter to the people we serve. Bilingual English/Spanish a plus. Drive guest satisfaction scores and online reviews. Run inventory, ordering and vendor relationships. Hire, train and schedule a team of 40+ hourly employees. Launch new menus and seasonal promotions. Food Manager certification (ServSafe) required. Maintain health code and safety compliance. Use sales and labor data to make daily decisions. We are an equal opportunity employer and value a diverse team. Our people are the reason guests, patients and clients return. This role offers competitive pay, health benefits, paid time off and a retirement plan with an employer match. You will join a team that cares about doing the work properly, learning every day and supporting one another through busy periods. Pay range: 58118.0\u201368378.0 per year."
+  },
+  {
+   "company": "Barton Creek Hospitality",
+   "title": "Kitchen Manager",
+   "city": "Austin",
+   "band": "manager",
+   "pay": {
+    "min": 57537.0,
+    "max": 77626.0,
+    "unit": "year",
+    "currency": "USD"
+   },
+   "years": 2,
+   "reqs": [
+    "Handle guest complaints and service recovery",
+    "Multi-unit experience preferred",
+    "Run inventory, ordering and vendor relationships",
+    "Food Manager certification (ServSafe) required",
+    "Experience with Toast POS and scheduling software",
+    "Hire, train and schedule a team of 40+ hourly employees",
+    "Bilingual English/Spanish a plus",
+    "Maintain health code and safety compliance",
+    "Own the restaurant P&L, food cost and labor cost",
+    "Coach and develop shift leads and assistant managers"
+   ],
+   "text": "Barton Creek Hospitality is hiring a Kitchen Manager in Austin. In this role you will be accountable for outcomes that matter to the people we serve. Handle guest complaints and service recovery. Multi-unit experience preferred. Run inventory, ordering and vendor relationships. Food Manager certification (ServSafe) required. Experience with Toast POS and scheduling software. Hire, train and schedule a team of 40+ hourly employees. Bilingual English/Spanish a plus. Maintain health code and safety compliance. Own the restaurant P&L, food cost and labor cost. Coach and develop shift leads and assistant managers. We are an equal opportunity employer and value a diverse team. Our people are the reason guests, patients and clients return. This role offers competitive pay, health benefits, paid time off and a retirement plan with an employer match. You will join a team that cares about doing the work properly, learning every day and supporting one another through busy periods. Pay range: 57537.0\u201377626.0 per year."
+  },
+  {
+   "company": "Rainey Street Group",
+   "title": "Restaurant Manager",
+   "city": "Austin",
+   "band": "manager",
+   "pay": {
+    "min": 77991.0,
+    "max": 105149.0,
+    "unit": "year",
+    "currency": "USD"
+   },
+   "years": 5,
+   "reqs": [
+    "Bilingual English/Spanish a plus",
+    "Use sales and labor data to make daily decisions",
+    "Maintain health code and safety compliance",
+    "Three years of full-service restaurant management experience",
+    "Run inventory, ordering and vendor relationships",
+    "Multi-unit experience preferred",
+    "Launch new menus and seasonal promotions",
+    "Handle guest complaints and service recovery",
+    "Open and close shifts, including nights, weekends and holidays"
+   ],
+   "text": "Rainey Street Group is hiring a Restaurant Manager in Austin. In this role you will be accountable for outcomes that matter to the people we serve. Bilingual English/Spanish a plus. Use sales and labor data to make daily decisions. Maintain health code and safety compliance. Three years of full-service restaurant management experience. Run inventory, ordering and vendor relationships. Multi-unit experience preferred. Launch new menus and seasonal promotions. Handle guest complaints and service recovery. Open and close shifts, including nights, weekends and holidays. We are an equal opportunity employer and value a diverse team. Our people are the reason guests, patients and clients return. This role offers competitive pay, health benefits, paid time off and a retirement plan with an employer match. You will join a team that cares about doing the work properly, learning every day and supporting one another through busy periods. Pay range: 77991.0\u2013105149.0 per year."
+  },
+  {
+   "company": "Congress Ave Dining",
+   "title": "Area Manager, Multi-unit",
+   "city": "Austin",
+   "band": "director",
+   "pay": {
+    "min": 77864.0,
+    "max": 90499.0,
+    "unit": "year",
+    "currency": "USD"
+   },
+   "years": 2,
+   "reqs": [
+    "Three years of full-service restaurant management experience",
+    "Use sales and labor data to make daily decisions",
+    "Maintain health code and safety compliance",
+    "Bilingual English/Spanish a plus",
+    "Experience with Toast POS and scheduling software",
+    "Coach and develop shift leads and assistant managers",
+    "Handle guest complaints and service recovery",
+    "Multi-unit experience preferred",
+    "Own the restaurant P&L, food cost and labor cost"
+   ],
+   "text": "Congress Ave Dining is hiring a Area Manager, Multi-unit in Austin. In this role you will be accountable for outcomes that matter to the people we serve. Three years of full-service restaurant management experience. Use sales and labor data to make daily decisions. Maintain health code and safety compliance. Bilingual English/Spanish a plus. Experience with Toast POS and scheduling software. Coach and develop shift leads and assistant managers. Handle guest complaints and service recovery. Multi-unit experience preferred. Own the restaurant P&L, food cost and labor cost. We are an equal opportunity employer and value a diverse team. Our people are the reason guests, patients and clients return. This role offers competitive pay, health benefits, paid time off and a retirement plan with an employer match. You will join a team that cares about doing the work properly, learning every day and supporting one another through busy periods. Pay range: 77864.0\u201390499.0 per year."
+  },
+  {
+   "company": "Hill Country Grill Co.",
+   "title": "General Manager",
+   "city": "Austin",
+   "band": "manager",
+   "pay": {
+    "min": 79824.0,
+    "max": 93290.0,
+    "unit": "year",
+    "currency": "USD"
+   },
+   "years": 5,
+   "reqs": [
+    "Handle guest complaints and service recovery",
+    "Experience with Toast POS and scheduling software",
+    "Hire, train and schedule a team of 40+ hourly employees",
+    "Use sales and labor data to make daily decisions",
+    "Bilingual English/Spanish a plus",
+    "Food Manager certification (ServSafe) required",
+    "Open and close shifts, including nights, weekends and holidays"
+   ],
+   "text": "Hill Country Grill Co. is hiring a General Manager in Austin. In this role you will be accountable for outcomes that matter to the people we serve. Handle guest complaints and service recovery. Experience with Toast POS and scheduling software. Hire, train and schedule a team of 40+ hourly employees. Use sales and labor data to make daily decisions. Bilingual English/Spanish a plus. Food Manager certification (ServSafe) required. Open and close shifts, including nights, weekends and holidays. We are an equal opportunity employer and value a diverse team. Our people are the reason guests, patients and clients return. This role offers competitive pay, health benefits, paid time off and a retirement plan with an employer match. You will join a team that cares about doing the work properly, learning every day and supporting one another through busy periods. Pay range: 79824.0\u201393290.0 per year."
+  },
+  {
+   "company": "South Lamar Eats",
+   "title": "Assistant General Manager",
+   "city": "Austin",
+   "band": "lead",
+   "pay": {
+    "min": 59338.0,
+    "max": 75739.0,
+    "unit": "year",
+    "currency": "USD"
+   },
+   "years": 2,
+   "reqs": [
+    "Use sales and labor data to make daily decisions",
+    "Bilingual English/Spanish a plus",
+    "Hire, train and schedule a team of 40+ hourly employees",
+    "Launch new menus and seasonal promotions",
+    "Food Manager certification (ServSafe) required",
+    "Handle guest complaints and service recovery",
+    "Own the restaurant P&L, food cost and labor cost"
+   ],
+   "text": "South Lamar Eats is hiring a Assistant General Manager in Austin. In this role you will be accountable for outcomes that matter to the people we serve. Use sales and labor data to make daily decisions. Bilingual English/Spanish a plus. Hire, train and schedule a team of 40+ hourly employees. Launch new menus and seasonal promotions. Food Manager certification (ServSafe) required. Handle guest complaints and service recovery. Own the restaurant P&L, food cost and labor cost. We are an equal opportunity employer and value a diverse team. Our people are the reason guests, patients and clients return. This role offers competitive pay, health benefits, paid time off and a retirement plan with an employer match. You will join a team that cares about doing the work properly, learning every day and supporting one another through busy periods. Pay range: 59338.0\u201375739.0 per year."
+  },
+  {
+   "company": "Lone Star Kitchens",
+   "title": "Kitchen Manager",
+   "city": "Austin",
+   "band": "manager",
+   "pay": {
+    "min": 53895.0,
+    "max": 68393.0,
+    "unit": "year",
+    "currency": "USD"
+   },
+   "years": 5,
+   "reqs": [
+    "Maintain health code and safety compliance",
+    "Drive guest satisfaction scores and online reviews",
+    "Open and close shifts, including nights, weekends and holidays",
+    "Use sales and labor data to make daily decisions",
+    "Food Manager certification (ServSafe) required",
+    "Three years of full-service restaurant management experience",
+    "Coach and develop shift leads and assistant managers",
+    "Own the restaurant P&L, food cost and labor cost",
+    "Launch new menus and seasonal promotions"
+   ],
+   "text": "Lone Star Kitchens is hiring a Kitchen Manager in Austin. In this role you will be accountable for outcomes that matter to the people we serve. Maintain health code and safety compliance. Drive guest satisfaction scores and online reviews. Open and close shifts, including nights, weekends and holidays. Use sales and labor data to make daily decisions. Food Manager certification (ServSafe) required. Three years of full-service restaurant management experience. Coach and develop shift leads and assistant managers. Own the restaurant P&L, food cost and labor cost. Launch new menus and seasonal promotions. We are an equal opportunity employer and value a diverse team. Our people are the reason guests, patients and clients return. This role offers competitive pay, health benefits, paid time off and a retirement plan with an employer match. You will join a team that cares about doing the work properly, learning every day and supporting one another through busy periods. Pay range: 53895.0\u201368393.0 per year."
+  },
+  {
+   "company": "Barton Creek Hospitality",
+   "title": "Restaurant Manager",
+   "city": "Austin",
+   "band": "manager",
+   "pay": {
+    "min": 82177.0,
+    "max": 95783.0,
+    "unit": "year",
+    "currency": "USD"
+   },
+   "years": 3,
+   "reqs": [
+    "Experience with Toast POS and scheduling software",
+    "Coach and develop shift leads and assistant managers",
+    "Bilingual English/Spanish a plus",
+    "Food Manager certification (ServSafe) required",
+    "Multi-unit experience preferred",
+    "Launch new menus and seasonal promotions",
+    "Run inventory, ordering and vendor relationships",
+    "Maintain health code and safety compliance",
+    "Use sales and labor data to make daily decisions",
+    "Drive guest satisfaction scores and online reviews"
+   ],
+   "text": "Barton Creek Hospitality is hiring a Restaurant Manager in Austin. In this role you will be accountable for outcomes that matter to the people we serve. Experience with Toast POS and scheduling software. Coach and develop shift leads and assistant managers. Bilingual English/Spanish a plus. Food Manager certification (ServSafe) required. Multi-unit experience preferred. Launch new menus and seasonal promotions. Run inventory, ordering and vendor relationships. Maintain health code and safety compliance. Use sales and labor data to make daily decisions. Drive guest satisfaction scores and online reviews. We are an equal opportunity employer and value a diverse team. Our people are the reason guests, patients and clients return. This role offers competitive pay, health benefits, paid time off and a retirement plan with an employer match. You will join a team that cares about doing the work properly, learning every day and supporting one another through busy periods. Pay range: 82177.0\u201395783.0 per year."
+  },
+  {
+   "company": "Rainey Street Group",
+   "title": "Area Manager, Multi-unit",
+   "city": "Austin",
+   "band": "director",
+   "pay": {
+    "min": 58842.0,
+    "max": 72345.0,
+    "unit": "year",
+    "currency": "USD"
+   },
+   "years": 3,
+   "reqs": [
+    "Use sales and labor data to make daily decisions",
+    "Bilingual English/Spanish a plus",
+    "Launch new menus and seasonal promotions",
+    "Food Manager certification (ServSafe) required",
+    "Run inventory, ordering and vendor relationships",
+    "Hire, train and schedule a team of 40+ hourly employees",
+    "Maintain health code and safety compliance",
+    "Three years of full-service restaurant management experience"
+   ],
+   "text": "Rainey Street Group is hiring a Area Manager, Multi-unit in Austin. In this role you will be accountable for outcomes that matter to the people we serve. Use sales and labor data to make daily decisions. Bilingual English/Spanish a plus. Launch new menus and seasonal promotions. Food Manager certification (ServSafe) required. Run inventory, ordering and vendor relationships. Hire, train and schedule a team of 40+ hourly employees. Maintain health code and safety compliance. Three years of full-service restaurant management experience. We are an equal opportunity employer and value a diverse team. Our people are the reason guests, patients and clients return. This role offers competitive pay, health benefits, paid time off and a retirement plan with an employer match. You will join a team that cares about doing the work properly, learning every day and supporting one another through busy periods. Pay range: 58842.0\u201372345.0 per year."
+  }
+ ]
+}

@@ -1,0 +1,28 @@
+{
+ "niche_id": "n01",
+ "panel": [
+  {
+   "reviewer": "recruiter",
+   "old": 6,
+   "new": 6,
+   "chose": "new",
+   "why": "B's headline and summary lead with the Head of Partnerships title, the $18M partner-sourced pipeline and AWS Marketplace, so it matches the search faster, though its unfilled bracketed placeholders look unfinished."
+  },
+  {
+   "reviewer": "hiring manager",
+   "old": 7,
+   "new": 5,
+   "chose": "old",
+   "why": "A reads as a complete, credible record of the same achievements (35 ISVs, $18M pipeline, AWS launch, hands-on Python assistant), while B's many bracketed blanks leave scope, results and company context unanswered."
+  },
+  {
+   "reviewer": "executive",
+   "old": 6,
+   "new": 5,
+   "chose": "old",
+   "why": "A is clean and ready to forward, whereas B's template brackets signal an unfinished document, which outweighs its sharper positioning for a head-level, AI-native role."
+  }
+ ],
+ "independent": false,
+ "note": "three readers played in one session"
+}

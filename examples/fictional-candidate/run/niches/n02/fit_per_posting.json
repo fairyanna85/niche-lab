@@ -1,0 +1,78 @@
+{
+ "niche": "n02",
+ "line": 0.6,
+ "n": 10,
+ "above_line": 3,
+ "postings": [
+  {
+   "id": "p0010",
+   "company": "Subtotal",
+   "title": "Head of Partnerships",
+   "fit": 0.705,
+   "band": "live"
+  },
+  {
+   "id": "p0013",
+   "company": "TripleLift",
+   "title": "VP, Business Development",
+   "fit": 0.647,
+   "band": "live"
+  },
+  {
+   "id": "p0023",
+   "company": "Confidential (martech)",
+   "title": "Head of Partnerships",
+   "fit": 0.639,
+   "band": "live"
+  },
+  {
+   "id": "p0019",
+   "company": "Smartly",
+   "title": "VP, Partner Development",
+   "fit": 0.595,
+   "band": "live"
+  },
+  {
+   "id": "p0021",
+   "company": "Braze",
+   "title": "Senior Partner Account Director (Snowflake)",
+   "fit": 0.583,
+   "band": "live"
+  },
+  {
+   "id": "p0022",
+   "company": "Braze",
+   "title": "AVP, Partner Sales",
+   "fit": 0.57,
+   "band": "live"
+  },
+  {
+   "id": "p0003",
+   "company": "Amperity",
+   "title": "Head of Partnerships & Alliances",
+   "fit": 0.538,
+   "band": "live"
+  },
+  {
+   "id": "p0001",
+   "company": "GWI",
+   "title": "VP Strategic Partnerships",
+   "fit": 0.51,
+   "band": "live"
+  },
+  {
+   "id": "p0002",
+   "company": "Addepar",
+   "title": "Head of Partner Solutions",
+   "fit": 0.5,
+   "band": "live"
+  },
+  {
+   "id": "p0017",
+   "company": "Confidential (public cloud platform)",
+   "title": "Head of AI Partnerships",
+   "fit": 0.389,
+   "band": "doubtful"
+  }
+ ]
+}

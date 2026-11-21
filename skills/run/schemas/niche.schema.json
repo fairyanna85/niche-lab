@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "niches.json — candidate niches and their screen verdicts (phase 2)",
+  "type": "object", "required": ["niches"],
+  "properties": {"niches": {"type": "array", "minItems": 1, "items": {
+    "type": "object",
+    "required": ["id", "label", "role_family", "seniority", "segment", "city", "module", "origin", "triage", "screen", "verdict", "reason"],
+    "properties": {
+      "id": {"type": "string", "pattern": "^n[0-9]{2}$"},
+      "label": {"type": "string"},
+      "role_family": {"type": "string"}, "seniority": {"type": "string"}, "segment": {"type": "string"}, "city": {"type": "string"},
+      "module": {"type": "string"},
+      "origin": {"enum": ["current", "adjacent_role", "adjacent_segment", "level_up", "level_down", "other_city", "other_side", "observed_move"]},
+      "title_queries": {"type": "array", "items": {"type": "string"}},
+      "triage": {"type": "object", "required": ["score"], "properties": {"score": {"type": "number"}, "notes": {"type": "string"}}},
+      "screen": {"type": "object", "required": ["n_postings", "n_employers"], "properties": {"n_postings": {"type": "integer"}, "n_employers": {"type": "integer"}, "posting_ids": {"type": "array", "items": {"type": "string"}}, "coverage_est": {"type": "number"}}},
+      "verdict": {"enum": ["keep", "merge", "reject", "not_screened"]},
+      "merged_into": {"type": ["string", "null"]},
+      "reason": {"type": "string"}
+    }}}}
+}

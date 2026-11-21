@@ -1,0 +1,19 @@
+# Job-family module: Program / Technical program / Engineering program management, PMO, chief of staff.
+# Status: UNTESTED on a coded corpus. Written from the dissection test on a program-management resume.
+# First run must second-code 20% and report kappa per code before any finding is published.
+module: program-management
+version: 1
+title_patterns: ['program manag', 'technical program', '\btpm\b', 'pmo', 'portfolio', 'chief of staff', 'delivery', 'operations']
+codes:
+  - {id: pgm_span,   label: Owns a multi-team / org-wide program portfolio, posting_rule: "2 if the role owns a portfolio across teams or an org; 1 if a single program.", resume_cues: ['portfolio', 'org-?wide', 'cross-?functional', '\d+ (teams|engineers|programs)']}
+  - {id: pgm_eng,    label: "Works with engineering orgs (TPM / EPM)", posting_rule: "2 if engineering partnership is core; 1 if mentioned.", resume_cues: ['engineer', 'technical program', 'tpm', 'r&d', 'sdlc']}
+  - {id: pgm_launch, label: Product / feature launches, posting_rule: "2 if launch management is core; 1 if mentioned.", resume_cues: ['launch', 'release', 'go-?live', 'rollout']}
+  - {id: pgm_plan,   label: Planning / OKRs / roadmaps / capacity, posting_rule: "2 if planning cadence is owned; 1 if participates.", resume_cues: ['okr', 'roadmap', 'planning', 'capacity', 'headcount']}
+  - {id: pgm_ops,    label: Operating cadence / rhythm of the business, posting_rule: "2 if the role runs business reviews / operating rhythm; 1 if mentioned.", resume_cues: ['operating (rhythm|cadence|model)', 'business review', '\bmbr\b', '\bqbr\b', 'weekly business']}
+  - {id: pgm_risk,   label: Risk / dependency / escalation management, posting_rule: "2 if core; 1 if mentioned.", resume_cues: ['risk', 'dependenc', 'escalat', 'mitigat']}
+  - {id: pgm_metric, label: Metrics / dashboards / data-driven decisions, posting_rule: "2 if building metrics is core; 1 if mentioned.", resume_cues: ['dashboard', 'metric', 'kpi', 'sql', 'tableau', 'looker']}
+  - {id: pgm_method, label: "Named methods (Agile, Scrum, PMP, SAFe)", posting_rule: "2 if a method or certification is required; 1 if a plus.", resume_cues: ['agile', 'scrum', '\bpmp\b', 'safe', 'kanban', 'prince2', 'lean', 'six sigma']}
+  - {id: pgm_change, label: Change management / transformation, posting_rule: "2 if transformation is core; 1 if mentioned.", resume_cues: ['transformation', 'change management', 'reorg', 'adoption']}
+  - {id: pgm_ext,    label: External partners / vendors in scope, posting_rule: "2 if external partner or vendor programs are core; 1 if mentioned.", resume_cues: ['partner', 'vendor', 'supplier', 'outsourc']}
+  - {id: pgm_comms,  label: Executive communication / exec reviews, posting_rule: "2 if preparing exec reviews / board materials is core; 1 if mentioned.", resume_cues: ['exec(utive)? review', 'board', 'leadership update', 'steering']}
+  - {id: pgm_budget, label: Budget / financial ownership, posting_rule: "2 if a budget is owned; 1 if tracked.", resume_cues: ['budget', '\$\d', '€\d', 'p&l', 'cost']}

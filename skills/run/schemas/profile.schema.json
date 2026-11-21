@@ -1,0 +1,40 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "profile.json — phase 1 dissection of the candidate",
+  "type": "object",
+  "required": ["candidate", "fields", "revealed_preferences", "strengths", "disclosure_risks", "edges"],
+  "$defs": {
+    "grade": {"enum": ["stated", "inferred2", "inferred1", "absent"]},
+    "field": {
+      "type": "object", "required": ["value", "grade", "evidence"],
+      "properties": {
+        "value": {}, "grade": {"$ref": "#/$defs/grade"},
+        "evidence": {"type": "array", "items": {"type": "string", "pattern": "^[RL][0-9]+$"}},
+        "note": {"type": "string"}
+      },
+      "allOf": [
+        {"if": {"properties": {"grade": {"const": "stated"}}}, "then": {"properties": {"evidence": {"minItems": 1}}}},
+        {"if": {"properties": {"grade": {"const": "inferred2"}}}, "then": {"properties": {"evidence": {"minItems": 2}}}},
+        {"if": {"properties": {"grade": {"const": "inferred1"}}}, "then": {"properties": {"evidence": {"minItems": 1}}}}
+      ]
+    }
+  },
+  "properties": {
+    "candidate": {
+      "type": "object", "required": ["display_name", "city", "languages"],
+      "properties": {"display_name": {"type": "string"}, "city": {"type": "string"}, "languages": {"type": "array", "items": {"type": "string"}}, "linkedin_status": {"enum": ["parsed", "blocked", "absent"]}}
+    },
+    "fields": {
+      "type": "object",
+      "required": ["role_family", "seniority_band", "level_map", "industry", "side_of_market", "span_people", "span_budget_or_revenue", "own_role", "years_experience", "current_pay_band_est", "work_auth_signals"],
+      "additionalProperties": {"$ref": "#/$defs/field"}
+    },
+    "revealed_preferences": {
+      "type": "object", "required": ["employer_types", "cities", "median_tenure_years", "company_stage", "mobility"],
+      "additionalProperties": {"$ref": "#/$defs/field"}
+    },
+    "strengths": {"type": "array", "items": {"type": "object", "required": ["label", "grade", "evidence"], "properties": {"label": {"type": "string"}, "grade": {"$ref": "#/$defs/grade"}, "evidence": {"type": "array", "items": {"type": "string"}}}}},
+    "edges": {"type": "array", "items": {"type": "object", "required": ["label", "evidence"], "properties": {"label": {"type": "string"}, "evidence": {"type": "array", "items": {"type": "string"}}}}},
+    "disclosure_risks": {"type": "array", "items": {"type": "object", "required": ["line", "type", "action"], "properties": {"line": {"type": "string"}, "type": {"enum": ["named_individual", "named_client", "current_employer_figure", "confidential_project", "personal_data", "other"]}, "action": {"enum": ["keep", "generalize", "remove", "confirm"]}}}}
+  }
+}

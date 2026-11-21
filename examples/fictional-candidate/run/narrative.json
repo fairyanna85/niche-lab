@@ -1,0 +1,774 @@
+{
+ "summary": {
+  "headline": "Run the martech/data Head-of-Partnerships niche and the AI-native one now; keep the New York director niche as the volume channel and Paris next, once work authorization is confirmed.",
+  "run_now": [
+   "n02",
+   "n01"
+  ],
+  "fixes": [
+   {
+    "text": "Fill the company context lines (what each employer sells, stage, headcount).",
+    "why": "Every role lacks context; reviewers and rubric 17 require it."
+   },
+   {
+    "text": "Replace '$40M annual media spend' with the revenue Quillfeather earned from those agencies.",
+    "why": "Flagged in both review loops as ambiguous."
+   },
+   {
+    "text": "Add the co-sell motion and its pipeline to the AWS bullet.",
+    "why": "Co-sell is required in 50–80% of postings across all four niches and is only in the skills line today."
+   },
+   {
+    "text": "Give the $18M a baseline and say whether 22% is of pipeline or of bookings.",
+    "why": "Every reviewer asked; it is the main proof number."
+   },
+   {
+    "text": "Remove 'Results-driven' and 'Passionate' from the summary; replace with the 35-integration and $18M facts.",
+    "why": "Stock phrases fail the authenticity gate."
+   }
+  ],
+  "gaps": [
+   {
+    "text": "No GSI / systems-integrator partners",
+    "why": "Required in 5 of 8 AI-native postings and 6 of 10 Paris postings."
+   },
+   {
+    "text": "Never worked at an AI-product company",
+    "why": "80–100% of postings in three niches sell AI."
+   },
+   {
+    "text": "No visible executive relationships or reporting line",
+    "why": "Asked in 60–80% of postings."
+   }
+  ],
+  "narrative": "Jordan reads today as a director who builds partner programs. The data says the stronger story is a builder who has worked on all three sides of the partner market: consultancy, platform and vendor. That story fits the martech/data Head roles best, and it fits AI-native Head roles once co-sell and GSI evidence are added.",
+  "do_this": [
+   "Start the two active niches this week with the n02 and n01 resumes; fill placeholders first.",
+   "Send warm approaches before cold applications: every niche has 3+ employers with an ecosystem path."
+  ],
+  "findings": [
+   {
+    "title": "The core is stable",
+    "body": "Ten requirements appear in at least half the postings of every niche. Jordan proves seven of them, including the two asked most: owned partner revenue and technology partners."
+   },
+   {
+    "title": "The new demands",
+    "body": "Working for a company that sells an AI product and relationships with senior executives are asked across niches and do not show on the record. Close them, or explain them in the first interview."
+   },
+   {
+    "title": "The rare proof",
+    "body": "Owned partner revenue: 88% of postings ask for it, 58% of the people now in these jobs show it, and Jordan states it with a number."
+   }
+  ]
+ },
+ "profile_view": {
+  "do_this": [
+   "Confirm the inferred fields marked 'inferred' — especially reporting line, company stage and work authorization — before sending any version."
+  ]
+ },
+ "portfolio": {
+  "do_this": [
+   "Run n02 and n01 in parallel; use n03 as the volume channel only if replies are slow after 10 approaches.",
+   "Ranks 2–4 are within 3 points and swap under other weights; treat them as a cluster, not a strict order."
+  ]
+ },
+ "funnel": {
+  "do_this": [
+   "Log every approach: niche, employer, channel (warm or cold), date, reply, stage. Review weekly against the diagnosis table."
+  ]
+ },
+ "niches": {
+  "n01": {
+   "demand": {
+    "insight": "Every one of the 8 postings sells an AI product; 7 of 8 want people management and deal structuring; GSI partners are required in 5 of 8.",
+    "do_this": [
+     "Open every application with the 35-integration program and the $18M pipeline: program design and build-from-zero are required in most postings.",
+     "Prepare a GSI story or a plan for one: 5 of 8 postings require systems-integrator partners and the resume has none."
+    ]
+   },
+   "language": {
+    "use": [
+     "partner program",
+     "define partnership strategy",
+     "operating cadence",
+     "build",
+     "co-sell"
+    ],
+    "avoid": [
+     "relationship management",
+     "supported",
+     "coordinated"
+    ],
+    "do_this": [
+     "Mirror 'define and build the partner program' in the headline and first bullet — 'program' and 'define' are the terms most specific to this niche."
+    ]
+   },
+   "fit": {
+    "fixes": {
+     "cos": "Surface co-sell: name the AWS co-sell motion behind the Marketplace launch, with [co-sell pipeline] — the skill line alone scores grade 1.",
+     "aip": "No AI-product employer yet. Lead with the AI account-planning assistant as proof of AI fluency; target AI-native employers through the AWS ecosystem path.",
+     "exec": "Add one line showing C-level relationships (e.g. [partner CEO/CRO you negotiated with]) if true; otherwise expect this question in interviews.",
+     "gsi": "No GSI/SI evidence. Build it: run one SI-partner pilot or co-sell deal in the next quarter, or name consultancy partners worked with at Atelier Varenne Conseil if true.",
+     "fcst": "Add the forecasting mechanism behind the $18M figure: [how partner-sourced pipeline is tracked and forecast].",
+     "csuite": "Reporting line is not on the resume: add [reports to] on the Northwind scope line.",
+     "stb": "Fill the company context lines with stage and headcount; startup experience is likely but unstated."
+    },
+    "do_this": [
+     "Close the two cheapest gaps first: surface co-sell evidence and the reporting line; both need facts, not new experience.",
+     "Treat 'employer sells AI' as a targeting choice, not a resume fix: apply where the AI product sits on data infrastructure you know."
+    ]
+   },
+   "employers": {
+    "do_this": [
+     "Start with the five employers where the AWS ecosystem gives a strength-2 path (Botify, Profound, Conveo, Decagon, Hex).",
+     "Apply on the employer's own careers page; aggregator copies of the same job were penalized for liveness."
+    ]
+   },
+   "access": {
+    "do_this": [
+     "Use the AWS Marketplace launch as the opener with each target's alliances lead; ask for 20 minutes, not a job.",
+     "For strength-1 employers, apply within 72 hours of posting and send a three-line note to the hiring manager."
+    ]
+   },
+   "pitch": {
+    "one_liner": "I build partner programs from zero that become a revenue line: 35 ISV integrations and $18M in partner-sourced pipeline at a data platform, and I build the AI tools my team runs on.",
+    "proof_points": [
+     "35 ISV integrations signed in 2 years from zero",
+     "$18M partner-sourced pipeline, 22% of new business",
+     "AWS Marketplace launch co-led; first private offer in 5 months"
+    ],
+    "objections": [
+     {
+      "objection": "You have never worked at an AI company.",
+      "answer": "The AI-native companies in this niche sell into data stacks; I built the integration program for one and I build AI tooling myself."
+     },
+     {
+      "objection": "You've managed 4 people; this is a Head/VP role.",
+      "answer": "The postings ask for a builder first: 6 of 8 want hands-on build work. I scaled a program and a team from zero."
+     },
+     {
+      "objection": "No GSI experience.",
+      "answer": "Agency and reseller channels ran on the same mechanics: tiering, joint plans, incentives. [Name any SI you worked with.]"
+     }
+    ],
+    "do_this": [
+     "Rehearse the three objections out loud; the GSI answer needs a concrete example before the first interview."
+    ]
+   },
+   "plan30": [
+    {
+     "week": "Week 1",
+     "actions": [
+      "Fill the 13 placeholders in the n01 resume",
+      "List alliances leads at the five strength-2 employers"
+     ]
+    },
+    {
+     "week": "Week 2",
+     "actions": [
+      "Send 5 warm notes via the AWS ecosystem",
+      "Apply on employer sites to 2 live postings"
+     ]
+    },
+    {
+     "week": "Week 3",
+     "actions": [
+      "Draft a 1-page GSI partner plan as a work sample",
+      "Follow up once on every note from week 2"
+     ]
+    },
+    {
+     "week": "Week 4",
+     "actions": [
+      "Review the funnel: replies, screens; apply the diagnosis table"
+     ]
+    }
+   ],
+   "peers": {
+    "insight": "People in AI-native Head roles came from AI providers and cloud marketplaces; working for an AI product company is the norm here, not the edge.",
+    "do_this": [
+     "Name the AI products you integrated with and their buyers; it is the gap peers do not have."
+    ]
+   },
+   "formulas": [
+    {
+     "bundle": [
+      "aiu",
+      "hypb"
+     ],
+     "template": "Built [an AI tool] that [does what] for [team], and launched on [hyperscaler marketplace].",
+     "example": "Built an AI assistant in Python that drafts partner account plans, used weekly by the team; co-led the AWS Marketplace launch.",
+     "ledger_ids": [
+      "R13",
+      "R10"
+     ]
+    },
+    {
+     "bundle": [
+      "agyb",
+      "com"
+     ],
+     "template": "Ran [n] agency partners on [co-marketing programme], measured by [metric].",
+     "example": "Introduced partner scorecards and quarterly business reviews with the top 10 agency partners.",
+     "ledger_ids": [
+      "R12"
+     ]
+    }
+   ]
+  },
+  "n02": {
+   "demand": {
+    "insight": "All 10 postings want ISV partners and own a partner-sourced number; co-sell, executive relationships and program design appear in 7 of 10.",
+    "do_this": [
+     "Lead with the $18M partner-sourced figure: partner-sourced revenue is required in 7 of 10 postings.",
+     "Add co-sell evidence before applying; it is required in half the postings."
+    ]
+   },
+   "change": {
+    "insight": "Only 4 archive postings: shown as counts, not tested.",
+    "do_this": [
+     "Treat any change here as directional until more closed postings are found."
+    ]
+   },
+   "language": {
+    "use": [
+     "forecast",
+     "revenue",
+     "cross-functional",
+     "technical",
+     "C-suite"
+    ],
+    "avoid": [
+     "campaigns",
+     "relationships"
+    ],
+    "do_this": [
+     "Name the forecast mechanism and the C-suite audience: 'forecast' and 'suite' are among the most niche-specific terms."
+    ]
+   },
+   "fit": {
+    "fixes": {
+     "cos": "Surface co-sell: name the AWS co-sell motion behind the Marketplace launch, with [co-sell pipeline] — the skill line alone scores grade 1.",
+     "aip": "No AI-product employer yet. Lead with the AI account-planning assistant as proof of AI fluency; target AI-native employers through the AWS ecosystem path.",
+     "exec": "Add one line showing C-level relationships (e.g. [partner CEO/CRO you negotiated with]) if true; otherwise expect this question in interviews.",
+     "gsi": "No GSI/SI evidence. Build it: run one SI-partner pilot or co-sell deal in the next quarter, or name consultancy partners worked with at Atelier Varenne Conseil if true.",
+     "fcst": "Add the forecasting mechanism behind the $18M figure: [how partner-sourced pipeline is tracked and forecast].",
+     "csuite": "Reporting line is not on the resume: add [reports to] on the Northwind scope line.",
+     "stb": "Fill the company context lines with stage and headcount; startup experience is likely but unstated."
+    },
+    "do_this": [
+     "Five of the six gaps are about unstated facts (co-sell, forecasting, C-suite, stage). Fill them before applying; coverage would move from 0.57 to about 0.86."
+    ]
+   },
+   "employers": {
+    "do_this": [
+     "Start with TripleLift, Braze, Amperity and Subtotal: live postings plus an agency or AWS ecosystem path.",
+     "Skip the agency-posted 'Confidential (martech)' listing unless the employer can be identified."
+    ]
+   },
+   "access": {
+    "do_this": [
+     "Ask a holding-company agency contact for an introduction to the partnerships lead at each martech target; agencies sit on both sides of these deals."
+    ]
+   },
+   "pitch": {
+    "one_liner": "I run partner ecosystems for martech and data platforms on both sides of the table: $40M of agency spend on the platform side, then an $18M partner-sourced pipeline on the vendor side.",
+    "proof_points": [
+     "$18M partner-sourced pipeline, 22% of new business",
+     "6 holding-company agencies, $40M annual media spend",
+     "3 multi-year agency deals worth $12M"
+    ],
+    "objections": [
+     {
+      "objection": "Is the $40M your revenue?",
+      "answer": "It was the agencies' annual spend on the platform; [state Quillfeather revenue from them]."
+     },
+     {
+      "objection": "Co-sell experience?",
+      "answer": "[Name the AWS co-sell motion and its pipeline.]"
+     }
+    ],
+    "do_this": [
+     "Get the Quillfeather revenue figure before the first screen; reviewers flagged the $40M framing twice."
+    ]
+   },
+   "pay": {
+    "anchor": "Ask for $233,000 base (the band's 75th percentile).",
+    "walk_away": "[Your floor — not inferable from the resume]",
+    "script": "'Based on the posted ranges for this level in New York, I'm targeting $233,000 base. Is there flexibility to get there, or to close the gap with a signing bonus?'",
+    "do_this": [
+     "Counter once, with the 75th-percentile figure and a reason; most negotiators who counter get more."
+    ]
+   },
+   "plan30": [
+    {
+     "week": "Week 1",
+     "actions": [
+      "Fill placeholders; add co-sell and forecasting lines",
+      "Map agency contacts to the 8 target employers"
+     ]
+    },
+    {
+     "week": "Week 2",
+     "actions": [
+      "Request 4 introductions through agency contacts",
+      "Apply to TripleLift and Braze on their own sites"
+     ]
+    },
+    {
+     "week": "Week 3",
+     "actions": [
+      "Follow up; prepare the $40M and co-sell answers"
+     ]
+    },
+    {
+     "week": "Week 4",
+     "actions": [
+      "Review the funnel and the diagnosis table"
+     ]
+    }
+   ],
+   "peers": {
+    "insight": "The ten people in these roles came mostly from partner roles at martech platforms; most show owned partner revenue and technology partners, few show building tools themselves.",
+    "do_this": [
+     "Lead with the self-built AI tools in the first three lines: it is the proof most peers cannot show."
+    ]
+   },
+   "formulas": [
+    {
+     "bundle": [
+      "hyp",
+      "mkt"
+     ],
+     "template": "Took [a cloud marketplace] from launch to first closed private offer in [time], working with the [hyperscaler] alliances team.",
+     "example": "Co-led the AWS Marketplace launch with the alliances team; first private offer closed in 5 months.",
+     "ledger_ids": [
+      "R10"
+     ]
+    },
+    {
+     "bundle": [
+      "agyb",
+      "hyp"
+     ],
+     "template": "Turned [n] agency relationships worth [spend] into a co-sell motion with [hyperscaler].",
+     "example": "Responsible for relationships with 6 holding company agencies representing $40M annual media spend; co-led the AWS Marketplace launch.",
+     "ledger_ids": [
+      "R16",
+      "R10"
+     ]
+    }
+   ]
+  },
+  "n03": {
+   "demand": {
+    "insight": "Joint business plans appear in 14 of 15 postings, ISV partners and partner-sourced revenue in 13; two archetypes: revenue-and-cloud alliances, and builder roles that want AI fluency.",
+    "do_this": [
+     "Use the QBR and scorecard bullet near the top: joint planning is the most common requirement here.",
+     "Pick the archetype per application: lead with the $18M pipeline for the alliances cluster, with the AI assistant for the builder cluster."
+    ]
+   },
+   "change": {
+    "insight": "Versus 13 closed postings (2020–25), build-from-zero rose from 23% to 60% and AI fluency from 0% to 33%; requirements per posting rose from about 12 to 13.5. All directional at this sample size.",
+    "do_this": [
+     "Keep 'built from zero' and the AI assistant on every version: both are rising requirements at director level."
+    ]
+   },
+   "language": {
+    "use": [
+     "co-selling",
+     "negotiate",
+     "without authority",
+     "onboarding",
+     "partner selection"
+    ],
+    "avoid": [
+     "campaigns"
+    ],
+    "do_this": [
+     "Add 'influence without authority' to the scope line if true; it is specific to director postings."
+    ]
+   },
+   "fit": {
+    "fixes": {
+     "cos": "Surface co-sell: name the AWS co-sell motion behind the Marketplace launch, with [co-sell pipeline] — the skill line alone scores grade 1.",
+     "aip": "No AI-product employer yet. Lead with the AI account-planning assistant as proof of AI fluency; target AI-native employers through the AWS ecosystem path.",
+     "exec": "Add one line showing C-level relationships (e.g. [partner CEO/CRO you negotiated with]) if true; otherwise expect this question in interviews.",
+     "gsi": "No GSI/SI evidence. Build it: run one SI-partner pilot or co-sell deal in the next quarter, or name consultancy partners worked with at Atelier Varenne Conseil if true.",
+     "fcst": "Add the forecasting mechanism behind the $18M figure: [how partner-sourced pipeline is tracked and forecast].",
+     "csuite": "Reporting line is not on the resume: add [reports to] on the Northwind scope line.",
+     "stb": "Fill the company context lines with stage and headcount; startup experience is likely but unstated."
+    },
+    "do_this": [
+     "Co-sell, forecasting and AI-product exposure are the gaps that recur in most postings; fix co-sell and forecasting with facts."
+    ]
+   },
+   "employers": {
+    "do_this": [
+     "Start with Braze, OpenAI, Denodo and Yobi: highest opportunity scores, all live, all with an ecosystem path."
+    ]
+   },
+   "access": {
+    "do_this": [
+     "Use the AWS path for Braze and Denodo; ask agency contacts about Yobi."
+    ]
+   },
+   "pitch": {
+    "one_liner": "I run partner programs that show up in the forecast: $18M of partner-sourced pipeline from an ISV program I built from zero, with scorecards and QBRs that keep partners accountable.",
+    "proof_points": [
+     "$18M partner-sourced pipeline, 22% of new business",
+     "35 ISV integrations from zero",
+     "Scorecards and QBRs with the top 10 agency partners"
+    ],
+    "objections": [
+     {
+      "objection": "This is a lateral move.",
+      "answer": "It is the band where my evidence is strongest; the scope is larger: [team, number]."
+     },
+     {
+      "objection": "Forecasting?",
+      "answer": "[Describe the partner pipeline review and forecast cadence.]"
+     }
+    ],
+    "do_this": [
+     "Use this niche as the volume channel: it has the most postings and the same band as today."
+    ]
+   },
+   "pay": {
+    "anchor": "Ask for $225,000 base (the band's 75th percentile).",
+    "walk_away": "[Your floor — not inferable from the resume]",
+    "script": "'For a director scope with a partner-sourced number, the posted New York ranges put the upper quartile near $225,000. That's where I'd like to land.'",
+    "do_this": [
+     "A lateral title is a pay lever: ask for the upper quartile because the scope is larger."
+    ]
+   },
+   "plan30": [
+    {
+     "week": "Week 1",
+     "actions": [
+      "Fill placeholders; add the forecast line",
+      "Shortlist Braze, OpenAI, Denodo, Yobi"
+     ]
+    },
+    {
+     "week": "Week 2",
+     "actions": [
+      "4 warm approaches via the AWS and agency ecosystems",
+      "2 applications on employer sites"
+     ]
+    },
+    {
+     "week": "Week 3",
+     "actions": [
+      "Follow up; rehearse the lateral-move answer"
+     ]
+    },
+    {
+     "week": "Week 4",
+     "actions": [
+      "Funnel review"
+     ]
+    }
+   ],
+   "formulas": [
+    {
+     "bundle": [
+      "quota",
+      "tool"
+     ],
+     "template": "Owned [revenue number] and ran it in [named tool].",
+     "example": "Grew partner-sourced pipeline to $18M in FY2025, 22% of new business.",
+     "ledger_ids": [
+      "R9"
+     ]
+    }
+   ]
+  },
+  "n04": {
+   "demand": {
+    "insight": "All 10 Paris postings want international scope and a partner-sourced number; 9 of 10 sell AI; GSI partners and co-sell are required in 6 of 10.",
+    "do_this": [
+     "Lead with the French and Belgian channel and native French: international scope is required in 8 of 10 postings.",
+     "Add any EMEA work from the New York roles; the Paris evidence otherwise ends in 2017."
+    ]
+   },
+   "language": {
+    "use": [
+     "EMEA",
+     "trusted advisor",
+     "tech ecosystem",
+     "build from zero",
+     "fluent English"
+    ],
+    "avoid": [
+     "New York-only framing"
+    ],
+    "do_this": [
+     "Use 'EMEA' in the headline or profile if any New York role touched Europe; it is the most specific term in this niche."
+    ]
+   },
+   "fit": {
+    "fixes": {
+     "cos": "Surface co-sell: name the AWS co-sell motion behind the Marketplace launch, with [co-sell pipeline] — the skill line alone scores grade 1.",
+     "aip": "No AI-product employer yet. Lead with the AI account-planning assistant as proof of AI fluency; target AI-native employers through the AWS ecosystem path.",
+     "exec": "Add one line showing C-level relationships (e.g. [partner CEO/CRO you negotiated with]) if true; otherwise expect this question in interviews.",
+     "gsi": "No GSI/SI evidence. Build it: run one SI-partner pilot or co-sell deal in the next quarter, or name consultancy partners worked with at Atelier Varenne Conseil if true.",
+     "fcst": "Add the forecasting mechanism behind the $18M figure: [how partner-sourced pipeline is tracked and forecast].",
+     "csuite": "Reporting line is not on the resume: add [reports to] on the Northwind scope line.",
+     "stb": "Fill the company context lines with stage and headcount; startup experience is likely but unstated."
+    },
+    "do_this": [
+     "Two gaps matter most here: GSI partners and co-sell. Both appear in 6 of 10 postings."
+    ]
+   },
+   "employers": {
+    "do_this": [
+     "Start with Partoo, Mirakl and Dataiku: live postings and an ecosystem path.",
+     "Confirm the right to work in France before applying."
+    ]
+   },
+   "access": {
+    "do_this": [
+     "Use ESCP alumni at target companies (public alumni pages) as the first warm path; it is the strongest Paris tie on the resume."
+    ]
+   },
+   "pitch": {
+    "one_liner": "A French partnerships leader with a US playbook: built a 35-integration ISV program and $18M pipeline in New York after growing a French and Belgian channel from €1.2M to €3.4M.",
+    "proof_points": [
+     "€1.2M → €3.4M reseller channel in France and Belgium",
+     "35 ISV integrations from zero",
+     "$18M partner-sourced pipeline"
+    ],
+    "objections": [
+     {
+      "objection": "Can you start in Paris?",
+      "answer": "[Work authorization and move date.]"
+     },
+     {
+      "objection": "Your European results are from 2017.",
+      "answer": "[Any EMEA partners or customers handled from New York.]"
+     }
+    ],
+    "do_this": [
+     "Answer the start-date question in the first message; reviewers flagged it as the first thing a Paris CEO asks."
+    ]
+   },
+   "plan30": [
+    {
+     "week": "Week 1",
+     "actions": [
+      "Confirm work authorization and timing",
+      "Write a French version of the n04 resume"
+     ]
+    },
+    {
+     "week": "Week 2",
+     "actions": [
+      "Contact ESCP alumni at Partoo, Mirakl, Dataiku"
+     ]
+    },
+    {
+     "week": "Week 3",
+     "actions": [
+      "Apply on employer sites to live postings"
+     ]
+    },
+    {
+     "week": "Week 4",
+     "actions": [
+      "Funnel review; decide whether to keep Paris active"
+     ]
+    }
+   ],
+   "formulas": [
+    {
+     "bundle": [
+      "csuite",
+      "mgr"
+     ],
+     "template": "Led a team of [n] and reported [metric] to [leadership level].",
+     "example": "Managed a team of 4 partner managers; grew partner-sourced pipeline to $18M in FY2025, 22% of new business.",
+     "ledger_ids": [
+      "R11",
+      "R9"
+     ]
+    }
+   ]
+  }
+ },
+ "confirm_extra": [
+  {
+   "item": "Willing to relocate to Paris, and right to work in France?",
+   "why": "Not on the resume; decides whether n04 can be activated."
+  },
+  {
+   "item": "Does 22% of new business refer to pipeline or closed bookings?",
+   "why": "Main proof number; reviewers asked in every loop."
+  }
+ ],
+ "method_steps": [
+  "Ingest and lint the resume (phase 0)",
+  "Build the ledger and infer the profile with confidence grades (phase 1)",
+  "Generate 7 candidate niches, triage, screen (phase 2)",
+  "Code postings on 35 requirement codes, second-code a sample, score liveness (phase 3)",
+  "Peers (phase 4) — fictional peer set for the two run-now niches (19 people); a real run collects them from public announcements, team pages and speaker bios",
+  "Then vs now on closed postings (phase 5)",
+  "Fit, qualification and ranking with 1,000 weight draws (phase 6)",
+  "Employers and access paths (phase 7)",
+  "Four niche resumes from one ledger (phase 8)",
+  "Gates, advocate test and CEO review loops (phase 9)",
+  "Assemble and build this report (phase 10)"
+ ],
+ "limits": [
+  "Fictional candidate; postings are the real reference corpus, so volume thresholds were relaxed to 8 postings / 5 employers.",
+  "All niches have fewer than 30 coded postings: statistical tests are off and changes are directional.",
+  "Raw posting text was not retained in the reference run; codes cannot be re-audited from text.",
+  "Access paths are inferred from shared ecosystems in the postings, not from a real network.",
+  "The peers in act 3 are fictional, generated from the niches' own requirement rates; the postings are real.",
+  "Recruiter and hiring-manager reviewers not run in the example; two CEO loops were."
+ ],
+ "sources": [
+  {
+   "title": "Reference corpus: 42 coded 2026 postings and 17 closed 2020–25 postings",
+   "url": "reference/partnerships-2026/sources.md"
+  },
+  {
+   "title": "Bock, 'My Personal Formula for a Winning Resume' (2014)",
+   "url": "https://www.calstatela.edu/sites/default/files/formula_for_a_winning_resume.docx"
+  },
+  {
+   "title": "Greenhouse ghost-job share via Apollo Technical",
+   "url": "https://www.apollotechnical.com/?p=60303"
+  },
+  {
+   "title": "Gem 2026 Recruiting Benchmarks",
+   "url": "https://app.gem.com/blog/key-takeaways-from-the-2026-recruiting-benchmarks-report"
+  },
+  {
+   "title": "Interview Guys review of negotiation studies",
+   "url": "https://blog.theinterviewguys.com/?p=4616"
+  }
+ ],
+ "journey": {
+  "acts": [
+   {
+    "act": "cover",
+    "question": "What can the market do with a record like Jordan's?",
+    "answer": "We read 42 live job postings across four markets and placed Jordan's record among them, star by star.",
+    "learned": [],
+    "handover": "It starts with what Jordan brings."
+   },
+   {
+    "act": "you",
+    "question": "What does Jordan bring, on the evidence?",
+    "answer": "A builder of partner programs who has worked on three sides of the partner market and builds working AI tools without being an engineer.",
+    "learned": [
+     "Six strengths are stated outright on the resume, each traced to a line of it.",
+     "Thirteen years in partnerships, the most recent role leading a team of four partner managers.",
+     "The current resume undersells this: no role says what the employer sells or how big it is."
+    ],
+    "handover": "That is the supply. Now, who is asking for it?"
+   },
+   {
+    "act": "market",
+    "question": "Who is asking for it, and what do they want?",
+    "answer": "Four markets share one core: ten requirements appear in at least half the postings of every niche, and Jordan proves seven of them.",
+    "learned": [
+     "Every niche asks for owned partner revenue and technology partners; Jordan proves both.",
+     "Working for an AI product company and senior-executive relationships are asked everywhere and do not show on the resume.",
+     "One listing in ten in the top niche shows signs of not being a real opening, below the 18–22% platform benchmark."
+    ],
+    "handover": "That is the demand. Who else is answering it?"
+   },
+   {
+    "act": "peers",
+    "question": "Who else supplies this, and what is rare about Jordan?",
+    "answer": "Jordan is in range of the people already doing these jobs: they have a median of 12 years, Jordan has 13. The clearest edge over them is owned partner revenue: 88% of postings ask for it, 58% of these peers show it.",
+    "learned": [
+     "Most came from partner roles at martech platforms or AI providers; Jordan's path through an agency, a platform and a data vendor is less common.",
+     "The top two niches hire at Head and VP level, one band above Jordan's current title.",
+     "Referrals convert about eleven times better than cold applications: this field is won on access, not volume."
+    ],
+    "handover": "Supply, demand, competition. Here is what they add up to."
+   },
+   {
+    "act": "verdict",
+    "question": "Where should Jordan aim, and why?",
+    "answer": "Two niches now, two next: the Head roles in New York lead, the director roles and Paris follow.",
+    "learned": [
+     "The martech and data Head niche ranks first on fit, pay and demand together.",
+     "The top three keep their order in 58% of 1,000 random re-weightings: the top two are close, and both are worth running."
+    ],
+    "handover": "The decision is made. Here is how to run it."
+   },
+   {
+    "act": "course",
+    "question": "What exactly does Jordan do, send and say?",
+    "answer": "Fill the blanks, send the two Head versions to the gold-star postings first, and log every approach so the tracker can say what to change.",
+    "learned": [],
+    "handover": null
+   },
+   {
+    "act": "method",
+    "question": "How was this measured, and what are its limits?",
+    "answer": "42 live and 17 archive postings coded on one codebook by two independent coders, agreement κ 0.79; every resume line traced to the original.",
+    "learned": [],
+    "handover": null
+   }
+  ]
+ },
+ "bridge_reads_as": {
+  "src": "Owns partner-sourced pipeline and revenue",
+  "zero": "Builds or launches something new"
+ },
+ "plan12": [
+  {
+   "week": "1",
+   "track": "Resume and profile",
+   "action": "Fill the blanks; publish the LinkedIn rewrite",
+   "target": "0 blanks left"
+  },
+  {
+   "week": "1-2",
+   "track": "Access",
+   "action": "Map agency and AWS contacts to the gold-star employers",
+   "target": "8 employers mapped"
+  },
+  {
+   "week": "2-3",
+   "track": "Approaches",
+   "action": "Ask for introductions; send notes to the top three",
+   "target": "4 introductions"
+  },
+  {
+   "week": "3-6",
+   "track": "Approaches",
+   "action": "Two referral-led approaches a week in the top two niches",
+   "target": "8 approaches"
+  },
+  {
+   "week": "4",
+   "track": "Review",
+   "action": "Read the tracker's diagnosis; fix the stage that stalls",
+   "target": "1 change made"
+  },
+  {
+   "week": "5-8",
+   "track": "Interviews",
+   "action": "Prepare the co-sell and $40M answers; run mock interviews",
+   "target": "3 screens"
+  },
+  {
+   "week": "7-10",
+   "track": "Approaches",
+   "action": "Open the director niche and Paris if the first two stall",
+   "target": "6 more approaches"
+  },
+  {
+   "week": "9-12",
+   "track": "Offers",
+   "action": "Negotiate from the 75th-percentile anchor",
+   "target": "1 offer at or above band"
+  }
+ ]
+}

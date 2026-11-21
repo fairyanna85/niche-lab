@@ -1,0 +1,168 @@
+# Universal requirement codes — profession-neutral. Applied to every posting in every niche.
+# 2 = required / core, 1 = preferred or mentioned, 0 = absent. Candidate evidence graded 0–3 (rubric 03).
+module: core
+version: 2
+codes:
+- id: aiu
+  label: Uses AI or digital tools in the work
+  posting_rule: 2 if fluency with AI or specific digital tools is required; 1 if a plus.
+  resume_cues:
+  - chatgpt
+  - claude
+  - gemini
+  - copilot
+  - prompt
+  - \bai tools?
+- id: mgr
+  label: Manages people
+  posting_rule: 2 if direct reports are stated or "lead a team"; 1 if "may supervise" or "mentor".
+  resume_cues:
+  - team of \d+
+  - \d+ (direct )?reports
+  - managed \d+
+  - led (a )?team
+  - hired
+- id: zero
+  label: Builds or launches something new
+  posting_rule: 2 if founding, opening, launching or building a function from scratch; 1 if scaling an early one.
+  resume_cues:
+  - from (zero|scratch)
+  - founded
+  - founding
+  - first (hire|\w+ hire)
+  - launched
+  - created
+  - built
+- id: csuite
+  label: Reports to top leadership
+  posting_rule: 2 if the role reports to the CEO, owner, chief nursing officer or equivalent; 1 if works closely with them.
+  resume_cues:
+  - report(ed|ing)? to (the )?(ceo|coo|cro|cto|cpo|founder)
+  - executive committee
+  - comex
+- id: exec
+  label: Works with senior leaders or executives
+  posting_rule: 2 if relationships with senior leaders (internal or external) are a responsibility; 1 if "executive presence" only.
+  resume_cues:
+  - c-level
+  - c-suite
+  - executive (sponsor|relationship)
+  - \bceo
+  - \bcmo
+  - \bboard\b
+- id: tool
+  label: Named tools, software or equipment
+  posting_rule: 2 if a named tool, system or piece of equipment is required; 1 if listed as a plus.
+  resume_cues:
+  - salesforce
+  - hubspot
+  - jira
+  - tableau
+  - looker
+  - crossbeam
+  - asana
+  - smartsheet
+  - zendesk
+- id: stb
+  label: Fast-growth or new-venture environment
+  posting_rule: 2 if experience in a start-up, new opening or fast-growth setting is required; 1 if "fast-paced" only.
+  resume_cues:
+  - start-?up
+  - series [a-d]
+  - seed
+  - scale-?up
+  - hypergrowth
+  - founder
+- id: intl
+  label: Multi-site, multi-region or international scope
+  posting_rule: 2 if the scope spans several sites, regions or countries; 1 if travel or a single additional site.
+  resume_cues:
+  - global
+  - emea
+  - apac
+  - latam
+  - international
+  - countries
+  - multi-region
+- id: lang
+  label: Languages required
+  posting_rule: 2 if a language besides the posting's own is required; 1 if a plus.
+  resume_cues:
+  - fluent
+  - bilingual
+  - native
+  - french
+  - spanish
+  - german
+  - mandarin
+  - japanese
+- id: budget
+  label: Owns a budget, P&L or cost line
+  posting_rule: 2 if the role owns a budget, P&L, food/labor cost or project budget; 1 if it tracks or reports one.
+  resume_cues:
+  - budget
+  - p&l
+  - \bcost
+  - \$\d
+  - €\d
+  - margin
+- id: cred
+  label: Licence or certification required
+  posting_rule: 2 if a named licence or certification is required to do the job; 1 if preferred.
+  resume_cues:
+  - licen[cs]e
+  - certif
+  - \bpe\b
+  - \brn\b
+  - cpa
+  - pmp
+  - servsafe
+  - registered
+- id: shift
+  label: Shifts, on-call or travel
+  posting_rule: 2 if nights, weekends, on-call, rotating shifts or regular travel are required; 1 if occasional.
+  resume_cues:
+  - shift
+  - on-?call
+  - night
+  - weekend
+  - travel
+- id: safety
+  label: Safety, compliance or regulation
+  posting_rule: 2 if the role owns safety, regulatory or compliance outcomes; 1 if it follows them.
+  resume_cues:
+  - safety
+  - complian
+  - regulat
+  - osha
+  - audit
+  - health code
+  - infection
+- id: cust
+  label: Directly serves customers, patients or clients
+  posting_rule: 2 if serving customers, patients, guests or clients is core; 1 if occasional.
+  resume_cues:
+  - customer
+  - client
+  - patient
+  - guest
+  - stakeholder
+- id: data
+  label: Uses data or metrics to decide
+  posting_rule: 2 if the role is measured on or decides from data and metrics; 1 if it reports them.
+  resume_cues:
+  - data
+  - metric
+  - kpi
+  - dashboard
+  - report
+  - '%'
+- id: train
+  label: Trains or mentors others
+  posting_rule: 2 if training, coaching, precepting or mentoring is a responsibility; 1 if mentioned.
+  resume_cues:
+  - train
+  - mentor
+  - coach
+  - precept
+  - onboard
